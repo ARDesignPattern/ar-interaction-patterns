@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -169,58 +169,177 @@
 
       <main class="pattern-main-content">
         <h1 id="point-of-interest-guide">Point of Interest Guide</h1>
-
-<h2 id="problem">Problem</h2>
-<p>Visitors in AR-enhanced environments such as museums or exhibitions may struggle to efficiently locate points of interest (PoIs). Without clear directional guidance, they risk missing key exhibits due to complex spatial layouts, limited time, or inadequate physical signage.</p>
-
-<h2 id="context">Context</h2>
-<p>This pattern is suitable for AR spaces containing multiple PoIs, such as museums, galleries, or trade shows. It is especially valuable when:</p>
-
+<hr />
+<h2 id="overview">Overview</h2>
 <ul>
-  <li>Visitors have limited time and need to prioritize key content.</li>
-  <li>The venue is large or subdivided, making it hard to identify or reach a specific exhibit.</li>
-  <li>Conventional maps or signage are insufficient or difficult to interpret.</li>
+  <li><strong>Name</strong><br />
+Point of Interest Guide</li>
+  <li><strong>Intent</strong><br />
+Help visitors efficiently locate and navigate to selected POIs in complex AR spaces by combining path visualization, selection interfaces, and multisensory feedback.</li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
+<hr />
 
+<h2 id="target">Target</h2>
 <ul>
-  <li>Visitors begin exploration and seek their first AR destination.</li>
-  <li>Visitors want to locate unvisited exhibits efficiently.</li>
-  <li>Visitors wish to revisit previously explored exhibits.</li>
-  <li>Time constraints require targeted navigation.</li>
+  <li><strong>Problem</strong><br />
+Visitors in AR-enhanced environments may miss key exhibits due to complex layouts, limited time, or insufficient physical signage.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>AR spaces with multiple dispersed POIs (museums, galleries, trade shows)</li>
+      <li>Large or subdivided venues where wayfinding is non-trivial</li>
+      <li>Conventional maps or signage are inadequate or hard to interpret</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Visitors begin exploration and need their first AR destination</li>
+      <li>Visitors want to locate unvisited exhibits efficiently</li>
+      <li>Visitors wish to revisit previously seen POIs</li>
+      <li>Time constraints demand targeted navigation</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Efficiency vs. Exploration</strong>: Balancing guided paths with room for serendipity</li>
+      <li><strong>Clarity vs. Clutter</strong>: Presenting enough cues without overwhelming the AR view</li>
+      <li><strong>Control vs. Automation</strong>: Letting users choose destinations while automating the routing</li>
+      <li><strong>Multisensory Consistency</strong>: Aligning visual and audio guidance seamlessly</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Reduced search time; improved coverage of key content; higher visitor satisfaction</li>
+      <li><strong>Negative</strong>: Over-directing may stifle free exploration; UI elements may occlude exhibits</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="solution">Solution</h2>
+<hr />
 
-<p>To assist users in reaching PoIs effectively, combine spatial guidance, interface support, and multisensory feedback:</p>
+<h2 id="application">Application</h2>
 
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Path Point-Based Guiding</strong>
+    <ul>
+      <li>Author or generate a polyline route from current position to the chosen POI.</li>
+      <li>Continuously update route if the user deviates or selects a new destination.</li>
+    </ul>
+  </li>
+  <li><strong>Point of Interest Selection Interface</strong>
+    <ul>
+      <li>Display a floor-pinned or HUD menu listing POIs with thumbnails, categories, and estimated travel times.</li>
+      <li>Allow sorting by proximity, popularity, or remaining time.</li>
+    </ul>
+  </li>
+  <li><strong>Navigation Control Interface</strong>
+    <ul>
+      <li>Provide Start, Pause, Resume, and Cancel controls via gesture, voice, or on-screen buttons.</li>
+      <li>Cache paused routes for later resumption.</li>
+    </ul>
+  </li>
+  <li><strong>Directional Visual Cues</strong>
+    <ul>
+      <li>Overlay arrows or footprints along the path, color-coded for upcoming turns or straight segments.</li>
+      <li>Animate next-step indicators (e.g., pulsing arrow) when approaching decision points.</li>
+    </ul>
+  </li>
+  <li><strong>Auditory Feedback</strong>
+    <ul>
+      <li>Play spatialized cues (“30 meters to the next POI,” “Turn right ahead”) at key waypoints.</li>
+      <li>Adjust volume based on ambient noise and distance.</li>
+    </ul>
+  </li>
+  <li><strong>Arrival Trigger</strong>
+    <ul>
+      <li>When the user enters the POI zone, fade out path indicators, play a confirmation chime, and display a brief arrival tooltip.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Combining explicit path visualization with user-driven POI selection reduces cognitive load, ensures efficient coverage of highlights, and accommodates both goal-oriented and exploratory behaviors.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li>
-    <p><strong>Path Point-Based Guiding Method</strong><br />
-Generate or author a guiding path from the user’s current or starting position to a selected PoI.</p>
-  </li>
-  <li>
-    <p><strong>Point of Interest Selection Interface</strong><br />
-Provide a user interface for selecting PoIs by interest, efficiency, or time.</p>
-  </li>
-  <li>
-    <p><strong>Navigation Control Interface</strong><br />
-Allow users to start, pause, resume, or stop guidance.</p>
-  </li>
-  <li>
-    <p><strong>Directional Visual Cues</strong><br />
-Overlay visual indicators in AR space.</p>
-  </li>
-  <li>
-    <p><strong>Auditory Feedback</strong><br />
-Use spatial sounds or voice guidance at key locations.</p>
-  </li>
-  <li>
-    <p><strong>Arrival Trigger</strong><br />
-Provide visual/audio confirmation when the user reaches the PoI.</p>
-  </li>
+  <li><strong>Path Width</strong>: 0.1–0.2 m in AR space for clear visibility</li>
+  <li><strong>Arrow Size</strong>: ≥ 0.3 m head width to remain legible at distance</li>
+  <li><strong>Cue Lead Time</strong>: Announce turns 5–10 m before decision points</li>
+  <li><strong>Audio Level</strong>: 60–70 dB SPL, adaptive to ambient noise</li>
+  <li><strong>Menu Reach</strong>: Within 1.5 m of user gaze center for easy selection</li>
 </ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Explorer Badge</strong>: Earned for visiting a sequence of POIs without pauses</li>
+  <li><strong>Time Challenge</strong>: Complete N POIs within a time limit for a leaderboard</li>
+  <li><strong>Route Streak</strong>: Rewards for revisiting POIs in the same order as recommended</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>Avatar Guide (personalized escort along a path)</li>
+  <li>Forward Cue-Routing (ground-anchored turn anticipation)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Provides clear direction without physical signage; supports time-sensitive visits</li>
+  <li><strong>Risks</strong>: Excessive overlays can distract; rigid routing may reduce serendipity</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<p>At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture.</p>
+
+<hr />
+
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
+
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
+<ul>
+  <li><strong>Draw visitors in</strong>: Present a rotating carousel of featured POIs with engaging thumbnails and brief descriptions to spark curiosity.</li>
+  <li><strong>Auto-start interaction</strong>: Automatically display the nearest POI suggestion and begin path guidance when the visitor enters the mapped area.</li>
+</ul>
+
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
+<ul>
+  <li><strong>Floor marking</strong>: Semi-transparent footprints or glowing floor tiles leading toward the selected POI.</li>
+  <li><strong>Guiding element</strong>: A pulsing waypoint beacon (e.g., floating orb or arrow) that hovers above the path to reinforce direction.</li>
+</ul>
+
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: A gentle chime and voice prompt (“Next stop: Sculpture Garden, 50 m ahead”) as the route initializes.</li>
+  <li><strong>Visual cue</strong>: Animated arrows or footprints that pulse at regular intervals and brighten when a turn is imminent.</li>
+  <li><strong>Narration design</strong>: Short, context-sensitive voiceovers upon arrival (“Welcome to the Sculpture Garden—home to…”), with optional on-screen captions.</li>
+</ol>
+
+<h3 id="experience-principles">Experience Principles</h3>
+<ul>
+  <li><strong>Intuitive guidance</strong>: Align AR cues with natural walking direction and avoid obstructing the visitor’s view of exhibits.</li>
+  <li><strong>Seamless transition</strong>: Fade path indicators in at journey start and out upon arrival, ensuring no abrupt visual shifts.</li>
+  <li><strong>Comfortable pacing</strong>: Announce distance and turns only when the user is within optimal lead-in range (5–10 m), avoiding clutter.</li>
+</ul>
+
+<h3 id="curation-considerations">Curation Considerations</h3>
+<ul>
+  <li><strong>Traffic flow</strong>: Monitor visitor density and suggest alternate routes to prevent bottlenecks at popular POIs.</li>
+  <li><strong>Aesthetic harmony</strong>: Choose cue colors, shapes, and animations that complement the exhibit’s design language and lighting.</li>
+  <li><strong>Accessibility</strong>: Provide high-contrast options, adjustable audio volume, and text labels to accommodate diverse visitor needs.</li>
+</ul>
+
+<hr />
+
+<h2 id="supplementary-information">Supplementary Information</h2>
+
+<h3 id="biography">Biography</h3>
+<p>Created by UX designer Elena Rossi for the “Smart Wayfinding” project at the Milan AR Museum, 2024.</p>
+
+<hr />
+
+<h2 id="discussion">Discussion</h2>
+<p>Key considerations include balancing guidance granularity with user freedom, dynamically re-routing for crowd flow, and integrating predictive POI suggestions based on user interests or time constraints. Future work may incorporate group navigation modes and live occupancy data to optimize routes.</p>
 
 <h2 id="media">Media</h2>
 
@@ -237,10 +356,14 @@ Provide visual/audio confirmation when the user reaches the PoI.</p>
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

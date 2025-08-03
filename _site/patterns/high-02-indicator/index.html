@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -169,47 +169,158 @@
 
       <main class="pattern-main-content">
         <h1 id="ar-experience-indicator">AR Experience Indicator</h1>
-
-<h2 id="problem">Problem</h2>
-<p>Visitors are often unaware of which exhibits contain embedded AR content or how to activate it. As a result, they may miss enriching experiences or waste time searching for interactive features without success.</p>
-
-<h2 id="context">Context</h2>
-<p>This pattern is used in exhibition environments where only a subset of the exhibits contains AR experiences. It assumes that:</p>
+<hr />
+<h2 id="overview">Overview</h2>
 <ul>
-  <li>Visitors are equipped with an HMD or other AR interface;</li>
-  <li>There are no clear visual or spatial cues indicating which exhibits are interactive.</li>
+  <li><strong>Name</strong><br />
+AR Experience Indicator</li>
+  <li><strong>Intent</strong><br />
+Help visitors discover and launch embedded AR experiences by providing clear, consistent cues and intuitive activation methods.</li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
-<ul>
-  <li>Visitors are freely exploring and need explicit, discoverable cues for AR-enabled exhibits.</li>
-  <li>Visitors reach a specific exhibit and want to activate rich multimedia or contextual content.</li>
-</ul>
+<hr />
 
-<h2 id="solution">Solution</h2>
-<p>To help visitors easily identify and access AR content, combine clear visual cues with intuitive activation methods and feedback:</p>
-
+<h2 id="target">Target</h2>
 <ul>
-  <li>
-    <p><strong>Visual Indicators</strong><br />
-Place recognizable AR prompts (such as floating 3D icons, glowing outlines, pulsing circles, or minimalist labels) near exhibits that offer digital interaction. These cues distinguish AR-enabled exhibits from non-interactive ones.</p>
-  </li>
-  <li><strong>Activation Mechanism</strong><br />
-Enable users to launch the AR content through intuitive interactions, such as:
+  <li><strong>Problem</strong><br />
+Visitors often don’t know which exhibits contain AR content or how to start it, causing missed opportunities and wasted time.</li>
+  <li><strong>Context</strong>
     <ul>
-      <li>Gaze or gesture recognition zones;</li>
-      <li>Voice commands (e.g., “show me more”);</li>
-      <li>Virtual or spatial triggers (e.g., stepping into a glowing AR circle on the floor to start content playback).</li>
+      <li>Only some exhibits feature AR experiences</li>
+      <li>Visitors use head-mounted displays or AR-capable devices</li>
+      <li>There are no obvious physical markers denoting interactivity</li>
     </ul>
   </li>
-  <li><strong>Feedback Cues</strong><br />
-Once an exhibit is activated, provide immediate feedback confirming success:
+  <li><strong>Use When</strong>
     <ul>
-      <li>Visually, via brief animations, interface changes, or highlight effects;</li>
-      <li>Audibly, using sound effects, tones, or spoken messages to indicate system response.</li>
+      <li>Visitors roam freely and need discoverable markers for AR-enabled exhibits</li>
+      <li>Upon reaching an exhibit, users want to access rich multimedia or contextual overlays</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Discoverability vs. Distraction</strong>: Indicators must stand out without cluttering the scene</li>
+      <li><strong>Consistency vs. Flexibility</strong>: Use a uniform visual language while supporting varied activation methods</li>
+      <li><strong>Immediate Feedback vs. Subtlety</strong>: Confirm activations clearly but avoid jarring transitions</li>
+      <li><strong>Accessibility</strong>: Cues and activation must work across device types and user abilities</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Increases AR uptake; reduces user frustration; highlights interactive content</li>
+      <li><strong>Negative</strong>: Overuse of indicators can overwhelm; inconsistent placement breaks learned expectations</li>
     </ul>
   </li>
 </ul>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Visual Indicators</strong>
+    <ul>
+      <li>Render floating 3D AR icons (e.g., stylized cubes or “AR” badges) adjacent to interactive exhibits.</li>
+      <li>Apply pulsing outlines or gentle glow effects to draw peripheral attention.</li>
+    </ul>
+  </li>
+  <li><strong>Activation Mechanism</strong>
+    <ul>
+      <li>Define gaze or gesture zones: fix a reticle on the indicator for 1–2 seconds, or perform a tap-gesture.</li>
+      <li>Support voice commands (“Show me more”) to launch experiences hands-free.</li>
+      <li>Optionally, place a subtle floor circle around the exhibit; stepping in triggers content.</li>
+    </ul>
+  </li>
+  <li><strong>Feedback Cues</strong>
+    <ul>
+      <li>Immediately animate the icon (e.g., expand-fade) or change color to confirm activation.</li>
+      <li>Play a soft audio cue or brief spoken confirmation (“Loading AR content”).</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Combining consistent visual markers with multiple intuitive activation paths ensures that all visitors—whether novice or experienced—can locate and engage AR content with minimal learning curve.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Icon Size</strong>: 0.3–0.5 m in AR space for legibility</li>
+  <li><strong>Glow Pulse Rate</strong>: 0.5–1 Hz to balance noticeability and subtlety</li>
+  <li><strong>Gaze Timer</strong>: 1.5 s dwell for selection, with a progress ring indicator</li>
+  <li><strong>Voice Command Delay</strong>: &lt;0.2 s from keyword to system response</li>
+  <li><strong>Audio Cue Volume</strong>: 60 dB SPL in typical gallery noise</li>
+</ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>First-Use Badge</strong>: Unlock “AR Explorer” on first activation</li>
+  <li><strong>Activation Streak</strong>: Reward successive AR launches without pauses</li>
+  <li><strong>Discovery Tracker</strong>: Show percentage of AR-enabled exhibits visited</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>Floor Circle (proximity-based trigger)</li>
+  <li>Point of Interest Guide (path-based navigation to interactive exhibits)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Clearly differentiates interactive content; guides focus without heavy UI</li>
+  <li><strong>Risks</strong>: Too many markers can clutter view; poorly tuned animations may distract</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<p>In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns.</p>
+
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
+
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
+<ul>
+  <li><strong>Draw visitors in</strong>: Highlight floating AR icons with a gentle glow to signal interactivity and pique curiosity.</li>
+  <li><strong>Auto-start interaction</strong>: Automatically reveal the nearest AR indicator and enable gaze/gesture activation when a visitor approaches within 1.5 m.</li>
+</ul>
+
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
+<ul>
+  <li><strong>Floor marking</strong>: A subtle, semi-transparent circle at the exhibit base that appears on proximity to denote interactive zones.</li>
+  <li><strong>Guiding element</strong>: A pulsing “AR” cube or badge hovering beside the exhibit, oriented toward the visitor’s view.</li>
+</ul>
+
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: A soft chime and brief spoken prompt (“Tap or gaze to explore”) when the indicator appears.</li>
+  <li><strong>Visual cue</strong>: The icon expands and pulses once on activation, then smoothly transitions into the AR content overlay.</li>
+  <li><strong>Narration design</strong>: Concise voiceover explaining how to interact (“Look at the icon to begin”), paired with on-screen captions.</li>
+</ol>
+
+<h3 id="experience-principles">Experience Principles</h3>
+<ul>
+  <li><strong>Intuitive guidance</strong>: Use consistent iconography and placement so visitors immediately recognize AR-enabled exhibits.</li>
+  <li><strong>Seamless transition</strong>: Fade indicators in on approach and fade out once content loads, avoiding abrupt visual shifts.</li>
+  <li><strong>Comfortable pacing</strong>: Allow a 1–2 second dwell time for gaze selection, avoiding rushed activations.</li>
+</ul>
+
+<h3 id="curation-considerations">Curation Considerations</h3>
+<ul>
+  <li><strong>Traffic flow</strong>: Limit visible indicators to the closest two exhibits to prevent crowding and visual clutter.</li>
+  <li><strong>Aesthetic harmony</strong>: Match icon colors, shapes, and glow intensity to the exhibit’s lighting and design language.</li>
+  <li><strong>Accessibility</strong>: Offer high-contrast indicator variants, adjustable dwell durations, and alternative tap or voice command activation.</li>
+</ul>
+
+<hr />
+
+<h2 id="supplementary-information">Supplementary Information</h2>
+
+<h3 id="biography">Biography</h3>
+<p>Developed by AR UX designer Thomas Lee for the “Digital Layers” initiative at the Modern Art Museum, 2024.</p>
+
+<hr />
+
+<h2 id="discussion">Discussion</h2>
+<p>Key challenges include harmonizing indicator placement with exhibit aesthetics and ensuring voice/gesture activation works reliably across varied lighting and noise conditions. Future enhancements might personalize indicators based on visitor profiles or dynamically adjust glow intensity in crowded spaces.</p>
 
 <h2 id="media">Media</h2>
 
@@ -225,10 +336,14 @@ Once an exhibit is activated, provide immediate feedback confirming success:
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

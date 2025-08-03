@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,116 +168,191 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Gif/FollowAvatar.gif" alt="AR Interaction" class="profile" />
+        <h1 id="avatar-guide">Avatar Guide</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+Avatar Guide</li>
+  <li><strong>Intent</strong><br />
+Provide a personable, pace‐regulated virtual escort that users naturally follow through a physical environment, enhancing orientation and thematic immersion beyond traditional wayfinding cues.</li>
+</ul>
+
+<hr />
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+In AR-enhanced museum settings, guests can miss salient points of interest despite a preconfigured route, and planar indicators offer limited guidance for regulating walking pace or maintaining orientation when attention is divided among exhibits.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Multiple points of interest dispersed across a nontrivial floor plan</li>
+      <li>Real-time user localization accurate enough to anchor and animate a virtual figure in situ</li>
+      <li>Desire for a more personable, dramaturgical escort experience than abstract wayfinding cues allow</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Visitors prefer to “follow” a guide rather than decode symbolic markers</li>
+      <li>Maintaining a natural, steady walking pace is important for comfort</li>
+      <li>The venue wants to embody thematic or narrative elements (e.g., a curator avatar or historical persona)</li>
+      <li>The system must adjust pacing dynamically without manual speed controls</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Attention Split</strong>: Balancing user focus between exhibits and navigation</li>
+      <li><strong>Pacing</strong>: Ensuring a comfortable, consistent walking speed</li>
+      <li><strong>Orientation</strong>: Preventing users from veering off the intended route</li>
+      <li><strong>Realism vs. Performance</strong>: Keeping animations plausible without overloading device resources</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Increased engagement, clearer navigation, stronger thematic immersion</li>
+      <li><strong>Negative</strong>: Potential uncanny-valley effects if avatar animations feel artificial; reliance on localization accuracy</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Avatar Instantiation &amp; Path Binding</strong>
+    <ul>
+      <li>Spawn a 3D avatar at the user’s position; bind its movement to the authored path.</li>
+      <li>Monitor heading and speed; adjust guide’s velocity to maintain a 2–3 m following distance.</li>
+    </ul>
+  </li>
+  <li><strong>Kinematic Plausibility</strong>
+    <ul>
+      <li>Use inverse-kinematics and idle animations when paused or off-course.</li>
+      <li>The avatar’s animation speed is directly proportional to its the movement speed; Or, colour-code avatar outline or attire to reflect navigation states (eg.: green = en route, amber = paused).</li>
+    </ul>
+  </li>
+  <li><strong>Point-of-Interest Menu</strong>
+    <ul>
+      <li>Floating radial or list menu for selecting next destination.</li>
+      <li>Display estimated travel time based on adaptive speed profile.</li>
+    </ul>
+  </li>
+  <li><strong>Gesture-Activated Controls</strong>
+    <ul>
+      <li>Palm-up gesture reveals a mini hand-menu with Start, Pause, Resume, End.</li>
+      <li>Haptic/auditory confirmation for commands.</li>
+    </ul>
+  </li>
+  <li><strong>Auditory &amp; Spatial Prompts</strong>
+    <ul>
+      <li>Spatialized vocal cues (“Turn left ahead”) and footstep sounds at decision points.</li>
+      <li>Adjust volume/cadence in response to ambient noise and proximity.</li>
+    </ul>
+  </li>
+  <li><strong>Arrival Interaction</strong>
+    <ul>
+      <li>Upon reaching a PoI, avatar stops and provides visual feedback.</li>
+      <li>Trigger on-screen tooltip and chime to affirm arrival.</li>
+    </ul>
+  </li>
+</ol>
+
+<!-- <div class="column">
+  <img src="/ar-interaction-patterns/images/ExhibitMenu.jpg" alt="AR Interaction" class="profile">
+</div>  
+
+<div class="column">
+  <img src="/ar-interaction-patterns/images/FollowingTheButterfly.png" alt="AR Interaction" class="profile">
+</div>  -->
+<h3 id="rationale">Rationale</h3>
+<ul>
+  <li>Anchoring a virtual guide in situ leverages social following instincts, reducing cognitive load compared to abstract markers.</li>
+  <li>Adaptive pacing preserves visitor comfort and flow, preventing bottlenecks or rushed experiences.</li>
+  <li>Gesture controls and contextual cues keep the interface hands-free and intuitive, minimizing distraction.</li>
+</ul>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Following Distance(between the avatar and the user)</strong>: 2–3 m</li>
+  <li><strong>Avatar moveing speed</strong>: Avatar’s moving speed is proportional to user’s walking speed; or,  around 1.2 m/s, with adjustable ±25%</li>
+  <li><strong>State Indication</strong>: Speed-automatic-adjustable animation design.</li>
+  <li><strong>Postion of the Guiding Control Interface</strong>: The interface anchors itself to the user’s hand (as a palm menu) or to the starting point of the guidance path.</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>-</li>
+  <li>-</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Social presence via anthropomorphic guide, narrative cohesion</li>
+  <li><strong>Risks</strong>: Breaks immersion if avatar animation or localization jitter is noticeable</li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/UfcltoRAjKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
-<h1 id="avatar-guide">Avatar Guide</h1>
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
 
-<h2 id="problem">Problem</h2>
-<p>In AR‑enhanced museum settings, guests may overlook salient points of interest despite the presence of a preconfigured route. Traditional planar indicators—such as arrows or floor decals—offer limited guidance for regulating walking pace and preserving orientation, particularly when visitors divide their attention among exhibits.</p>
-
-<h2 id="context">Context</h2>
-<p>This sub‑pattern is intended for gallery and museum spaces that:</p>
-
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>Feature multiple points of interest dispersed across a nontrivial floor plan</p>
+  <li><strong>Draw visitors in</strong>: Craft an engaging opening animation or narrative hook, such as the avatar greeting guests by introducing its name; or with a brief thematic anecdote, to immediately capture attention and curiosity.</li>
+  <li><strong>Auto-start interaction (Optional)</strong>: Automatically initiate the guide function when the visitor enters a defined proximity zone, minimizing manual setup and ensuring seamless engagement from the outset.</li>
+</ul>
+
+<h3 id="ar-experience-indicators-optional">AR Experience Indicators (Optional)</h3>
+<!-- - **Floor marking**: Subtle virtual footprints or glows embedded in the floor texture to reinforce the avatar’s path, offering a secondary cue without overwhelming the environment.   -->
+<ul>
+  <li><strong>Guiding element</strong>: A dynamic light beam/particals or floating arrow above the avatar’s head that adjusts orientation in real time to highlight upcoming turns or split paths.</li>
+</ul>
+
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ul>
+  <li><strong>Narration Design</strong>: The content of the narrative should be designed to correspond with the movement of the avatar, providing different but coherent narrative content based on the avatar’s location.</li>
+  <li><strong>Audio cue</strong>:
+    <ul>
+      <li>Informative: While guiding, play a narration of an exhibit before the arrival.</li>
+      <li>Playful: provide a gentle chime or thematic sound effect plays as the visitor crosses a virtual trigger boundary, signaling the transition to the next segment.</li>
+    </ul>
   </li>
-  <li>
-    <p>Support real‑time user localization accurate enough to anchor and animate a virtual figure in situ</p>
-  </li>
-  <li>
-    <p>Seek to provide a more personable, dramaturgical escort experience than abstract wayfinding cues allow</p>
+  <li><strong>Visual cue</strong>:
+    <ul>
+      <li>Informative: Additional visual cue is NOT recommended in exhibit narration.</li>
+      <li>Playful: The avatar’s outline briefly pulses or changes colour (e.g., from green to amber) when a waypoint is reached or about to be passed.</li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
-
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>Visitors prefer to “follow” a guide rather than decode symbolic markers</p>
-  </li>
-  <li>
-    <p>Maintaining a natural, steady walking pace is important for visitor comfort</p>
-  </li>
-  <li>
-    <p>The venue desires to embody thematic or narrative elements (e.g., a curator avatar or historical persona) in its navigation system</p>
-  </li>
-  <li>
-    <p>The system must adjust pacing dynamically without requiring manual speed controls</p>
-  </li>
+  <li><strong>Intuitive guidance</strong>: Visual and auditory signals should align with natural human instincts—such as following motion and responding to directional audio—to reduce cognitive load.</li>
+  <li><strong>Seamless transition</strong>: Transitions between walking, pausing, and narration segments must occur without abrupt stops or lag, preserving a fluid journey.</li>
+  <li><strong>Comfortable pacing</strong>: The avatar’s speed should adjust incrementally based on visitor movement, avoiding sudden accelerations or decelerations that could disrupt immersion.</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
-
-<p><strong>Avatar Instantiation &amp; Path Binding</strong></p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>Spawn a 3D avatar at the user’s position and bind its movement to the authored path.</p>
-  </li>
-  <li>
-    <p>Monitor the visitor’s heading and speed; continuously adjust the guide’s velocity to remain at an optimal following distance (approx. 2–3 m).</p>
-  </li>
+  <li><strong>Traffic flow</strong>: Design path widths and timing to prevent group bottlenecks; consider staggered start zones or dynamic pacing adjustments for high-traffic periods.</li>
+  <li><strong>Aesthetic harmony</strong>: Ensure avatar design, floor markings, and menus complement the exhibit’s visual style and lighting conditions to maintain thematic cohesion.</li>
+  <li><strong>Accessibility</strong>: Provide alternative guidance modes (e.g., high-contrast outlines, text-only menus, adjustable narration volumes) to accommodate visitors with visual, auditory, or mobility impairments.</li>
 </ul>
 
-<p><strong>Kinematic Plausibility</strong></p>
-
+<hr />
+<h2 id="supplementary-information">Supplementary Information</h2>
 <ul>
-  <li>
-    <p>Employ inverse‑kinematics and subtle idle animations to maintain realism when the user pauses or veers off-course.</p>
-  </li>
-  <li>
-    <p>Colour‑code the avatar’s outline or attire to reflect navigation states (e.g., green for “en route,” amber for “paused”).</p>
-  </li>
+  <li><strong>Biography</strong><br />
+ -</li>
 </ul>
 
-<p><strong>Point‑of‑Interest Menu</strong></p>
-
-<ul>
-  <li>
-    <p>Provide a floating radial or list menu allowing users to select their next destination.</p>
-  </li>
-  <li>
-    <p>Display estimated travel time based on the avatar’s adaptive speed profile.</p>
-  </li>
-</ul>
-
-<p><strong>Gesture‑Activated Controls</strong></p>
-
-<ul>
-  <li>
-    <p>Recognize a simple hand gesture (e.g., palm‑up) to reveal a mini hand‑menu with Start, Pause, Resume, and End options.</p>
-  </li>
-  <li>
-    <p>Deliver haptic or auditory confirmation upon each command.</p>
-  </li>
-</ul>
-
-<p><strong>Auditory &amp; Spatial Prompts</strong></p>
-
-<ul>
-  <li>
-    <p>Issue spatialized vocal cues (e.g., “Turn left ahead”) and footstep sounds at key decision points.</p>
-  </li>
-  <li>
-    <p>Dynamically adjust volume and cadence in response to ambient noise and proximity.</p>
-  </li>
-</ul>
-
-<p><strong>Arrival Interaction</strong></p>
-
-<ul>
-  <li>
-    <p>Upon reaching a PoI, have the avatar stop, turn toward the visitor, and perform a brief welcoming gesture.</p>
-  </li>
-  <li>
-    <p>Simultaneously trigger an on‑screen tooltip and a gentle chime to affirm arrival.</p>
-  </li>
-</ul>
-
-<h2 id="media">Media</h2>
+<h3 id="discussion">Discussion</h3>
+<p>This pattern balances technological capabilities (real-time localization, inverse-kinematics) with user experience goals (comfort, engagement). Future considerations include multi-avatar guiding for group tours and personalized narrative branching based on visitor interests.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -292,10 +367,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

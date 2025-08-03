@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,108 +168,169 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif" alt="AR Interaction" class="profile" />
+        <h1 id="exhibit-knowledge-trigger">Exhibit Knowledge Trigger</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+Exhibit Knowledge Trigger</li>
+  <li><strong>Intent</strong><br />
+Surface a single high-value concept through a brief, goal-oriented interaction that unlocks deeper AR content.</li>
+</ul>
+
+<hr />
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+Visitors may perceive AR prompts as decorative and overlook core scientific or cultural insights, reducing the exhibit’s interpretive value.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Exhibits feature specific behavioural or functional phenomena (e.g., echolocation) that benefit from hands-on demonstration</li>
+      <li>Spatial affordances allow auxiliary virtual objects within a few metres of the primary exhibit</li>
+      <li>Visitors are open to light, one-step interactions rather than lengthy manipulations</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>A single concept needs highlighting before revealing richer AR layers</li>
+      <li>Playful, embodied tasks boost engagement and illustrate cause-and-effect</li>
+      <li>Learning should be scaffolded, rewarding exploration with additional content</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Engagement vs. Friction</strong>: Task must be intuitive enough to invite participation without oversimplifying the concept</li>
+      <li><strong>Focus vs. Distraction</strong>: Interaction loop must foreground the knowledge nugget without pulling attention too far from the exhibit</li>
+      <li><strong>Spatial Accuracy</strong>: Object placement and drop-zone detection require precise localization</li>
+      <li><strong>Feedback Multimodality</strong>: Visual, audio, and optional haptic cues must align to confirm success</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Deepens understanding of the key concept; scaffolds learning; motivates further exploration</li>
+      <li><strong>Negative</strong>: Misregistration or failed pickups can frustrate users; poorly tuned feedback may feel gimmicky</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Spatial Object Placement</strong>
+    <ul>
+      <li>Position an auxiliary virtual object (e.g., a fish) 2–3 m from the life-size orca model.</li>
+      <li>Render a subtle “grab here” indicator when visitors approach.</li>
+    </ul>
+  </li>
+  <li><strong>Knowledge-Centric Interaction Loop</strong>
+    <ul>
+      <li>Prompt the visitor (voice/UI) to grab the fish.</li>
+      <li>On pickup, orca orients toward the fish and plays a sonar click sequence with pulsed cone waveform.</li>
+    </ul>
+  </li>
+  <li><strong>Completion &amp; Knowledge Delivery</strong>
+    <ul>
+      <li>When the fish is placed into the orca’s mouth zone:
+        <ul>
+          <li>Play confirmation chime; cease sonar animation.</li>
+          <li>Display a multimedia panel summarizing echolocation (frequency range, tactics, ecology).</li>
+          <li>Offer a “Discover More” button to unlock feeding-behaviour mini-scenes or anatomy overlays.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Feedback Cues</strong>
+    <ul>
+      <li><strong>Visual</strong>: Fish outline glows within the drop zone; orca eyes blink on success.</li>
+      <li><strong>Auditory</strong>: Escalating pings as fish nears mouth, resolved by a soft “capture” tone.</li>
+      <li><strong>Haptic (optional)</strong>: Controller vibration or glove pulse upon correct release.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>A focused micro-task leverages embodied interaction to make an abstract concept tangible, priming visitors for deeper AR layers once the core insight is understood.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Object Distance</strong>: 2–3 m from primary exhibit</li>
+  <li><strong>Drop-Zone Radius</strong>: 0.5–0.8 m around orca’s mouth</li>
+  <li><strong>Sonar Pulse Rate</strong>: 4–6 clicks per second, cone angle ~30°</li>
+  <li><strong>Chime Duration</strong>: 0.3 s for quick confirmation</li>
+  <li><strong>Panel Fade-In</strong>: 0.5 s transition</li>
+</ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Knowledge Badge</strong>: Award “Echolocation Expert” on first completion</li>
+  <li><strong>Speed Challenge</strong>: Time from pickup to placement for a playful leaderboard</li>
+  <li><strong>Layer Unlock</strong>: Completing the micro-task reveals advanced AR modules</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>Floor Circle (proximity-triggered activation)</li>
+  <li>Avatar Guide (guided pacing and narrative)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Promotes active learning, strengthens concept retention, feels rewarding</li>
+  <li><strong>Risks</strong>: Jittery tracking or missed pickups can break flow; excessive UI panels may distract</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/HBKIbfCrwZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h1 id="exhibit-knowledge-trigger">Exhibit Knowledge Trigger</h1>
+<!-- A visitor grabs a virtual fish floating beside the AR orca. As the fish nears the orca’s mouth, increasing sonar pings build anticipation; dropping the fish triggers a chime and reveals a concise panel on echolocation, with an option to explore feeding-behaviour scenes. -->
 
-<h2 id="problem">Problem</h2>
-<p>Visitors frequently perceive AR prompts as merely decorative and may fail to uncover deeper scientific or cultural insights embedded in an exhibit. Without an engaging, goal-oriented micro-task, the core educational message can remain latent, reducing the interpretive value of the AR experience.</p>
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
 
-<h2 id="context">Context</h2>
-<p>Applicable in AR-enhanced galleries where:</p>
-
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>Exhibits possess specific behavioural or functional phenomena (e.g., echolocation) that benefit from experiential demonstration;</p>
-  </li>
-  <li>
-    <p>Spatial affordances allow placement of auxiliary virtual objects within a few metres of the primary exhibit;</p>
-  </li>
-  <li>
-    <p>Visitors are encouraged to perform light, one-step interactions (e.g., grab-and-place) rather than lengthy manipulation sequences.</p>
-  </li>
+  <li><strong>Draw visitors in</strong>: Prompt curiosity by highlighting a floating virtual fish beside the orca and inviting a “grab” interaction.</li>
+  <li><strong>Auto-start interaction</strong>: Automatically reveal the fish and “grab here” indicator when a visitor approaches within 2–3 m of the exhibit.</li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
-
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>Designers need to foreground a single, high-value knowledge point before unlocking more extensive AR content.</p>
-  </li>
-  <li>
-    <p>Visitors are likely to be attracted by playful, embodied tasks that immediately visualise cause–and-effect relationships.</p>
-  </li>
-  <li>
-    <p>The museum aims to scaffold learning progressively, rewarding exploratory behaviour with additional layers of information.</p>
-  </li>
+  <li><strong>Object highlight</strong>: Subtle glowing outline around the fish signals it’s interactive.</li>
+  <li><strong>Drop-zone marker</strong>: A pulsing ring at the orca’s mouth indicates where to place the fish.</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: Escalating sonar pings begin on pickup and resolve into a soft chime on correct placement.</li>
+  <li><strong>Visual cue</strong>: The fish outline glows brighter as it nears the drop-zone; orca eyes blink on success.</li>
+  <li><strong>Narration launch</strong>: A concise echolocation summary panel fades in immediately upon successful placement.</li>
+</ol>
 
-<p>Extract a concise knowledge nugget from the exhibit and embed it in an interaction loop that is short, intuitive, and intrinsically meaningful.</p>
-
-<p><strong>Knowledge-Centric Interaction Loop</strong></p>
-
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>Identify the exhibit’s key concept—in the Orca case, ultrasonic hunting.</p>
-  </li>
-  <li>
-    <p>Author an auxiliary virtual object (e.g., a fish) positioned 2–3 m from the life-size 3-D orca model.</p>
-  </li>
-  <li>
-    <p>Instruct the visitor (verbally or via subtle UI) to grab the fish.</p>
-  </li>
+  <li><strong>Intuitive guidance</strong>: Use direct, hands-on actions (grab &amp; drop) to illustrate the concept without menus.</li>
+  <li><strong>Seamless transition</strong>: Provide instant multimodal feedback (visual, audio, haptic) to maintain flow from task to learning.</li>
+  <li><strong>Comfortable pacing</strong>: Allow visitors to interact at their own speed—no countdowns or time pressure unless opting into challenges.</li>
 </ul>
 
-<p><strong>Dynamic Exhibit Response</strong></p>
-
-<p>Upon fish pickup, trigger a state change in the orca model:</p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>Orca re-orients toward the fish with realistic swimming animation;</p>
-  </li>
-  <li>
-    <p>A pulsed, cone-shaped sonar waveform emanates from the orca’s head;</p>
-  </li>
-  <li>
-    <p>Spatial audio plays an authentic echolocation click sequence.</p>
-  </li>
+  <li><strong>Traffic flow</strong>: Stagger interaction availability or use proximity locks to avoid crowding at the drop-zone.</li>
+  <li><strong>Aesthetic harmony</strong>: Match fish and UI overlays to the exhibit’s visual style and ambient lighting.</li>
+  <li><strong>Accessibility</strong>: Offer captions for audio cues, optional vibration feedback, and adjustable outline contrast for visibility.</li>
 </ul>
 
-<p><strong>Completion &amp; Knowledge Delivery</strong></p>
+<hr />
+<h2 id="supplementary-information">Supplementary Information</h2>
+<h3 id="biography">Biography</h3>
+<!-- Built by AR educator Dr. Elena García for the “Marine Minds” exhibit at the Ocean Discovery Center, 2024. -->
 
-<p>When the visitor places or throws the fish into the orca’s mouth region:</p>
-
-<ul>
-  <li>
-    <p>A confirmation chime sounds and the sonar animation ceases;</p>
-  </li>
-  <li>
-    <p>A concise multimedia panel appears, summarising orca echolocation (frequency range, hunting tactics, ecological relevance);</p>
-  </li>
-  <li>
-    <p>The panel offers a “Discover More” button that unlocks additional AR layers—e.g., feeding-behaviour mini-scenes or comparative anatomy overlays.</p>
-  </li>
-</ul>
-
-<p><strong>Feedback Cues</strong></p>
-
-<ul>
-  <li>
-    <p>Visual — fish outline glows when within the valid drop zone; orca eyes blink to acknowledge success.</p>
-  </li>
-  <li>
-    <p>Auditory — escalating sonar pings as proximity narrows, resolved by a softer “capture” tone on completion.</p>
-  </li>
-  <li>
-    <p>Haptic (optional) — short controller vibration or glove feedback when the fish is released correctly.</p>
-  </li>
-</ul>
-
-<h2 id="media">Media</h2>
+<h2 id="discussion">Discussion</h2>
+<p>Key tuning involves aligning drop-zone sensitivity with tracking fidelity and balancing the brevity of the task against the richness of the follow-on content. Future extensions could adapt the experience for groups or integrate adaptive difficulty based on visitor age.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -284,10 +345,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

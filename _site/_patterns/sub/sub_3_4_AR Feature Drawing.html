@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,76 +168,174 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/DrawingExample.jpg" alt="AR Interaction" class="profile" />
+        <h1 id="ar-exhibit-feature-drawing">AR Exhibit Feature Drawing</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+AR Exhibit Feature Drawing</li>
+  <li><strong>Intent</strong><br />
+Invite visitors to co-create and explore speculative or contested exhibit details through freehand AR sketching and comparison with expert models.</li>
+</ul>
+
+<hr />
+
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+Static presentations of speculative or partially unknown exhibit features limit engagement and creative interpretation.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Exhibits rely on hypotheses or evolving consensus (feather morphology, extinct coloration, reconstruction details)</li>
+      <li>AR can overlay an interactive canvas directly on or around 3D models</li>
+      <li>Visitors benefit from hands-on, creative engagement</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Scientific or historical details are hypothetical or debated</li>
+      <li>The exhibit’s goal is to spark visitor contribution, debate, and interpretation</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Openness vs. Accuracy</strong>: Balancing creative freedom with scientific fidelity</li>
+      <li><strong>Accessibility vs. Complexity</strong>: Making drawing intuitive without overwhelming novices</li>
+      <li><strong>Persistence vs. Ephemerality</strong>: Deciding whether visitor sketches remain session-only or contribute to a shared gallery</li>
+      <li><strong>Feedback Timeliness</strong>: Providing real-time stroke feedback without latency</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Deepens engagement, fosters ownership and discussion, makes science participatory</li>
+      <li><strong>Negative</strong>: Poor drawing controls can frustrate visitors; conflicting community sketches may confuse rather than clarify</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Freehand &amp; Pinch-Gesture Drawing</strong>
+    <ul>
+      <li>Provide a spatial canvas around or directly on the 3D exhibit model.</li>
+      <li>Enable mid-air strokes for sketching details (feathers, textures) and pinch gestures to adjust brush size or erase.</li>
+    </ul>
+  </li>
+  <li><strong>Feature Customization Toolkit</strong>
+    <ul>
+      <li>Offer adjustable brush size, opacity, and a scientific-theory–inspired palette.</li>
+      <li>Include layering and undo/redo for refinement.</li>
+    </ul>
+  </li>
+  <li><strong>Start-Point Guidance &amp; Prompt Zones</strong>
+    <ul>
+      <li>Highlight recommended areas (e.g., wing surfaces, crests) with subtle markers.</li>
+      <li>Display a brief on-screen prompt explaining how to begin.</li>
+    </ul>
+  </li>
+  <li><strong>Feedback &amp; Comparative Overlay</strong>
+    <ul>
+      <li>Show real-time visual feedback for stroke accuracy and depth placement.</li>
+      <li>Provide a toggle to overlay expert or consensus reconstructions for side-by-side comparison.</li>
+    </ul>
+  </li>
+  <li><strong>Creative Interpretation Gallery</strong>
+    <ul>
+      <li>On completion, allow visitors to save their designs to a shared AR gallery.</li>
+      <li>Cycle through community submissions on a virtual wall to encourage discussion.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Allowing visitors to actively sketch hypotheses turns passive observation into participatory science, making speculative details tangible and fostering deeper curiosity and debate.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Brush Sizes</strong>: 1–10 cm virtual width, adjustable via pinch span</li>
+  <li><strong>Opacity Levels</strong>: 20–100% in 10% increments</li>
+  <li><strong>Stroke Latency</strong>: ≤ 50 ms for real-time feel</li>
+  <li><strong>Prompt Zone Highlight</strong>: 0.2 m radius pulsing halo</li>
+  <li><strong>Gallery Slot Limit</strong>: Store up to 20 recent designs per exhibit</li>
+</ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Community Badge</strong>: Earn “Citizen Illustrator” for contributing a design</li>
+  <li><strong>Challenge Mode</strong>: Attempt to match an expert sketch under a time limit</li>
+  <li><strong>Voting System</strong>: Visitors can upvote favorite community sketches</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>Exhibit Knowledge Trigger (micro-task activation)</li>
+  <li>Floor Circle (proximity-based AR entry)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Transforms speculation into tangible interaction; fosters social learning</li>
+  <li><strong>Risks</strong>: UI clutter if toolkit is too large; sketch overlays may obscure the physical artifact</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/UrQMUq3n9PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h1 id="ar-exhibit-feature-drawing">AR Exhibit Feature Drawing</h1>
+<!-- At a paleontology exhibit, visitors sketch feather patterns on a velociraptor model. They adjust brush thickness with pinches, compare their designs to a paleontologist’s rendition, and then submit their own version to the exhibit’s AR gallery wall. -->
 
-<h2 id="problem">Problem</h2>
-<p>Static presentations of speculative or partially unknown exhibit features limit visitor engagement and discourage creative interpretation.</p>
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
 
-<h2 id="context">Context</h2>
-<p>Use in exhibits where scientific consensus is evolving (e.g., feather morphology of early dinosaurs, coloration of extinct species, architectural reconstructions).</p>
-
-<h2 id="use-when">Use When</h2>
-
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>The exhibit relies on hypothetical or contested visual details.</p>
-  </li>
-  <li>
-    <p>The aim is to invite visitors to co-create or debate plausible interpretations.</p>
-  </li>
+  <li><strong>Spark creativity</strong>: Encourage visitors to imagine and sketch speculative features (e.g., feather patterns) directly on the exhibit model.</li>
+  <li><strong>Compare perspectives</strong>: Invite side-by-side exploration of personal sketches and expert reconstructions to foster critical thinking.</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
-
-<p><strong>Freehand &amp; Pinch-Gesture Drawing</strong></p>
-
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>Provide a spatial canvas around or directly on the 3-D exhibit model.</p>
-  </li>
-  <li>
-    <p>Let visitors sketch feathers, textures, or annotations using mid-air strokes and pinch gestures.</p>
-  </li>
+  <li><strong>Prompt zones</strong>: Subtle pulsing halos around recommended drawing areas (e.g., wings, crests) guide where to begin.</li>
+  <li><strong>Tool icons</strong>: Floating brush and eraser icons that appear when users perform pinch gestures to select tools.</li>
 </ul>
 
-<p><strong>Feature Customization Toolkit</strong></p>
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: A soft brush stroke sound when drawing begins and an erase “swoosh” on pinch-delete.</li>
+  <li><strong>Visual cue</strong>: Real-time stroke feedback with immediate line rendering and brush-size halo adjustments.</li>
+  <li><strong>Comparison overlay</strong>: A semi-transparent expert sketch fades in when the user toggles the “Expert View” button.</li>
+</ol>
 
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>Offer adjustable brush size, opacity, and palette options drawn from current scientific theories.</p>
-  </li>
-  <li>
-    <p>Allow erasing or layering to refine ideas.</p>
-  </li>
+  <li><strong>Direct manipulation</strong>: Let visitors draw mid-air strokes that adhere to the 3D model’s surface, avoiding separate menus.</li>
+  <li><strong>Fluid transitions</strong>: Ensure seamless toggling between freehand and comparison modes without interrupting the creative flow.</li>
+  <li><strong>Creative freedom within bounds</strong>: Provide guidelines via prompt zones but allow unrestricted sketching elsewhere.</li>
 </ul>
 
-<p><strong>Start-Point Guidance &amp; Prompt Zones</strong></p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>Highlight recommended areas (e.g., wings, crest) to encourage exploration without overwhelming novices.</li>
+  <li><strong>Interface minimalism</strong>: Keep brush controls unobtrusive—hide tool icons when idle to preserve focus on the artifact.</li>
+  <li><strong>Gallery management</strong>: Limit saved designs to a recent curated set (e.g., 20 per exhibit) to maintain quality.</li>
+  <li><strong>Accessibility</strong>: Offer adjustable stroke contrast, voice commands for tool selection, and subtitle prompts for all instructions.</li>
 </ul>
 
-<p><strong>Feedback &amp; Comparative Overlay</strong></p>
+<hr />
 
-<ul>
-  <li>
-    <p>Real-time visual feedback shows stroke accuracy and depth placement.</p>
-  </li>
-  <li>
-    <p>A toggle reveals expert or consensus reconstructions so visitors can compare and reflect.</p>
-  </li>
-</ul>
+<h2 id="supplementary-information">Supplementary Information</h2>
 
-<p><strong>Creative Interpretation Gallery</strong></p>
+<h3 id="biography">Biography</h3>
+<p>-</p>
 
-<ul>
-  <li>Upon finishing, save visitor designs to a shared gallery wall, cycling through community contributions and sparking discussion.</li>
-</ul>
+<hr />
 
-<h2 id="media">Media</h2>
+<h2 id="discussion">Discussion</h2>
+<p>Critical tuning involves ensuring drawing controls are intuitive across devices and balancing community contributions so the shared gallery remains inspiring rather than chaotic. Future enhancements might include AI-assisted sketch suggestions or collaborative multi-user drawing sessions.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -252,10 +350,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

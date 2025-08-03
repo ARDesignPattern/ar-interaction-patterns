@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,117 +168,176 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif" alt="AR Interaction" class="profile" />
-</div>
+        <!-- <div class="column">
+  <img src="/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif" alt="AR Interaction" class="profile">
+</div>  -->
+
 <h1 id="forward-cue-routing">Forward Cue-Routing</h1>
 
-<h2 id="problem">Problem</h2>
-<p>Visitors often lose situational awareness at decision points such as corners or junctions. Traditional path lines may be overlooked in visually dense AR scenes, and users may miss subtle route deviations, leading to detours and time loss.</p>
-
-<h2 id="context">Context</h2>
-<p>Applicable to AR-enabled environments that:</p>
-
+<hr />
+<h2 id="overview">Overview</h2>
 <ul>
-  <li>
-    <p>feature long corridors, frequent turns, or multi-level layouts;</p>
+  <li><strong>Name</strong><br />
+Forward Cue-Routing</li>
+  <li><strong>Intent</strong><br />
+Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised visual ‘ripples’ and spatialised audio, while displaying the route the user has already passed.</li>
+</ul>
+
+<hr />
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+Visitors often lose situational awareness at decision points such as corners or junctions. Traditional path lines may be overlooked in visually dense AR scenes, and users may miss subtle route deviations, leading to detours and time loss.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Feature long corridors, frequent turns, or multi-level layouts</li>
+      <li>Can pre-author routes and embed triggers at discrete waypoints</li>
+      <li>Require an unobtrusive, ground-anchored visual language to maintain immersion</li>
+    </ul>
   </li>
-  <li>
-    <p>can pre-author routes and embed triggers at discrete waypoints;</p>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Users prefer minimal above-eye-level graphics that do not occlude exhibits</li>
+      <li>Clear anticipation of turns is essential—for example, in labyrinthine galleries</li>
+      <li>The institution wants a metaphor evocative of flow or movement (e.g., ripples) rather than character-based guidance</li>
+      <li>Acoustic icons can be leveraged at each turn to reinforce direction without constant narration</li>
+    </ul>
   </li>
-  <li>
-    <p>require an unobtrusive, ground-anchored visual language to maintain immersion.</p>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Visual Density</strong>: AR elements must not compete with exhibits</li>
+      <li><strong>Anticipation vs. Reaction</strong>: Cues must appear early enough to redirect attention</li>
+      <li><strong>Pacing</strong>: Visual and audio rhythms should match average walking speed</li>
+      <li><strong>Localization Accuracy</strong>: Ground-anchored cues rely on precise user positioning</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Smooth, predictable navigation; high immersion; low UI clutter</li>
+      <li><strong>Negative</strong>: May be missed if localization jitters; requires careful tuning of cue timing and intensity</li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
+<hr />
+<h2 id="application">Application</h2>
 
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Waypoint-Based Guiding</strong>
+    <ul>
+      <li>Author a polyline route with triggers at each change-of-direction node.</li>
+      <li>On trigger, emit a localized cluster of visual ripples and spatialized audio.</li>
+    </ul>
+  </li>
+  <li><strong>Point of Interest Selection Interface</strong>
+    <ul>
+      <li>At the start hub, display a floor-pinned planar menu with PoI thumbnails, estimated walking time, and “Start.”</li>
+    </ul>
+  </li>
+  <li><strong>Navigation Control Interface</strong>
+    <ul>
+      <li>Invoke the start menu on demand via gesture or voice (“Show route menu”).</li>
+      <li>Allow Pause/Abort; cache progress for later resumption.</li>
+    </ul>
+  </li>
+  <li><strong>Directional Visual Cues</strong>
+    <ul>
+      <li>Animate concentric “raindrop” rings on the ground, propagating toward the next waypoint.</li>
+      <li>Map ring expansion rate to recommended walking speed; slow-expanding rings signal deceleration.</li>
+    </ul>
+  </li>
+  <li><strong>Auditory Feedback</strong>
+    <ul>
+      <li>Play a spatialized whoosh or bell at each turn trigger, aligned with turn direction.</li>
+      <li>Adjust ambient volume based on acoustic properties of the environment.</li>
+    </ul>
+  </li>
+  <li><strong>Arrival Trigger</strong>
+    <ul>
+      <li>Converge final rings into a glowing disc at the PoI.</li>
+      <li>Play a harmonic chord and pulse light to confirm arrival.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Ground-anchored ripples leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li>
-    <p>Users prefer minimal above-eye-level graphics that do not occlude exhibits.</p>
-  </li>
-  <li>
-    <p>Clear anticipation of turns is essential—for example, in labyrinthine galleries.</p>
-  </li>
-  <li>
-    <p>The institution wants a metaphor evocative of flow or movement (e.g., ripples) rather than character-based guidance.</p>
-  </li>
-  <li>
-    <p>Acoustic icons can be leveraged at each turn to reinforce direction without constant narration.</p>
-  </li>
+  <li><strong>Ring Expansion Rate</strong>: Set so a ring reaches midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s)</li>
+  <li><strong>Trigger Radius</strong>: 1–2 m before each waypoint to fire cues early</li>
+  <li><strong>Audio Lead Time</strong>: 0.5–1 s before visual rings to pre-alert</li>
+  <li><strong>Opacity Falloff (Optional)</strong>: Ripples fade over 1.5 s to avoid persistence</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
+<!-- ### Game Mechanics
+- **Progress Meter**: Subtle floor bar filling toward next waypoint  
+- **Time Trials**: Display a “beat the ripple” timer for more playful visits  
+- **Achievements**: Unlock badges for completing routes without pausing   -->
 
-<p>Leverage animated ground projections and waypoint-linked audio to shepherd visitors smoothly from origin to destination.</p>
+<h3 id="related-pattern">Related Pattern</h3>
+<!-- - Avatar Guide (character-led pacing)  
+- Abstract Wayfinding (floating arrows, decals)   -->
 
-<p><strong>Waypoint-Based Guiding Method</strong></p>
-
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
 <ul>
-  <li>
-    <p>Author a polyline route; place event triggers at each change-of-direction node.</p>
-  </li>
-  <li>
-    <p>Each trigger initiates a localised cue cluster (visual + auditory).</p>
-  </li>
+  <li><strong>Enhances</strong>: Maintains attention on exhibits; feels organic and thematic</li>
+  <li><strong>Risks</strong>: Misaligned or jittery cues break presence; too-subtle rings may go unnoticed</li>
 </ul>
 
-<p><strong>Point of Interest Selection Interface</strong></p>
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/Xs7Bb4F3tq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<!-- In a “Medieval Gallery” corridor, concentric green ripples pulse outward along the stone floor toward the next alcove. A soft chime precedes each ring sequence. Visitors instinctively follow the expanding rings and arrive at alcoves just as informative voice-overs begin. -->
 
+<hr />
+
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
+
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>At the start hub, render a planar menu pinned to the floor or a nearby pedestal.</p>
-  </li>
-  <li>
-    <p>Options include PoI thumbnails, estimated walking time, and a Start button.</p>
-  </li>
+  <li><strong>Anticipate direction</strong>: Provide subtle early cues (ripples and audio) that draw visitors’ attention to upcoming turns before they reach decision points.</li>
+  <li><strong>Maintain flow</strong>: Encourage continuous movement by syncing visual and auditory rhythms with average walking pace, preventing stops or confusion.</li>
 </ul>
 
-<p><strong>Navigation Control Interface</strong></p>
-
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>The same start menu reappears on demand via gesture or voice (“Show route menu”).</p>
-  </li>
-  <li>
-    <p>Users can Pause or Abort; route progress is cached for later resumption.</p>
-  </li>
+  <li><strong>Ground ripples</strong>: Animated ripple effects, such as circular/ring patterns spreading out to the next waypoint, are used to indicate direction and time.</li>
+  <li><strong>Audio icon</strong>: Spatialized whoosh or bell sound that originates from the turn point, reinforcing the visual cue.</li>
 </ul>
 
-<p><strong>Directional Visual Cues</strong></p>
-
+<h3 id="interactive-narrative">Interactive Narrative</h3>
 <ul>
-  <li>
-    <p>A series of concentric, outward-expanding “raindrop” rings animate along the ground, always propagating toward the next waypoint.</p>
-  </li>
-  <li>
-    <p>Ring expansion rate corresponds to recommended walking speed; slowing rings indicate the need to decelerate.</p>
-  </li>
+  <li><strong>Narration Design</strong>: Present both auditory and visual narratives at each turning point so that users can experience a coherent narrative as they progress along the path.</li>
+  <li><strong>Audio cue</strong>: A directional tone plays 0.5–1 s before the ripple animation, guiding attention toward the turn.</li>
+  <li><strong>Visual cue</strong>: Ground-anchored ripples pulse and expand in a “raindrop” fashion, mapped to walking speed.</li>
+  <li><strong>Arrival marker</strong>: Final ripples converge into a glowing disc with a harmonic chord to signal PoI arrival.</li>
 </ul>
 
-<p><strong>Auditory Feedback</strong></p>
-
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>At each turn trigger, play a short spatialised whoosh or bell aligned with the upcoming direction.</p>
-  </li>
-  <li>
-    <p>Ambient volume scales with hallway acoustics to remain perceptible but non-intrusive.</p>
-  </li>
+  <li><strong>Peripheral engagement</strong>: Use low-profile, ground-anchored visuals that register in the peripheral vision without occluding exhibits.</li>
+  <li><strong>Temporal alignment</strong>: Time cues so that rings reach the midpoint between waypoints in 2–3 s at normal walking speed, ensuring intuitive pacing.<br />
+<!-- - **Minimal distraction**: Keep cues subtle yet noticeable—avoid abrupt or oversized graphics that compete with the environment.   --></li>
 </ul>
 
-<p><strong>Arrival Trigger</strong></p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>Final rings converge into a glowing disc at the PoI.</p>
-  </li>
-  <li>
-    <p>A harmonic chord and gentle pulse of light confirm arrival.</p>
-  </li>
+  <li><strong>Spatial calibration</strong>: Fine-tune trigger radii (1–2 m) and localization precision to prevent premature or delayed cues.</li>
+  <li><strong>Acoustic context</strong>: Adjust audio volume and frequency to suit ambient noise levels and room acoustics.</li>
+  <li><strong>Accessibility options</strong>: Offer adjustable ripple contrast, optional high-contrast overlays for hearing-impaired visitors.</li>
 </ul>
 
-<h2 id="media">Media</h2>
+<hr />
+<h2 id="supplementary-information">Supplementary Information</h2>
+<h3 id="biography">Biography</h3>
+<!-- Developed by AR designer Li Wei for the “Time Passage” exhibition at the Beijing Museum of Digital Art, 2024. -->
+
+<h2 id="discussion">Discussion</h2>
+<p>Tuning the balance between subtlety and noticeability is key: too-fast ripples rush visitors, too-slow ones risk invisibility. Future work includes adaptive ring colors for accessibility and multi-path routing for group tours.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -293,10 +352,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,76 +168,170 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Placing1.jpg" alt="AR Interaction" class="profile" />
+        <h1 id="ar-exhibit-reassembler">AR Exhibit Reassembler</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+AR Exhibit Reassembler</li>
+  <li><strong>Intent</strong><br />
+Enable visitors to virtually reconstruct missing artifact components through an interactive 3D puzzle, deepening comprehension of the whole form and its significance.</li>
+</ul>
+
+<hr />
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+When only partial physical artifacts are on display, visitors struggle to grasp the complete structure and relationships between parts.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Exhibits with missing components (fossils, machinery, relics)</li>
+      <li>Digital reconstructions available for the absent pieces</li>
+      <li>Desire to engage users in an active, hands-on learning process</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Visitors encounter artifacts with substantial missing elements</li>
+      <li>The goal is to teach overall structure via participatory assembly</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Engagement vs. Complexity</strong>: Balancing puzzle difficulty to avoid frustration</li>
+      <li><strong>Accuracy vs. Playfulness</strong>: Ensuring reconstructions are correct while remaining fun</li>
+      <li><strong>Spatial Registration</strong>: Aligning virtual pieces precisely with the physical artifact</li>
+      <li><strong>Feedback Responsiveness</strong>: Providing timely confirmation to sustain motivation</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Active learning, improved spatial understanding, memorable interaction</li>
+      <li><strong>Negative</strong>: Poor tracking or misplacements can cause confusion; overly simple puzzles may feel trivial</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Jigsaw-Puzzle Mechanic</strong>
+    <ul>
+      <li>Spawn interactive 3D fragments representing the missing parts.</li>
+      <li>Allow visitors to drag or gesture-match edges/textures to snap pieces into place on the physical artifact.</li>
+    </ul>
+  </li>
+  <li><strong>Progression Feedback</strong>
+    <ul>
+      <li>On correct placement, play a glow animation on the piece and an encouraging audio cue.</li>
+      <li>Update a visible completion meter (e.g., “3 of 8 pieces assembled”).</li>
+    </ul>
+  </li>
+  <li><strong>Adaptive Challenge</strong>
+    <ul>
+      <li>Start with boundary or high-contrast pieces for early confidence.</li>
+      <li>Introduce subtler shapes or mirrored fragments as users progress, adapting based on placement speed and errors.</li>
+    </ul>
+  </li>
+  <li><strong>Guidance &amp; Tutorial</strong>
+    <ul>
+      <li>Highlight an initial docking region with a pulsing indicator.</li>
+      <li>Play a brief voice-over or display on-screen instructions explaining controls and objectives.</li>
+    </ul>
+  </li>
+  <li><strong>Narrative Enhancements</strong>
+    <ul>
+      <li>As sections assemble, trigger contextual facts (e.g., “This vertebra supported the spinal cord”) via text and audio to weave learning into the flow.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Transforming passive viewing into active assembly engages spatial reasoning and contextualizes individual components within the artifact’s holistic form, reinforcing educational outcomes.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Piece Count</strong>: 6–12 fragments to balance challenge and completion time</li>
+  <li><strong>Snap Tolerance</strong>: 0.1–0.2 m positional threshold, 5–10° rotational allowance</li>
+  <li><strong>Feedback Delay</strong>: ≤ 0.2 s between placement and confirmation</li>
+  <li><strong>Completion Meter</strong>: Updated immediately upon each placement</li>
+  <li><strong>Tutorial Duration</strong>: 5–8 s voice-over with visual highlights</li>
+</ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Puzzle Badge</strong>: Award “Master Reassembler” upon full assembly</li>
+  <li><strong>Speed Run</strong>: Time from first pick to final snap for a leaderboard</li>
+  <li><strong>Hint Tokens</strong>: Earn or purchase hints to highlight next piece or region</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>Exhibit Knowledge Trigger (focused micro-task)</li>
+  <li>Avatar Guide (guided pacing and narrative)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Hands-on engagement, spatial learning, narrative context</li>
+  <li><strong>Risks</strong>: Tracking jitter or misalignment breaks presence; excessive tutorial can feel patronizing</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/pYIqsSc2lLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h1 id="ar-exhibit-reassembler">AR Exhibit Reassembler</h1>
+<!-- In a dinosaur exhibit, visitors slide 3D femur and rib fragments into place on a partial skeleton. Each correctly snapped bone glows and plays a short roar, while a meter tracks progress. Upon completion, a voice-over narrates the full skeletal structure and its function. -->
 
-<h2 id="problem">Problem</h2>
-<p>When an exhibit showcases only partial physical artifacts, visitors struggle to grasp the exhibit’s full form and scale, hindering their understanding of how individual parts relate to the whole.</p>
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
 
-<h2 id="context">Context</h2>
-<p>This pattern applies to museum pieces (e.g., fossils, machinery, architectural relics) where substantial elements are missing, yet digital reconstructions are available to complete the story.</p>
-
-<h2 id="use-when">Use When</h2>
-
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>Visitors encounter exhibits with missing components that must be virtually reconstructed.</p>
-  </li>
-  <li>
-    <p>The goal is to deepen comprehension of an object’s overall structure and significance through active participation.</p>
-  </li>
+  <li><strong>Engage curiosity</strong>: Invite visitors to explore missing fragments by displaying ghosted outlines of each piece and prompting “Tap to pick up.”</li>
+  <li><strong>Hands-on reconstruction</strong>: Encourage active participation by letting visitors drag and snap virtual fragments into place at their own pace.</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
-
-<p><strong>Jigsaw-Puzzle Reconstruction Mechanic</strong></p>
-
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>Spawn interactive 3-D pieces representing the absent parts.</p>
-  </li>
-  <li>
-    <p>Require visitors to match shapes, edges, or textures to dock each piece in its correct position on the physical artifact.</p>
-  </li>
+  <li><strong>Ghost outlines</strong>: Faint silhouettes of missing components appear over the physical artifact to indicate where pieces belong.</li>
+  <li><strong>Snap zone markers</strong>: Pulsing rings or highlighted edges around target areas show valid placement regions.</li>
 </ul>
 
-<p><strong>Progression Feedback</strong></p>
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: A soft “snap” sound plays when a fragment enters the correct zone, and a brief “pickup” tone on initial grab.</li>
+  <li><strong>Visual cue</strong>: The fragment glows and briefly pulses on correct placement; the completion meter increments with an animated fill.</li>
+  <li><strong>Narration launch</strong>: Contextual facts (“This rib supported the chest cavity”) auto-play and display as text once each fragment is secured.</li>
+</ol>
 
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>After every correct placement, provide immediate visual confirmation (e.g., glow animation) and an encouraging audio cue.</p>
-  </li>
-  <li>
-    <p>Display a completion meter to motivate continued engagement.</p>
-  </li>
+  <li><strong>Intuitive interaction</strong>: Use direct manipulation (grab, drag, release) paired with clear visual markers to guide assembly without menus.</li>
+  <li><strong>Immediate feedback</strong>: Confirm actions within 0.2 s to maintain flow and reinforce learning through positive reinforcement.</li>
+  <li><strong>Self-paced discovery</strong>: Allow visitors to pause, inspect, and resume assembly without time pressure or forced sequencing.</li>
 </ul>
 
-<p><strong>Adaptive Challenge Balancing</strong></p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>Begin with boundary or high-contrast pieces to build confidence.</p>
-  </li>
-  <li>
-    <p>Gradually increase difficulty by introducing subtler matches or mirrored pieces based on user performance.</p>
-  </li>
+  <li><strong>Spatial accuracy</strong>: Calibrate snap tolerances (0.1–0.2 m, 5–10°) per exhibit to minimize frustration from misalignments.</li>
+  <li><strong>Aesthetic integration</strong>: Match fragment shading and highlight styles to the artifact’s palette and exhibit lighting.</li>
+  <li><strong>Accessibility</strong>: Offer alternative input (e.g., gesture-free selection), adjustable highlight contrast, and captions for audio narration.</li>
 </ul>
 
-<p><strong>Start-Point Guidance &amp; Tutorial</strong></p>
+<hr />
+<h2 id="supplementary-information">Supplementary Information</h2>
 
-<ul>
-  <li>Highlight an initial region of interest and launch a concise voice-over or on-screen guide explaining controls and objectives.</li>
-</ul>
+<h3 id="biography">Biography</h3>
+<!-- Designed by paleontology AR specialist Dr. Anika Vogel for the “Lost Giants” exhibit at the Natural History Forum, 2025. -->
 
-<p><strong>Narrative Enhancements</strong></p>
+<hr />
 
-<ul>
-  <li>As sections assemble, trigger contextual facts (e.g., bone function, historical discovery) to weave learning into the puzzle flow.</li>
-</ul>
-
-<h2 id="media">Media</h2>
+<h2 id="discussion">Discussion</h2>
+<p>Key challenges include ensuring robust spatial anchoring of virtual pieces and balancing puzzle difficulty. Future enhancements might introduce cooperative assembly for group learning or dynamically generate piece shapes based on user skill level.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -252,10 +346,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

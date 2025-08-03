@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,99 +168,172 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Gif/EnteringCircle.gif" alt="AR Interaction" class="profile" />
+        <h1 id="floor-circle">Floor Circle</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+Floor Circle</li>
+  <li><strong>Intent</strong><br />
+Provide an attention-grabbing, proximity-based AR entry point that encourages natural, embodied interaction without complex input.</li>
+</ul>
+
+<hr />
+
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+Visitors often struggle to distinguish AR-capable exhibits and may miss opportunities to engage at their own pace.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Only select exhibits offer AR content, so cues must stand out.</li>
+      <li>Visitors roam freely without a fixed route.</li>
+      <li>Activation must feel seamless, avoiding handheld controls or intricate gestures.</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>Visitors are scanning for interactive exhibits.</li>
+      <li>Approaching an AR-capable exhibit warrants a clear “entry zone.”</li>
+      <li>Designers want a spatial, proximity-driven activation method.</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Visibility vs. Subtlety</strong>: The circle must attract attention without obstructing sightlines.</li>
+      <li><strong>Proximity Accuracy</strong>: Reliable detection of user position to avoid false positives/negatives.</li>
+      <li><strong>Multimodal Feedback</strong>: Combining visual, audio, and animation cues to confirm activation.</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Intuitive activation, reduced learning curve, preserves immersion.</li>
+      <li><strong>Negative</strong>: Overly dense trigger areas may cause the trigger to activate unexpectedly or fail to function properly; overly bright or large trigger areas may cause clutter on the ground.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Spatial Entry Trigger</strong>
+    <ul>
+      <li>Render a virtual circle on the floor in front of the exhibit.</li>
+      <li>Use a proximity sensor: when the user’s feet enter the circle boundary, fire activation.</li>
+    </ul>
+  </li>
+  <li><strong>AR Experience Indicator Interface</strong>
+    <ul>
+      <li>Above or beside the circle, display:
+        <ul>
+          <li>A looping 3D model (e.g., a swimming orca).</li>
+          <li>A title label in legible typography (e.g., “Orca”).</li>
+          <li>Subtle pulsing or glow on the circle’s edge.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Activation Mechanism</strong>
+    <ul>
+      <li>On entry:
+        <ul>
+          <li>Play a spatial audio cue (chime or splash).</li>
+          <li>Fade out the model, label, and circle.</li>
+          <li>Voice prompt confirms launch: e.g., “Orca AR experience launched”. (Optional)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Feedback Cues</strong>
+    <ul>
+      <li>Visual disappearance of interface elements.</li>
+      <li>Spatialized audio confirmation.<br />
+<!-- - Optional quick “boot-up” animation before content begins. --></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Anchoring a simple visual zone to the floor leverages natural proximity behavior, reducing cognitive load and eliminating the need for manual controls. Multimodal cues ensure clear feedback without distracting from the exhibit.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Circle Radius</strong>: 1.2–1.5 m to allow comfortable entry.<br />
+<!-- - **Pulse Rate**: 0.8–1 Hz for gentle attractor effect.   --></li>
+  <li><strong>Label Height</strong>: 0.5 m above floor to stay in peripheral view.<br />
+<!-- - **Audio Volume**: Adjust to 60–70 dB SPL in typical gallery acoustics.   --></li>
+  <li><strong>Fade Duration (Optional)</strong>: 0.5 s for interface elements to dissolve.</li>
+</ul>
+
+<!-- ### Game Mechanics
+- **Proximity Badge**: Earn a “First Step” achievement for first-time activation.  
+- **Speed Challenge**: Time from circle entry to full activation for a playful metric.  
+- **Sequential Unlocks**: Visiting all circles in an exhibit set unlocks bonus content. -->
+
+<h3 id="related-pattern">Related Pattern</h3>
+<!-- - **Avatar Guide** (character-led escort)  
+- **Surface Tap Indicator** (gesture-based AR activation) -->
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Seamless entry, embodied interaction, minimal UI overhead.</li>
+  <li><strong>Risks</strong>: Jittery localization breaks presence; overly bold visuals detract from exhibits.</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/CtplECOaHXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h1 id="floor-circle">Floor circle</h1>
+<!-- At an aquarium exhibit, a softly glowing blue circle with a pulsing orca model invites visitors forward. Stepping into the zone triggers a splash sound, the circle fades, and a narrated 3D orca appears swimming in the space before them. -->
 
-<h2 id="problem">Problem</h2>
-<p>Visitors often struggle with understanding the various categories of information in an exhibit and may find it challenging to explore the exhibit at their own pace.</p>
+<hr />
 
-<h2 id="context">Context</h2>
-<p>This pattern is applicable in AR-supported exhibition spaces where:</p>
-
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>Only select exhibits offer AR content, requiring visual cues to stand out;</p>
-  </li>
-  <li>
-    <p>Visitors are free-roaming and may not follow a predetermined path;</p>
-  </li>
-  <li>
-    <p>Activation should feel natural and effortless, without relying on handheld input or complex gestures.</p>
-  </li>
+  <li><strong>Draw visitors in</strong>: Define an “experience circle” on the floor in front of the exhibit so visitors instinctively step into it.</li>
+  <li><strong>Auto-start interaction</strong>: Once inside the circle, AR content (narration or animation) begins without requiring any buttons.</li>
 </ul>
 
-<h2 id="use-when">Use When</h2>
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>Visitors are scanning the environment for interactive exhibits.</p>
-  </li>
-  <li>
-    <p>Visitors approach an AR-capable exhibit and need a clear entry point to trigger the experience.</p>
-  </li>
-  <li>
-    <p>Designers seek a spatial and embodied method to encourage proximity-based interaction.</p>
-  </li>
+  <li><strong>Floor marking</strong>: Paint a low-saturation circle on the gallery floor (radius ≈ 1.3 m) that complements the exhibit’s overall design.</li>
+  <li><strong>Guiding element</strong>: Beside the circle, place a small sign or sculpture (height ≈ 50 cm) with a prompt like “Step here to hear the whale’s story.”</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: As visitors enter the circle, play a soft ocean ambience or whale call at a comfortable volume.</li>
+  <li><strong>Visual cue</strong>: After the sound, fade out the floor marking and sign so attention shifts to the AR scene.</li>
+  <li><strong>Narration launch</strong>: Immediately follow with a voiceover, e.g. “Welcome to the orca exhibit”</li>
+</ol>
 
-<p>Provide an attention-grabbing interface anchored in physical space, using a distance-based trigger to seamlessly initiate AR content:</p>
-
-<p><strong>Spatial Entry Trigger</strong></p>
-
-<p>A virtual circle is rendered on the floor in front of the exhibit. This serves as both a visual attractor and an activation zone. The trigger is proximity-based: when the user steps inside the circle, the system initiates the AR experience.</p>
-
-<p><strong>AR Experience Indicator Interface</strong></p>
-
-<p>Positioned above or near the activation circle is a combination of elements that convey exhibit identity and interactivity:</p>
-
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>A 3D model representing the exhibit, such as a swimming orca rendered with subtle looping animation;</p>
-  </li>
-  <li>
-    <p>A title label, e.g., “Orca,” displayed in clean, legible typography;</p>
-  </li>
-  <li>
-    <p>The floor circle, which may pulse or glow gently to draw attention without disrupting the spatial environment.</p>
-  </li>
+  <li><strong>Intuitive guidance</strong>: Combine floor markings and text prompts to steer visitors along the intended path.</li>
+  <li><strong>Seamless transition</strong>: Ensure the fade-out of markers and the appearance of AR content are smooth, with no jarring gaps.</li>
+  <li><strong>Comfortable pacing (Optional)</strong>: Allow a brief (~0.5 s) pause before the animation or narration starts to maintain flow.</li>
 </ul>
 
-<p><strong>Activation Mechanism</strong></p>
-
-<p>When the user enters the virtual circle:</p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>A spatial audio cue plays (e.g., a short chime or water splash);</p>
-  </li>
-  <li>
-    <p>The 3D model, label, and circle fade out or dissolve to signal the transition;</p>
-  </li>
-  <li>
-    <p>A voice prompt confirms activation (e.g., “Orca AR experience launched”).</p>
-  </li>
+  <li><strong>Traffic flow</strong>: Position the circle so it doesn’t block main pathways or conflict with adjacent exhibits.</li>
+  <li><strong>Aesthetic harmony</strong>: Choose marking colors and materials that blend with floor finishes and lighting—visible yet unobtrusive.</li>
+  <li><strong>Accessibility</strong>: Ensure visitors of all heights and those with mobility challenges can easily enter the trigger zone.</li>
 </ul>
 
-<p><strong>Feedback Cues</strong></p>
+<hr />
+<h2 id="supplementary-information">Supplementary Information</h2>
 
-<p>Immediate multimodal feedback ensures users know their action was successful:</p>
+<h3 id="biography">Biography</h3>
+<p>-</p>
 
-<ul>
-  <li>
-    <p>Visual disappearance of interface elements;</p>
-  </li>
-  <li>
-    <p>Contextual audio confirmation via spatial voice or tone;</p>
-  </li>
-  <li>
-    <p>Optional brief visual transition or AR content boot-up sequence.</p>
-  </li>
-</ul>
-
-<h2 id="media">Media</h2>
+<h2 id="discussion">Discussion</h2>
+<p>Balance the circle’s visibility and size to avoid both missed activations and floor clutter. Future iterations might adapt circle color or shape based on user profiles or exhibit themes.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -275,10 +348,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>

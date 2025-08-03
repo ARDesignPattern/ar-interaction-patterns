@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Threat Defender</title>
+  <title>Object Catching</title>
   <link rel="canonical" href="http://localhost:4000/ar-interaction-patterns/_patterns/sub/sub_3_5_AR%20Threat%20Defender.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -155,7 +155,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/"
                class="">
-              Threat Defender
+              Object Catching
             </a>
           </li>
         
@@ -168,81 +168,176 @@
       </aside>
 
       <main class="pattern-main-content">
-        <div class="column">
-  <img src="/ar-interaction-patterns/images/Object%20Catching_1.png" alt="AR Interaction" class="profile" />
+        <h1 id="object-catching">Object Catching</h1>
+
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+  <li><strong>Name</strong><br />
+AR Object Catching</li>
+  <li><strong>Intent</strong><br />
+Convey invisible or abstract environmental threats through interactive AR gameplay, fostering urgency and empathy while teaching mitigation strategies.</li>
+</ul>
+
+<hr />
+
+<h2 id="target">Target</h2>
+<ul>
+  <li><strong>Problem</strong><br />
+Invisible or abstract threats—such as pollution or climate impacts—are difficult to convey in static exhibits, reducing visitor empathy and sense of agency.</li>
+  <li><strong>Context</strong>
+    <ul>
+      <li>Natural-history or environmental exhibits illustrating hazards (ghost nets, acidic runoff)</li>
+      <li>AR can render and animate non-physical threats in situ</li>
+      <li>Installation supports real-time gestural tracking</li>
+    </ul>
+  </li>
+  <li><strong>Use When</strong>
+    <ul>
+      <li>The exhibit aims to illustrate environmental hazards and empower visitors to act</li>
+      <li>Visitors can interact gesturally (hand or body tracking)</li>
+      <li>Threats are dynamic and benefit from active interception</li>
+    </ul>
+  </li>
+  <li><strong>Forces</strong>
+    <ul>
+      <li><strong>Visibility vs. Realism</strong>: Threats must look tangible without breaking immersion</li>
+      <li><strong>Engagement vs. Complexity</strong>: Gestures should be intuitive yet varied enough to teach concepts</li>
+      <li><strong>Feedback Latency</strong>: Real-time responses crucial to maintain sense of cause and effect</li>
+      <li><strong>Emotional Impact</strong>: Balancing urgency without overwhelming visitors</li>
+    </ul>
+  </li>
+  <li><strong>Consequences</strong>
+    <ul>
+      <li><strong>Positive</strong>: Deepens empathy, makes abstract hazards concrete, reinforces learning through action</li>
+      <li><strong>Negative</strong>: Poor tracking or slow feedback can frustrate; overly aggressive challenges may deter participation</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<h3 id="solution">Solution</h3>
+<ol>
+  <li><strong>Gesture-Based Object Interception</strong>
+    <ul>
+      <li>Spawn virtual threats (drifting nets, plastic debris) moving toward vulnerable exhibit zones (e.g., coral reef).</li>
+      <li>Track visitor hand/body gestures to block, deflect, or capture threats in mid-air.</li>
+    </ul>
+  </li>
+  <li><strong>Targeted Protection &amp; Progressive Challenges</strong>
+    <ul>
+      <li>Highlight critical zones when they’re at risk (glow or pulse).</li>
+      <li>Increase difficulty over time: faster threats, multiple simultaneous objects, or visual obfuscation (murkiness).</li>
+    </ul>
+  </li>
+  <li><strong>Start-Point Guidance with Animated Prompts</strong>
+    <ul>
+      <li>Begin with a short cinematic explaining real-world origin and impact of each threat.</li>
+      <li>Display ghost-hand overlays or arrows showing the protective gesture required (e.g., sweeping motion).</li>
+    </ul>
+  </li>
+  <li><strong>Narration &amp; Real-Time Feedback</strong>
+    <ul>
+      <li>Play spatialized audio narrating impact stats when a threat is intercepted or missed.</li>
+      <li>Show visual effects: healthy coral brightening and fish population bloom for successful defenses.</li>
+    </ul>
+  </li>
+  <li><strong>Educational Wrap-Up</strong>
+    <ul>
+      <li>After the session, display personalized metrics (objects intercepted, reef health score).</li>
+      <li>Present actionable conservation tips visitors can adopt outside the museum.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rationale">Rationale</h3>
+<p>Turning abstract environmental hazards into tangible, interactive threats leverages embodied action to build empathy and reinforce learning; immediate feedback ties visitor effort directly to positive virtual outcomes.</p>
+
+<h3 id="design-parameters">Design Parameters</h3>
+<ul>
+  <li><strong>Threat Speed</strong>: Start at 0.5 m/s, increase by 0.1 m/s every 20 seconds</li>
+  <li><strong>Gesture Window</strong>: Recognition window of 0.3–0.5 s for swipe or block motions</li>
+  <li><strong>Highlight Radius</strong>: 0.5 m glow around at-risk zones</li>
+  <li><strong>Feedback Delay</strong>: ≤ 0.1 s between gesture and visual/audio response</li>
+  <li><strong>Session Duration</strong>: 60–120 s for optimal engagement</li>
+</ul>
+
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Score Meter</strong>: Tracks number of threats intercepted</li>
+  <li><strong>Combo Bonus</strong>: Extra points for consecutive successful blocks</li>
+  <li><strong>Lives System</strong>: Allow 3 misses before “reef health” fails, prompting game over</li>
+  <li><strong>Unlockables</strong>: New threat types or conservation tips unlocked based on performance</li>
+</ul>
+
+<h3 id="related-pattern">Related Pattern</h3>
+<ul>
+  <li>AR Exhibit Reassembler (interactive assembly)</li>
+  <li>Exhibit Knowledge Trigger (micro-task activation)</li>
+</ul>
+
+<h3 id="impact-on-immersion">Impact on Immersion</h3>
+<ul>
+  <li><strong>Enhances</strong>: Makes invisible hazards visible and urgent; fosters active learning</li>
+  <li><strong>Risks</strong>: Tracking failures or UX latency break presence; overly difficult stages can frustrate</li>
+</ul>
+
+<h3 id="example">Example</h3>
+<div class="intro-video-wrapper">
+  <iframe src="https://www.youtube-nocookie.com/embed/3VmuF4z6loY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h1 id="ar-threat-defender">AR Threat Defender</h1>
+<!-- In a coral reef exhibit, plastic bottles drift toward a virtual reef. Visitors sweep their arms to deflect debris; each successful block triggers a coral-brightening animation and upbeat chime, while misses cause subtle reef graying and a soft alert tone. At the end, a summary screen shows intercepted debris count and suggests real-world recycling actions. -->
 
-<h2 id="problem">Problem</h2>
-<p>Invisible or abstract threats—such as pollution or climate impacts—are difficult to convey in static displays, reducing urgency and visitor empathy.</p>
+<hr />
+<h2 id="narrative-creation-in-cultural-heritage">Narrative Creation in Cultural Heritage</h2>
 
-<h2 id="context">Context</h2>
-<p>Ideal for natural-history and environmental exhibits where negative forces (e.g., ghost nets, acidic runoff) cannot be shown physically yet demand tangible representation.</p>
-
-<h2 id="use-when">Use When</h2>
-
+<h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
-  <li>
-    <p>The exhibit’s goal is to illustrate environmental hazards and empower visitors with mitigation strategies.</p>
-  </li>
-  <li>
-    <p>Real-time gestural interaction is feasible in the installation space.</p>
-  </li>
+  <li><strong>Build empathy</strong>: Encourage visitors to feel responsible by intercepting virtual threats before they reach vulnerable exhibit zones.</li>
+  <li><strong>Learn mitigation</strong>: Guide visitors to perform protective gestures that model real-world conservation actions.</li>
 </ul>
 
-<h2 id="solution">Solution</h2>
-
-<p><strong>Gesture-Based Object Interception</strong></p>
-
+<h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li>
-    <p>Spawn harmful objects (e.g., drifting nets, plastic debris) that move toward vulnerable reef sections.</p>
-  </li>
-  <li>
-    <p>Track visitor hand or body gestures to block, deflect, or capture these threats.</p>
-  </li>
+  <li><strong>Threat visuals</strong>: Animated debris or nets with semitransparent textures that drift toward highlighted exhibit areas.</li>
+  <li><strong>Risk highlights</strong>: Pulsing glow around endangered zones (e.g., coral reef) to signal where intervention is needed.</li>
 </ul>
 
-<p><strong>Targeted Protection &amp; Progressive Challenges</strong></p>
+<h3 id="interactive-narrative">Interactive Narrative</h3>
+<ol>
+  <li><strong>Audio cue</strong>: A sharp “block” sound on successful interception and a low warning tone when a threat breaches the zone.</li>
+  <li><strong>Visual cue</strong>: Immediate particle burst and brightening of the protected area on success; brief darkening or desaturation on miss.</li>
+  <li><strong>Narration launch</strong>: A concise voiceover stating “You intercepted X pieces” or “Y threats got through,” paired with on-screen conservation tips.</li>
+</ol>
 
+<h3 id="experience-principles">Experience Principles</h3>
 <ul>
-  <li>
-    <p>Emphasize critical reef zones by highlighting them whenever they are at risk.</p>
-  </li>
-  <li>
-    <p>Increase difficulty through faster objects, multiple simultaneous threats, or visibility-reducing effects to sustain engagement.</p>
-  </li>
+  <li><strong>Intuitive gestures</strong>: Use natural swipe or block motions—mirroring real cleanup actions—to minimize learning curve.</li>
+  <li><strong>Instant reinforcement</strong>: Provide feedback within 0.1 s to tie visitor effort directly to virtual outcomes and sustain engagement.</li>
+  <li><strong>Balanced urgency</strong>: Calibrate threat pacing so visitors feel motivated but not overwhelmed.</li>
 </ul>
 
-<p><strong>Start-Point Guidance with Animated Prompts</strong></p>
-
+<h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li>
-    <p>Introduce each threat via a brief cinematic illustrating its real-world origin and consequences.</p>
-  </li>
-  <li>
-    <p>Provide on-screen arrows or ghost hands demonstrating the required protective gesture.</p>
-  </li>
+  <li><strong>Gesture calibration</strong>: Adjust recognition sensitivity per space and lighting to reduce false positives/negatives.</li>
+  <li><strong>Emotional tone</strong>: Tune audio and visual feedback to maintain a hopeful, actionable mood rather than despair.</li>
+  <li><strong>Accessibility</strong>: Offer alternate input options (e.g., button taps), captioned narration, and adjustable audio volumes.</li>
 </ul>
 
-<p><strong>Narration &amp; Real-Time Feedback</strong></p>
+<hr />
 
-<ul>
-  <li>
-    <p>Spatialized audio narrates impact statistics when threats are neutralized or missed.</p>
-  </li>
-  <li>
-    <p>Visual effects (e.g., coral brightening, fish population bloom) reinforce successful defense actions.</p>
-  </li>
-</ul>
+<h2 id="supplementary-information">Supplementary Information</h2>
 
-<p><strong>Educational Wrap-Up</strong></p>
+<h3 id="biography">Biography</h3>
+<p>-</p>
 
-<ul>
-  <li>After gameplay, display personalized metrics (e.g., objects intercepted, reef health score) along with actionable conservation tips visitors can adopt beyond the museum.</li>
-</ul>
+<hr />
 
-<h2 id="media">Media</h2>
+<h2 id="discussion">Discussion</h2>
+<p>Key challenges include ensuring robust gesture recognition in varied lighting and space conditions, and balancing threat pacing to foster both engagement and educational impact. Future work could integrate cooperative multiplayer defense or dynamically tailor threat types based on visitor profiles.</p>
 
 <h2 id="notes">Notes</h2>
 
@@ -257,10 +352,14 @@
     <a href="mailto:yu.liu@hs-rm.de" class="button">EMAIL ME</a>
   </footer>
   
-  <div class="copyright">
-    &copy; 2025 Yu Liu. This project is part of my PhD research and is released under the 
-    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-  </div>
+<div class="copyright">
+  &copy; 2025 Yu Liu. This project is part of my PhD research and is licensed under the
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+    Creative Commons BY-NC 4.0 License
+    <img alt="Creative Commons License" style="height: 22px; vertical-align: middle; margin-left: 4px;"
+         src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+  </a>
+</div>
   
   <script src="/ar-interaction-patterns/assets/js/site.js" defer></script>
 </body>
