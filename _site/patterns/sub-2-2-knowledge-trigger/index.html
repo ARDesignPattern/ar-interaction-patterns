@@ -217,12 +217,12 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
 <hr />
 <h2 id="application">Application</h2>
 
-<h3 id="solution">Solution</h3>
+<h3 id="solution-use-the-orca-skeleten-exhibit-as-the-example">Solution (Use the Orca skeleten exhibit as the example)</h3>
 <ol>
   <li><strong>Spatial Object Placement</strong>
     <ul>
       <li>Position an auxiliary virtual object (e.g., a fish) 2–3 m from the life-size orca model.</li>
-      <li>Render a subtle “grab here” indicator when visitors approach.</li>
+      <li>Render a subtle “grab here” indicator when visitors approach (Optional).</li>
     </ul>
   </li>
   <li><strong>Knowledge-Centric Interaction Loop</strong>
@@ -236,8 +236,8 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
       <li>When the fish is placed into the orca’s mouth zone:
         <ul>
           <li>Play confirmation chime; cease sonar animation.</li>
-          <li>Display a multimedia panel summarizing echolocation (frequency range, tactics, ecology).</li>
-          <li>Offer a “Discover More” button to unlock feeding-behaviour mini-scenes or anatomy overlays.</li>
+          <li>Start the exhibit presentation, such as displaying a multimedia panel summarizing echolocation (frequency range, tactics, ecology).</li>
+          <li>Offer a “Discover More” button to unlock feeding-behaviour mini-scenes or anatomy overlays  (Optional).</li>
         </ul>
       </li>
     </ul>
@@ -245,8 +245,8 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
   <li><strong>Feedback Cues</strong>
     <ul>
       <li><strong>Visual</strong>: Fish outline glows within the drop zone; orca eyes blink on success.</li>
-      <li><strong>Auditory</strong>: Escalating pings as fish nears mouth, resolved by a soft “capture” tone.</li>
-      <li><strong>Haptic (optional)</strong>: Controller vibration or glove pulse upon correct release.</li>
+      <li><strong>Auditory</strong>: Escalating pings as fish nears mouth, resolved by a soft “capture” tone.<br />
+<!-- - **Haptic (optional)**: Controller vibration or glove pulse upon correct release. --></li>
     </ul>
   </li>
 </ol>
@@ -256,9 +256,10 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Object Distance</strong>: 2–3 m from primary exhibit</li>
-  <li><strong>Drop-Zone Radius</strong>: 0.5–0.8 m around orca’s mouth</li>
-  <li><strong>Sonar Pulse Rate</strong>: 4–6 clicks per second, cone angle ~30°</li>
+  <li><strong>3D Orca mode</strong>: Same position of the physical exhibit</li>
+  <li><strong>Grab Fish 3D mode</strong>: 2–3 m from primary exhibit</li>
+  <li><strong>Drop-Zone Radius</strong>: 0.5–0.8 m around orca’s mouth<br />
+<!-- - **Sonar Pulse Rate**: 4–6 clicks per second, cone angle ~30°   --></li>
   <li><strong>Chime Duration</strong>: 0.3 s for quick confirmation</li>
   <li><strong>Panel Fade-In</strong>: 0.5 s transition</li>
 </ul>
@@ -292,21 +293,21 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
 <h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
   <li><strong>Draw visitors in</strong>: Prompt curiosity by highlighting a floating virtual fish beside the orca and inviting a “grab” interaction.</li>
-  <li><strong>Auto-start interaction</strong>: Automatically reveal the fish and “grab here” indicator when a visitor approaches within 2–3 m of the exhibit.</li>
+  <li><strong>Auto-start interaction</strong>: A detailed presentation automatically starts when the user successfully feeds the fish to the orca.</li>
 </ul>
 
 <h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
-  <li><strong>Object highlight</strong>: Subtle glowing outline around the fish signals it’s interactive.</li>
+  <li><strong>Object highlight</strong>: Glowing outline around the fish signals it’s interactive.</li>
   <li><strong>Drop-zone marker</strong>: A pulsing ring at the orca’s mouth indicates where to place the fish.</li>
 </ul>
 
 <h3 id="interactive-narrative">Interactive Narrative</h3>
-<ol>
-  <li><strong>Audio cue</strong>: Escalating sonar pings begin on pickup and resolve into a soft chime on correct placement.</li>
-  <li><strong>Visual cue</strong>: The fish outline glows brighter as it nears the drop-zone; orca eyes blink on success.</li>
-  <li><strong>Narration launch</strong>: A concise echolocation summary panel fades in immediately upon successful placement.</li>
-</ol>
+<ul>
+  <li><strong>Narration Design</strong>: The narrative content should be related to the exhibits themselves as well as the interaction itself, such as how Orcas use sonar to locate their prey.</li>
+  <li><strong>Audio cue</strong>: Play progressive sonar sounds after picking up the fish, ending with a cue sound when the fish is placed correctly.</li>
+  <li><strong>Visual cue</strong>: When fish approach, their outlines gradually become brighter; after successful feeding, visual feedback is provided, such as a pop-up window indicating successful feeding.</li>
+</ul>
 
 <h3 id="experience-principles">Experience Principles</h3>
 <ul>
@@ -317,9 +318,9 @@ Visitors may perceive AR prompts as decorative and overlook core scientific or c
 
 <h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
-  <li><strong>Traffic flow</strong>: Stagger interaction availability or use proximity locks to avoid crowding at the drop-zone.</li>
+  <li><strong>Traffic flow</strong>: Stagger interaction availability, or avoid multiple users operating simultaneously: multiple users occupying the delivery area at the same time causes interaction difficulties.</li>
   <li><strong>Aesthetic harmony</strong>: Match fish and UI overlays to the exhibit’s visual style and ambient lighting.</li>
-  <li><strong>Accessibility</strong>: Offer captions for audio cues, optional vibration feedback, and adjustable outline contrast for visibility.</li>
+  <li><strong>Accessibility</strong>: Offer captions for audio cues, and adjustable outline contrast for visibility.</li>
 </ul>
 
 <hr />

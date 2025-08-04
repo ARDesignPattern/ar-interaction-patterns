@@ -13,14 +13,14 @@ summary: "Explore In-Depth Exhibit Information"
 description: "Provides access to detailed information about an exhibit, particularly useful for complex or multi-faceted displays."
 ---
 
-# Sequential Explanation
+# Labelling
 
 
 
 ---
 ## Overview
 - **Name**  
-  Sequential Explanation
+  Labelling
 - **Intent**  
   Help visitors identify and learn about individual parts or components of an exhibit in a space-constrained environment by linking visual labels to physical elements and revealing detailed explanations on approach.
 
@@ -61,11 +61,11 @@ description: "Provides access to detailed information about an exhibit, particul
 Pointing lines create a direct visual association between physical components and their explanations, while proximity-based reveals prevent information overload and preserve the exhibit’s visual integrity.
 
 ### Design Parameters
-- **Line Thickness**: 2–4 px on screen  
-- **Title Distance**: 0.5–1 m from component in 3D space  
-- **Trigger Radius**: 1.2–1.5 m around title anchor  
-- **Fade Duration**: 0.4 s for panel in/out  
-- **Panel Size**: 300 × 200 px (min) for readability  
+- **Line Thickness**: 1–2 cm   
+- **Title Distance**: 0.2–0.8 m from component in 3D space  
+- **Trigger Radius**: 1.2–3 m around title anchor  
+- **Fade Duration**: 0.5 s for panel in/out  
+<!-- - **Panel Size**: 300 × 200 px (min) for readability   -->
 
 <!-- ### Game Mechanics
 - **Explorer Badge**: Unlock after viewing explanations for all components  
@@ -77,8 +77,8 @@ Pointing lines create a direct visual association between physical components an
 - Exhibit Knowledge Trigger (micro-task to surface key concept)   -->
 
 ### Impact on Immersion
-- **Enhances**: Provides targeted detail without permanent UI clutter; feels context-aware  
-- **Risks**: Mis-fires or mis-alignment break presence; too many active lines can distract  
+- **Enhances**: Context-related interaction enhances understanding without interfering with the overall viewing experience.  
+- **Risks**: Mis-fires or mis-alignment break presence; too many active lines can distract. 
 
 ### Example
 <div class="intro-video-wrapper">
@@ -104,9 +104,10 @@ Pointing lines create a direct visual association between physical components an
 - **Title labels**: Concise, contrasting text that appears only when viewing is unobstructed.  
 
 ### Interactive Narrative
-1. **Audio cue**: A soft “ping” when entering the 1.2–1.5 m proximity trigger for a component.  
-2. **Visual cue**: The detailed overlay panel fades in around the label upon approach, then fades out on exit.  
-3. **Narration launch**: Optional brief voiceover plays as the panel appears, with synchronized caption text.  
+- **Narration Design**: Add labels to the main components of the exhibition; ensure that labels are consistent across different categories and, if necessary, classify labels based on the exhibited content.
+- **Audio cue**: A soft “ding” when entering the 1.2–1.5 m proximity trigger for a component. Same when the distance from the component exceeds 2–3 metres.
+- **Visual cue**: The detailed overlay panel fades in around the label upon approach, then fades out on exit.  
+  
 
 ### Experience Principles
 - **Precision alignment**: Ensure labels and lines accurately track components without jitter.  

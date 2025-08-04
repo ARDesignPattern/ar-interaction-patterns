@@ -60,7 +60,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
    - Optionally show a progress indicator or step count (e.g., “2 of 5”).  
 4. **Category Indicators**  
    - Always display the active category title prominently.  
-   - Dim or collapse inactive categories to maintain focus.  
+   - Hide inactive categories to maintain focus.  
 5. **Control for Animated Content**  
    - For any looping animation or video, include “Pause” and “Resume” controls.  
    - Auto-pause when users navigate away, auto-resume if they return.
@@ -70,10 +70,10 @@ Structuring content into bite-sized, thematically grouped segments reduces overw
 
 ### Design Parameters
 - **Categories**: 3–6 per exhibit to balance breadth and simplicity  
-- **Button Size**: ≥ 40px height/tap target for easy selection  
-- **Panel Duration**: Auto-advance disabled; allow unlimited reading time  
+- **Button Size**: ≥ 10cm /tap target for easy selection  
+<!-- - **Panel Duration**: Auto-advance disabled; allow unlimited reading time   -->
 - **Progress Indicator**: Show step count (e.g., “Step 1/4”) or progress bar  
-- **Animation Controls**: Pauses after 10 s of inactivity in a panel with moving content  
+<!-- - **Animation Controls**: Pauses after 10 s of inactivity in a panel with moving content   -->
 
 <!-- ### Game Mechanics
 - **Completion Badge**: Award “Explorer” badge for visiting all panels in a category  
@@ -112,19 +112,20 @@ Structuring content into bite-sized, thematically grouped segments reduces overw
 - **Progress marker**: A subtle step counter or progress bar showing “Panel 2 of 5” within each category.  
 
 ### Interactive Narrative
-1. **Audio cue**: A soft “page‐turn” sound when navigating panels to reinforce the transition.  
-2. **Visual cue**: The newly active tab briefly pulses or underlines when selected.  
-3. **Narration launch**: The first line of audio narration auto‐plays on panel entry, with caption text fading in concurrently.  
+- **Narration Design**: The narrative approach should align with the characteristics of the exhibits. Narrative content should include basic information, features, historical context, etc.
+- **Audio cue**: Narration should be smooth and clear, with each segment not exceeding 60 seconds in length.
+- **Visual cue**: Control interface design can be stylistically aligned with the exhibit's characteristics. Based on the narrative progression, provide highlighted frames and text on physical exhibits to guide users' attention during their visit.  
+  
 
 ### Experience Principles
-- **Unobtrusive UI**: Place controls at screen edges or floor‐pinned so as not to obscure the physical exhibit.  
+- **Unobtrusive UI**: Exhibit presentation components should integrate with physical exhibits; Place controls at screen edges or floor‐pinned so as not to obscure the physical exhibit.  
 - **Consistent navigation**: Use uniform icons and button layouts across all categories to reduce learning time.  
-- **Cognitive relief**: Disable auto‐advance; let visitors control pacing without feeling rushed.  
+- **Cognitive relief (Optional)**: Disable auto‐advance; let visitors control pacing without feeling rushed.  
 
 ### Curation Considerations
 - **Exhibit aesthetics**: Match button shapes, fonts, and accent colors to the exhibit’s design language.  
 - **Accessibility**: Provide high‐contrast tab outlines, adjustable text size, and optional subtitles for audio.  
-- **Hardware variance**: Ensure touch targets (≥ 40 px) and gesture zones are comfortable on both tablets and HMDs.  
+<!-- - **Hardware variance**: Ensure touch targets (≥ 40 px) and gesture zones are comfortable on both tablets and HMDs.   -->
 
 
 ---

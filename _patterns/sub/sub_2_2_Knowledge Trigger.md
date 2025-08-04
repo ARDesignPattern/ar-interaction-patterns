@@ -46,30 +46,31 @@ description: "Engage visitors in concise, meaningful interactions that activate 
 ---
 ## Application
 
-### Solution
+### Solution (Use the Orca skeleten exhibit as the example)
 1. **Spatial Object Placement**  
    - Position an auxiliary virtual object (e.g., a fish) 2–3 m from the life-size orca model.  
-   - Render a subtle “grab here” indicator when visitors approach.  
+   - Render a subtle “grab here” indicator when visitors approach (Optional).  
 2. **Knowledge-Centric Interaction Loop**  
    - Prompt the visitor (voice/UI) to grab the fish.  
    - On pickup, orca orients toward the fish and plays a sonar click sequence with pulsed cone waveform.  
 3. **Completion & Knowledge Delivery**  
    - When the fish is placed into the orca’s mouth zone:  
      - Play confirmation chime; cease sonar animation.  
-     - Display a multimedia panel summarizing echolocation (frequency range, tactics, ecology).  
-     - Offer a “Discover More” button to unlock feeding-behaviour mini-scenes or anatomy overlays.  
+     - Start the exhibit presentation, such as displaying a multimedia panel summarizing echolocation (frequency range, tactics, ecology).  
+     - Offer a “Discover More” button to unlock feeding-behaviour mini-scenes or anatomy overlays  (Optional).  
 4. **Feedback Cues**  
    - **Visual**: Fish outline glows within the drop zone; orca eyes blink on success.  
    - **Auditory**: Escalating pings as fish nears mouth, resolved by a soft “capture” tone.  
-   - **Haptic (optional)**: Controller vibration or glove pulse upon correct release.
+   <!-- - **Haptic (optional)**: Controller vibration or glove pulse upon correct release. -->
 
 ### Rationale
 A focused micro-task leverages embodied interaction to make an abstract concept tangible, priming visitors for deeper AR layers once the core insight is understood.
 
 ### Design Parameters
-- **Object Distance**: 2–3 m from primary exhibit  
+- **3D Orca mode**: Same position of the physical exhibit  
+- **Grab Fish 3D mode**: 2–3 m from primary exhibit  
 - **Drop-Zone Radius**: 0.5–0.8 m around orca’s mouth  
-- **Sonar Pulse Rate**: 4–6 clicks per second, cone angle ~30°  
+<!-- - **Sonar Pulse Rate**: 4–6 clicks per second, cone angle ~30°   -->
 - **Chime Duration**: 0.3 s for quick confirmation  
 - **Panel Fade-In**: 0.5 s transition  
 
@@ -103,16 +104,17 @@ A focused micro-task leverages embodied interaction to make an abstract concept 
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Prompt curiosity by highlighting a floating virtual fish beside the orca and inviting a “grab” interaction.  
-- **Auto-start interaction**: Automatically reveal the fish and “grab here” indicator when a visitor approaches within 2–3 m of the exhibit.  
+- **Auto-start interaction**: A detailed presentation automatically starts when the user successfully feeds the fish to the orca.
 
 ### AR Experience Indicators
-- **Object highlight**: Subtle glowing outline around the fish signals it’s interactive.  
+- **Object highlight**: Glowing outline around the fish signals it’s interactive.  
 - **Drop-zone marker**: A pulsing ring at the orca’s mouth indicates where to place the fish.  
 
 ### Interactive Narrative
-1. **Audio cue**: Escalating sonar pings begin on pickup and resolve into a soft chime on correct placement.  
-2. **Visual cue**: The fish outline glows brighter as it nears the drop-zone; orca eyes blink on success.  
-3. **Narration launch**: A concise echolocation summary panel fades in immediately upon successful placement.  
+- **Narration Design**: The narrative content should be related to the exhibits themselves as well as the interaction itself, such as how Orcas use sonar to locate their prey. 
+- **Audio cue**: Play progressive sonar sounds after picking up the fish, ending with a cue sound when the fish is placed correctly.   
+- **Visual cue**: When fish approach, their outlines gradually become brighter; after successful feeding, visual feedback is provided, such as a pop-up window indicating successful feeding.  
+
 
 ### Experience Principles
 - **Intuitive guidance**: Use direct, hands-on actions (grab & drop) to illustrate the concept without menus.  
@@ -120,9 +122,9 @@ A focused micro-task leverages embodied interaction to make an abstract concept 
 - **Comfortable pacing**: Allow visitors to interact at their own speed—no countdowns or time pressure unless opting into challenges.  
 
 ### Curation Considerations
-- **Traffic flow**: Stagger interaction availability or use proximity locks to avoid crowding at the drop-zone.  
+- **Traffic flow**: Stagger interaction availability, or avoid multiple users operating simultaneously: multiple users occupying the delivery area at the same time causes interaction difficulties.  
 - **Aesthetic harmony**: Match fish and UI overlays to the exhibit’s visual style and ambient lighting.  
-- **Accessibility**: Offer captions for audio cues, optional vibration feedback, and adjustable outline contrast for visibility.  
+- **Accessibility**: Offer captions for audio cues, and adjustable outline contrast for visibility.  
 
 
 ---

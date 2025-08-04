@@ -115,9 +115,10 @@ Anchoring a simple visual zone to the floor leverages natural proximity behavior
 - **Guiding element**: Beside the circle, place a small sign or sculpture (height ≈ 50 cm) with a prompt like “Step here to hear the whale’s story.”
 
 ### Interactive Narrative
-1. **Audio cue**: As visitors enter the circle, play a soft ocean ambience or whale call at a comfortable volume.  
-2. **Visual cue**: After the sound, fade out the floor marking and sign so attention shifts to the AR scene.  
-3. **Narration launch**: Immediately follow with a voiceover, e.g. “Welcome to the orca exhibit”
+- **Narration Design**: Immediately follow with a voiceover, e.g. “Welcome to the orca exhibit”
+- **Audio cue**: As visitors enter the circle, play a soft ocean ambience or whale call at a comfortable volume.  
+- **Visual cue**: After the sound, fade out the floor marking and sign so attention shifts to the AR scene.  
+
 
 ### Experience Principles
 - **Intuitive guidance**: Combine floor markings and text prompts to steer visitors along the intended path.  
