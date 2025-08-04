@@ -69,21 +69,21 @@ Combining consistent visual markers with multiple intuitive activation paths ens
 - **Voice Command Delay**: <0.2 s from keyword to system response  
 - **Audio Cue Volume**: 60 dB SPL in typical gallery noise  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **First-Use Badge**: Unlock “AR Explorer” on first activation  
 - **Activation Streak**: Reward successive AR launches without pauses  
-- **Discovery Tracker**: Show percentage of AR-enabled exhibits visited  
+- **Discovery Tracker**: Show percentage of AR-enabled exhibits visited   -->
 
 ### Related Pattern
 - Floor Circle (proximity-based trigger)  
-- Point of Interest Guide (path-based navigation to interactive exhibits)  
+<!-- - Point of Interest Guide (path-based navigation to interactive exhibits)   -->
 
 ### Impact on Immersion
 - **Enhances**: Clearly differentiates interactive content; guides focus without heavy UI  
 - **Risks**: Too many markers can clutter view; poorly tuned animations may distract  
 
 ### Example
-In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns.
+<!-- In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns. -->
 
 ---
 ## Narrative Creation in Cultural Heritage

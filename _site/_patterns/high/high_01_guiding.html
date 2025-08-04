@@ -236,19 +236,19 @@ Visitors in AR-enhanced environments may miss key exhibits due to complex layout
   <li><strong>Navigation Control Interface</strong>
     <ul>
       <li>Provide Start, Pause, Resume, and Cancel controls via gesture, voice, or on-screen buttons.</li>
-      <li>Cache paused routes for later resumption.</li>
+      <li>Cache paused routes for later resumption (Optional).</li>
     </ul>
   </li>
   <li><strong>Directional Visual Cues</strong>
     <ul>
-      <li>Overlay arrows or footprints along the path, color-coded for upcoming turns or straight segments.</li>
+      <li>Overlay avatar/arrows/footprints/animnated visual object along the path, shape/color-coded for upcoming turns or straight segments.</li>
       <li>Animate next-step indicators (e.g., pulsing arrow) when approaching decision points.</li>
     </ul>
   </li>
   <li><strong>Auditory Feedback</strong>
     <ul>
-      <li>Play spatialized cues (“30 meters to the next POI,” “Turn right ahead”) at key waypoints.</li>
-      <li>Adjust volume based on ambient noise and distance.</li>
+      <li>Play spatialized cues at key waypoints.</li>
+      <li>Adjust volume based on ambient noise and distance (Optional).</li>
     </ul>
   </li>
   <li><strong>Arrival Trigger</strong>
@@ -263,19 +263,18 @@ Visitors in AR-enhanced environments may miss key exhibits due to complex layout
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Path Width</strong>: 0.1–0.2 m in AR space for clear visibility</li>
-  <li><strong>Arrow Size</strong>: ≥ 0.3 m head width to remain legible at distance</li>
-  <li><strong>Cue Lead Time</strong>: Announce turns 5–10 m before decision points</li>
-  <li><strong>Audio Level</strong>: 60–70 dB SPL, adaptive to ambient noise</li>
-  <li><strong>Menu Reach</strong>: Within 1.5 m of user gaze center for easy selection</li>
+  <li><strong>Path Width</strong>: 1–1.5 m in AR space for clear visibility</li>
+  <li><strong>Size of the Visual Cue</strong>: ≥ 0.3 m</li>
+  <li><strong>Distance between the cue and the user</strong>: 1-2 m</li>
+  <li><strong>Cue Lead Time (When apply)</strong>: Announce turns 5–10 m before decision points 
+<!-- - **Audio Level**: 60–70 dB SPL, adaptive to ambient noise   --></li>
+  <li><strong>Menu Reach</strong>: Within 1-1.5 m of user gaze center for easy selection</li>
 </ul>
 
-<h3 id="game-mechanics">Game Mechanics</h3>
-<ul>
-  <li><strong>Explorer Badge</strong>: Earned for visiting a sequence of POIs without pauses</li>
-  <li><strong>Time Challenge</strong>: Complete N POIs within a time limit for a leaderboard</li>
-  <li><strong>Route Streak</strong>: Rewards for revisiting POIs in the same order as recommended</li>
-</ul>
+<!-- ### Game Mechanics
+- **Explorer Badge**: Earned for visiting a sequence of POIs without pauses  
+- **Time Challenge**: Complete N POIs within a time limit for a leaderboard  
+- **Route Streak**: Rewards for revisiting POIs in the same order as recommended   -->
 
 <h3 id="related-pattern">Related Pattern</h3>
 <ul>
@@ -290,7 +289,7 @@ Visitors in AR-enhanced environments may miss key exhibits due to complex layout
 </ul>
 
 <h3 id="example">Example</h3>
-<p>At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture.</p>
+<!-- At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture. -->
 
 <hr />
 

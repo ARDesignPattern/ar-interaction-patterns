@@ -58,13 +58,13 @@ description: "To assist users in reaching PoIs effectively, combine spatial guid
    - Allow sorting by proximity, popularity, or remaining time.  
 3. **Navigation Control Interface**  
    - Provide Start, Pause, Resume, and Cancel controls via gesture, voice, or on-screen buttons.  
-   - Cache paused routes for later resumption.  
+   - Cache paused routes for later resumption (Optional).  
 4. **Directional Visual Cues**  
-   - Overlay arrows or footprints along the path, color-coded for upcoming turns or straight segments.  
+   - Overlay avatar/arrows/footprints/animnated visual object along the path, shape/color-coded for upcoming turns or straight segments.  
    - Animate next-step indicators (e.g., pulsing arrow) when approaching decision points.  
 5. **Auditory Feedback**  
-   - Play spatialized cues (“30 meters to the next POI,” “Turn right ahead”) at key waypoints.  
-   - Adjust volume based on ambient noise and distance.  
+   - Play spatialized cues at key waypoints.  
+   - Adjust volume based on ambient noise and distance (Optional).  
 6. **Arrival Trigger**  
    - When the user enters the POI zone, fade out path indicators, play a confirmation chime, and display a brief arrival tooltip.
 
@@ -72,16 +72,17 @@ description: "To assist users in reaching PoIs effectively, combine spatial guid
 Combining explicit path visualization with user-driven POI selection reduces cognitive load, ensures efficient coverage of highlights, and accommodates both goal-oriented and exploratory behaviors.
 
 ### Design Parameters
-- **Path Width**: 0.1–0.2 m in AR space for clear visibility  
-- **Arrow Size**: ≥ 0.3 m head width to remain legible at distance  
-- **Cue Lead Time**: Announce turns 5–10 m before decision points  
-- **Audio Level**: 60–70 dB SPL, adaptive to ambient noise  
-- **Menu Reach**: Within 1.5 m of user gaze center for easy selection  
+- **Path Width**: 1–1.5 m in AR space for clear visibility  
+- **Size of the Visual Cue**: ≥ 0.3 m 
+- **Distance between the cue and the user**: 1-2 m
+- **Cue Lead Time (When apply)**: Announce turns 5–10 m before decision points 
+<!-- - **Audio Level**: 60–70 dB SPL, adaptive to ambient noise   -->
+- **Menu Reach**: Within 1-1.5 m of user gaze center for easy selection  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **Explorer Badge**: Earned for visiting a sequence of POIs without pauses  
 - **Time Challenge**: Complete N POIs within a time limit for a leaderboard  
-- **Route Streak**: Rewards for revisiting POIs in the same order as recommended  
+- **Route Streak**: Rewards for revisiting POIs in the same order as recommended   -->
 
 ### Related Pattern
 - Avatar Guide (personalized escort along a path)  
@@ -92,7 +93,7 @@ Combining explicit path visualization with user-driven POI selection reduces cog
 - **Risks**: Excessive overlays can distract; rigid routing may reduce serendipity  
 
 ### Example
-At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture.
+<!-- At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture. -->
 
 ---
 

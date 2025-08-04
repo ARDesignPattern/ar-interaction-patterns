@@ -74,21 +74,21 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 - **Audio Clip Duration**: 10–20 s each  
 - **Animation Control Latency**: ≤ 0.2 s for pause/resume  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **Completion Badge**: Earn “Content Navigator” for viewing all modules  
 - **Choice Path**: Unlock a “Deep Dive” quiz after completing core modules  
-- **Time Tracker**: Show total time spent per module for playful feedback  
+- **Time Tracker**: Show total time spent per module for playful feedback   -->
 
 ### Related Pattern
 - Sequential Explanation (step-by-step panels)  
-- AR Experience Indicator (discovering interactive exhibits)  
+<!-- - AR Experience Indicator (discovering interactive exhibits)   -->
 
 ### Impact on Immersion
 - **Enhances**: Provides clear mental model; supports autonomy and deeper learning  
 - **Risks**: UI elements may occlude exhibits; overly linear flow could feel restrictive  
 
 ### Example
-At a Roman artifact display, visitors tap the “Construction” tab to see animated building phases, then choose “Material Analysis” for microscopic texture overlays with narrated commentary, progressing at their own pace via Next/Previous controls.
+<!-- At a Roman artifact display, visitors tap the “Construction” tab to see animated building phases, then choose “Material Analysis” for microscopic texture overlays with narrated commentary, progressing at their own pace via Next/Previous controls. -->
 
 ---
 ## Narrative Creation in Cultural Heritage
