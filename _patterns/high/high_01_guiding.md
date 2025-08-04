@@ -100,17 +100,17 @@ Combining explicit path visualization with user-driven POI selection reduces cog
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
-- **Draw visitors in**: Present a rotating carousel of featured POIs with engaging thumbnails and brief descriptions to spark curiosity.  
-- **Auto-start interaction**: Automatically display the nearest POI suggestion and begin path guidance when the visitor enters the mapped area.  
+- **Draw visitors in**: Display a POI selection menu showing nearby exhibits with their names and distances, prompting users to choose a destination.    
+- **Auto-start interaction (Potional)**: Automatically display the nearest POI suggestion and begin path guidance when the visitor enters the mapped area.  
 
 ### AR Experience Indicators
-- **Floor marking**: Semi-transparent footprints or glowing floor tiles leading toward the selected POI.  
-- **Guiding element**: A pulsing waypoint beacon (e.g., floating orb or arrow) that hovers above the path to reinforce direction.  
+- **Floor marking (Optional)**: Semi-transparent AR visual elements (eg.: footprints or glowing floor tiles) leading toward the selected POI.  
+- **Guiding element**: Animated visual elements/waypoint icon (e.g., an avatar or floating arrows) that hovers above the path to reinforce direction.
 
 ### Interactive Narrative
-1. **Audio cue**: A gentle chime and voice prompt (“Next stop: Sculpture Garden, 50 m ahead”) as the route initializes.  
-2. **Visual cue**: Animated arrows or footprints that pulse at regular intervals and brighten when a turn is imminent.  
-3. **Narration design**: Short, context-sensitive voiceovers upon arrival (“Welcome to the Sculpture Garden—home to…”), with optional on-screen captions.  
+- **Narration design**: Before the guided tour begins, provide the name of the exhibit and a description of the tour content; during the path guiding, provide basic background information on the relevant exhibits; upon reaching points of interest, start the formal exhibit presentation. 
+- **Audio cue**: A gentle chime and voice prompt (eg.: This tour will lead you to the Orca exhibit) as the route initializes.  
+- **Visual cue**: Guide users to points of interest using interactive visual elements (such as virtual avatars or animated arrows/footprints), with designs that align with the features and style of the exhibits.
 
 ### Experience Principles
 - **Intuitive guidance**: Align AR cues with natural walking direction and avoid obstructing the visitor’s view of exhibits.  
