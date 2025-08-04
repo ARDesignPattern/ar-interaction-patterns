@@ -73,14 +73,14 @@ A focused micro-task leverages embodied interaction to make an abstract concept 
 - **Chime Duration**: 0.3 s for quick confirmation  
 - **Panel Fade-In**: 0.5 s transition  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **Knowledge Badge**: Award “Echolocation Expert” on first completion  
 - **Speed Challenge**: Time from pickup to placement for a playful leaderboard  
-- **Layer Unlock**: Completing the micro-task reveals advanced AR modules  
+- **Layer Unlock**: Completing the micro-task reveals advanced AR modules   -->
 
 ### Related Pattern
 - Floor Circle (proximity-triggered activation)  
-- Avatar Guide (guided pacing and narrative)
+<!-- - Avatar Guide (guided pacing and narrative) -->
 
 ### Impact on Immersion
 - **Enhances**: Promotes active learning, strengthens concept retention, feels rewarding  

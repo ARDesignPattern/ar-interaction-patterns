@@ -14,11 +14,11 @@ summary: "Recognizing and Activating AR Exhibit"
 description: "Recognizing and Activating AR Experiences: To help visitors easily identify and access AR content, combine clear visual cues with intuitive activation methods and feedback."
 ---
 
-# AR Experience Indicator
+# Experience Indicator
 ---
 ## Overview
 - **Name**  
-  AR Experience Indicator
+ AR Experience Indicator
 - **Intent**  
   Help visitors discover and launch embedded AR experiences by providing clear, consistent cues and intuitive activation methods.
 

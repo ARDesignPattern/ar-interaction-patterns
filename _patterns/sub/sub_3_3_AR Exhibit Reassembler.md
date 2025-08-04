@@ -77,13 +77,13 @@ Transforming passive viewing into active assembly engages spatial reasoning and 
 - **Tutorial Duration**: 5–8 s voice-over with visual highlights  
 
 ### Game Mechanics
-- **Puzzle Badge**: Award “Master Reassembler” upon full assembly  
+<!-- - **Puzzle Badge**: Award “Master Reassembler” upon full assembly  
 - **Speed Run**: Time from first pick to final snap for a leaderboard  
-- **Hint Tokens**: Earn or purchase hints to highlight next piece or region  
+- **Hint Tokens**: Earn or purchase hints to highlight next piece or region   -->
 
 ### Related Pattern
-- Exhibit Knowledge Trigger (focused micro-task)  
-- Avatar Guide (guided pacing and narrative)
+<!-- - Exhibit Knowledge Trigger (focused micro-task)  
+- Avatar Guide (guided pacing and narrative) -->
 
 ### Impact on Immersion
 - **Enhances**: Hands-on engagement, spatial learning, narrative context  

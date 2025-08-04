@@ -86,8 +86,8 @@ Turning abstract environmental hazards into tangible, interactive threats levera
 - **Unlockables**: New threat types or conservation tips unlocked based on performance  
 
 ### Related Pattern
-- AR Exhibit Reassembler (interactive assembly)  
-- Exhibit Knowledge Trigger (micro-task activation)
+<!-- - AR Exhibit Reassembler (interactive assembly)  
+- Exhibit Knowledge Trigger (micro-task activation) -->
 
 ### Impact on Immersion
 - **Enhances**: Makes invisible hazards visible and urgent; fosters active learning  

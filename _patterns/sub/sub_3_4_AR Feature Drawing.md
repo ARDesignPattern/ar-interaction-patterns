@@ -80,13 +80,13 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 - **Gallery Slot Limit**: Store up to 20 recent designs per exhibit  
 
 ### Game Mechanics
-- **Community Badge**: Earn “Citizen Illustrator” for contributing a design  
+<!-- - **Community Badge**: Earn “Citizen Illustrator” for contributing a design  
 - **Challenge Mode**: Attempt to match an expert sketch under a time limit  
-- **Voting System**: Visitors can upvote favorite community sketches  
+- **Voting System**: Visitors can upvote favorite community sketches   -->
 
 ### Related Pattern
-- Exhibit Knowledge Trigger (micro-task activation)  
-- Floor Circle (proximity-based AR entry)
+<!-- - Exhibit Knowledge Trigger (micro-task activation)  
+- Floor Circle (proximity-based AR entry) -->
 
 ### Impact on Immersion
 - **Enhances**: Transforms speculation into tangible interaction; fosters social learning  

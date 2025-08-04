@@ -67,14 +67,14 @@ Pointing lines create a direct visual association between physical components an
 - **Fade Duration**: 0.4 s for panel in/out  
 - **Panel Size**: 300 × 200 px (min) for readability  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **Explorer Badge**: Unlock after viewing explanations for all components  
 - **Time Challenge**: Track how quickly users discover each part  
-- **Hidden Detail**: Occasionally include an Easter-egg fact unlocked by revisiting a component  
+- **Hidden Detail**: Occasionally include an Easter-egg fact unlocked by revisiting a component   -->
 
 ### Related Pattern
-- Floor Circle (proximity-based AR activation)  
-- Exhibit Knowledge Trigger (micro-task to surface key concept)  
+<!-- - Floor Circle (proximity-based AR activation)  
+- Exhibit Knowledge Trigger (micro-task to surface key concept)   -->
 
 ### Impact on Immersion
 - **Enhances**: Provides targeted detail without permanent UI clutter; feels context-aware  

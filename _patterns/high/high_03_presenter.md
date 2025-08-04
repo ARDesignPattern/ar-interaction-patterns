@@ -14,11 +14,11 @@ summary: "Exploring and Controlling AR Content"
 description: "Exploring and Controlling AR Content: Present the content in a structured, navigable, and user-controlled manner."
 ---
 
-# AR Experience Presenter
+# Experience Presenter
 ---
 ## Overview
 - **Name**  
-  AR Experience Presenter
+ AR Experience Presenter
 - **Intent**  
   Offer a modular, self-paced AR content delivery system that organizes complex exhibit information into manageable, user-selected segments.
 

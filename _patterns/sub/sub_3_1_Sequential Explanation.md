@@ -75,14 +75,14 @@ Structuring content into bite-sized, thematically grouped segments reduces overw
 - **Progress Indicator**: Show step count (e.g., “Step 1/4”) or progress bar  
 - **Animation Controls**: Pauses after 10 s of inactivity in a panel with moving content  
 
-### Game Mechanics
+<!-- ### Game Mechanics
 - **Completion Badge**: Award “Explorer” badge for visiting all panels in a category  
 - **Quiz Unlock**: After finishing a category, unlock a short quiz mini-game  
-- **Time Trial**: Track how quickly users cycle through panels for a playful challenge  
+- **Time Trial**: Track how quickly users cycle through panels for a playful challenge   -->
 
 ### Related Pattern
 - Exhibit Knowledge Trigger (micro-task to surface key concept)  
-- Floor Circle (proximity-based AR activation)
+<!-- - Floor Circle (proximity-based AR activation) -->
 
 ### Impact on Immersion
 - **Enhances**: Gives a clear, predictable structure; supports deeper learning  
