@@ -26,7 +26,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 
 ## Target
 - **Problem**  
-  Visitors face information overload when an exhibit contains multiple thematic layers (historical, scientific, cultural) with no clear structure or control over pacing.
+  Visitors face information overload when an exhibit contains multiple thematic layers (eg.: historical, scientific, cultural) with no clear structure or control over pacing.
 - **Context**  
   - Exhibits integrate rich, categorized AR overlays (3D models, text, audio)  
   - Visitors vary in prior knowledge and interests  
@@ -56,23 +56,23 @@ description: "Exploring and Controlling AR Content: Present the content in a str
    - Highlight key elements visually and narrate explanations in short segments.  
 3. **Navigation Controls**  
    - Provide “Previous” and “Next” buttons to move between items.  
-   - Disable auto-advance; allow unlimited dwell time on each segment.  
+   - Disable auto-advance (Optional): allow unlimited dwell time on each segment.  
 4. **Category Indicators**  
    - Show the active module name prominently at the top of the view.  
-   - Dim or collapse inactive modules to maintain focus.  
+   - Hide inactive modules to maintain focus.  
 5. **Control for Animated Content**  
    - For videos or timed animations, include “Pause” and “Resume” controls.  
-   - Auto-pause when navigating away; auto-resume upon return.
+   <!-- - Auto-pause when navigating away; auto-resume upon return. -->
 
 ### Rationale
 Structuring AR content into discrete, labeled modules reduces cognitive load, lets visitors prioritize their interests, and prevents information dumping by pacing delivery.
 
 ### Design Parameters
 - **Modules per Exhibit**: 3–5 to balance depth and simplicity  
-- **Button Size**: ≥ 50 px tap target  
-- **Text Segment Length**: ≤ 40 words per panel  
-- **Audio Clip Duration**: 10–20 s each  
-- **Animation Control Latency**: ≤ 0.2 s for pause/resume  
+- **Button Size**: ≥ 10 cm tap target  
+<!-- - **Text Segment Length**: ≤ 40 words per panel   -->
+- **Audio Clip Duration**: 10–30 s each  
+- **Animation Control Latency**: ≤ 0.5 s for pause/resume  
 
 <!-- ### Game Mechanics
 - **Completion Badge**: Earn “Content Navigator” for viewing all modules  
@@ -95,21 +95,22 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Present a concise module overview popup on AR activation, showcasing thematic segments to pique interest.  
-- **Auto-start interaction**: Automatically highlight the first available content module when the visitor’s gaze fixes on the exhibit area.  
+- **Auto-start interaction**: Automatically play the first available content module when the visitor enters the exhibit trigger area.  
 
 ### AR Experience Indicators
-- **Floor marking**: Subtle glowing border or shaded area around the exhibit base indicating interactive AR content zones.  
-- **Guiding element**: Floating module icons or tab buttons hovering near the exhibit that clearly denote selectable content segments.  
+- **Narrative marking**: Subtle glowing border or shaded area around the exhibit base indicating interactive AR content zones.  
+- **Guiding element**: Floating module icons/hand menu/tab buttons hovering near the exhibit that clearly denote selectable content segments.  
 
 ### Interactive Narrative
-1. **Audio cue**: A soft confirmation tone and brief voice prompt (“Module: Cultural History”) when a visitor selects a module.  
-2. **Visual cue**: The activated module button pulses and the content panel smoothly slides into view.  
-3. **Narration design**: Short, scripted voiceovers that introduce each content segment, synchronized with on-screen captions and visuals.  
+- **Narration design**: Short, scripted voiceovers that introduce each content segment, synchronized with on-screen captions and visuals. 
+- **Audio cue**: Directly play related exhibit narration after the module selection.  
+- **Visual cue**: Highlight the narration section in the exhibition, indicate the current narration category, and provide the completion rate/number of current narratives.
+ 
 
 ### Experience Principles
 - **Intuitive guidance**: Use consistent iconography and spatial placement so visitors immediately recognize and select content modules.  
-- **Seamless transition**: Animate module panels in and out without abrupt cuts, maintaining visual flow as users navigate.  
-- **Comfortable pacing**: Let visitors control dwell time on each segment, disabling auto-advance and offering clear “Next/Previous” controls.  
+- **Seamless transition**: Visual and audio presentations should correspond with narration. Module transitions should maintain smooth animation connections to avoid abrupt jumps.
+- **Comfortable pacing**: Let visitors control dwell time on each segment, offering clear “Next/Previous” controls; disabling auto-advance when needed. 
 
 ### Curation Considerations
 - **Traffic flow**: Limit visible modules to the nearest two or three to reduce cognitive load and avoid crowd bottlenecks.  
@@ -122,7 +123,7 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 ## Supplementary Information
 
 ### Biography
-<!-- Developed by AR curator Dr. Lena Hoffmann for the “Layers of Time” exhibition at the Historical Arts Center, 2025. -->
+Developed by AR curator Dr. Lena Hoffmann for the “Layers of Time” exhibition at the Historical Arts Center, 2025.
 
 ---
 

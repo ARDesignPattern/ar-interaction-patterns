@@ -193,7 +193,7 @@ Visitors often don’t know which exhibits contain AR content or how to start it
   </li>
   <li><strong>Use When</strong>
     <ul>
-      <li>Visitors roam freely and need discoverable markers for AR-enabled exhibits</li>
+      <li>Visitors explore freely in a point of interest and need discoverable markers for AR-enabled exhibits</li>
       <li>Upon reaching an exhibit, users want to access rich multimedia or contextual overlays</li>
     </ul>
   </li>
@@ -208,7 +208,7 @@ Visitors often don’t know which exhibits contain AR content or how to start it
   <li><strong>Consequences</strong>
     <ul>
       <li><strong>Positive</strong>: Increases AR uptake; reduces user frustration; highlights interactive content</li>
-      <li><strong>Negative</strong>: Overuse of indicators can overwhelm; inconsistent placement breaks learned expectations</li>
+      <li><strong>Negative</strong>: Overuse of indicators can overwhelm; inconsistent placement breaks visiting/learning expectations</li>
     </ul>
   </li>
 </ul>
@@ -221,21 +221,22 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 <ol>
   <li><strong>Visual Indicators</strong>
     <ul>
-      <li>Render floating 3D AR icons (e.g., stylized cubes or “AR” badges) adjacent to interactive exhibits.</li>
+      <li>Render floating 3D AR icons (e.g., stylized cubes or 3D exhibit model) adjacent to interactive exhibits.</li>
       <li>Apply pulsing outlines or gentle glow effects to draw peripheral attention.</li>
     </ul>
   </li>
   <li><strong>Activation Mechanism</strong>
     <ul>
-      <li>Define gaze or gesture zones: fix a reticle on the indicator for 1–2 seconds, or perform a tap-gesture.</li>
-      <li>Support voice commands (“Show me more”) to launch experiences hands-free.</li>
-      <li>Optionally, place a subtle floor circle around the exhibit; stepping in triggers content.</li>
+      <li>Define distance trigger area: user enters the trigger area to activate the AR experience.</li>
+      <li>(Optional) Define gesture zones: fix a reticle on the indicator for 1–2 seconds, or perform a tap-gesture.</li>
+      <li>(Optional) Support voice commands (“Show me more”) to launch experiences hands-free.<br />
+<!-- - Optionally, place a subtle floor circle around the exhibit; stepping in triggers content.   --></li>
     </ul>
   </li>
   <li><strong>Feedback Cues</strong>
     <ul>
       <li>Immediately animate the icon (e.g., expand-fade) or change color to confirm activation.</li>
-      <li>Play a soft audio cue or brief spoken confirmation (“Loading AR content”).</li>
+      <li>Play a soft audio cue or brief spoken confirmation.</li>
     </ul>
   </li>
 </ol>
@@ -245,11 +246,11 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Icon Size</strong>: 0.3–0.5 m in AR space for legibility</li>
-  <li><strong>Glow Pulse Rate</strong>: 0.5–1 Hz to balance noticeability and subtlety</li>
-  <li><strong>Gaze Timer</strong>: 1.5 s dwell for selection, with a progress ring indicator</li>
-  <li><strong>Voice Command Delay</strong>: &lt;0.2 s from keyword to system response</li>
-  <li><strong>Audio Cue Volume</strong>: 60 dB SPL in typical gallery noise</li>
+  <li><strong>Icon Size</strong>: 0.3–0.5 m in AR space for legibility<br />
+<!-- - **Glow Pulse Rate**: 0.5–1 Hz to balance noticeability and subtlety   --></li>
+  <li><strong>Gaze Timer(Optional)</strong>: 1.5 s dwell for selection, with a progress ring indicator</li>
+  <li><strong>Voice Command Delay(Optional)</strong>: &lt;0.2 s from keyword to system response<br />
+<!-- - **Audio Cue Volume**: 60 dB SPL in typical gallery noise   --></li>
 </ul>
 
 <!-- ### Game Mechanics
@@ -278,27 +279,27 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 <h3 id="visitor-behavioral-goals">Visitor Behavioral Goals</h3>
 <ul>
   <li><strong>Draw visitors in</strong>: Highlight floating AR icons with a gentle glow to signal interactivity and pique curiosity.</li>
-  <li><strong>Auto-start interaction</strong>: Automatically reveal the nearest AR indicator and enable gaze/gesture activation when a visitor approaches within 1.5 m.</li>
+  <li><strong>Auto-start interaction</strong>: Automatically reveal the nearest AR indicator and enable gaze/gesture activation when a visitor approaches within 1.5-2 m.</li>
 </ul>
 
 <h3 id="ar-experience-indicators">AR Experience Indicators</h3>
 <ul>
   <li><strong>Floor marking</strong>: A subtle, semi-transparent circle at the exhibit base that appears on proximity to denote interactive zones.</li>
-  <li><strong>Guiding element</strong>: A pulsing “AR” cube or badge hovering beside the exhibit, oriented toward the visitor’s view.</li>
+  <li><strong>Guiding element</strong>: A pulsing “AR” cube or 3D model of the exhibit hovering beside the exhibit, oriented toward the visitor’s view.</li>
 </ul>
 
 <h3 id="interactive-narrative">Interactive Narrative</h3>
-<ol>
-  <li><strong>Audio cue</strong>: A soft chime and brief spoken prompt (“Tap or gaze to explore”) when the indicator appears.</li>
-  <li><strong>Visual cue</strong>: The icon expands and pulses once on activation, then smoothly transitions into the AR content overlay.</li>
-  <li><strong>Narration design</strong>: Concise voiceover explaining how to interact (“Look at the icon to begin”), paired with on-screen captions.</li>
-</ol>
+<ul>
+  <li><strong>Narration design</strong>: Provide exhibition titles and 3D objects to present the first impression of the exhibition.</li>
+  <li><strong>Audio cue</strong>: A soft chime and brief spoken prompt (“step into to continue”) when the indicator appears.</li>
+  <li><strong>Visual cue</strong>: The icon disappear once on activation; or smoothly transitions into the AR content overlay.</li>
+</ul>
 
 <h3 id="experience-principles">Experience Principles</h3>
 <ul>
   <li><strong>Intuitive guidance</strong>: Use consistent iconography and placement so visitors immediately recognize AR-enabled exhibits.</li>
   <li><strong>Seamless transition</strong>: Fade indicators in on approach and fade out once content loads, avoiding abrupt visual shifts.</li>
-  <li><strong>Comfortable pacing</strong>: Allow a 1–2 second dwell time for gaze selection, avoiding rushed activations.</li>
+  <li><strong>Comfortable pacing (Optional)</strong>: Allow a 1–2 second dwell time for gaze selection, avoiding rushed activations.</li>
 </ul>
 
 <h3 id="curation-considerations">Curation Considerations</h3>
@@ -313,7 +314,7 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 <h2 id="supplementary-information">Supplementary Information</h2>
 
 <h3 id="biography">Biography</h3>
-<p>Developed by AR UX designer Thomas Lee for the “Digital Layers” initiative at the Modern Art Museum, 2024.</p>
+<!-- Developed by AR UX designer Thomas Lee for the “Digital Layers” initiative at the Modern Art Museum, 2024. -->
 
 <hr />
 
