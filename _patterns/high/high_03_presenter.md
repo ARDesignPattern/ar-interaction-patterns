@@ -123,7 +123,7 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 ## Supplementary Information
 
 ### Biography
-Developed by AR curator Dr. Lena Hoffmann for the “Layers of Time” exhibition at the Historical Arts Center, 2025.
+<!-- Developed by AR curator Dr. Lena Hoffmann for the “Layers of Time” exhibition at the Historical Arts Center, 2025. -->
 
 ---
 

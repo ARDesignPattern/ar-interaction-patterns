@@ -130,7 +130,7 @@ Combining explicit path visualization with user-driven POI selection reduces cog
 ## Supplementary Information
 
 ### Biography
-Created by UX designer Elena Rossi for the “Smart Wayfinding” project at the Milan AR Museum, 2024.
+<!-- Created by UX designer Elena Rossi for the “Smart Wayfinding” project at the Milan AR Museum, 2024. -->
 
 ---
 
