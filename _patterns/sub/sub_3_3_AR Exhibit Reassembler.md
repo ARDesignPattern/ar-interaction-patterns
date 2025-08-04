@@ -46,6 +46,15 @@ description: "Enable visitors to reconstruct missing parts of physical exhibits 
 ---
 ## Application
 
+### Game Mechanics
+- **Type**: Jigsaw puzzle
+- **Piece Matching**: Identify and align puzzle pieces based onshape, color, or patterns.
+- **Spatial Arrangement**: Determine correct spatial placement of pieces within the layout.
+- **Pattern Recognition**: Identify connections using visual cues.
+- **Trial and Error**: Experiment with combinations to find correct fits.
+- **Progression Feedback**: Provide a sense of progress and achievement.
+- **Challenge Balancing**: Adjust difficulty by varying the complexity of components.
+
 ### Solution
 1. **Jigsaw-Puzzle Mechanic**  
    - Spawn interactive 3D fragments representing the missing parts.  
@@ -59,27 +68,23 @@ description: "Enable visitors to reconstruct missing parts of physical exhibits 
    - Start with boundary or high-contrast pieces for early confidence.  
    - Introduce subtler shapes or mirrored fragments as users progress, adapting based on placement speed and errors.  
 
-4. **Guidance & Tutorial**  
+4. **Guidance & Tutorial (Optional)**  
    - Highlight an initial docking region with a pulsing indicator.  
    - Play a brief voice-over or display on-screen instructions explaining controls and objectives.  
 
-5. **Narrative Enhancements**  
+5. **Narrative Enhancements (Optional)**  
    - As sections assemble, trigger contextual facts (e.g., “This vertebra supported the spinal cord”) via text and audio to weave learning into the flow.
 
 ### Rationale
 Transforming passive viewing into active assembly engages spatial reasoning and contextualizes individual components within the artifact’s holistic form, reinforcing educational outcomes.
 
 ### Design Parameters
-- **Piece Count**: 6–12 fragments to balance challenge and completion time  
-- **Snap Tolerance**: 0.1–0.2 m positional threshold, 5–10° rotational allowance  
-- **Feedback Delay**: ≤ 0.2 s between placement and confirmation  
+- **Piece Count**: 4–8 fragments to balance challenge and completion time  
+- **Snap Tolerance**: 0.2–0.5 m positional threshold, 10-30° rotational allowance  
+- **Feedback Delay**: ≤ 1 s between placement and confirmation  
 - **Completion Meter**: Updated immediately upon each placement  
-- **Tutorial Duration**: 5–8 s voice-over with visual highlights  
+<!-- - **Tutorial Duration**: 5–8 s voice-over with visual highlights   -->
 
-### Game Mechanics
-<!-- - **Puzzle Badge**: Award “Master Reassembler” upon full assembly  
-- **Speed Run**: Time from first pick to final snap for a leaderboard  
-- **Hint Tokens**: Earn or purchase hints to highlight next piece or region   -->
 
 ### Related Pattern
 <!-- - Exhibit Knowledge Trigger (focused micro-task)  
@@ -113,9 +118,10 @@ Transforming passive viewing into active assembly engages spatial reasoning and 
 - **Snap zone markers**: Pulsing rings or highlighted edges around target areas show valid placement regions.  
 
 ### Interactive Narrative
-1. **Audio cue**: A soft “snap” sound plays when a fragment enters the correct zone, and a brief “pickup” tone on initial grab.  
-2. **Visual cue**: The fragment glows and briefly pulses on correct placement; the completion meter increments with an animated fill.  
-3. **Narration launch**: Contextual facts (“This rib supported the chest cavity”) auto-play and display as text once each fragment is secured.  
+- **Narration Design**: Contextual facts (eg.: “This rib supported the chest cavity”) auto-play and display as text once each fragment is secured.  
+- **Audio cue**: A soft “snap” sound plays when a fragment enters the correct zone, and a brief “pickup” tone on initial grab.  
+- **Visual cue**: The fragment glows and briefly pulses on correct placement; the completion meter increments with an animated fill.  
+
 
 ### Experience Principles
 - **Intuitive interaction**: Use direct manipulation (grab, drag, release) paired with clear visual markers to guide assembly without menus.  

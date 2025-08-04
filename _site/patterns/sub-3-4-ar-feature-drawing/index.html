@@ -218,6 +218,15 @@ Static presentations of speculative or partially unknown exhibit features limit 
 
 <h2 id="application">Application</h2>
 
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Type</strong>: Drawing</li>
+  <li><strong>Freehand Drawing</strong>: Freely draw ideas on or around the exhibit.</li>
+  <li><strong>Feature Customization</strong>: Adjust feature options to match scientific findings or imagination.</li>
+  <li><strong>Feedback Integration</strong>: Provide comparisons with existing assumptions or highlight accuracy.</li>
+  <li><strong>Progressive Exploration</strong>: Guide visitors to different parts of the exhibit for additional challenges.</li>
+</ul>
+
 <h3 id="solution">Solution</h3>
 <ol>
   <li><strong>Freehand &amp; Pinch-Gesture Drawing</strong>
@@ -258,16 +267,11 @@ Static presentations of speculative or partially unknown exhibit features limit 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
   <li><strong>Brush Sizes</strong>: 1–10 cm virtual width, adjustable via pinch span</li>
-  <li><strong>Opacity Levels</strong>: 20–100% in 10% increments</li>
-  <li><strong>Stroke Latency</strong>: ≤ 50 ms for real-time feel</li>
-  <li><strong>Prompt Zone Highlight</strong>: 0.2 m radius pulsing halo</li>
-  <li><strong>Gallery Slot Limit</strong>: Store up to 20 recent designs per exhibit</li>
+  <li><strong>Opacity Levels</strong>: 20–100% in 10% increments<br />
+<!-- - **Stroke Latency**: ≤ 50 ms for real-time feel   --></li>
+  <li><strong>Color Option</strong>: Provide colours that correspond to the characteristics of the exhibition.
+<!-- - **Gallery Slot Limit**: Store up to 20 recent designs per exhibit   --></li>
 </ul>
-
-<h3 id="game-mechanics">Game Mechanics</h3>
-<!-- - **Community Badge**: Earn “Citizen Illustrator” for contributing a design  
-- **Challenge Mode**: Attempt to match an expert sketch under a time limit  
-- **Voting System**: Visitors can upvote favorite community sketches   -->
 
 <h3 id="related-pattern">Related Pattern</h3>
 <!-- - Exhibit Knowledge Trigger (micro-task activation)  
@@ -301,11 +305,12 @@ Static presentations of speculative or partially unknown exhibit features limit 
 </ul>
 
 <h3 id="interactive-narrative">Interactive Narrative</h3>
-<ol>
+<ul>
+  <li><strong>Narration Design</strong>: Guide users through the painting task using a narrative approach.</li>
   <li><strong>Audio cue</strong>: A soft brush stroke sound when drawing begins and an erase “swoosh” on pinch-delete.</li>
   <li><strong>Visual cue</strong>: Real-time stroke feedback with immediate line rendering and brush-size halo adjustments.</li>
-  <li><strong>Comparison overlay</strong>: A semi-transparent expert sketch fades in when the user toggles the “Expert View” button.</li>
-</ol>
+  <li><strong>Comparison overlay (Optional)</strong>: A semi-transparent expert sketch fades in when the user toggles the “Expert View” button.</li>
+</ul>
 
 <h3 id="experience-principles">Experience Principles</h3>
 <ul>
@@ -317,7 +322,7 @@ Static presentations of speculative or partially unknown exhibit features limit 
 <h3 id="curation-considerations">Curation Considerations</h3>
 <ul>
   <li><strong>Interface minimalism</strong>: Keep brush controls unobtrusive—hide tool icons when idle to preserve focus on the artifact.</li>
-  <li><strong>Gallery management</strong>: Limit saved designs to a recent curated set (e.g., 20 per exhibit) to maintain quality.</li>
+  <li><strong>Gallery management</strong>: Limit saved designs to a recent curated set (e.g., 5 per exhibit) to maintain quality.</li>
   <li><strong>Accessibility</strong>: Offer adjustable stroke contrast, voice commands for tool selection, and subtitle prompts for all instructions.</li>
 </ul>
 

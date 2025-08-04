@@ -48,6 +48,13 @@ description: "Enable visitors to creatively sketch hypothetical features—like 
 
 ## Application
 
+### Game Mechanics
+- **Type**: Drawing
+- **Freehand Drawing**: Freely draw ideas on or around the exhibit.
+- **Feature Customization**: Adjust feature options to match scientific findings or imagination.
+- **Feedback Integration**: Provide comparisons with existing assumptions or highlight accuracy.
+- **Progressive Exploration**: Guide visitors to different parts of the exhibit for additional challenges.
+
 ### Solution
 1. **Freehand & Pinch-Gesture Drawing**  
    - Provide a spatial canvas around or directly on the 3D exhibit model.  
@@ -75,14 +82,9 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 ### Design Parameters
 - **Brush Sizes**: 1–10 cm virtual width, adjustable via pinch span  
 - **Opacity Levels**: 20–100% in 10% increments  
-- **Stroke Latency**: ≤ 50 ms for real-time feel  
-- **Prompt Zone Highlight**: 0.2 m radius pulsing halo  
-- **Gallery Slot Limit**: Store up to 20 recent designs per exhibit  
-
-### Game Mechanics
-<!-- - **Community Badge**: Earn “Citizen Illustrator” for contributing a design  
-- **Challenge Mode**: Attempt to match an expert sketch under a time limit  
-- **Voting System**: Visitors can upvote favorite community sketches   -->
+<!-- - **Stroke Latency**: ≤ 50 ms for real-time feel   -->
+- **Color Option**: Provide colours that correspond to the characteristics of the exhibition.
+<!-- - **Gallery Slot Limit**: Store up to 20 recent designs per exhibit   -->
 
 ### Related Pattern
 <!-- - Exhibit Knowledge Trigger (micro-task activation)  
@@ -116,9 +118,10 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 - **Tool icons**: Floating brush and eraser icons that appear when users perform pinch gestures to select tools.  
 
 ### Interactive Narrative
-1. **Audio cue**: A soft brush stroke sound when drawing begins and an erase “swoosh” on pinch-delete.  
-2. **Visual cue**: Real-time stroke feedback with immediate line rendering and brush-size halo adjustments.  
-3. **Comparison overlay**: A semi-transparent expert sketch fades in when the user toggles the “Expert View” button.  
+- **Narration Design**: Guide users through the painting task using a narrative approach.
+- **Audio cue**: A soft brush stroke sound when drawing begins and an erase “swoosh” on pinch-delete.  
+- **Visual cue**: Real-time stroke feedback with immediate line rendering and brush-size halo adjustments.  
+- **Comparison overlay (Optional)**: A semi-transparent expert sketch fades in when the user toggles the “Expert View” button.  
 
 ### Experience Principles
 - **Direct manipulation**: Let visitors draw mid-air strokes that adhere to the 3D model’s surface, avoiding separate menus.  
@@ -127,7 +130,7 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 
 ### Curation Considerations
 - **Interface minimalism**: Keep brush controls unobtrusive—hide tool icons when idle to preserve focus on the artifact.  
-- **Gallery management**: Limit saved designs to a recent curated set (e.g., 20 per exhibit) to maintain quality.  
+- **Gallery management**: Limit saved designs to a recent curated set (e.g., 5 per exhibit) to maintain quality.  
 - **Accessibility**: Offer adjustable stroke contrast, voice commands for tool selection, and subtitle prompts for all instructions.  
 
 

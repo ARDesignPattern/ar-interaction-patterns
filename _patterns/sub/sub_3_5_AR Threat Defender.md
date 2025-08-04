@@ -13,7 +13,7 @@ thumbnail: /images/Gif/CoralReef.gif
 summary: "Defending Ecosystems through AR-Based Environmental Challenges"
 description: "Transform invisible environmental threats into an interactive AR defense game, enabling visitors to protect vulnerable habitats through gestures while learning about real-world ecological impacts and solutions."
 ---
-# Object Catching
+# AR Object Catching
 
 ---
 ## Overview
@@ -48,6 +48,13 @@ description: "Transform invisible environmental threats into an interactive AR d
 
 ## Application
 
+### Game Mechanics
+- **Type**: Catching objects  
+- **Object Interaction**: Engage with objects or phenomena through gestures.
+- **Blocking or Deflecting**: Actively block, redirect, or neutralize incoming objects.
+- **Targeted Protection**: Identify and protect vulnerable exhibit areas.
+- **Time-Based Challenges**: Introduce urgency with timelimited tasks.
+
 ### Solution
 1. **Gesture-Based Object Interception**  
    - Spawn virtual threats (drifting nets, plastic debris) moving toward vulnerable exhibit zones (e.g., coral reef).  
@@ -65,7 +72,7 @@ description: "Transform invisible environmental threats into an interactive AR d
    - Play spatialized audio narrating impact stats when a threat is intercepted or missed.  
    - Show visual effects: healthy coral brightening and fish population bloom for successful defenses.
 
-5. **Educational Wrap-Up**  
+5. **Educational Wrap-Up (Optional)**  
    - After the session, display personalized metrics (objects intercepted, reef health score).  
    - Present actionable conservation tips visitors can adopt outside the museum.
 
@@ -74,16 +81,10 @@ Turning abstract environmental hazards into tangible, interactive threats levera
 
 ### Design Parameters
 - **Threat Speed**: Start at 0.5 m/s, increase by 0.1 m/s every 20 seconds  
-- **Gesture Window**: Recognition window of 0.3–0.5 s for swipe or block motions  
-- **Highlight Radius**: 0.5 m glow around at-risk zones  
+<!-- - **Gesture Window**: Recognition window of 0.3–0.5 s for swipe or block motions   -->
+- **Highlight Radius (Optional)**: 0.5 m glow around at-risk zones  
 - **Feedback Delay**: ≤ 0.1 s between gesture and visual/audio response  
 - **Session Duration**: 60–120 s for optimal engagement  
-
-### Game Mechanics
-- **Score Meter**: Tracks number of threats intercepted  
-- **Combo Bonus**: Extra points for consecutive successful blocks  
-- **Lives System**: Allow 3 misses before “reef health” fails, prompting game over  
-- **Unlockables**: New threat types or conservation tips unlocked based on performance  
 
 ### Related Pattern
 <!-- - AR Exhibit Reassembler (interactive assembly)  
@@ -117,9 +118,10 @@ Turning abstract environmental hazards into tangible, interactive threats levera
 - **Risk highlights**: Pulsing glow around endangered zones (e.g., coral reef) to signal where intervention is needed.  
 
 ### Interactive Narrative
-1. **Audio cue**: A sharp “block” sound on successful interception and a low warning tone when a threat breaches the zone.  
-2. **Visual cue**: Immediate particle burst and brightening of the protected area on success; brief darkening or desaturation on miss.  
-3. **Narration launch**: A concise voiceover stating “You intercepted X pieces” or “Y threats got through,” paired with on-screen conservation tips.  
+- **Narration Design**: Whenever a falling target is successfully intercepted, provide corresponding narrative explanations, such as the positive significance of the successful interception. 
+- **Audio cue**: A sharp “block” sound on successful interception and a low warning tone when a threat breaches the zone.  
+- **Visual cue**: Immediate particle burst and brightening of the protected area on success; brief darkening or desaturation on miss.  
+ 
 
 ### Experience Principles
 - **Intuitive gestures**: Use natural swipe or block motions—mirroring real cleanup actions—to minimize learning curve.  

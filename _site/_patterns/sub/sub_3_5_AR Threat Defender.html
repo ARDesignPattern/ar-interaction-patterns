@@ -168,7 +168,7 @@
       </aside>
 
       <main class="pattern-main-content">
-        <h1 id="object-catching">Object Catching</h1>
+        <h1 id="ar-object-catching">AR Object Catching</h1>
 
 <hr />
 <h2 id="overview">Overview</h2>
@@ -219,6 +219,15 @@ Invisible or abstract threats—such as pollution or climate impacts—are diffi
 
 <h2 id="application">Application</h2>
 
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Type</strong>: Catching objects</li>
+  <li><strong>Object Interaction</strong>: Engage with objects or phenomena through gestures.</li>
+  <li><strong>Blocking or Deflecting</strong>: Actively block, redirect, or neutralize incoming objects.</li>
+  <li><strong>Targeted Protection</strong>: Identify and protect vulnerable exhibit areas.</li>
+  <li><strong>Time-Based Challenges</strong>: Introduce urgency with timelimited tasks.</li>
+</ul>
+
 <h3 id="solution">Solution</h3>
 <ol>
   <li><strong>Gesture-Based Object Interception</strong>
@@ -245,7 +254,7 @@ Invisible or abstract threats—such as pollution or climate impacts—are diffi
       <li>Show visual effects: healthy coral brightening and fish population bloom for successful defenses.</li>
     </ul>
   </li>
-  <li><strong>Educational Wrap-Up</strong>
+  <li><strong>Educational Wrap-Up (Optional)</strong>
     <ul>
       <li>After the session, display personalized metrics (objects intercepted, reef health score).</li>
       <li>Present actionable conservation tips visitors can adopt outside the museum.</li>
@@ -258,19 +267,11 @@ Invisible or abstract threats—such as pollution or climate impacts—are diffi
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Threat Speed</strong>: Start at 0.5 m/s, increase by 0.1 m/s every 20 seconds</li>
-  <li><strong>Gesture Window</strong>: Recognition window of 0.3–0.5 s for swipe or block motions</li>
-  <li><strong>Highlight Radius</strong>: 0.5 m glow around at-risk zones</li>
+  <li><strong>Threat Speed</strong>: Start at 0.5 m/s, increase by 0.1 m/s every 20 seconds<br />
+<!-- - **Gesture Window**: Recognition window of 0.3–0.5 s for swipe or block motions   --></li>
+  <li><strong>Highlight Radius (Optional)</strong>: 0.5 m glow around at-risk zones</li>
   <li><strong>Feedback Delay</strong>: ≤ 0.1 s between gesture and visual/audio response</li>
   <li><strong>Session Duration</strong>: 60–120 s for optimal engagement</li>
-</ul>
-
-<h3 id="game-mechanics">Game Mechanics</h3>
-<ul>
-  <li><strong>Score Meter</strong>: Tracks number of threats intercepted</li>
-  <li><strong>Combo Bonus</strong>: Extra points for consecutive successful blocks</li>
-  <li><strong>Lives System</strong>: Allow 3 misses before “reef health” fails, prompting game over</li>
-  <li><strong>Unlockables</strong>: New threat types or conservation tips unlocked based on performance</li>
 </ul>
 
 <h3 id="related-pattern">Related Pattern</h3>
@@ -305,11 +306,11 @@ Invisible or abstract threats—such as pollution or climate impacts—are diffi
 </ul>
 
 <h3 id="interactive-narrative">Interactive Narrative</h3>
-<ol>
+<ul>
+  <li><strong>Narration Design</strong>: Whenever a falling target is successfully intercepted, provide corresponding narrative explanations, such as the positive significance of the successful interception.</li>
   <li><strong>Audio cue</strong>: A sharp “block” sound on successful interception and a low warning tone when a threat breaches the zone.</li>
   <li><strong>Visual cue</strong>: Immediate particle burst and brightening of the protected area on success; brief darkening or desaturation on miss.</li>
-  <li><strong>Narration launch</strong>: A concise voiceover stating “You intercepted X pieces” or “Y threats got through,” paired with on-screen conservation tips.</li>
-</ol>
+</ul>
 
 <h3 id="experience-principles">Experience Principles</h3>
 <ul>

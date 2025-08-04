@@ -216,6 +216,17 @@ When only partial physical artifacts are on display, visitors struggle to grasp 
 <hr />
 <h2 id="application">Application</h2>
 
+<h3 id="game-mechanics">Game Mechanics</h3>
+<ul>
+  <li><strong>Type</strong>: Jigsaw puzzle</li>
+  <li><strong>Piece Matching</strong>: Identify and align puzzle pieces based onshape, color, or patterns.</li>
+  <li><strong>Spatial Arrangement</strong>: Determine correct spatial placement of pieces within the layout.</li>
+  <li><strong>Pattern Recognition</strong>: Identify connections using visual cues.</li>
+  <li><strong>Trial and Error</strong>: Experiment with combinations to find correct fits.</li>
+  <li><strong>Progression Feedback</strong>: Provide a sense of progress and achievement.</li>
+  <li><strong>Challenge Balancing</strong>: Adjust difficulty by varying the complexity of components.</li>
+</ul>
+
 <h3 id="solution">Solution</h3>
 <ol>
   <li><strong>Jigsaw-Puzzle Mechanic</strong>
@@ -236,13 +247,13 @@ When only partial physical artifacts are on display, visitors struggle to grasp 
       <li>Introduce subtler shapes or mirrored fragments as users progress, adapting based on placement speed and errors.</li>
     </ul>
   </li>
-  <li><strong>Guidance &amp; Tutorial</strong>
+  <li><strong>Guidance &amp; Tutorial (Optional)</strong>
     <ul>
       <li>Highlight an initial docking region with a pulsing indicator.</li>
       <li>Play a brief voice-over or display on-screen instructions explaining controls and objectives.</li>
     </ul>
   </li>
-  <li><strong>Narrative Enhancements</strong>
+  <li><strong>Narrative Enhancements (Optional)</strong>
     <ul>
       <li>As sections assemble, trigger contextual facts (e.g., “This vertebra supported the spinal cord”) via text and audio to weave learning into the flow.</li>
     </ul>
@@ -254,17 +265,12 @@ When only partial physical artifacts are on display, visitors struggle to grasp 
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Piece Count</strong>: 6–12 fragments to balance challenge and completion time</li>
-  <li><strong>Snap Tolerance</strong>: 0.1–0.2 m positional threshold, 5–10° rotational allowance</li>
-  <li><strong>Feedback Delay</strong>: ≤ 0.2 s between placement and confirmation</li>
-  <li><strong>Completion Meter</strong>: Updated immediately upon each placement</li>
-  <li><strong>Tutorial Duration</strong>: 5–8 s voice-over with visual highlights</li>
+  <li><strong>Piece Count</strong>: 4–8 fragments to balance challenge and completion time</li>
+  <li><strong>Snap Tolerance</strong>: 0.2–0.5 m positional threshold, 10-30° rotational allowance</li>
+  <li><strong>Feedback Delay</strong>: ≤ 1 s between placement and confirmation</li>
+  <li><strong>Completion Meter</strong>: Updated immediately upon each placement<br />
+<!-- - **Tutorial Duration**: 5–8 s voice-over with visual highlights   --></li>
 </ul>
-
-<h3 id="game-mechanics">Game Mechanics</h3>
-<!-- - **Puzzle Badge**: Award “Master Reassembler” upon full assembly  
-- **Speed Run**: Time from first pick to final snap for a leaderboard  
-- **Hint Tokens**: Earn or purchase hints to highlight next piece or region   -->
 
 <h3 id="related-pattern">Related Pattern</h3>
 <!-- - Exhibit Knowledge Trigger (focused micro-task)  
@@ -298,11 +304,11 @@ When only partial physical artifacts are on display, visitors struggle to grasp 
 </ul>
 
 <h3 id="interactive-narrative">Interactive Narrative</h3>
-<ol>
+<ul>
+  <li><strong>Narration Design</strong>: Contextual facts (eg.: “This rib supported the chest cavity”) auto-play and display as text once each fragment is secured.</li>
   <li><strong>Audio cue</strong>: A soft “snap” sound plays when a fragment enters the correct zone, and a brief “pickup” tone on initial grab.</li>
   <li><strong>Visual cue</strong>: The fragment glows and briefly pulses on correct placement; the completion meter increments with an animated fill.</li>
-  <li><strong>Narration launch</strong>: Contextual facts (“This rib supported the chest cavity”) auto-play and display as text once each fragment is secured.</li>
-</ol>
+</ul>
 
 <h3 id="experience-principles">Experience Principles</h3>
 <ul>
