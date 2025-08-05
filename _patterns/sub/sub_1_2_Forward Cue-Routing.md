@@ -105,9 +105,9 @@ Ground-anchored ripples leverage peripheral vision and spatial audio to cue fort
 </div>
 <!-- In a “Medieval Gallery” corridor, concentric green ripples pulse outward along the stone floor toward the next alcove. A soft chime precedes each ring sequence. Visitors instinctively follow the expanding rings and arrive at alcoves just as informative voice-overs begin. -->
 
----
+<!-- ---
 
-<!-- ## Narrative Creation in Cultural Heritage
+## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Anticipate direction**: Provide subtle early cues (ripples and audio) that draw visitors’ attention to upcoming turns before they reach decision points.  
@@ -126,13 +126,14 @@ Ground-anchored ripples leverage peripheral vision and spatial audio to cue fort
 ### Experience Principles
 - **Peripheral engagement**: Use low-profile, ground-anchored visuals that register in the peripheral vision without occluding exhibits.  
 - **Temporal alignment**: Time cues so that rings reach the midpoint between waypoints in 2–3 s at normal walking speed, ensuring intuitive pacing.  
-<!-- - **Minimal distraction**: Keep cues subtle yet noticeable—avoid abrupt or oversized graphics that compete with the environment.   -->
+- **Minimal distraction**: Keep cues subtle yet noticeable—avoid abrupt or oversized graphics that compete with the environment.  
 
 ### Curation Considerations
 - **Spatial calibration**: Fine-tune trigger radii (1–2 m) and localization precision to prevent premature or delayed cues.  
 - **Acoustic context**: Adjust audio volume and frequency to suit ambient noise levels and room acoustics.  
-- **Accessibility options**: Offer adjustable ripple contrast, optional high-contrast overlays for hearing-impaired visitors.  
---- -->
+- **Accessibility options**: Offer adjustable ripple contrast, optional high-contrast overlays for hearing-impaired visitors.   -->
+
+---
 
 ## Supplementary Information
 ### Biography
