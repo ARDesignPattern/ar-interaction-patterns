@@ -100,7 +100,7 @@ A focused micro-task leverages embodied interaction to make an abstract concept 
 <!-- A visitor grabs a virtual fish floating beside the AR orca. As the fish nears the orca’s mouth, increasing sonar pings build anticipation; dropping the fish triggers a chime and reveals a concise panel on echolocation, with an option to explore feeding-behaviour scenes. -->
 
 ---
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Prompt curiosity by highlighting a floating virtual fish beside the orca and inviting a “grab” interaction.  
@@ -125,9 +125,8 @@ A focused micro-task leverages embodied interaction to make an abstract concept 
 - **Traffic flow**: Stagger interaction availability, or avoid multiple users operating simultaneously: multiple users occupying the delivery area at the same time causes interaction difficulties.  
 - **Aesthetic harmony**: Match fish and UI overlays to the exhibit’s visual style and ambient lighting.  
 - **Accessibility**: Offer captions for audio cues, and adjustable outline contrast for visibility.  
+--- -->
 
-
----
 ## Supplementary Information
 ### Biography
 <!-- Built by AR educator Dr. Elena García for the “Marine Minds” exhibit at the Ocean Discovery Center, 2024. -->

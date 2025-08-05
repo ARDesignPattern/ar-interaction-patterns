@@ -106,7 +106,7 @@ Turning abstract environmental hazards into tangible, interactive threats levera
 </div>
 <!-- In a coral reef exhibit, plastic bottles drift toward a virtual reef. Visitors sweep their arms to deflect debris; each successful block triggers a coral-brightening animation and upbeat chime, while misses cause subtle reef graying and a soft alert tone. At the end, a summary screen shows intercepted debris count and suggests real-world recycling actions. -->
 
----
+<!-- ---
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
@@ -131,7 +131,7 @@ Turning abstract environmental hazards into tangible, interactive threats levera
 ### Curation Considerations
 - **Gesture calibration**: Adjust recognition sensitivity per space and lighting to reduce false positives/negatives.  
 - **Emotional tone**: Tune audio and visual feedback to maintain a hopeful, actionable mood rather than despair.  
-- **Accessibility**: Offer alternate input options (e.g., button taps), captioned narration, and adjustable audio volumes.  
+- **Accessibility**: Offer alternate input options (e.g., button taps), captioned narration, and adjustable audio volumes.   -->
 
 
 

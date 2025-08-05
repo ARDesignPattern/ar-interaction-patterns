@@ -92,7 +92,7 @@ Pointing lines create a direct visual association between physical components an
 </div>
 <!-- In an AR tour of a mechanical watch, a thin line connects to the “Balance Wheel” label. Approaching within 1.3 m fades in a panel explaining its role in timekeeping, then fades out when stepping back. -->
 
----
+<!-- ---
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
@@ -117,7 +117,7 @@ Pointing lines create a direct visual association between physical components an
 ### Curation Considerations
 - **Sensor calibration**: Adjust trigger radius per component to avoid accidental activations.  
 - **Aesthetic consistency**: Match line styles and label fonts to the exhibit’s design language.  
-- **Accessibility**: Offer adjustable text size, high-contrast labels, and captioned audio for all visitors.  
+- **Accessibility**: Offer adjustable text size, high-contrast labels, and captioned audio for all visitors.   -->
 
 ---
 ## Supplementary Information

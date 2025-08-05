@@ -106,7 +106,7 @@ Transforming passive viewing into active assembly engages spatial reasoning and 
 </div>
 <!-- In a dinosaur exhibit, visitors slide 3D femur and rib fragments into place on a partial skeleton. Each correctly snapped bone glows and plays a short roar, while a meter tracks progress. Upon completion, a voice-over narrates the full skeletal structure and its function. -->
 
----
+<!-- ---
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
@@ -131,7 +131,7 @@ Transforming passive viewing into active assembly engages spatial reasoning and 
 ### Curation Considerations
 - **Spatial accuracy**: Calibrate snap tolerances (0.1–0.2 m, 5–10°) per exhibit to minimize frustration from misalignments.  
 - **Aesthetic integration**: Match fragment shading and highlight styles to the artifact’s palette and exhibit lighting.  
-- **Accessibility**: Offer alternative input (e.g., gesture-free selection), adjustable highlight contrast, and captions for audio narration.  
+- **Accessibility**: Offer alternative input (e.g., gesture-free selection), adjustable highlight contrast, and captions for audio narration.   -->
 
 
 

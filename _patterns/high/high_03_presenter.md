@@ -13,7 +13,9 @@ thumbnail: /images/high_presenter.png
 summary: "Exploring and Controlling AR Content"
 description: "Exploring and Controlling AR Content: Present the content in a structured, navigable, and user-controlled manner."
 ---
-
+  <div class="column">
+    <img src="{{ '/images/HomePage/Fig_ExperiencePresenter.png' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
 # Experience Presenter
 ---
 ## Overview
@@ -91,7 +93,7 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 <!-- At a Roman artifact display, visitors tap the “Construction” tab to see animated building phases, then choose “Material Analysis” for microscopic texture overlays with narrated commentary, progressing at their own pace via Next/Previous controls. -->
 
 ---
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Present a concise module overview popup on AR activation, showcasing thematic segments to pique interest.  
@@ -116,9 +118,7 @@ Structuring AR content into discrete, labeled modules reduces cognitive load, le
 - **Traffic flow**: Limit visible modules to the nearest two or three to reduce cognitive load and avoid crowd bottlenecks.  
 - **Aesthetic harmony**: Match UI colors, fonts, and panel styles to the exhibit’s design language and lighting conditions.  
 - **Accessibility**: Provide high-contrast UI themes, adjustable text sizes, and captioned audio for visitors with diverse needs.  
-
-
----
+--- -->
 
 ## Supplementary Information
 

@@ -100,7 +100,7 @@ Structuring content into bite-sized, thematically grouped segments reduces overw
 </div>
 <!-- At a dinosaur fossil display, visitors tap the “Anatomy” button to see sequential panels: labeled bone parts animated in 3D, narrated audio explaining each. They then click “Next” to view “Habitat” images with pause controls for immersive video. -->
 
----
+<!-- ---
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
@@ -124,11 +124,10 @@ Structuring content into bite-sized, thematically grouped segments reduces overw
 
 ### Curation Considerations
 - **Exhibit aesthetics**: Match button shapes, fonts, and accent colors to the exhibit’s design language.  
-- **Accessibility**: Provide high‐contrast tab outlines, adjustable text size, and optional subtitles for audio.  
+- **Accessibility**: Provide high‐contrast tab outlines, adjustable text size, and optional subtitles for audio.   -->
 <!-- - **Hardware variance**: Ensure touch targets (≥ 40 px) and gesture zones are comfortable on both tablets and HMDs.   -->
-
-
 ---
+
 ## Supplementary Information
 
 ### Biography

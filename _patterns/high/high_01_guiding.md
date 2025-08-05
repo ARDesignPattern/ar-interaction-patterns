@@ -13,8 +13,11 @@ thumbnail: /images/high_guide.png
 summary: "Guiding to Points of Interest (PoIs)"
 description: "To assist users in reaching PoIs effectively, combine spatial guidance, interface support, and multisensory feedback."
 ---
-
+  <div class="column">
+    <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
 # Point of Interest Guide
+
 ---
 ## Overview
 - **Name**  
@@ -97,7 +100,7 @@ Combining explicit path visualization with user-driven POI selection reduces cog
 
 ---
 
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Display a POI selection menu showing nearby exhibits with their names and distances, prompting users to choose a destination.    
@@ -121,11 +124,7 @@ Combining explicit path visualization with user-driven POI selection reduces cog
 - **Traffic flow**: Monitor visitor density and suggest alternate routes to prevent bottlenecks at popular POIs.  
 - **Aesthetic harmony**: Choose cue colors, shapes, and animations that complement the exhibit’s design language and lighting.  
 - **Accessibility**: Provide high-contrast options, adjustable audio volume, and text labels to accommodate diverse visitor needs.  
-
-
-
-
----
+--- -->
 
 ## Supplementary Information
 

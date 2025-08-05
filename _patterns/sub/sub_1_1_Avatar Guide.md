@@ -110,7 +110,7 @@ In AR-enhanced museum settings, guests can miss salient points of interest despi
 
 
 ---
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Craft an engaging opening animation or narrative hook, such as the avatar greeting guests by introducing its name; or with a brief thematic anecdote, to immediately capture attention and curiosity.  
@@ -139,8 +139,8 @@ In AR-enhanced museum settings, guests can miss salient points of interest despi
 - **Traffic flow**: Design path widths and timing to prevent group bottlenecks; consider staggered start zones or dynamic pacing adjustments for high-traffic periods.  
 - **Aesthetic harmony**: Ensure avatar design, floor markings, and menus complement the exhibit’s visual style and lighting conditions to maintain thematic cohesion.  
 - **Accessibility**: Provide alternative guidance modes (e.g., high-contrast outlines, text-only menus, adjustable narration volumes) to accommodate visitors with visual, auditory, or mobility impairments.  
+--- -->
 
----
 ## Supplementary Information
 - **Biography**  
  -

@@ -105,7 +105,7 @@ Anchoring a simple visual zone to the floor leverages natural proximity behavior
 
 ---
 
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Define an “experience circle” on the floor in front of the exhibit so visitors instinctively step into it.  
 - **Auto-start interaction**: Once inside the circle, AR content (narration or animation) begins without requiring any buttons.
@@ -129,8 +129,8 @@ Anchoring a simple visual zone to the floor leverages natural proximity behavior
 - **Traffic flow**: Position the circle so it doesn’t block main pathways or conflict with adjacent exhibits.  
 - **Aesthetic harmony**: Choose marking colors and materials that blend with floor finishes and lighting—visible yet unobtrusive.  
 - **Accessibility**: Ensure visitors of all heights and those with mobility challenges can easily enter the trigger zone.
+---  -->
 
---- 
 ## Supplementary Information
 
 ### Biography

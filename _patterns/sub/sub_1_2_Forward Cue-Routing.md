@@ -107,7 +107,7 @@ Ground-anchored ripples leverage peripheral vision and spatial audio to cue fort
 
 ---
 
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Anticipate direction**: Provide subtle early cues (ripples and audio) that draw visitors’ attention to upcoming turns before they reach decision points.  
@@ -132,9 +132,8 @@ Ground-anchored ripples leverage peripheral vision and spatial audio to cue fort
 - **Spatial calibration**: Fine-tune trigger radii (1–2 m) and localization precision to prevent premature or delayed cues.  
 - **Acoustic context**: Adjust audio volume and frequency to suit ambient noise levels and room acoustics.  
 - **Accessibility options**: Offer adjustable ripple contrast, optional high-contrast overlays for hearing-impaired visitors.  
+--- -->
 
-
----
 ## Supplementary Information
 ### Biography
 <!-- Developed by AR designer Li Wei for the “Time Passage” exhibition at the Beijing Museum of Digital Art, 2024. -->

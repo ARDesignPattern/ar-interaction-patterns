@@ -106,7 +106,7 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 </div>
 <!-- At a paleontology exhibit, visitors sketch feather patterns on a velociraptor model. They adjust brush thickness with pinches, compare their designs to a paleontologist’s rendition, and then submit their own version to the exhibit’s AR gallery wall. -->
 
----
+<!-- ---
 ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
@@ -131,7 +131,7 @@ Allowing visitors to actively sketch hypotheses turns passive observation into p
 ### Curation Considerations
 - **Interface minimalism**: Keep brush controls unobtrusive—hide tool icons when idle to preserve focus on the artifact.  
 - **Gallery management**: Limit saved designs to a recent curated set (e.g., 5 per exhibit) to maintain quality.  
-- **Accessibility**: Offer adjustable stroke contrast, voice commands for tool selection, and subtitle prompts for all instructions.  
+- **Accessibility**: Offer adjustable stroke contrast, voice commands for tool selection, and subtitle prompts for all instructions.   -->
 
 
 ---

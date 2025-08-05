@@ -13,7 +13,9 @@ thumbnail: /images/high_indicator.png
 summary: "Recognizing and Activating AR Exhibit"
 description: "Recognizing and Activating AR Experiences: To help visitors easily identify and access AR content, combine clear visual cues with intuitive activation methods and feedback."
 ---
-
+  <div class="column">
+    <img src="{{ '/images/HomePage/Fig_ExperienceIndicator.png' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
 # Experience Indicator
 ---
 ## Overview
@@ -87,7 +89,7 @@ Combining consistent visual markers with multiple intuitive activation paths ens
 <!-- In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns. -->
 
 ---
-## Narrative Creation in Cultural Heritage
+<!-- ## Narrative Creation in Cultural Heritage
 
 ### Visitor Behavioral Goals
 - **Draw visitors in**: Highlight floating AR icons with a gentle glow to signal interactivity and pique curiosity.  
@@ -113,9 +115,7 @@ Combining consistent visual markers with multiple intuitive activation paths ens
 - **Aesthetic harmony**: Match icon colors, shapes, and glow intensity to the exhibit’s lighting and design language.  
 - **Accessibility**: Offer high-contrast indicator variants, adjustable dwell durations, and alternative tap or voice command activation.  
 
-
-
----
+--- -->
 
 ## Supplementary Information
 
