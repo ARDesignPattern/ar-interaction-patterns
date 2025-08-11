@@ -49,47 +49,47 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 
 ## Application
 
-### Solution
-1. **Exhibit Information Categorization**  
-   - Divide AR content into clear modules (e.g., “Anatomical Features,” “Habitat,” “Cultural History”).  
-   - Present module buttons or tabs in a persistent menu.  
-2. **Detailed Exhibit Explanation**  
-   - Within each module, display one content item at a time—3D model animations, labeled overlays, or synced audio/subtitles.  
-   - Highlight key elements visually and narrate explanations in short segments.  
-3. **Navigation Controls**  
-   - Provide “Previous” and “Next” buttons to move between items.  
-   - Disable auto-advance (Optional): allow unlimited dwell time on each segment.  
-4. **Category Indicators**  
-   - Show the active module name prominently at the top of the view.  
-   - Hide inactive modules to maintain focus.  
-5. **Control for Animated Content**  
-   - For videos or timed animations, include “Pause” and “Resume” controls.  
-   <!-- - Auto-pause when navigating away; auto-resume upon return. -->
+### Solution (High-Level, Principle-Only)
+1. **Purpose & Scope**  
+Establish a **modular, self-paced** presentation convention that structures the journey **Discover → Select → Present → Deepen/Branch → Pause/Resume → Exit/Return**; define **principles and contracts**, not specific widgets, layouts, or timings.
+
+2. **Invariants (must always hold)**
+- **Discoverable without overload**
+- **Pace controllable** (pause, resume, jump)
+- **Progressive disclosure** (digestible units)
+- **Redundant multimodality** (≥2 channels)
+- **Consistent semantics** across exhibits
+
+3. **Variation Points (choose per context)**
+- Module organization: thematic groups, hierarchies, timelines, spatial partitions
+- Unit granularity: micro to macro; adapt to engagement
+- Navigation: sequential, free-jump, milestones, guided paths
+- Modality mix: text, imagery/3D, narration/captions, micro-interactions
+- Persistence: progress memory, bookmarks, context restore
+
+4. **Decision Heuristics (non-prescriptive)**
+Choose granularity and navigation by prior knowledge, time budget, spatial density, device/localization confidence; reduce concurrent channels in noisy or crowded contexts.
+
+5. **Integration Contract (technology-agnostic)**
+- Define states and events: **ModuleList → ModuleSelected → UnitPresented → UnitCompleted → ModuleCompleted → Exit/Return**
+- Define exceptions and rollbacks: **Paused, Off-Focus, Low-Confidence, Overload**
+- Expose telemetry hooks: **Enter/exit module, dwell time, jump/rollback, completion rate** 
+- Do **NOT** fix specific control forms or thresholds
+
+6. **Safety & Comfort Guards**
+- Bound per-unit density and concurrent channels; ensure interruptible media and graceful degradation under load or uncertainty.
+
+7. **Accessibility & Inclusivity**
+Offer equivalent paths (captions/transcripts, adjustable contrast/size, non-color encoding, voice/hands-free); provide concise summaries for reduced cognitive load.
 
 ### Rationale
-Structuring AR content into discrete, labeled modules reduces cognitive load, lets visitors prioritize their interests, and prevents information dumping by pacing delivery.
+- **Shifts from “how to present” to “what is guaranteed,**” freeing sub-pattern creativity.
+- **Balances personalization and consistency** via invariants and equivalent access paths.
+- **Manages cognitive load and pacing** with progressive disclosure and interruptible media.
+- **Enables composition and extensibility** by treating interactive micro-tasks as modules within a stable contract.
+- **Supports evidence-based iteration** with standardized states and telemetry for long-term governance.
 
-### Design Parameters
-- **Modules per Exhibit**: 3–5 to balance depth and simplicity  
-- **Button Size**: ≥ 10 cm tap target  
-<!-- - **Text Segment Length**: ≤ 40 words per panel   -->
-- **Audio Clip Duration**: 10–30 s each  
-- **Animation Control Latency**: ≤ 0.5 s for pause/resume  
-
-<!-- ### Game Mechanics
-- **Completion Badge**: Earn “Content Navigator” for viewing all modules  
-- **Choice Path**: Unlock a “Deep Dive” quiz after completing core modules  
-- **Time Tracker**: Show total time spent per module for playful feedback   -->
-
-### Related Pattern
-- Sequential Explanation (step-by-step panels)  
-<!-- - AR Experience Indicator (discovering interactive exhibits)   -->
-
-### Impact on Immersion
-- **Enhances**: Provides clear mental model; supports autonomy and deeper learning  
-- **Risks**: UI elements may occlude exhibits; overly linear flow could feel restrictive  
-
-### Example
+<!-- ### Example -->
 <!-- At a Roman artifact display, visitors tap the “Construction” tab to see animated building phases, then choose “Material Analysis” for microscopic texture overlays with narrated commentary, progressing at their own pace via Next/Previous controls. -->
 
 ---

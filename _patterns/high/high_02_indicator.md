@@ -49,28 +49,34 @@ description: "Recognizing and Activating AR Experiences: To help visitors easily
 
 ## Application
 
-### Solution
-1. **Visual Indicators**  
-   - Render floating 3D AR icons (e.g., stylized cubes or 3D exhibit model) adjacent to interactive exhibits.  
-   - Apply pulsing outlines or gentle glow effects to draw peripheral attention.  
-2. **Activation Mechanism**  
-   - Define distance trigger area: user enters the trigger area to activate the AR experience.
-   - (Optional) Define gesture zones: fix a reticle on the indicator for 1–2 seconds, or perform a tap-gesture.  
-   - (Optional) Support voice commands (“Show me more”) to launch experiences hands-free.  
-   <!-- - Optionally, place a subtle floor circle around the exhibit; stepping in triggers content.   -->
-3. **Feedback Cues**  
-   - Immediately animate the icon (e.g., expand-fade) or change color to confirm activation.  
-   - Play a soft audio cue or brief spoken confirmation.  
+### Solution (High-Level, Principle-Only)
+1. **Purpose & Scope**  
+   Define a system-level convention that guides the visitor journey **from discovery → approach → activation. Specify principles and contracts**, not visuals, parameters, or gestures.  
+2. **Invariants (must always hold)**  
+- Discoverable without clutter.
+- Clear state progression.
+- Redundant, multimodal feedback (at least two channels).
+- Accessible alternatives for varied abilities and contexts.
+- Consistent semantics across exhibits.
+3. **Variation Points (choose per context)**  
+- Placement strategy: ambient discovery vs. local anchor.
+- Activation family: proximity, explicit intent, voice/assisted, etc.
+- Feedback mix and intensity: visual / audio / haptic.
+- Persistence level: always-on vs. on-demand; level of detail.
+- Adaptation: personalization by crowding, lighting, or device capability.
+4. **Decision Heuristics (non-prescriptive)**  
+Select variation points based on spatial constraints, crowd density, safety, learning intent (concept-first vs. flow-preserving), and device/ambient limitations.
+5. **Integration Contract (technology-agnostic)**
+- Define lifecycle events and analytics hooks: **Discover → Candidate → Confirm → Activate → Exit/Recover**.
+- Do **NOT** fix shapes, distances, timings, or gesture sets—those belong to sub-level patterns.
 
 ### Rationale
-Combining consistent visual markers with multiple intuitive activation paths ensures that all visitors—whether novice or experienced—can locate and engage AR content with minimal learning curve.
+- **Preserves creative flexibility** by separating **what** the indicator system guarantees from **how** it is realized.
+- **Enables extensibility**: new sub-level patterns can be authored without modifying the high-level contract.
+- **Maintains consistency and accessibility** across exhibits while adapting to diverse spaces, devices, and audiences.
+- **Supports governance and iteration** via shared lifecycle events and metrics rather than fixed UI details.
 
-### Design Parameters
-- **Icon Size**: 0.3–0.5 m in AR space for legibility  
-<!-- - **Glow Pulse Rate**: 0.5–1 Hz to balance noticeability and subtlety   -->
-- **Gaze Timer(Optional)**: 1.5 s dwell for selection, with a progress ring indicator  
-- **Voice Command Delay(Optional)**: <0.2 s from keyword to system response  
-<!-- - **Audio Cue Volume**: 60 dB SPL in typical gallery noise   -->
+
 
 <!-- ### Game Mechanics
 - **First-Use Badge**: Unlock “AR Explorer” on first activation  
@@ -78,14 +84,11 @@ Combining consistent visual markers with multiple intuitive activation paths ens
 - **Discovery Tracker**: Show percentage of AR-enabled exhibits visited   -->
 
 ### Related Pattern
-- Floor Circle (proximity-based trigger)  
-<!-- - Point of Interest Guide (path-based navigation to interactive exhibits)   -->
+Sub-level patterns (e.g., Floor Circle, Exhibit Knowledge Trigger) **instantiate** choices along the variation points. They are examples, not the exhaustive set.
 
-### Impact on Immersion
-- **Enhances**: Clearly differentiates interactive content; guides focus without heavy UI  
-- **Risks**: Too many markers can clutter view; poorly tuned animations may distract  
 
-### Example
+
+<!-- ### Example -->
 <!-- In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns. -->
 
 ---

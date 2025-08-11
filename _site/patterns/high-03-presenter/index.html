@@ -220,70 +220,61 @@ Visitors face information overload when an exhibit contains multiple thematic la
 
 <h2 id="application">Application</h2>
 
-<h3 id="solution">Solution</h3>
+<h3 id="solution-high-level-principle-only">Solution (High-Level, Principle-Only)</h3>
 <ol>
-  <li><strong>Exhibit Information Categorization</strong>
+  <li>
+    <p><strong>Purpose &amp; Scope</strong><br />
+Establish a <strong>modular, self-paced</strong> presentation convention that structures the journey <strong>Discover → Select → Present → Deepen/Branch → Pause/Resume → Exit/Return</strong>; define <strong>principles and contracts</strong>, not specific widgets, layouts, or timings.</p>
+  </li>
+  <li><strong>Invariants (must always hold)</strong>
     <ul>
-      <li>Divide AR content into clear modules (e.g., “Anatomical Features,” “Habitat,” “Cultural History”).</li>
-      <li>Present module buttons or tabs in a persistent menu.</li>
+      <li><strong>Discoverable without overload</strong></li>
+      <li><strong>Pace controllable</strong> (pause, resume, jump)</li>
+      <li><strong>Progressive disclosure</strong> (digestible units)</li>
+      <li><strong>Redundant multimodality</strong> (≥2 channels)</li>
+      <li><strong>Consistent semantics</strong> across exhibits</li>
     </ul>
   </li>
-  <li><strong>Detailed Exhibit Explanation</strong>
+  <li><strong>Variation Points (choose per context)</strong>
     <ul>
-      <li>Within each module, display one content item at a time—3D model animations, labeled overlays, or synced audio/subtitles.</li>
-      <li>Highlight key elements visually and narrate explanations in short segments.</li>
+      <li>Module organization: thematic groups, hierarchies, timelines, spatial partitions</li>
+      <li>Unit granularity: micro to macro; adapt to engagement</li>
+      <li>Navigation: sequential, free-jump, milestones, guided paths</li>
+      <li>Modality mix: text, imagery/3D, narration/captions, micro-interactions</li>
+      <li>Persistence: progress memory, bookmarks, context restore</li>
     </ul>
   </li>
-  <li><strong>Navigation Controls</strong>
+  <li>
+    <p><strong>Decision Heuristics (non-prescriptive)</strong>
+Choose granularity and navigation by prior knowledge, time budget, spatial density, device/localization confidence; reduce concurrent channels in noisy or crowded contexts.</p>
+  </li>
+  <li><strong>Integration Contract (technology-agnostic)</strong>
     <ul>
-      <li>Provide “Previous” and “Next” buttons to move between items.</li>
-      <li>Disable auto-advance (Optional): allow unlimited dwell time on each segment.</li>
+      <li>Define states and events: <strong>ModuleList → ModuleSelected → UnitPresented → UnitCompleted → ModuleCompleted → Exit/Return</strong></li>
+      <li>Define exceptions and rollbacks: <strong>Paused, Off-Focus, Low-Confidence, Overload</strong></li>
+      <li>Expose telemetry hooks: <strong>Enter/exit module, dwell time, jump/rollback, completion rate</strong></li>
+      <li>Do <strong>NOT</strong> fix specific control forms or thresholds</li>
     </ul>
   </li>
-  <li><strong>Category Indicators</strong>
+  <li><strong>Safety &amp; Comfort Guards</strong>
     <ul>
-      <li>Show the active module name prominently at the top of the view.</li>
-      <li>Hide inactive modules to maintain focus.</li>
+      <li>Bound per-unit density and concurrent channels; ensure interruptible media and graceful degradation under load or uncertainty.</li>
     </ul>
   </li>
-  <li><strong>Control for Animated Content</strong>
-    <ul>
-      <li>For videos or timed animations, include “Pause” and “Resume” controls.<br />
-<!-- - Auto-pause when navigating away; auto-resume upon return. --></li>
-    </ul>
-  </li>
+  <li><strong>Accessibility &amp; Inclusivity</strong>
+Offer equivalent paths (captions/transcripts, adjustable contrast/size, non-color encoding, voice/hands-free); provide concise summaries for reduced cognitive load.</li>
 </ol>
 
 <h3 id="rationale">Rationale</h3>
-<p>Structuring AR content into discrete, labeled modules reduces cognitive load, lets visitors prioritize their interests, and prevents information dumping by pacing delivery.</p>
-
-<h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Modules per Exhibit</strong>: 3–5 to balance depth and simplicity</li>
-  <li><strong>Button Size</strong>: ≥ 10 cm tap target<br />
-<!-- - **Text Segment Length**: ≤ 40 words per panel   --></li>
-  <li><strong>Audio Clip Duration</strong>: 10–30 s each</li>
-  <li><strong>Animation Control Latency</strong>: ≤ 0.5 s for pause/resume</li>
+  <li><strong>Shifts from “how to present” to “what is guaranteed,</strong>” freeing sub-pattern creativity.</li>
+  <li><strong>Balances personalization and consistency</strong> via invariants and equivalent access paths.</li>
+  <li><strong>Manages cognitive load and pacing</strong> with progressive disclosure and interruptible media.</li>
+  <li><strong>Enables composition and extensibility</strong> by treating interactive micro-tasks as modules within a stable contract.</li>
+  <li><strong>Supports evidence-based iteration</strong> with standardized states and telemetry for long-term governance.</li>
 </ul>
 
-<!-- ### Game Mechanics
-- **Completion Badge**: Earn “Content Navigator” for viewing all modules  
-- **Choice Path**: Unlock a “Deep Dive” quiz after completing core modules  
-- **Time Tracker**: Show total time spent per module for playful feedback   -->
-
-<h3 id="related-pattern">Related Pattern</h3>
-<ul>
-  <li>Sequential Explanation (step-by-step panels)<br />
-<!-- - AR Experience Indicator (discovering interactive exhibits)   --></li>
-</ul>
-
-<h3 id="impact-on-immersion">Impact on Immersion</h3>
-<ul>
-  <li><strong>Enhances</strong>: Provides clear mental model; supports autonomy and deeper learning</li>
-  <li><strong>Risks</strong>: UI elements may occlude exhibits; overly linear flow could feel restrictive</li>
-</ul>
-
-<h3 id="example">Example</h3>
+<!-- ### Example -->
 <!-- At a Roman artifact display, visitors tap the “Construction” tab to see animated building phases, then choose “Material Analysis” for microscopic texture overlays with narrated commentary, progressing at their own pace via Next/Previous controls. -->
 
 <hr />

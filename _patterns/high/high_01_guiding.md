@@ -52,50 +52,45 @@ description: "To assist users in reaching PoIs effectively, combine spatial guid
 
 ## Application
 
-### Solution
-1. **Path Point-Based Guiding**  
-   - Author or generate a polyline route from current position to the chosen POI.  
-   - Continuously update route if the user deviates or selects a new destination.  
-2. **Point of Interest Selection Interface**  
-   - Display a floor-pinned or HUD menu listing POIs with thumbnails, categories, and estimated travel times.  
-   - Allow sorting by proximity, popularity, or remaining time.  
-3. **Navigation Control Interface**  
-   - Provide Start, Pause, Resume, and Cancel controls via gesture, voice, or on-screen buttons.  
-   - Cache paused routes for later resumption (Optional).  
-4. **Directional Visual Cues**  
-   - Overlay avatar/arrows/footprints/animnated visual object along the path, shape/color-coded for upcoming turns or straight segments.  
-   - Animate next-step indicators (e.g., pulsing arrow) when approaching decision points.  
-5. **Auditory Feedback**  
-   - Play spatialized cues at key waypoints.  
-   - Adjust volume based on ambient noise and distance (Optional).  
-6. **Arrival Trigger**  
-   - When the user enters the POI zone, fade out path indicators, play a confirmation chime, and display a brief arrival tooltip.
+### Solution (High-Level, Principle-Only)
+1. **Purpose & Scope**  
+Orchestrate the end-to-end journey **Select → Route → Navigate → Arrive/Dwell → Resume/End** via system-level conventions. Specify **principles and contracts**, not representations, thresholds, or gesture sets. 
+2. **Invariants (must always hold)**  
+- Perceptible without occluding exhibits; 
+- Pace-safe and comfortable; 
+- Continuous orientation with recoverability; 
+- Redundant multimodal feedback (≥2 channels); 
+- Consistent semantics and accessibility across exhibits.
+3. **Variation Points (choose per context)**  
+   - Guidance modality family: avatar/character, ground cues, HUD/overlays, audio/haptics.  
+   - Routing policy: shortest, smoothest, thematic, accessible-first, crowd-aware.
+   - Pacing policy: follower, leader, metronomic; adaptive or fixed.
+   - Anticipation horizon: how early/often to pre-announce turns.
+   - Persistence & visibility: always-on vs on-demand; level of detail.
+4. **Decision Heuristics (non-prescriptive)**  
+   Select variation points based on topology (corridors/open halls), crowding, noise/lighting, device capabilities, localization confidence, and visitor intent (goal- vs exploration-oriented).
+5. **Integration Contract (technology-agnostic)**  
+- Define states and events: **Select → Preview → Commit → Cruise → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End**; 
+- Exceptions and rollbacks: **Off-Route, Low-Confidence, Paused**; 
+- Required data and hooks: route geometry, PoI metadata, telemetry (detection/deviation/arrival). 
+- **NO** fixed shape, distance, or duration.
+
+6. **Safety & Comfort Guards**  
+Bound speed and acceleration deltas; avoid sharp turns/occlusion; provide exit/retry paths; **gracefully degrade** under low confidence.
+7. **Accessibility & Inclusivity**  
+Offer equivalent channels (speech/captions/high contrast/non-color coding/haptics); support hands-free modes and adjustable text/tempo.
+
 
 ### Rationale
-Combining explicit path visualization with user-driven POI selection reduces cognitive load, ensures efficient coverage of highlights, and accommodates both goal-oriented and exploratory behaviors.
+- **Decouples orchestration from representation** preserving freedom while avoiding over-specification.
+- **Enables extensibility and composition**, allowing new or combined sub-patterns without changing the contract.
+- **Reduces cognitive load while ensuring pace and safety** via invariants and guardrails.
+- **Adapts across devices and environments**, gracefully degrading under uncertainty.
+- **Fosters consistency and governance** with shared semantics and telemetry for large-scale operations.
 
-### Design Parameters
-- **Path Width**: 1–1.5 m in AR space for clear visibility  
-- **Size of the Visual Cue**: ≥ 0.3 m 
-- **Distance between the cue and the user**: 1-2 m
-- **Cue Lead Time (When apply)**: Announce turns 5–10 m before decision points 
-<!-- - **Audio Level**: 60–70 dB SPL, adaptive to ambient noise   -->
-- **Menu Reach**: Within 1-1.5 m of user gaze center for easy selection  
 
-<!-- ### Game Mechanics
-- **Explorer Badge**: Earned for visiting a sequence of POIs without pauses  
-- **Time Challenge**: Complete N POIs within a time limit for a leaderboard  
-- **Route Streak**: Rewards for revisiting POIs in the same order as recommended   -->
 
-### Related Pattern
-- Avatar Guide (personalized escort along a path)  
-- Forward Cue-Routing (ground-anchored turn anticipation)  
-
-### Impact on Immersion
-- **Enhances**: Provides clear direction without physical signage; supports time-sensitive visits  
-- **Risks**: Excessive overlays can distract; rigid routing may reduce serendipity  
-
-### Example
+<!-- ### Example -->
 <!-- At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture. -->
 
 ---

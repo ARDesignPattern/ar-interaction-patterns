@@ -220,40 +220,44 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 
 <h2 id="application">Application</h2>
 
-<h3 id="solution">Solution</h3>
+<h3 id="solution-high-level-principle-only">Solution (High-Level, Principle-Only)</h3>
 <ol>
-  <li><strong>Visual Indicators</strong>
+  <li><strong>Purpose &amp; Scope</strong><br />
+Define a system-level convention that guides the visitor journey <strong>from discovery → approach → activation. Specify principles and contracts</strong>, not visuals, parameters, or gestures.</li>
+  <li><strong>Invariants (must always hold)</strong>
     <ul>
-      <li>Render floating 3D AR icons (e.g., stylized cubes or 3D exhibit model) adjacent to interactive exhibits.</li>
-      <li>Apply pulsing outlines or gentle glow effects to draw peripheral attention.</li>
+      <li>Discoverable without clutter.</li>
+      <li>Clear state progression.</li>
+      <li>Redundant, multimodal feedback (at least two channels).</li>
+      <li>Accessible alternatives for varied abilities and contexts.</li>
+      <li>Consistent semantics across exhibits.</li>
     </ul>
   </li>
-  <li><strong>Activation Mechanism</strong>
+  <li><strong>Variation Points (choose per context)</strong>
     <ul>
-      <li>Define distance trigger area: user enters the trigger area to activate the AR experience.</li>
-      <li>(Optional) Define gesture zones: fix a reticle on the indicator for 1–2 seconds, or perform a tap-gesture.</li>
-      <li>(Optional) Support voice commands (“Show me more”) to launch experiences hands-free.<br />
-<!-- - Optionally, place a subtle floor circle around the exhibit; stepping in triggers content.   --></li>
+      <li>Placement strategy: ambient discovery vs. local anchor.</li>
+      <li>Activation family: proximity, explicit intent, voice/assisted, etc.</li>
+      <li>Feedback mix and intensity: visual / audio / haptic.</li>
+      <li>Persistence level: always-on vs. on-demand; level of detail.</li>
+      <li>Adaptation: personalization by crowding, lighting, or device capability.</li>
     </ul>
   </li>
-  <li><strong>Feedback Cues</strong>
+  <li><strong>Decision Heuristics (non-prescriptive)</strong><br />
+Select variation points based on spatial constraints, crowd density, safety, learning intent (concept-first vs. flow-preserving), and device/ambient limitations.</li>
+  <li><strong>Integration Contract (technology-agnostic)</strong>
     <ul>
-      <li>Immediately animate the icon (e.g., expand-fade) or change color to confirm activation.</li>
-      <li>Play a soft audio cue or brief spoken confirmation.</li>
+      <li>Define lifecycle events and analytics hooks: <strong>Discover → Candidate → Confirm → Activate → Exit/Recover</strong>.</li>
+      <li>Do <strong>NOT</strong> fix shapes, distances, timings, or gesture sets—those belong to sub-level patterns.</li>
     </ul>
   </li>
 </ol>
 
 <h3 id="rationale">Rationale</h3>
-<p>Combining consistent visual markers with multiple intuitive activation paths ensures that all visitors—whether novice or experienced—can locate and engage AR content with minimal learning curve.</p>
-
-<h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Icon Size</strong>: 0.3–0.5 m in AR space for legibility<br />
-<!-- - **Glow Pulse Rate**: 0.5–1 Hz to balance noticeability and subtlety   --></li>
-  <li><strong>Gaze Timer(Optional)</strong>: 1.5 s dwell for selection, with a progress ring indicator</li>
-  <li><strong>Voice Command Delay(Optional)</strong>: &lt;0.2 s from keyword to system response<br />
-<!-- - **Audio Cue Volume**: 60 dB SPL in typical gallery noise   --></li>
+  <li><strong>Preserves creative flexibility</strong> by separating <strong>what</strong> the indicator system guarantees from <strong>how</strong> it is realized.</li>
+  <li><strong>Enables extensibility</strong>: new sub-level patterns can be authored without modifying the high-level contract.</li>
+  <li><strong>Maintains consistency and accessibility</strong> across exhibits while adapting to diverse spaces, devices, and audiences.</li>
+  <li><strong>Supports governance and iteration</strong> via shared lifecycle events and metrics rather than fixed UI details.</li>
 </ul>
 
 <!-- ### Game Mechanics
@@ -262,18 +266,9 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 - **Discovery Tracker**: Show percentage of AR-enabled exhibits visited   -->
 
 <h3 id="related-pattern">Related Pattern</h3>
-<ul>
-  <li>Floor Circle (proximity-based trigger)<br />
-<!-- - Point of Interest Guide (path-based navigation to interactive exhibits)   --></li>
-</ul>
+<p>Sub-level patterns (e.g., Floor Circle, Exhibit Knowledge Trigger) <strong>instantiate</strong> choices along the variation points. They are examples, not the exhaustive set.</p>
 
-<h3 id="impact-on-immersion">Impact on Immersion</h3>
-<ul>
-  <li><strong>Enhances</strong>: Clearly differentiates interactive content; guides focus without heavy UI</li>
-  <li><strong>Risks</strong>: Too many markers can clutter view; poorly tuned animations may distract</li>
-</ul>
-
-<h3 id="example">Example</h3>
+<!-- ### Example -->
 <!-- In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns. -->
 
 <hr />
