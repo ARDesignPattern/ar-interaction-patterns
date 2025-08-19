@@ -51,23 +51,24 @@ description: "Recognizing and Activating AR Experiences: To help visitors easily
 
 ### Solution (High-Level, Principle-Only)
 1. **Purpose & Scope**  
-   Define a system-level convention that guides the visitor journey **from discovery → approach → activation. Specify principles and contracts**, not visuals, parameters, or gestures.  
+   Define a **platform convention** that governs the visitor journey from discovery → approach → activation. Specify **principles and agreements (i.e., system-level guarantees)**, rather than visuals, parameters, or gestures.  
 2. **Invariants (must always hold)**  
+   guides the visitor journey **from discovery → approach → activation. Specify 
 - Discoverable without clutter.
 - Clear state progression.
 - Redundant, multimodal feedback (at least two channels).
 - Accessible alternatives for varied abilities and contexts.
 - Consistent semantics across exhibits.
-3. **Variation Points (choose per context)**  
+3. **Design Choices(Variation Points)**  
 - Placement strategy: ambient discovery vs. local anchor.
-- Activation family: proximity, explicit intent, voice/assisted, etc.
+- Activation modes (e.g., proximity-based, intent-based): proximity, explicit intent, voice/assisted, etc.
 - Feedback mix and intensity: visual / audio / haptic.
 - Persistence level: always-on vs. on-demand; level of detail.
 - Adaptation: personalization by crowding, lighting, or device capability.
-4. **Decision Heuristics (non-prescriptive)**  
+4. **Decision Guidelines (Heuristics)**  
 Select variation points based on spatial constraints, crowd density, safety, learning intent (concept-first vs. flow-preserving), and device/ambient limitations.
-5. **Integration Contract (technology-agnostic)**
-- Define lifecycle events and analytics hooks: **Discover → Candidate → Confirm → Activate → Exit/Recover**.
+5. **Integration Protocol (system-level agreement)**  
+- Define lifecycle events and analytics hooks: **Discover → Candidate (potential AR target detected) → Confirm → Activate → Exit/Recover**.
 - Do **NOT** fix shapes, distances, timings, or gesture sets—those belong to sub-level patterns.
 
 ### Rationale

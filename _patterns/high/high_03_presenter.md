@@ -60,30 +60,30 @@ Establish a **modular, self-paced** presentation convention that structures the 
 - **Redundant multimodality** (≥2 channels)
 - **Consistent semantics** across exhibits
 
-3. **Variation Points (choose per context)**
+3. **Design Choices(Variation Points)** 
 - Module organization: thematic groups, hierarchies, timelines, spatial partitions
 - Unit granularity: micro to macro; adapt to engagement
 - Navigation: sequential, free-jump, milestones, guided paths
 - Modality mix: text, imagery/3D, narration/captions, micro-interactions
 - Persistence: progress memory, bookmarks, context restore
 
-4. **Decision Heuristics (non-prescriptive)**
+4. **Decision Guidelines (Heuristics)**  
 Choose granularity and navigation by prior knowledge, time budget, spatial density, device/localization confidence; reduce concurrent channels in noisy or crowded contexts.
 
-5. **Integration Contract (technology-agnostic)**
-- Define states and events: **ModuleList → ModuleSelected → UnitPresented → UnitCompleted → ModuleCompleted → Exit/Return**
+5. **Integration Protocol (system-level agreement)**  
+- Define states and events: **Users progress through the lifecycle: from seeing the content modules (thematic categories), selecting one, viewing its units, completing them, and finally finishing the module**
 - Define exceptions and rollbacks: **Paused, Off-Focus, Low-Confidence, Overload**
 - Expose telemetry hooks: **Enter/exit module, dwell time, jump/rollback, completion rate** 
-- Do **NOT** fix specific control forms or thresholds
+- Avoid locking down UI details (like button shapes) or fixed timings (like unit length).
 
 6. **Safety & Comfort Guards**
-- Bound per-unit density and concurrent channels; ensure interruptible media and graceful degradation under load or uncertainty.
+- Limit the amount of content per unit and the number of simultaneous media channels. Ensure all media can be paused or skipped, and that the system degrades smoothly if performance or tracking confidence drops.
 
 7. **Accessibility & Inclusivity**
 Offer equivalent paths (captions/transcripts, adjustable contrast/size, non-color encoding, voice/hands-free); provide concise summaries for reduced cognitive load.
 
 ### Rationale
-- **Shifts from “how to present” to “what is guaranteed,**” freeing sub-pattern creativity.
+- Focuses less on the **specific way of presenting** and more on **the core guarantees the system must provide** (e.g., pacing control, accessibility, consistent structure). freeing sub-pattern creativity.
 - **Balances personalization and consistency** via invariants and equivalent access paths.
 - **Manages cognitive load and pacing** with progressive disclosure and interruptible media.
 - **Enables composition and extensibility** by treating interactive micro-tasks as modules within a stable contract.

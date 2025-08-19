@@ -54,23 +54,23 @@ description: "To assist users in reaching PoIs effectively, combine spatial guid
 
 ### Solution (High-Level, Principle-Only)
 1. **Purpose & Scope**  
-Orchestrate the end-to-end journey **Select → Route → Navigate → Arrive/Dwell → Resume/End** via system-level conventions. Specify **principles and contracts**, not representations, thresholds, or gesture sets. 
+Orchestrate the end-to-end journey **Select → Route → Navigate → Arrive/Dwell → Resume/End** via system-level conventions. Specify **principles and agreement**, not representations, thresholds, or gesture sets. 
 2. **Invariants (must always hold)**  
 - Perceptible without occluding exhibits; 
 - Pace-safe and comfortable; 
 - Continuous orientation with recoverability; 
 - Redundant multimodal feedback (≥2 channels); 
 - Consistent semantics and accessibility across exhibits.
-3. **Variation Points (choose per context)**  
+3. **Design Choices(Variation Points)**  
    - Guidance modality family: avatar/character, ground cues, HUD/overlays, audio/haptics.  
    - Routing policy: shortest, smoothest, thematic, accessible-first, crowd-aware.
-   - Pacing policy: follower, leader, metronomic; adaptive or fixed.
+   - Pacing policy: follower, leader, Fixed-Rhythm; adaptive or fixed.
    - Anticipation horizon: how early/often to pre-announce turns.
    - Persistence & visibility: always-on vs on-demand; level of detail.
-4. **Decision Heuristics (non-prescriptive)**  
+4. **Decision Guidelines (Heuristics)**  
    Select variation points based on topology (corridors/open halls), crowding, noise/lighting, device capabilities, localization confidence, and visitor intent (goal- vs exploration-oriented).
-5. **Integration Contract (technology-agnostic)**  
-- Define states and events: **Select → Preview → Commit → Cruise → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End**; 
+5. **Integration Protocol (system-level agreement)**  
+- Define states and events: **Select → Preview → Commit → Navigation → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End**; 
 - Exceptions and rollbacks: **Off-Route, Low-Confidence, Paused**; 
 - Required data and hooks: route geometry, PoI metadata, telemetry (detection/deviation/arrival). 
 - **NO** fixed shape, distance, or duration.
@@ -83,7 +83,7 @@ Offer equivalent channels (speech/captions/high contrast/non-color coding/haptic
 
 ### Rationale
 - **Decouples orchestration from representation** preserving freedom while avoiding over-specification.
-- **Enables extensibility and composition**, allowing new or combined sub-patterns without changing the contract.
+- **Enables extensibility and composition**, allowing new or combined sub-patterns without changing the agreement.
 - **Reduces cognitive load while ensuring pace and safety** via invariants and guardrails.
 - **Adapts across devices and environments**, gracefully degrading under uncertainty.
 - **Fosters consistency and governance** with shared semantics and telemetry for large-scale operations.
