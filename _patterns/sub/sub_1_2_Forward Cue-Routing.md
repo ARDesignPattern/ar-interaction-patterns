@@ -54,7 +54,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 
 ### Solution
 1. **Waypoint-Based Guiding**  
-   - Author a polyline route with triggers at each change-of-direction node.  
+   - The route can be authored as a **polyline (multi-segment path)**, an **image-based overlay**, or other **hybrid representations**. Triggers are placed at key nodes, such as turns or decision points.  
    - On trigger, emit a localized cluster of visual ripples and spatialized audio.  
 2. **Point of Interest Selection Interface**  
    - At the start hub, display a floor-pinned planar menu with PoI thumbnails, estimated walking time, and “Start.”  
