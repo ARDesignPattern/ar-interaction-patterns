@@ -22,7 +22,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 - **Name**  
   Avatar Guide
 - **Intent**  
-  Provide a personable, pace‐regulated virtual escort that users naturally follow through a physical environment, enhancing orientation and thematic immersion beyond traditional wayfinding cues.
+  Provide a personable, pace‐regulated virtual Companion that users naturally follow through a physical environment, enhancing orientation and thematic immersion beyond traditional wayfinding cues.
 
 ---
 ## Target
@@ -31,7 +31,7 @@ In AR-enhanced museum settings, guests can miss salient points of interest despi
 - **Context**  
   - Multiple points of interest dispersed across a nontrivial floor plan
   - Real-time user localization accurate enough to anchor and animate a virtual figure in situ
-  - Desire for a more personable, dramaturgical escort experience than abstract wayfinding cues allow
+  - Desire for a more personable, dramaturgical companion experience than abstract wayfinding cues allow
 - **Use When**  
   - Visitors prefer to “follow” a guide rather than decode symbolic markers
   - Maintaining a natural, steady walking pace is important for comfort
