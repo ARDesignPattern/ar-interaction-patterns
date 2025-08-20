@@ -51,10 +51,6 @@ A game-like mechanic where visitors protect an exhibit from environmental threat
   - **Negative**: Poor tracking or slow feedback can frustrate; overly aggressive challenges may deter participation  
 
 ---
-
-  <div class="column">
-    <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="AR Interaction" class="profile">
-  </div> 
   
 ## Application
 
