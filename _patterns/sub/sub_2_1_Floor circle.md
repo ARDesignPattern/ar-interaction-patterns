@@ -13,6 +13,7 @@ summary: "Spatial Activation of AR Content"
 description: "Use a proximity-triggered circle to attract attention and seamlessly activate AR experiences, enabling intuitive and embodied engagement."
 ---
 # Step-In Circle
+A floor-based entry zone for activating AR exhibits
 
 ---
 ## Overview
