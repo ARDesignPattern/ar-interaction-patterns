@@ -1,6 +1,6 @@
 ---
 layout: pattern
-title: "Floor circle"
+title: "Step-In Circle"
 category: "sub-level"
 pattern_category: indicator
 order: 2.1
@@ -10,14 +10,14 @@ tags:
   - Spatial Trigger
 thumbnail: /images/Gif/EnteringCircle.gif
 summary: "Spatial Activation of AR Content"
-description: "Use a proximity-triggered floor circle to attract attention and seamlessly activate AR experiences, enabling intuitive and embodied engagement."
+description: "Use a proximity-triggered circle to attract attention and seamlessly activate AR experiences, enabling intuitive and embodied engagement."
 ---
-# Floor Circle
+# Step-In Circle
 
 ---
 ## Overview
 - **Name**  
-  Floor Circle
+  Step-In Circle
 - **Intent**  
   Provide an attention-grabbing, proximity-based AR entry point that encourages natural, embodied interaction without complex input.
 

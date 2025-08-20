@@ -22,7 +22,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 - **Name**  
   Avatar Guide
 - **Intent**  
-  Provide a personable, pace‐regulated virtual Companion that users naturally follow through a physical environment, enhancing orientation and thematic immersion beyond traditional wayfinding cues.
+  Provide a personable, pace‐regulated virtual companion that users naturally follow through a physical environment, enhancing orientation and thematic immersion beyond traditional wayfinding cues.
 
 ---
 ## Target
