@@ -13,7 +13,13 @@ thumbnail: /images/Gif/CoralReef.gif
 summary: "Defending Ecosystems through AR-Based Environmental Challenges"
 description: "Transform invisible environmental threats into an interactive AR defense game, enabling visitors to protect vulnerable habitats through gestures while learning about real-world ecological impacts and solutions."
 ---
+
+  <div class="column">
+    <img src="{{ '/images/Gif/CoralReef.gif' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
 # AR Object Catching
+A game-like mechanic where visitors protect an exhibit from environmental threats.
 
 ---
 ## Overview
@@ -46,6 +52,10 @@ description: "Transform invisible environmental threats into an interactive AR d
 
 ---
 
+  <div class="column">
+    <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
 ## Application
 
 ### Game Mechanics

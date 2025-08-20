@@ -113,7 +113,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-2-1-floor-circle/"
                class="">
-              Floor circle
+              Step-In Circle
             </a>
           </li>
         
@@ -171,7 +171,10 @@
         <div class="column">
     <img src="/ar-interaction-patterns/images/HomePage/Fig_ExperiencePresenter.png" alt="AR Interaction" class="profile" />
   </div>
+
 <h1 id="experience-presenter">Experience Presenter</h1>
+<p>A modular AR system that structures exhibit content into self-paced, user-selectable segments.</p>
+
 <hr />
 <h2 id="overview">Overview</h2>
 <ul>
@@ -235,7 +238,7 @@ Establish a <strong>modular, self-paced</strong> presentation convention that st
       <li><strong>Consistent semantics</strong> across exhibits</li>
     </ul>
   </li>
-  <li><strong>Variation Points (choose per context)</strong>
+  <li><strong>Design Choices(Variation Points)</strong>
     <ul>
       <li>Module organization: thematic groups, hierarchies, timelines, spatial partitions</li>
       <li>Unit granularity: micro to macro; adapt to engagement</li>
@@ -245,20 +248,20 @@ Establish a <strong>modular, self-paced</strong> presentation convention that st
     </ul>
   </li>
   <li>
-    <p><strong>Decision Heuristics (non-prescriptive)</strong>
+    <p><strong>Decision Guidelines (Heuristics)</strong><br />
 Choose granularity and navigation by prior knowledge, time budget, spatial density, device/localization confidence; reduce concurrent channels in noisy or crowded contexts.</p>
   </li>
-  <li><strong>Integration Contract (technology-agnostic)</strong>
+  <li><strong>Integration Protocol (system-level agreement)</strong>
     <ul>
-      <li>Define states and events: <strong>ModuleList → ModuleSelected → UnitPresented → UnitCompleted → ModuleCompleted → Exit/Return</strong></li>
+      <li>Define states and events: <strong>Users progress through the lifecycle: from seeing the content modules (thematic categories), selecting one, viewing its units, completing them, and finally finishing the module</strong></li>
       <li>Define exceptions and rollbacks: <strong>Paused, Off-Focus, Low-Confidence, Overload</strong></li>
       <li>Expose telemetry hooks: <strong>Enter/exit module, dwell time, jump/rollback, completion rate</strong></li>
-      <li>Do <strong>NOT</strong> fix specific control forms or thresholds</li>
+      <li>Avoid locking down UI details (like button shapes) or fixed timings (like unit length).</li>
     </ul>
   </li>
   <li><strong>Safety &amp; Comfort Guards</strong>
     <ul>
-      <li>Bound per-unit density and concurrent channels; ensure interruptible media and graceful degradation under load or uncertainty.</li>
+      <li>Limit the amount of content per unit and the number of simultaneous media channels. Ensure all media can be paused or skipped, and that the system degrades smoothly if performance or tracking confidence drops.</li>
     </ul>
   </li>
   <li><strong>Accessibility &amp; Inclusivity</strong>
@@ -267,7 +270,7 @@ Offer equivalent paths (captions/transcripts, adjustable contrast/size, non-colo
 
 <h3 id="rationale">Rationale</h3>
 <ul>
-  <li><strong>Shifts from “how to present” to “what is guaranteed,</strong>” freeing sub-pattern creativity.</li>
+  <li>Focuses less on the <strong>specific way of presenting</strong> and more on <strong>the core guarantees the system must provide</strong> (e.g., pacing control, accessibility, consistent structure). freeing sub-pattern creativity.</li>
   <li><strong>Balances personalization and consistency</strong> via invariants and equivalent access paths.</li>
   <li><strong>Manages cognitive load and pacing</strong> with progressive disclosure and interruptible media.</li>
   <li><strong>Enables composition and extensibility</strong> by treating interactive micro-tasks as modules within a stable contract.</li>

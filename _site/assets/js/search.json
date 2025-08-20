@@ -77,55 +77,55 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_1_1_Avatar%20Guide.html",
-    "excerpt": "# Avatar Guide---## Overview- **Name**    Avatar Guide- **Intent**    Provide a personable, pace‐regulated virtual escort that users naturally follow through a physical environment, enhancing orien..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/FollowAvatar.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div> # Avatar GuideA personable virtual companion that leads visito..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_1_2_Forward%20Cue-Routing.html",
-    "excerpt": "<!-- <div class=\"column\">  <img src=\"{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\"></div>  --># Forward Cue-Routing---## Overview- **Name**    For..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Forward Cue-RoutingGround-based visual cues that an..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_2_1_Floor%20circle.html",
-    "excerpt": "# Floor Circle---## Overview- **Name**    Floor Circle- **Intent**    Provide an attention-grabbing, proximity-based AR entry point that encourages natural, embodied interaction without complex inp..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/EnteringCircle.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Step-In CircleA floor-based entry zone for activating AR..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_2_2_Knowledge%20Trigger.html",
-    "excerpt": "# Exhibit Knowledge Trigger---## Overview- **Name**    Exhibit Knowledge Trigger- **Intent**    Surface a single high-value concept through a brief, goal-oriented interaction that unlocks deeper AR..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Exhibit Knowledge TriggerA br..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_1_Sequential%20Explanation.html",
-    "excerpt": "# Sequential Explanation---## Overview- **Name**    Sequential Explanation  - **Intent**    Present exhibit information in logical categories and let visitors explore at their own pace using clear ..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/SequentialExploration.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Sequential ExplanationA step-by-step interface fo..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_2_Labelling.html",
-    "excerpt": "# Labelling---## Overview- **Name**    Labelling- **Intent**    Help visitors identify and learn about individual parts or components of an exhibit in a space-constrained environment by linking vis..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/Labelling.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # LabellingA system of markers or text that identifies differen..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_3_AR%20Exhibit%20Reassembler.html",
-    "excerpt": "# AR Exhibit Reassembler---## Overview- **Name**    AR Exhibit Reassembler  - **Intent**    Enable visitors to virtually reconstruct missing artifact components through an interactive 3D puzzle, de..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/Triceratops.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Exhibit ReassemblerA puzzle-like interaction where visit..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_4_AR%20Feature%20Drawing.html",
-    "excerpt": "# AR Exhibit Feature Drawing---## Overview- **Name**    AR Exhibit Feature Drawing- **Intent**    Invite visitors to co-create and explore speculative or contested exhibit details through freehand ..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images//Gif/DeinonychusDemo.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Exhibit Feature DrawingAn interactive sketch tool t..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_5_AR%20Threat%20Defender.html",
-    "excerpt": "# AR Object Catching---## Overview- **Name**    AR Object Catching- **Intent**    Convey invisible or abstract environmental threats through interactive AR gameplay, fostering urgency and empathy w..."
+    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/CoralReef.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Object CatchingA game-like mechanic where visitors protect..."
   },
 
   {
@@ -161,55 +161,55 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-1-1-avatar-guide/",
-    "excerpt": "<h1 id=\"avatar-guide\">Avatar Guide</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />Avatar Guide</li>  <li><strong>Intent</strong><br />Provide a personable, pace‐regul..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/FollowAvatar.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"avatar-guide\">Avatar Guide</h1><p>A personable virtual..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-1-2-forward-cue-routing/",
-    "excerpt": "<!-- <div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif\" alt=\"AR Interaction\" class=\"profile\"></div>  --><h1 id=\"forward-cue-routing\">Forward Cue-Routing</h..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"forward-cue-routing\">Forward Cue-Routing</h1><p..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-2-1-floor-circle/",
-    "excerpt": "<h1 id=\"floor-circle\">Floor Circle</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />Floor Circle</li>  <li><strong>Intent</strong><br />Provide an attention-grabbing, p..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/EnteringCircle.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"step-in-circle\">Step-In Circle</h1><p>A floor-based ..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-2-2-knowledge-trigger/",
-    "excerpt": "<h1 id=\"exhibit-knowledge-trigger\">Exhibit Knowledge Trigger</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />Exhibit Knowledge Trigger</li>  <li><strong>Intent</strong..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"exhibit-knowledge-trigger..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-1-sequential-explanation/",
-    "excerpt": "<h1 id=\"sequential-explanation\">Sequential Explanation</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />Sequential Explanation</li>  <li><strong>Intent</strong><br />Pr..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/SequentialExploration.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"sequential-explanation\">Sequential Explanatio..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-2-labelling/",
-    "excerpt": "<h1 id=\"labelling\">Labelling</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />Labelling</li>  <li><strong>Intent</strong><br />Help visitors identify and learn about in..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/Labelling.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"labelling\">Labelling</h1><p>A system of markers or text t..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-3-ar-exhibit-reassembler/",
-    "excerpt": "<h1 id=\"ar-exhibit-reassembler\">AR Exhibit Reassembler</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />AR Exhibit Reassembler</li>  <li><strong>Intent</strong><br />En..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/Triceratops.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-exhibit-reassembler\">AR Exhibit Reassembler</h1><p>A..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-4-ar-feature-drawing/",
-    "excerpt": "<h1 id=\"ar-exhibit-feature-drawing\">AR Exhibit Feature Drawing</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />AR Exhibit Feature Drawing</li>  <li><strong>Intent</str..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images//Gif/DeinonychusDemo.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-exhibit-feature-drawing\">AR Exhibit Feature Dra..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/",
-    "excerpt": "<h1 id=\"ar-object-catching\">AR Object Catching</h1><hr /><h2 id=\"overview\">Overview</h2><ul>  <li><strong>Name</strong><br />AR Object Catching</li>  <li><strong>Intent</strong><br />Convey invisib..."
+    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/CoralReef.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-object-catching\">AR Object Catching</h1><p>A game-like..."
   },
 
   {

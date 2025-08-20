@@ -113,7 +113,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-2-1-floor-circle/"
                class="">
-              Floor circle
+              Step-In Circle
             </a>
           </li>
         
@@ -171,7 +171,10 @@
         <div class="column">
     <img src="/ar-interaction-patterns/images/HomePage/Fig_ExperienceIndicator.png" alt="AR Interaction" class="profile" />
   </div>
+
 <h1 id="experience-indicator">Experience Indicator</h1>
+<p>A visual or symbolic hint that shows how to activate AR content at an exhibit.</p>
+
 <hr />
 <h2 id="overview">Overview</h2>
 <ul>
@@ -223,8 +226,9 @@ Visitors often don’t know which exhibits contain AR content or how to start it
 <h3 id="solution-high-level-principle-only">Solution (High-Level, Principle-Only)</h3>
 <ol>
   <li><strong>Purpose &amp; Scope</strong><br />
-Define a system-level convention that guides the visitor journey <strong>from discovery → approach → activation. Specify principles and contracts</strong>, not visuals, parameters, or gestures.</li>
-  <li><strong>Invariants (must always hold)</strong>
+Define a <strong>platform convention</strong> that governs the visitor journey from discovery → approach → activation. Specify <strong>principles and agreements (i.e., system-level guarantees)</strong>, rather than visuals, parameters, or gestures.</li>
+  <li><strong>Invariants (must always hold)</strong><br />
+guides the visitor journey **from discovery → approach → activation. Specify
     <ul>
       <li>Discoverable without clutter.</li>
       <li>Clear state progression.</li>
@@ -233,20 +237,20 @@ Define a system-level convention that guides the visitor journey <strong>from di
       <li>Consistent semantics across exhibits.</li>
     </ul>
   </li>
-  <li><strong>Variation Points (choose per context)</strong>
+  <li><strong>Design Choices(Variation Points)</strong>
     <ul>
       <li>Placement strategy: ambient discovery vs. local anchor.</li>
-      <li>Activation family: proximity, explicit intent, voice/assisted, etc.</li>
+      <li>Activation modes (e.g., proximity-based, intent-based): proximity, explicit intent, voice/assisted, etc.</li>
       <li>Feedback mix and intensity: visual / audio / haptic.</li>
       <li>Persistence level: always-on vs. on-demand; level of detail.</li>
       <li>Adaptation: personalization by crowding, lighting, or device capability.</li>
     </ul>
   </li>
-  <li><strong>Decision Heuristics (non-prescriptive)</strong><br />
+  <li><strong>Decision Guidelines (Heuristics)</strong><br />
 Select variation points based on spatial constraints, crowd density, safety, learning intent (concept-first vs. flow-preserving), and device/ambient limitations.</li>
-  <li><strong>Integration Contract (technology-agnostic)</strong>
+  <li><strong>Integration Protocol (system-level agreement)</strong>
     <ul>
-      <li>Define lifecycle events and analytics hooks: <strong>Discover → Candidate → Confirm → Activate → Exit/Recover</strong>.</li>
+      <li>Define lifecycle events and analytics hooks: <strong>Discover → Candidate (potential AR target detected) → Confirm → Activate → Exit/Recover</strong>.</li>
       <li>Do <strong>NOT</strong> fix shapes, distances, timings, or gesture sets—those belong to sub-level patterns.</li>
     </ul>
   </li>

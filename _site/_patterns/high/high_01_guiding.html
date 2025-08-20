@@ -113,7 +113,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-2-1-floor-circle/"
                class="">
-              Floor circle
+              Step-In Circle
             </a>
           </li>
         
@@ -172,6 +172,7 @@
     <img src="/ar-interaction-patterns/images/HomePage/Fig_POIGuide.png" alt="AR Interaction" class="profile" />
   </div>
 <h1 id="point-of-interest-guide">Point of Interest Guide</h1>
+<p>A spatial path or cue that directs visitors toward a point of interest.</p>
 
 <hr />
 <h2 id="overview">Overview</h2>
@@ -226,7 +227,7 @@ Visitors in AR-enhanced environments may miss key exhibits due to complex layout
 <h3 id="solution-high-level-principle-only">Solution (High-Level, Principle-Only)</h3>
 <ol>
   <li><strong>Purpose &amp; Scope</strong><br />
-Orchestrate the end-to-end journey <strong>Select → Route → Navigate → Arrive/Dwell → Resume/End</strong> via system-level conventions. Specify <strong>principles and contracts</strong>, not representations, thresholds, or gesture sets.</li>
+Orchestrate the end-to-end journey <strong>Select → Route → Navigate → Arrive/Dwell → Resume/End</strong> via system-level conventions. Specify <strong>principles and agreement</strong>, not representations, thresholds, or gesture sets.</li>
   <li><strong>Invariants (must always hold)</strong>
     <ul>
       <li>Perceptible without occluding exhibits;</li>
@@ -236,20 +237,20 @@ Orchestrate the end-to-end journey <strong>Select → Route → Navigate → Arr
       <li>Consistent semantics and accessibility across exhibits.</li>
     </ul>
   </li>
-  <li><strong>Variation Points (choose per context)</strong>
+  <li><strong>Design Choices(Variation Points)</strong>
     <ul>
       <li>Guidance modality family: avatar/character, ground cues, HUD/overlays, audio/haptics.</li>
       <li>Routing policy: shortest, smoothest, thematic, accessible-first, crowd-aware.</li>
-      <li>Pacing policy: follower, leader, metronomic; adaptive or fixed.</li>
+      <li>Pacing policy: follower, leader, Fixed-Rhythm; adaptive or fixed.</li>
       <li>Anticipation horizon: how early/often to pre-announce turns.</li>
       <li>Persistence &amp; visibility: always-on vs on-demand; level of detail.</li>
     </ul>
   </li>
-  <li><strong>Decision Heuristics (non-prescriptive)</strong><br />
+  <li><strong>Decision Guidelines (Heuristics)</strong><br />
 Select variation points based on topology (corridors/open halls), crowding, noise/lighting, device capabilities, localization confidence, and visitor intent (goal- vs exploration-oriented).</li>
-  <li><strong>Integration Contract (technology-agnostic)</strong>
+  <li><strong>Integration Protocol (system-level agreement)</strong>
     <ul>
-      <li>Define states and events: <strong>Select → Preview → Commit → Cruise → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End</strong>;</li>
+      <li>Define states and events: <strong>Select → Preview → Commit → Navigation → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End</strong>;</li>
       <li>Exceptions and rollbacks: <strong>Off-Route, Low-Confidence, Paused</strong>;</li>
       <li>Required data and hooks: route geometry, PoI metadata, telemetry (detection/deviation/arrival).</li>
       <li><strong>NO</strong> fixed shape, distance, or duration.</li>
@@ -264,7 +265,7 @@ Offer equivalent channels (speech/captions/high contrast/non-color coding/haptic
 <h3 id="rationale">Rationale</h3>
 <ul>
   <li><strong>Decouples orchestration from representation</strong> preserving freedom while avoiding over-specification.</li>
-  <li><strong>Enables extensibility and composition</strong>, allowing new or combined sub-patterns without changing the contract.</li>
+  <li><strong>Enables extensibility and composition</strong>, allowing new or combined sub-patterns without changing the agreement.</li>
   <li><strong>Reduces cognitive load while ensuring pace and safety</strong> via invariants and guardrails.</li>
   <li><strong>Adapts across devices and environments</strong>, gracefully degrading under uncertainty.</li>
   <li><strong>Fosters consistency and governance</strong> with shared semantics and telemetry for large-scale operations.</li>

@@ -14,7 +14,12 @@ summary: "Drawing and Exploring Interpretive Features in AR"
 description: "Enable visitors to creatively sketch hypothetical features—like feathers or textures—directly onto 3D models, supporting scientific dialogue and participatory interpretation through AR drawing tools."
 ---
 
+  <div class="column">
+    <img src="{{ '/images//Gif/DeinonychusDemo.gif' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
 # AR Exhibit Feature Drawing
+An interactive sketch tool that lets visitors highlight or trace exhibit features.
 
 ---
 ## Overview

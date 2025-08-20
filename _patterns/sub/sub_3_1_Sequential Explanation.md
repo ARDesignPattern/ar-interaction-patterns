@@ -13,9 +13,13 @@ summary: "Exploring and Controlling AR Content"
 description: "Exploring and Controlling AR Content: Present the content in a structured, navigable, and user-controlled manner."
 ---
 
+  <div class="column">
+    <img src="{{ '/images/Gif/SequentialExploration.gif' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
 
 # Sequential Explanation
-
+A step-by-step interface for exploring exhibit information in order.
 
 ---
 ## Overview

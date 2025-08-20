@@ -16,7 +16,10 @@ description: "Exploring and Controlling AR Content: Present the content in a str
   <div class="column">
     <img src="{{ '/images/HomePage/Fig_ExperiencePresenter.png' | relative_url }}" alt="AR Interaction" class="profile">
   </div> 
+
 # Experience Presenter
+A modular AR system that structures exhibit content into self-paced, user-selectable segments.
+
 ---
 ## Overview
 - **Name**  

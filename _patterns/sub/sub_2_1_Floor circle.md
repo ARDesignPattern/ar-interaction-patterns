@@ -12,6 +12,12 @@ thumbnail: /images/Gif/EnteringCircle.gif
 summary: "Spatial Activation of AR Content"
 description: "Use a proximity-triggered circle to attract attention and seamlessly activate AR experiences, enabling intuitive and embodied engagement."
 ---
+
+  <div class="column">
+    <img src="{{ '/images/Gif/EnteringCircle.gif' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
+
 # Step-In Circle
 A floor-based entry zone for activating AR exhibits
 

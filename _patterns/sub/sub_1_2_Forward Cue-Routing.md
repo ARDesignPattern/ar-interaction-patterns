@@ -12,12 +12,14 @@ thumbnail: /images/Gif/FollowCirclePattern.gif
 summary: "Exploring and Controlling AR Content"
 description: "Exploring and Controlling AR Content: Present the content in a structured, navigable, and user-controlled manner."
 ---
-<!-- <div class="column">
-  <img src="{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}" alt="AR Interaction" class="profile">
-</div>  -->
+
+  <div class="column">
+    <img src="{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}" alt="AR Interaction" class="profile">
+  </div> 
+  
 
 # Forward Cue-Routing
-
+Ground-based visual cues that anticipate turns and guide visitors along the route.
 
 
 ---
@@ -25,7 +27,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 - **Name**  
   Forward Cue-Routing
 - **Intent**  
-  Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised visual ‘ripples’ and spatialised audio, while displaying the route the user has already passed.
+  Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised ground-based visual patterns (e.g., ripples, footprints, arrows) and spatialised audio, while displaying the route the user has already passed.
 
 ---
 ## Target
@@ -38,7 +40,7 @@ description: "Exploring and Controlling AR Content: Present the content in a str
 - **Use When**  
   - Users prefer minimal above-eye-level graphics that do not occlude exhibits  
   - Clear anticipation of turns is essential—for example, in labyrinthine galleries  
-  - The institution wants a metaphor evocative of flow or movement (e.g., ripples) rather than character-based guidance  
+  - The institution wants a metaphor evocative of flow or movement (e.g., ripples, footprints, glowing arrows) rather than character-based guidance  
   - Acoustic icons can be leveraged at each turn to reinforce direction without constant narration  
 - **Forces**  
   - **Visual Density**: AR elements must not compete with exhibits  
@@ -62,8 +64,8 @@ description: "Exploring and Controlling AR Content: Present the content in a str
    - Invoke the start menu on demand via gesture or voice (“Show route menu”).  
    - Allow Pause/Abort; cache progress for later resumption.  
 4. **Directional Visual Cues**  
-   - Animate concentric “raindrop” rings on the ground, propagating toward the next waypoint.  
-   - Map ring expansion rate to recommended walking speed; slow-expanding rings signal deceleration.  
+   - Animate ground-based patterns (e.g., concentric rings, footprints, arrows) that propagate toward the next waypoint. 
+   - Pattern motion speed can be mapped to walking pace (e.g., faster expansion = normal speed, slower expansion = deceleration).
 5. **Auditory Feedback**  
    - Play a spatialized whoosh or bell at each turn trigger, aligned with turn direction.  
    - Adjust ambient volume based on acoustic properties of the environment.  
@@ -72,10 +74,10 @@ description: "Exploring and Controlling AR Content: Present the content in a str
    - Play a harmonic chord and pulse light to confirm arrival.
 
 ### Rationale
-Ground-anchored ripples leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.
+Ground-anchored visual patterns (such as ripples or footprints) leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.
 
 ### Design Parameters
-- **Ring Expansion Rate**: Set so a ring reaches midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s)  
+- **Pattern Propagation Rate**: Speed at which the ground cue advances between waypoints (e.g., ripple expansion, footprint spacing), calibrated so the cue reaches the midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s).
 - **Trigger Radius**: 1–2 m before each waypoint to fire cues early  
 - **Audio Lead Time**: 0.5–1 s before visual rings to pre-alert  
 - **Opacity Falloff (Optional)**: Ripples fade over 1.5 s to avoid persistence  

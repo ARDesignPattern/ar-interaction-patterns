@@ -17,6 +17,8 @@ description: "To assist users in reaching PoIs effectively, combine spatial guid
     <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="AR Interaction" class="profile">
   </div> 
 # Point of Interest Guide
+A spatial path or cue that directs visitors toward a point of interest.
+
 
 ---
 ## Overview

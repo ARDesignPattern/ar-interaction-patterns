@@ -16,7 +16,10 @@ description: "Recognizing and Activating AR Experiences: To help visitors easily
   <div class="column">
     <img src="{{ '/images/HomePage/Fig_ExperienceIndicator.png' | relative_url }}" alt="AR Interaction" class="profile">
   </div> 
+  
 # Experience Indicator
+A visual or symbolic hint that shows how to activate AR content at an exhibit.
+
 ---
 ## Overview
 - **Name**  

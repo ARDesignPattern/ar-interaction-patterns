@@ -113,7 +113,7 @@
           <li>
             <a href="/ar-interaction-patterns/patterns/sub-2-1-floor-circle/"
                class="">
-              Floor circle
+              Step-In Circle
             </a>
           </li>
         
@@ -168,11 +168,12 @@
       </aside>
 
       <main class="pattern-main-content">
-        <!-- <div class="column">
-  <img src="/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif" alt="AR Interaction" class="profile">
-</div>  -->
+        <div class="column">
+    <img src="/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif" alt="AR Interaction" class="profile" />
+  </div>
 
 <h1 id="forward-cue-routing">Forward Cue-Routing</h1>
+<p>Ground-based visual cues that anticipate turns and guide visitors along the route.</p>
 
 <hr />
 <h2 id="overview">Overview</h2>
@@ -180,7 +181,7 @@
   <li><strong>Name</strong><br />
 Forward Cue-Routing</li>
   <li><strong>Intent</strong><br />
-Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised visual ‘ripples’ and spatialised audio, while displaying the route the user has already passed.</li>
+Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised ground-based visual patterns (e.g., ripples, footprints, arrows) and spatialised audio, while displaying the route the user has already passed.</li>
 </ul>
 
 <hr />
@@ -199,7 +200,7 @@ Visitors often lose situational awareness at decision points such as corners or 
     <ul>
       <li>Users prefer minimal above-eye-level graphics that do not occlude exhibits</li>
       <li>Clear anticipation of turns is essential—for example, in labyrinthine galleries</li>
-      <li>The institution wants a metaphor evocative of flow or movement (e.g., ripples) rather than character-based guidance</li>
+      <li>The institution wants a metaphor evocative of flow or movement (e.g., ripples, footprints, glowing arrows) rather than character-based guidance</li>
       <li>Acoustic icons can be leveraged at each turn to reinforce direction without constant narration</li>
     </ul>
   </li>
@@ -226,7 +227,7 @@ Visitors often lose situational awareness at decision points such as corners or 
 <ol>
   <li><strong>Waypoint-Based Guiding</strong>
     <ul>
-      <li>Author a polyline route with triggers at each change-of-direction node.</li>
+      <li>The route can be authored as a <strong>polyline (multi-segment path)</strong>, an <strong>image-based overlay</strong>, or other <strong>hybrid representations</strong>. Triggers are placed at key nodes, such as turns or decision points.</li>
       <li>On trigger, emit a localized cluster of visual ripples and spatialized audio.</li>
     </ul>
   </li>
@@ -243,8 +244,8 @@ Visitors often lose situational awareness at decision points such as corners or 
   </li>
   <li><strong>Directional Visual Cues</strong>
     <ul>
-      <li>Animate concentric “raindrop” rings on the ground, propagating toward the next waypoint.</li>
-      <li>Map ring expansion rate to recommended walking speed; slow-expanding rings signal deceleration.</li>
+      <li>Animate ground-based patterns (e.g., concentric rings, footprints, arrows) that propagate toward the next waypoint.</li>
+      <li>Pattern motion speed can be mapped to walking pace (e.g., faster expansion = normal speed, slower expansion = deceleration).</li>
     </ul>
   </li>
   <li><strong>Auditory Feedback</strong>
@@ -262,11 +263,11 @@ Visitors often lose situational awareness at decision points such as corners or 
 </ol>
 
 <h3 id="rationale">Rationale</h3>
-<p>Ground-anchored ripples leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.</p>
+<p>Ground-anchored visual patterns (such as ripples or footprints) leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.</p>
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Ring Expansion Rate</strong>: Set so a ring reaches midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s)</li>
+  <li><strong>Pattern Propagation Rate</strong>: Speed at which the ground cue advances between waypoints (e.g., ripple expansion, footprint spacing), calibrated so the cue reaches the midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s).</li>
   <li><strong>Trigger Radius</strong>: 1–2 m before each waypoint to fire cues early</li>
   <li><strong>Audio Lead Time</strong>: 0.5–1 s before visual rings to pre-alert</li>
   <li><strong>Opacity Falloff (Optional)</strong>: Ripples fade over 1.5 s to avoid persistence</li>
