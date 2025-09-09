@@ -52,25 +52,46 @@ In AR-enhanced museum settings, guests can miss salient points of interest despi
 ---
 ## Application
 
-### Solution ###
-1. **Avatar Instantiation & Path Binding**  
-    - Spawn a 3D avatar at the user’s position; bind its movement to the authored path.
-    - Monitor heading and speed; adjust guide’s velocity to maintain a 2–3 m following distance.
+### Solution
+1. **Avatar & Path**  
+   - Spawn a 3D avatar at the user’s position; bind its movement to the authored path.  
+   - Monitor heading and speed; adjust the guide’s velocity to maintain a **2–3 m** following distance.  
+   - **Pace & comfort:** Walking speed adapts to the visitor (**default 1.0 m/s**, range **0.8–1.2 m/s**) so the guide never pulls away. In crowded or narrow areas, shorten the following distance and slow slightly to keep things comfortable and safe.
+
 2. **Kinematic Plausibility**  
-    - Use inverse-kinematics and idle animations when paused or off-course.
-    - The avatar's animation speed is directly proportional to its the movement speed; Or, colour-code avatar outline or attire to reflect navigation states (eg.: green = en route, amber = paused).
+   - Use inverse-kinematics and idle animations when paused or off-course.  
+   - The avatar’s animation speed scales with movement speed; or use a color-coded outline/attire to reflect navigation states (e.g., green = en route, amber = paused).  
+   - **Smoothness:** Avoid sudden starts/stops; keep turns and stops gentle so movement feels natural.
+
 3. **Point-of-Interest Menu**  
-    - Floating radial or list menu for selecting next destination.
-    - Display estimated travel time based on adaptive speed profile.
+   - Floating radial or list menu for selecting the next destination.  
+   - Display estimated travel time based on the adaptive speed profile.  
+   - **Placement:** Prefer **environment-anchored** placement (e.g., near the route start, at a stable waypoint, or a safe pull-over spot) to reduce gaze switching; **hand-anchored** is an **optional** quick-access variant when appropriate. Use large, readable targets and avoid occluding exhibits.
+
 4. **Gesture-Activated Controls**  
-    - Palm-up gesture reveals a mini hand-menu with Start, Pause, Resume, End.
-    - Haptic/auditory confirmation for commands.
+   - Palm-up gesture reveals a mini hand-menu with **Start, Pause, Resume, End**.  
+   - Haptic/audio confirmations for commands.  
+   - **Minimal & fallback:** Keep commands minimal to avoid distraction; if gestures are unreliable, show a small environment-anchored panel with the same options.
+
 5. **Auditory & Spatial Prompts**  
-    - Spatialized vocal cues (“Turn left ahead”) and footstep sounds at decision points.
-    - Adjust volume/cadence in response to ambient noise and proximity.
+   - Spatialized vocal cues (“Turn left ahead”) and soft footstep sounds at decision points.  
+   - Adjust volume/cadence in response to ambient noise and proximity.  
+   - **Accessible prompts:** Pair audio with captions/icons and color-blind-safe indicators; repeat gently (e.g., every **6–10 s**) so guidance is helpful, not intrusive.
+
 6. **Arrival Interaction**  
-    - Upon reaching a PoI, avatar stops and provides visual feedback.
-    - Trigger on-screen tooltip and chime to affirm arrival.
+   - Upon reaching a PoI, the avatar stops and provides clear visual feedback.  
+   - Trigger an on-screen tooltip and brief chime to affirm arrival.
+
+7. **Composition**   
+   - **Typical hand-off (optional):** After confirming arrival, the avatar **may** hand over to **Step-In Circle** (activation) → **Sequential Explanation/Labelling** (content exploration).  
+   - **Separation of concerns:** These are **separate patterns**; the avatar’s role is guiding and announcing arrival, not presenting content. Use hand-offs when they improve flow; otherwise the avatar can remain idle until the visitor is ready.
+
+8. **Failure & Fallback**  
+   - **Lost or low-confidence tracking:** The avatar stays within this pattern’s logic—enter a **waiting** state and display simple, non-intrusive ground/path cues. After a short timeout, **ask the visitor** whether to continue or end; **do not auto-switch** to other patterns.  
+   - **Crowded or narrow areas:** Shorten following distance and reduce speed; stop at safe pull-over spots rather than blocking others.  
+   - **Hazards & restrictions:** Avoid stairs/edges and non-public areas; suggest a nearby alternative PoI if the planned path is unsafe.  
+   - **Input fallback:** If gestures fail, provide an environment-anchored control panel. **End** is always available for a clean stop.  
+   - **Quiet spaces:** Cap audio volume and rely on captions/icons.
 
 <!-- <div class="column">
   <img src="{{ '/images/ExhibitMenu.jpg' | relative_url }}" alt="AR Interaction" class="profile">
@@ -79,16 +100,19 @@ In AR-enhanced museum settings, guests can miss salient points of interest despi
 <div class="column">
   <img src="{{ '/images/FollowingTheButterfly.png' | relative_url }}" alt="AR Interaction" class="profile">
 </div>  -->
-### Rationale ###
-  - Anchoring a virtual guide in situ leverages social following instincts, reducing cognitive load compared to abstract markers.
-  - Adaptive pacing preserves visitor comfort and flow, preventing bottlenecks or rushed experiences.
-  - Gesture controls and contextual cues keep the interface hands-free and intuitive, minimizing distraction.
+### Rationale 
+- A personable guide leverages people’s tendency to follow, reducing the effort of interpreting arrows or maps.  
+- Adaptive pacing and comfortable following distance maintain flow across different visitors and room conditions.  
+- Keeping hand-offs **optional** and pattern roles distinct avoids overloading the guide with presentation duties.  
+- Staying in-pattern on loss (wait → gently prompt → ask) keeps the experience robust without surprising mode switches.
 
-### Design Parameters ###
-  - **Following Distance(between the avatar and the user)**: 2–3 m  
-  - **Avatar moveing speed**: Avatar's moving speed is proportional to user's walking speed; or,  around 1.2 m/s, with adjustable ±25%
-  - **State Indication**: Speed-automatic-adjustable animation design.
-  - **Postion of the Guiding Control Interface**: The interface anchors itself to the user's hand (as a palm menu) or to the starting point of the guidance path.
+### Design Parameters 
+- **Following distance:** **2–3 m** (default **2.5 m**; shorten in crowds or narrow aisles).  
+- **Walking speed:** default **1.0 m/s**; adaptive range **0.8–1.2 m/s**.  
+- **Arrival radius:** **≈ 2.0 m** (adjust to safe standoff from exhibits).  
+- **Prompt cadence:** repeat gently every **6–10 s** if needed; cap volume in quiet rooms.  
+- **State indication:** animation follows movement; optional outline/back beacon shows **en-route / paused / recover** (use color + icon for accessibility).  
+- **Control/menu placement:** **environment-anchored by default** (route start, stable waypoint, safe pull-over); **hand-anchored optional** for quick access; keep targets large and readable.
 
 
 ### Related Pattern ###
