@@ -228,7 +228,8 @@ Visitors often struggle to distinguish AR-capable exhibits and may miss opportun
   <li><strong>Spatial Entry Trigger</strong>
     <ul>
       <li>Render a virtual circle on the floor in front of the exhibit.</li>
-      <li>Use a proximity sensor: when the user’s feet enter the circle boundary, fire activation.</li>
+      <li><strong>Activation fires after ~0.40 s of stable dwell</strong> once the user’s feet are inside the circle to suppress false positives.</li>
+      <li>Place the <strong>circle center ~1.0 m</strong> from the exhibit’s leading edge (<strong>adjustable 0.8–1.2 m</strong>) to balance visibility and safety.</li>
     </ul>
   </li>
   <li><strong>AR Experience Indicator Interface</strong>
@@ -256,22 +257,21 @@ Visitors often struggle to distinguish AR-capable exhibits and may miss opportun
   <li><strong>Feedback Cues</strong>
     <ul>
       <li>Visual disappearance of interface elements.</li>
-      <li>Spatialized audio confirmation.<br />
-<!-- - Optional quick “boot-up” animation before content begins. --></li>
+      <li>Spatialized audio confirmation.</li>
     </ul>
   </li>
 </ol>
 
 <h3 id="rationale">Rationale</h3>
-<p>Anchoring a simple visual zone to the floor leverages natural proximity behavior, reducing cognitive load and eliminating the need for manual controls. Multimodal cues ensure clear feedback without distracting from the exhibit.</p>
+<p>Anchoring a simple visual zone to the floor leverages natural proximity behavior, reducing cognitive load and eliminating the need for manual controls. A brief dwell and a safe standoff from the exhibit provide reliability and comfort, while multimodal cues keep feedback clear without distraction.</p>
 
 <h3 id="design-parameters">Design Parameters</h3>
 <ul>
-  <li><strong>Circle Radius</strong>: 1.2–1.5 m to allow comfortable entry.<br />
-<!-- - **Pulse Rate**: 0.8–1 Hz for gentle attractor effect.   --></li>
-  <li><strong>Label Height</strong>: 0.5 m above floor to stay in peripheral view.<br />
-<!-- - **Audio Volume**: Adjust to 60–70 dB SPL in typical gallery acoustics.   --></li>
-  <li><strong>Fade Duration (Optional)</strong>: 0.5 s for interface elements to dissolve.</li>
+  <li><strong>Circle Radius:</strong> <strong>0.6–1.2 m</strong> (<strong>default 0.9 m</strong>)</li>
+  <li><strong>Dwell Time:</strong> <strong>~0.40 s</strong> stable inside the zone before trigger</li>
+  <li><strong>Placement (from exhibit leading edge):</strong> <strong>0.8–1.2 m</strong> to balance visibility and safety</li>
+  <li><strong>Label Height:</strong> <strong>~0.5 m</strong> above floor (peripheral visibility)</li>
+  <li><strong>Fade Duration (optional):</strong> <strong>~0.5 s</strong> for interface elements to dissolve</li>
 </ul>
 
 <!-- ### Game Mechanics

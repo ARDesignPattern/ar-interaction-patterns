@@ -56,7 +56,8 @@ A floor-based entry zone for activating AR exhibits
 ### Solution
 1. **Spatial Entry Trigger**  
    - Render a virtual circle on the floor in front of the exhibit.  
-   - Use a proximity sensor: when the user’s feet enter the circle boundary, fire activation.
+   - **Activation fires after ~0.40 s of stable dwell** once the user’s feet are inside the circle to suppress false positives.  
+   - Place the **circle center ~1.0 m** from the exhibit’s leading edge (**adjustable 0.8–1.2 m**) to balance visibility and safety.
 
 2. **AR Experience Indicator Interface**  
    - Above or beside the circle, display:  
@@ -73,17 +74,17 @@ A floor-based entry zone for activating AR exhibits
 4. **Feedback Cues**  
    - Visual disappearance of interface elements.  
    - Spatialized audio confirmation.  
-   <!-- - Optional quick “boot-up” animation before content begins. -->
 
 ### Rationale
-Anchoring a simple visual zone to the floor leverages natural proximity behavior, reducing cognitive load and eliminating the need for manual controls. Multimodal cues ensure clear feedback without distracting from the exhibit.
+Anchoring a simple visual zone to the floor leverages natural proximity behavior, reducing cognitive load and eliminating the need for manual controls. A brief dwell and a safe standoff from the exhibit provide reliability and comfort, while multimodal cues keep feedback clear without distraction.
 
 ### Design Parameters
-- **Circle Radius**: 1.2–1.5 m to allow comfortable entry.  
-<!-- - **Pulse Rate**: 0.8–1 Hz for gentle attractor effect.   -->
-- **Label Height**: 0.5 m above floor to stay in peripheral view.  
-<!-- - **Audio Volume**: Adjust to 60–70 dB SPL in typical gallery acoustics.   -->
-- **Fade Duration (Optional)**: 0.5 s for interface elements to dissolve.
+- **Circle Radius:** **0.6–1.2 m** (**default 0.9 m**)  
+- **Dwell Time:** **~0.40 s** stable inside the zone before trigger  
+- **Placement (from exhibit leading edge):** **0.8–1.2 m** to balance visibility and safety  
+- **Label Height:** **~0.5 m** above floor (peripheral visibility)  
+- **Fade Duration (optional):** **~0.5 s** for interface elements to dissolve
+
 
 <!-- ### Game Mechanics
 - **Proximity Badge**: Earn a “First Step” achievement for first-time activation.  
