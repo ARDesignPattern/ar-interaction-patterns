@@ -3,99 +3,199 @@ layout: pattern
 title: "Forward Cue-Routing"
 category: "sub-level"
 pattern_category: guiding
+pattern_group: poi-guide
 order: 1.2
 
 tags:
-  - Exploration
+  - PoI Guide
   - Experience Navigation
 thumbnail: /images/Gif/FollowCirclePattern.gif
-summary: "Exploring and Controlling AR Content"
-description: "Exploring and Controlling AR Content: Present the content in a structured, navigable, and user-controlled manner."
+summary: "Guiding visitors through lightweight ground-anchored route cues"
+description: "Ground-anchored AR cues indicate forward direction, anticipate turns, and guide visitors toward points of interest without relying on a character-based guide or visually dominant floating interface elements."
 ---
 
-  <div class="column">
-    <img src="{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}" alt="AR Interaction" class="profile">
-  </div> 
-  
+<div class="column">
+  <img src="{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}" alt="Forward Cue-Routing" class="profile">
+</div> 
 
 # Forward Cue-Routing
-Ground-based visual cues that anticipate turns and guide visitors along the route.
 
-
----
-## Overview
-- **Name**  
-  Forward Cue-Routing
-- **Intent**  
-  Provide concise, ground-based augmented reality prompts to show users upcoming turns and maintain immersion through synchronised ground-based visual patterns (e.g., ripples, footprints, arrows) and spatialised audio, while displaying the route the user has already passed.
+Ground-based visual cues that anticipate turns and guide visitors along a route toward one or more points of interest.
 
 ---
-## Target
-- **Problem**  
-  Visitors often lose situational awareness at decision points such as corners or junctions. Traditional path lines may be overlooked in visually dense AR scenes, and users may miss subtle route deviations, leading to detours and time loss.
-- **Context**  
-  - Feature long corridors, frequent turns, or multi-level layouts  
-  - Can pre-author routes and embed triggers at discrete waypoints  
-  - Require an unobtrusive, ground-anchored visual language to maintain immersion  
-- **Use When**  
-  - Users prefer minimal above-eye-level graphics that do not occlude exhibits  
-  - Clear anticipation of turns is essential—for example, in labyrinthine galleries  
-  - The institution wants a metaphor evocative of flow or movement (e.g., ripples, footprints, glowing arrows) rather than character-based guidance  
-  - Acoustic icons can be leveraged at each turn to reinforce direction without constant narration  
-- **Forces**  
-  - **Visual Density**: AR elements must not compete with exhibits  
-  - **Anticipation vs. Reaction**: Cues must appear early enough to redirect attention  
-  - **Pacing**: Visual and audio rhythms should match average walking speed  
-  - **Localization Accuracy**: Ground-anchored cues rely on precise user positioning  
-- **Consequences**  
-  - **Positive**: Smooth, predictable navigation; high immersion; low UI clutter  
-  - **Negative**: May be missed if localization jitters; requires careful tuning of cue timing and intensity  
+
+## Name
+
+Forward Cue-Routing
 
 ---
-## Application
 
-### Solution
-1. **Waypoint-Based Guiding**  
-   - The route can be authored as a **polyline (multi-segment path)**, an **image-based overlay**, or other **hybrid representations**. Triggers are placed at key nodes, such as turns or decision points.  
-   - On trigger, emit a localized cluster of visual ripples and spatialized audio.  
-2. **Point of Interest Selection Interface**  
-   - At the start hub, display a floor-pinned planar menu with PoI thumbnails, estimated walking time, and “Start.”  
-3. **Navigation Control Interface**  
-   - Invoke the start menu on demand via gesture or voice (“Show route menu”).  
-   - Allow Pause/Abort; cache progress for later resumption.  
-4. **Directional Visual Cues**  
-   - Animate ground-based patterns (e.g., concentric rings, footprints, arrows) that propagate toward the next waypoint. 
-   - Pattern motion speed can be mapped to walking pace (e.g., faster expansion = normal speed, slower expansion = deceleration).
-5. **Auditory Feedback**  
-   - Play a spatialized whoosh or bell at each turn trigger, aligned with turn direction.  
-   - Adjust ambient volume based on acoustic properties of the environment.  
-6. **Arrival Trigger**  
-   - Converge final rings into a glowing disc at the PoI.  
-   - Play a harmonic chord and pulse light to confirm arrival.
+## Level and Category
 
-### Rationale
-Ground-anchored visual patterns (such as ripples or footprints) leverage peripheral vision and spatial audio to cue forthcoming turns without cluttering the user’s focus, reducing cognitive load compared to floating arrows or moving avatars.
+Application-level pattern under the category-level class **PoI Guide**.
 
-### Design Parameters
-- **Pattern Propagation Rate**: Speed at which the ground cue advances between waypoints (e.g., ripple expansion, footprint spacing), calibrated so the cue reaches the midpoint between waypoints in ~2–3 s at average walking speed (1.2 m/s).
-- **Trigger Radius**: 1–2 m before each waypoint to fire cues early  
-- **Audio Lead Time**: 0.5–1 s before visual rings to pre-alert  
-- **Opacity Falloff (Optional)**: Ripples fade over 1.5 s to avoid persistence  
+---
 
-<!-- ### Game Mechanics
-- **Progress Meter**: Subtle floor bar filling toward next waypoint  
-- **Time Trials**: Display a “beat the ripple” timer for more playful visits  
-- **Achievements**: Unlock badges for completing routes without pausing   -->
+## Intent
 
-### Related Pattern
-<!-- - Avatar Guide (character-led pacing)  
-- Abstract Wayfinding (floating arrows, decals)   -->
+Provide lightweight, ground-anchored AR cues that indicate the forward direction, anticipate upcoming turns, and help visitors follow a route toward one or more points of interest without relying on a character-based guide or visually dominant floating interface elements.
 
-### Impact on Immersion
-- **Enhances**: Maintains attention on exhibits; feels organic and thematic  
-- **Risks**: Misaligned or jittery cues break presence; too-subtle rings may go unnoticed  
+---
 
-### Example
+## Rationale
+
+In HMD-based AR museum experiences, visitors need route guidance that remains visible and understandable while leaving their forward view available for exhibits, other visitors, and the physical environment. Continuous lines, floating arrows, or large visual markers can become visually intrusive, especially in dense exhibition spaces.
+
+Forward Cue-Routing addresses this problem by placing directional cues on or near the floor plane, where they can support peripheral awareness and route anticipation without occupying the central exhibit-viewing area. The pattern is especially useful when the guiding experience should feel subtle, environmental, or thematic rather than social or character-driven.
+
+---
+
+## Problem
+
+Visitors may lose orientation at decision points such as corners, crossings, transitions between rooms, or visually dense gallery areas. If navigation cues appear too late, visitors may already have passed the intended turning point. If cues are too prominent, they may distract from the exhibits and reduce the sense of situated museum exploration.
+
+In HMD-based AR, this problem is intensified by limited field of view, divided attention, and the need to preserve awareness of the physical environment during movement.
+
+---
+
+## Context
+
+This pattern applies to standing and walking HMD-AR museum experiences in which visitors follow an authored route through corridors, open galleries, or multi-point exhibition layouts. It is especially relevant when the route contains turns, junctions, or intermediate waypoints, and when the experience requires an unobtrusive guidance layer that does not occlude exhibits.
+
+The pattern assumes that route segments and waypoints can be authored in advance and that the system can place cues with sufficient spatial stability in relation to the floor plane, visitor position, and points of interest.
+
+---
+
+## Use When
+
+Use this pattern when:
+
+- visitors need directional support, but a moving avatar or large above-ground interface would be too visually dominant;
+- the route should be indicated through subtle spatial cues, such as ripples, footprints, glowing arrows, lines, particles, or other thematic floor-based motifs;
+- visitors should receive anticipatory guidance before turns, junctions, or transitions between rooms;
+- the museum wants to preserve attention on physical exhibits while still making the route legible;
+- the experience requires a lightweight guidance layer rather than a social, narrative, or character-based guide.
+
+Avoid using this pattern as the only guidance mechanism when the floor is visually cluttered, highly reflective, crowded, or difficult to augment reliably. It may also be insufficient when visitors need social, narrative, or spoken guidance, or when the route requires complex decision-making that cannot be communicated through simple forward cues alone.
+
+---
+
+## Forces
+
+- **Visibility vs. unobtrusiveness:** The cues must be noticeable enough to guide the visitor, but subtle enough to avoid dominating the exhibition environment.
+- **Anticipation vs. overload:** Cues should appear early enough before turns or decision points, but not so early or frequently that they become confusing or visually noisy.
+- **Route clarity vs. exhibit attention:** The route should remain understandable while allowing visitors to keep their attention on the surrounding exhibits.
+- **Pacing vs. autonomy:** Cue movement and rhythm can encourage walking pace, but should not pressure visitors to move faster than they wish.
+- **Spatial stability vs. environmental variability:** Floor-anchored cues depend on reliable spatial mapping and can become confusing if they jitter, drift, or appear misaligned.
+- **Lightweight guidance vs. narrative support:** The pattern can guide unobtrusively, but provides less social or narrative support than a character-based guide.
+
+---
+
+## Solution
+
+Implement route guidance through a sequence of lightweight AR cues placed on or near the floor plane. The cues should appear along an authored route and provide anticipatory direction before turns, junctions, or intermediate waypoints.
+
+The route can be authored as a waypoint sequence, multi-segment path, floor-based cue chain, or hybrid representation. At each relevant waypoint or decision point, the system spawns a short cue pattern, such as ripples, footprints, glowing arrows, particles, lines, or other thematic floor-based motifs. These cues should propagate or orient toward the next waypoint so that visitors can infer the direction of travel before they reach the turn.
+
+Optional spatial audio can be used to reinforce the visual cue, especially at turns or visually complex decision points. Audio should remain short and directional rather than becoming constant narration.
+
+At the destination, the final cue should converge into a stable arrival marker, such as a glowing disc, converging ripple, or short pulse. This marker confirms that the visitor has reached the point of interest and prepares the transition to the next interaction pattern.
+
+---
+
+## Design Parameters and Recommended Settings
+
+- **Cue type:** Use visual forms such as ripples, footprints, glowing arrows, particles, lines, or other thematic ground-based motifs.
+- **Cue placement:** Place cues on or near the floor plane and align them with the authored route, visitor movement direction, and safe walking path.
+- **Cue scale and spacing:** Keep cues large enough to be visible in the HMD field of view, but avoid covering too much of the floor or competing with physical exhibits.
+- **Propagation rate:** Calibrate cue movement so that it supports normal walking speed. As a practical reference, the cue may reach the midpoint between waypoints within approximately **2–3 seconds** at average walking speed.
+- **Trigger radius:** Use a trigger radius of approximately **1–2 metres** before each waypoint or turn so that visitors receive the cue before reaching the decision point.
+- **Turn anticipation distance:** Increase the lead distance before sharp turns, corners, or visually complex junctions; reduce it in short or narrow passages where early cues may overlap.
+- **Cue persistence:** Keep cues temporary and allow them to fade after use. A short fade-out of approximately **1–2 seconds** can reduce visual clutter while preserving route legibility.
+- **Opacity and brightness:** Use enough contrast for the cue to be visible under exhibition lighting, but avoid excessive brightness that distracts from physical exhibits or creates visual fatigue.
+- **Audio lead time:** When audio is used, trigger it approximately **0.5–1 second** before or together with the visual cue to pre-alert the visitor without creating constant narration.
+- **Route progress:** Optionally show the path already passed through lower-intensity cues or fading traces, but avoid leaving persistent visual trails that clutter the floor.
+- **Arrival indication:** Use a stable final marker, such as a glowing disc, converging ripple, or short pulse, to indicate that the destination point of interest has been reached.
+- **Fallback behaviour:** If spatial tracking becomes unstable, reduce cue complexity, pause the route display, or provide a simple recovery indication rather than continuing to show misaligned cues.
+
+---
+
+## Consequences
+
+When applied successfully, Forward Cue-Routing can support smooth and predictable navigation while keeping the visitor’s forward view relatively clear. It reduces reliance on maps or floating interface elements and can make movement through the museum feel more integrated with the physical environment. Because the cues are ground-anchored and lightweight, the pattern can preserve attention on exhibits and support an unobtrusive sense of flow.
+
+However, the pattern also introduces risks. If the cues are too subtle, visitors may miss them; if they are too bright, frequent, or persistent, they may create visual clutter. Misaligned or jittering floor cues can break presence and reduce trust in the system. The pattern also provides less narrative and social support than **Avatar Guide**, and therefore may be less suitable when the experience depends on a guide character, interpretive narration, or strong dramaturgical framing.
+
+---
+
+## Related Patterns
+
+- **Alternative guidance pattern**
+  - **Avatar Guide** is an alternative guidance pattern under the same PoI Guide category. It is more socially and narratively expressive, but also more visually prominent.
+
+- **Follow-up activation patterns**
+  - **Step-In Trigger** can follow Forward Cue-Routing when the visitor reaches the point of interest and should activate the next experience through a spatial entry zone.
+  - **Exhibit Knowledge Trigger** can follow Forward Cue-Routing when the transition into the AR experience should be connected to a meaningful exhibit-related marker.
+
+- **Follow-up presentation patterns**
+  - **Sequential Explanation** can follow the route guidance phase after arrival at the target exhibit.
+  - **AR Labelling** can follow the route guidance phase when visitors need spatially placed labels or annotations connected to parts of the physical exhibit.
+
+---
+
+## Composition Notes
+
+Forward Cue-Routing is usually used during the movement phase of an HMD-AR museum experience. A typical composition is:
+
+**Forward Cue-Routing → Experience Indicator → Experience Presenter**
+
+For example:
+
+**Forward Cue-Routing → Step-In Trigger → Sequential Explanation → AR Labelling**
+
+The handoff at the destination should be clearly marked. For example, the final floor cue may converge into a stable arrival marker, after which a **Step-In Trigger** or **Exhibit Knowledge Trigger** becomes active.
+
+If the route includes multiple points of interest, the pattern can be repeated between exhibits, but each route segment should have a clear start cue, decision-point cue, arrival cue, and recovery behaviour.
+
+---
+
+## Implementation Alignment
+
+The pattern can be implemented as a reusable route-guidance module or Unity prefab that combines:
+
+- a waypoint list;
+- floor-plane placement;
+- cue spawning;
+- trigger-zone detection;
+- animation control;
+- optional spatial audio;
+- arrival detection;
+- event-based handoff to subsequent modules.
+
+Relevant exposed parameters include cue type, cue scale, cue spacing, propagation speed, trigger radius, anticipation distance, opacity, fade duration, audio use, audio lead time, waypoint list, arrival radius, and fallback thresholds.
+
+Implementation-level events may include:
+
+- route started;
+- cue spawned;
+- turn cue triggered;
+- waypoint reached;
+- visitor deviated;
+- route resumed;
+- arrival cue triggered;
+- tracking unstable;
+- route ended.
+
+These events can support debugging, system logs, observation sheets, and later evaluation of route completion, hesitation at turns, missed cues, deviation frequency, and transition success.
+
+---
+
+## Example Use
+
+In a natural-history museum, visitors are guided from the entrance area toward a target exhibit through a sequence of subtle glowing ripples on the floor. As visitors approach a corridor junction, the ripples begin to propagate toward the correct turn, supported by a short spatialized sound cue from the turning direction. The cue pattern remains low enough to avoid covering the visitor’s view of surrounding exhibits.
+
+When the visitor reaches the destination, the final ripples converge into a glowing disc near the point of interest. This arrival cue then hands over to a **Step-In Trigger**, which activates the next exhibit-related AR experience.
+
 <div class="intro-video-wrapper">
   <iframe
     src="https://www.youtube-nocookie.com/embed/Xs7Bb4F3tq8"
@@ -105,47 +205,3 @@ Ground-anchored visual patterns (such as ripples or footprints) leverage periphe
     allowfullscreen
   ></iframe>
 </div>
-<!-- In a “Medieval Gallery” corridor, concentric green ripples pulse outward along the stone floor toward the next alcove. A soft chime precedes each ring sequence. Visitors instinctively follow the expanding rings and arrive at alcoves just as informative voice-overs begin. -->
-
-<!-- ---
-
-## Narrative Creation in Cultural Heritage
-
-### Visitor Behavioral Goals
-- **Anticipate direction**: Provide subtle early cues (ripples and audio) that draw visitors’ attention to upcoming turns before they reach decision points.  
-- **Maintain flow**: Encourage continuous movement by syncing visual and auditory rhythms with average walking pace, preventing stops or confusion.  
-
-### AR Experience Indicators
-- **Ground ripples**: Animated ripple effects, such as circular/ring patterns spreading out to the next waypoint, are used to indicate direction and time. 
-- **Audio icon**: Spatialized whoosh or bell sound that originates from the turn point, reinforcing the visual cue.  
-
-### Interactive Narrative
-- **Narration Design**: Present both auditory and visual narratives at each turning point so that users can experience a coherent narrative as they progress along the path.
-- **Audio cue**: A directional tone plays 0.5–1 s before the ripple animation, guiding attention toward the turn.  
-- **Visual cue**: Ground-anchored ripples pulse and expand in a “raindrop” fashion, mapped to walking speed.  
-- **Arrival marker**: Final ripples converge into a glowing disc with a harmonic chord to signal PoI arrival.  
-
-### Experience Principles
-- **Peripheral engagement**: Use low-profile, ground-anchored visuals that register in the peripheral vision without occluding exhibits.  
-- **Temporal alignment**: Time cues so that rings reach the midpoint between waypoints in 2–3 s at normal walking speed, ensuring intuitive pacing.  
-- **Minimal distraction**: Keep cues subtle yet noticeable—avoid abrupt or oversized graphics that compete with the environment.  
-
-### Curation Considerations
-- **Spatial calibration**: Fine-tune trigger radii (1–2 m) and localization precision to prevent premature or delayed cues.  
-- **Acoustic context**: Adjust audio volume and frequency to suit ambient noise levels and room acoustics.  
-- **Accessibility options**: Offer adjustable ripple contrast, optional high-contrast overlays for hearing-impaired visitors.   -->
-
----
-
-## Supplementary Information
-### Biography
-<!-- Developed by AR designer Li Wei for the “Time Passage” exhibition at the Beijing Museum of Digital Art, 2024. -->
-
-## Discussion
-Tuning the balance between subtlety and noticeability is key: too-fast ripples rush visitors, too-slow ones risk invisibility. Future work includes adaptive ring colors for accessibility and multi-path routing for group tours.
-
-
-
-## Notes
-
-Forward Cue-Routing preserves the clarity of a drawn path while avoiding visual overload in the user’s forward gaze. By anchoring cues to the floor plane and synchronising them with discrete acoustic events, the pattern balances immersion and instruction, supporting intuitive navigation even in acoustically or visually busy environments.

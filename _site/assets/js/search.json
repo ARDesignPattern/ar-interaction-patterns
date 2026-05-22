@@ -29,19 +29,19 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/high/high_01_guiding.html",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_POIGuide.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"point-of-interest-guide\">Point of Interest Guide<..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_POIGuide.png\" alt=\"Point of Interest Guide\" class=\"profile\" /></div><h1 id=\"point-of-interest-guide\">Point of Interest G..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/high/high_02_indicator.html",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperienceIndicator.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"experience-indicator\">Experience Indic..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperienceIndicator.png\" alt=\"Experience Indicator\" class=\"profile\" /></div><h1 id=\"experience-indicator\">Experience Ind..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/high/high_03_presenter.html",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperiencePresenter.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"experience-presenter\">Experience Prese..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperiencePresenter.png\" alt=\"Experience Presenter\" class=\"profile\" /></div><h1 id=\"experience-presenter\">Experience Pre..."
   },
 
   {
@@ -77,55 +77,55 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_1_1_Avatar%20Guide.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/FollowAvatar.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div> # Avatar GuideA personable virtual companion that leads visito..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/FollowAvatar.gif' | relative_url }}\" alt=\"Avatar Guide\" class=\"profile\"></div> # Avatar GuideA virtual companion that leads visitors toward a point o..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_1_2_Forward%20Cue-Routing.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Forward Cue-RoutingGround-based visual cues that an..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/FollowCirclePattern.gif' | relative_url }}\" alt=\"Forward Cue-Routing\" class=\"profile\"></div> # Forward Cue-RoutingGround-based visual cues that antic..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_2_1_Floor%20circle.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/EnteringCircle.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Step-In CircleA floor-based entry zone for activating AR..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/EnteringCircle.gif' | relative_url }}\" alt=\"Step-In Trigger\" class=\"profile\"></div> # Step-In TriggerA floor-based entry zone that indicates and acti..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_2_2_Knowledge%20Trigger.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Exhibit Knowledge TriggerA br..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif' | relative_url }}\" alt=\"Exhibit Knowledge Trigger\" class=\"profile\"></div> # Exhibit Knowledge TriggerA..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_1_Sequential%20Explanation.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/SequentialExploration.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # Sequential ExplanationA step-by-step interface fo..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/SequentialExploration.gif' | relative_url }}\" alt=\"Sequential Explanation\" class=\"profile\"></div> # Sequential ExplanationA step-by-step AR presentat..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_2_Labelling.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/Labelling.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # LabellingA system of markers or text that identifies differen..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/Labelling.gif' | relative_url }}\" alt=\"AR Labelling\" class=\"profile\"></div> # AR LabellingA spatial labelling system that identifies exhibit parts an..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_3_AR%20Exhibit%20Reassembler.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/Triceratops.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Exhibit ReassemblerA puzzle-like interaction where visit..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/Triceratops.gif' | relative_url }}\" alt=\"AR Exhibit Reassembler\" class=\"profile\"></div> # Exhibit ReassemblerA puzzle-like AR interaction where visit..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_4_AR%20Feature%20Drawing.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images//Gif/DeinonychusDemo.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Exhibit Feature DrawingAn interactive sketch tool t..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/DeinonychusDemo.gif' | relative_url }}\" alt=\"AR Exhibit Feature Drawing\" class=\"profile\"></div> # Exhibit Feature DrawingA spatial AR drawing interac..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/_patterns/sub/sub_3_5_AR%20Threat%20Defender.html",
-    "excerpt": "  <div class=\"column\">    <img src=\"{{ '/images/Gif/CoralReef.gif' | relative_url }}\" alt=\"AR Interaction\" class=\"profile\">  </div>   # AR Object CatchingA game-like mechanic where visitors protect..."
+    "excerpt": "<div class=\"column\">  <img src=\"{{ '/images/Gif/CoralReef.gif' | relative_url }}\" alt=\"AR Object Catching\" class=\"profile\"></div> # Object CatchingA protective AR interaction where visitors catch, ..."
   },
 
   {
@@ -143,73 +143,73 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/high-01-guiding/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_POIGuide.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"point-of-interest-guide\">Point of Interest Guide<..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_POIGuide.png\" alt=\"Point of Interest Guide\" class=\"profile\" /></div><h1 id=\"point-of-interest-guide\">Point of Interest G..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/high-02-indicator/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperienceIndicator.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"experience-indicator\">Experience Indic..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperienceIndicator.png\" alt=\"Experience Indicator\" class=\"profile\" /></div><h1 id=\"experience-indicator\">Experience Ind..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/high-03-presenter/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperiencePresenter.png\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"experience-presenter\">Experience Prese..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/HomePage/Fig_ExperiencePresenter.png\" alt=\"Experience Presenter\" class=\"profile\" /></div><h1 id=\"experience-presenter\">Experience Pre..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-1-1-avatar-guide/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/FollowAvatar.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"avatar-guide\">Avatar Guide</h1><p>A personable virtual..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/FollowAvatar.gif\" alt=\"Avatar Guide\" class=\"profile\" /></div><h1 id=\"avatar-guide\">Avatar Guide</h1><p>A virtual companion that l..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-1-2-forward-cue-routing/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"forward-cue-routing\">Forward Cue-Routing</h1><p..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/FollowCirclePattern.gif\" alt=\"Forward Cue-Routing\" class=\"profile\" /></div><h1 id=\"forward-cue-routing\">Forward Cue-Routing</h1><..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-2-1-floor-circle/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/EnteringCircle.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"step-in-circle\">Step-In Circle</h1><p>A floor-based ..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/EnteringCircle.gif\" alt=\"Step-In Trigger\" class=\"profile\" /></div><h1 id=\"step-in-trigger\">Step-In Trigger</h1><p>A floor-based e..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-2-2-knowledge-trigger/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"exhibit-knowledge-trigger..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/GrabFish-ezgif.com-video-to-gif-converter.gif\" alt=\"Exhibit Knowledge Trigger\" class=\"profile\" /></div><h1 id=\"exhibit-knowledge-..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-1-sequential-explanation/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/SequentialExploration.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"sequential-explanation\">Sequential Explanatio..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/SequentialExploration.gif\" alt=\"Sequential Explanation\" class=\"profile\" /></div><h1 id=\"sequential-explanation\">Sequential Explan..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-2-labelling/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/Labelling.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"labelling\">Labelling</h1><p>A system of markers or text t..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/Labelling.gif\" alt=\"AR Labelling\" class=\"profile\" /></div><h1 id=\"ar-labelling\">AR Labelling</h1><p>A spatial labelling system th..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-3-ar-exhibit-reassembler/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/Triceratops.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-exhibit-reassembler\">AR Exhibit Reassembler</h1><p>A..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/Triceratops.gif\" alt=\"AR Exhibit Reassembler\" class=\"profile\" /></div><h1 id=\"exhibit-reassembler\">Exhibit Reassembler</h1><p>A p..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-4-ar-feature-drawing/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images//Gif/DeinonychusDemo.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-exhibit-feature-drawing\">AR Exhibit Feature Dra..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/DeinonychusDemo.gif\" alt=\"AR Exhibit Feature Drawing\" class=\"profile\" /></div><h1 id=\"exhibit-feature-drawing\">Exhibit Feature Dr..."
   },
 
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/",
-    "excerpt": "<div class=\"column\">    <img src=\"/ar-interaction-patterns/images/Gif/CoralReef.gif\" alt=\"AR Interaction\" class=\"profile\" />  </div><h1 id=\"ar-object-catching\">AR Object Catching</h1><p>A game-like..."
+    "excerpt": "<div class=\"column\">  <img src=\"/ar-interaction-patterns/images/Gif/CoralReef.gif\" alt=\"AR Object Catching\" class=\"profile\" /></div><h1 id=\"object-catching\">Object Catching</h1><p>A protective AR i..."
   },
 
   {

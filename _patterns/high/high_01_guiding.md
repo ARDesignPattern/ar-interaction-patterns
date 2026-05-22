@@ -3,141 +3,248 @@ layout: pattern
 title: "Point of Interest Guide"
 category: "high-level"
 pattern_category: guiding
+pattern_group: poi-guide
 overlay: /images/PatternIcon/Path.png
 order: 1
+
 tags:
-  - Navigation
-  - AR
-
+  - PoI Guide
+  - Route Guidance
+  - Experience Navigation
 thumbnail: /images/high_guide.png
-summary: "Guiding to Points of Interest (PoIs)"
-description: "To assist users in reaching PoIs effectively, combine spatial guidance, interface support, and multisensory feedback."
+summary: "Supporting visitor movement toward points of interest"
+description: "The PoI Guide category organizes HMD-AR guidance patterns that help visitors locate, approach, and arrive at points of interest through spatial guidance, route support, pace regulation, and recoverable arrival logic."
 ---
-  <div class="column">
-    <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="AR Interaction" class="profile">
-  </div> 
+
+<div class="column">
+  <img src="{{ '/images/HomePage/Fig_POIGuide.png' | relative_url }}" alt="Point of Interest Guide" class="profile">
+</div> 
+  
 # Point of Interest Guide
-A spatial path or cue that directs visitors toward a point of interest.
 
-
----
-## Overview
-- **Name**  
-  Point of Interest Guide
-- **Intent**  
-  Help visitors efficiently locate and navigate to selected POIs in complex AR spaces by combining path visualization, selection interfaces, and multisensory feedback.
+A category-level pattern class for guiding visitors toward points of interest in HMD-based AR museum experiences.
 
 ---
 
-## Target
-- **Problem**  
-  Visitors in AR-enhanced environments may miss key exhibits due to complex layouts, limited time, or insufficient physical signage.
-- **Context**  
-  - AR spaces with multiple dispersed POIs (museums, galleries, trade shows)  
-  - Large or subdivided venues where wayfinding is non-trivial  
-  - Conventional maps or signage are inadequate or hard to interpret  
-- **Use When**  
-  - Visitors begin exploration and need their first AR destination  
-  - Visitors want to locate unvisited exhibits efficiently  
-  - Visitors wish to revisit previously seen POIs  
-  - Time constraints demand targeted navigation  
-- **Forces**  
-  - **Efficiency vs. Exploration**: Balancing guided paths with room for serendipity  
-  - **Clarity vs. Clutter**: Presenting enough cues without overwhelming the AR view  
-  - **Control vs. Automation**: Letting users choose destinations while automating the routing  
-  - **Multisensory Consistency**: Aligning visual and audio guidance seamlessly  
-- **Consequences**  
-  - **Positive**: Reduced search time; improved coverage of key content; higher visitor satisfaction  
-  - **Negative**: Over-directing may stifle free exploration; UI elements may occlude exhibits  
+## Name
+
+PoI Guide / Point of Interest Guide
 
 ---
 
-## Application
+## Level and Category
 
-### Solution (High-Level, Principle-Only)
-1. **Purpose & Scope**  
-Orchestrate the end-to-end journey **Select → Route → Navigate → Arrive/Dwell → Resume/End** via system-level conventions. Specify **principles and agreement**, not representations, thresholds, or gesture sets. 
-2. **Invariants (must always hold)**  
-- Perceptible without occluding exhibits; 
-- Pace-safe and comfortable; 
-- Continuous orientation with recoverability; 
-- Redundant multimodal feedback (≥2 channels); 
-- Consistent semantics and accessibility across exhibits.
-3. **Design Choices(Variation Points)**  
-   - Guidance modality family: avatar/character, ground cues, HUD/overlays, audio/haptics.  
-   - Routing policy: shortest, smoothest, thematic, accessible-first, crowd-aware.
-   - Pacing policy: follower, leader, Fixed-Rhythm; adaptive or fixed.
-   - Anticipation horizon: how early/often to pre-announce turns.
-   - Persistence & visibility: always-on vs on-demand; level of detail.
-4. **Decision Guidelines (Heuristics)**  
-   Select variation points based on topology (corridors/open halls), crowding, noise/lighting, device capabilities, localization confidence, and visitor intent (goal- vs exploration-oriented).
-5. **Integration Protocol (system-level agreement)**  
-- Define states and events: **Select → Preview → Commit → Navigation → Anticipate-Turn → Turn → Arrive → Dwell → Resume/End**; 
-- Exceptions and rollbacks: **Off-Route, Low-Confidence, Paused**; 
-- Required data and hooks: route geometry, PoI metadata, telemetry (detection/deviation/arrival). 
-- **NO** fixed shape, distance, or duration.
+Category-level pattern class in the consolidated pattern system.
 
-6. **Safety & Comfort Guards**  
-Bound speed and acceleration deltas; avoid sharp turns/occlusion; provide exit/retry paths; **gracefully degrade** under low confidence.
-7. **Accessibility & Inclusivity**  
-Offer equivalent channels (speech/captions/high contrast/non-color coding/haptics); support hands-free modes and adjustable text/tempo.
-
-
-### Rationale
-- **Decouples orchestration from representation** preserving freedom while avoiding over-specification.
-- **Enables extensibility and composition**, allowing new or combined sub-patterns without changing the agreement.
-- **Reduces cognitive load while ensuring pace and safety** via invariants and guardrails.
-- **Adapts across devices and environments**, gracefully degrading under uncertainty.
-- **Fosters consistency and governance** with shared semantics and telemetry for large-scale operations.
-
-
-
-<!-- ### Example -->
-<!-- At a contemporary art museum, a visitor taps the “Highlights” menu and selects “Sculpture Garden.” A translucent blue path appears on the floor, arrows pulse at each turn, and a soft voice prompts “Proceed 20 meters to the next hall.” Upon arrival, a chime sounds and the path fades, revealing the sculpture. -->
+It groups guidance-related application-level patterns that support visitor movement toward points of interest in HMD-based AR museum experiences.
 
 ---
 
-<!-- ## Narrative Creation in Cultural Heritage
+## Intent
 
-### Visitor Behavioral Goals
-- **Draw visitors in**: Display a POI selection menu showing nearby exhibits with their names and distances, prompting users to choose a destination.    
-- **Auto-start interaction (Potional)**: Automatically display the nearest POI suggestion and begin path guidance when the visitor enters the mapped area.  
+Help visitors locate, approach, and arrive at selected points of interest in complex AR-enhanced exhibition spaces through spatial guidance, route support, pacing support, and multimodal feedback.
 
-### AR Experience Indicators
-- **Floor marking (Optional)**: Semi-transparent AR visual elements (eg.: footprints or glowing floor tiles) leading toward the selected POI.  
-- **Guiding element**: Animated visual elements/waypoint icon (e.g., an avatar or floating arrows) that hovers above the path to reinforce direction.
-
-### Interactive Narrative
-- **Narration design**: Before the guided tour begins, provide the name of the exhibit and a description of the tour content; during the path guiding, provide basic background information on the relevant exhibits; upon reaching points of interest, start the formal exhibit presentation. 
-- **Audio cue**: A gentle chime and voice prompt (eg.: This tour will lead you to the Orca exhibit) as the route initializes.  
-- **Visual cue**: Guide users to points of interest using interactive visual elements (such as virtual avatars or animated arrows/footprints), with designs that align with the features and style of the exhibits.
-
-### Experience Principles
-- **Intuitive guidance**: Align AR cues with natural walking direction and avoid obstructing the visitor’s view of exhibits.  
-- **Seamless transition**: Fade path indicators in at journey start and out upon arrival, ensuring no abrupt visual shifts.  
-- **Comfortable pacing**: Announce distance and turns only when the user is within optimal lead-in range (5–10 m), avoiding clutter.  
-
-### Curation Considerations
-- **Traffic flow**: Monitor visitor density and suggest alternate routes to prevent bottlenecks at popular POIs.  
-- **Aesthetic harmony**: Choose cue colors, shapes, and animations that complement the exhibit’s design language and lighting.  
-- **Accessibility**: Provide high-contrast options, adjustable audio volume, and text labels to accommodate diverse visitor needs.  
---- -->
-
-## Supplementary Information
-
-### Biography
-<!-- Created by UX designer Elena Rossi for the “Smart Wayfinding” project at the Milan AR Museum, 2024. -->
+The category provides a system-level guidance structure that can be instantiated through different application-level patterns, such as **Avatar Guide** or **Forward Cue-Routing**.
 
 ---
 
-## Discussion
-Key considerations include balancing guidance granularity with user freedom, dynamically re-routing for crowd flow, and integrating predictive POI suggestions based on user interests or time constraints. Future work may incorporate group navigation modes and live occupancy data to optimize routes.
+## Rationale
 
+Guidance in HMD-based AR museums is not only a matter of showing a destination. Visitors move through real exhibition spaces while attending to physical exhibits, other visitors, spatial obstacles, and digital overlays.
 
-## Media
+The PoI Guide class separates the general guidance function from its concrete representation. This allows creators to preserve a consistent guidance logic across an exhibition while choosing different guidance strategies according to route complexity, spatial layout, crowding, visitor intent, device capability, and desired narrative framing.
 
+As a category-level class, PoI Guide defines the shared interaction role, variation dimensions, state logic, and composition position of guidance patterns without prescribing a single visual form, distance threshold, or interaction technique.
 
+---
 
-## Notes
+## Problem
 
-This pattern enhances orientation and engagement in AR-rich spaces by reducing spatial confusion and supporting personalized exhibit discovery.
+Visitors in AR-enhanced museum or exhibition environments may miss important points of interest because exhibits are spatially dispersed, only partly visible, insufficiently supported by physical signage, or difficult to locate through conventional maps.
+
+In HMD-based AR, this problem is intensified by limited field of view, divided attention, unfamiliar spatial cues, and the need to remain aware of other visitors and the physical environment while moving.
+
+A reusable guidance structure is needed so that different guidance representations can support movement, orientation, pacing, route recovery, and arrival confirmation in a consistent way.
+
+---
+
+## Context
+
+This category applies to standing and walking HMD-based AR museum experiences in which visitors move between points of interest before entering an exhibit-related AR experience. It is especially relevant when:
+
+- multiple points of interest are distributed across an exhibition area;
+- visitors need help locating the next exhibit or AR-enabled station;
+- the route includes corridors, turns, junctions, open halls, or visually dense spaces;
+- guidance must remain legible while preserving attention to exhibits and public-space safety;
+- the experience needs to hand over from movement to activation and presentation patterns.
+
+The category assumes that route geometry, point-of-interest metadata, safe viewing positions, and localization confidence can be represented sufficiently for guidance and arrival detection.
+
+---
+
+## Use When
+
+Use this category when:
+
+- visitors need to move from one point of interest to another;
+- a museum experience requires a repeatable guidance phase before exhibit activation;
+- creators need to choose between different guidance strategies, such as avatar-based guidance or ground-based cue routing;
+- guidance needs to support route selection, turn anticipation, arrival confirmation, and recovery from deviation;
+- the exhibition requires a consistent guidance logic across different exhibits while allowing local adaptation.
+
+Avoid relying on this category as a separate interaction phase when the exhibit is immediately visible, when no route or movement support is needed, or when guidance cues would create safety risks, visual clutter, or excessive control over visitors’ free exploration.
+
+---
+
+## Forces
+
+- **Efficiency vs. exploration:** Guidance should help visitors find intended points of interest, but should not remove opportunities for voluntary exploration and serendipitous discovery.
+- **Clarity vs. clutter:** Guidance cues must be visible enough to support orientation, but not so persistent or dense that they overwhelm the HMD view.
+- **Control vs. automation:** Visitors may benefit from automatic route support, but should still be able to pause, resume, change destination, or leave the guided route.
+- **Guidance strength vs. exhibit attention:** Strong guidance can improve orientation, but may draw attention away from physical exhibits and the surrounding museum environment.
+- **Pacing vs. comfort:** The route should support comfortable movement and avoid encouraging visitors to walk too quickly, turn sharply, or ignore obstacles.
+- **Consistency vs. local adaptation:** Guidance semantics should remain recognizable across an exhibition, while cue form, modality, and intensity may adapt to local spatial conditions.
+- **Multimodal redundancy vs. overload:** Visual, auditory, and other feedback channels can reinforce orientation, but excessive simultaneous cues may become distracting.
+- **Spatial precision vs. recoverability:** Guidance should be spatially meaningful, but must degrade gracefully when tracking confidence, route alignment, or visitor position becomes uncertain.
+
+---
+
+## Solution
+
+Define a system-level guidance structure that supports the visitor journey from point-of-interest selection to route preview, route commitment, navigation, turn anticipation, arrival, dwell, and continuation or exit.
+
+The guidance layer should provide continuous orientation without over-specifying one particular representation. It may be implemented through a virtual guide, floor-based route cues, forward-facing indicators, audio prompts, haptic cues, or hybrid forms.
+
+The category should preserve several invariants:
+
+- guidance cues should be perceptible without occluding exhibits;
+- movement support should remain pace-safe and comfortable;
+- visitors should receive continuous orientation and recovery options when they pause, deviate, or lose the route;
+- at least two feedback channels, such as visual and auditory feedback, should be available where possible;
+- guidance-state meanings should remain consistent across exhibits, even when the concrete representation changes.
+
+The category also defines a shared state logic. A typical route sequence includes:
+
+**Select → Preview → Commit → Navigate → Anticipate Turn → Turn → Arrive → Dwell → Resume / End**
+
+Exception states may include:
+
+**Off Route → Paused → Low Tracking Confidence → Recovery**
+
+Concrete application-level patterns should instantiate this logic through their own visual form, feedback style, pacing policy, and implementation parameters.
+
+---
+
+## Design Parameters and Recommended Settings
+
+- **Guidance modality family:** Select between avatar-based guidance, ground-based cues, forward-facing overlays, audio prompts, haptic cues, or hybrid combinations. Use **Avatar Guide** when a social, narrative, or pace-regulated guide is desirable; use **Forward Cue-Routing** when lightweight and unobtrusive route indication is preferred.
+- **Routing policy:** Define whether the route prioritizes shortest distance, smoothest movement, thematic order, accessibility, crowd avoidance, or curatorial narrative sequence.
+- **Pacing policy:** Decide whether guidance behaves as a leader, follower, fixed-rhythm cue, adaptive route assistant, or user-paced route display.
+- **Anticipation horizon:** Specify how early turns, junctions, or decision points should be announced. Increase anticipation in complex layouts and reduce it in short or narrow route segments.
+- **Persistence and visibility:** Decide whether cues are always visible, shown on demand, shown only near decision points, or faded when the visitor is confidently following the route.
+- **Destination selection:** Define whether destinations are selected by visitor choice, curatorial sequence, system recommendation, time constraint, or previously visited/unvisited status.
+- **Feedback channels:** Combine visual guidance with optional spatial audio, captioned prompts, vibration where available, or other redundant cues. Avoid relying on a single channel when environmental conditions are uncertain.
+- **Recovery behaviour:** Define what happens when the visitor deviates, pauses, walks in the wrong direction, or tracking confidence becomes low. Recovery should be calm, reversible, and easy to understand.
+- **Arrival definition:** Define what counts as arrival, such as entering a radius around the point of interest, reaching a safe viewing position, or stopping within a predefined activation zone.
+- **Accessibility settings:** Support adjustable cue size, brightness, contrast, text size, audio volume, pacing tempo, and non-colour-dependent cue semantics where possible.
+- **Telemetry hooks:** Record route start, cue display, deviation, pause, recovery, arrival, and route completion events to support evaluation and debugging.
+
+---
+
+## Consequences
+
+When applied successfully, the PoI Guide category can reduce spatial confusion, improve coverage of intended exhibition content, and support smoother transitions between movement and exhibit engagement. It can also make route guidance more reusable because different guidance representations can share a common state logic, event structure, and composition position.
+
+However, the category also introduces risks. Overly directive guidance may reduce visitor autonomy and suppress exploratory museum behaviour. Persistent route cues may visually clutter the exhibition or distract from physical exhibits. If routing, arrival detection, or recovery behaviour is unreliable, visitors may lose trust in the AR system.
+
+The category therefore requires careful balancing of guidance strength, cue visibility, routing policy, pacing, feedback redundancy, and recovery design.
+
+---
+
+## Related Patterns
+
+- **Application-level patterns in this category**
+  - **Avatar Guide** instantiates this category through a visible virtual guide or character that visitors can follow toward a point of interest.
+  - **Forward Cue-Routing** instantiates this category through ground-based or forward-path cues that indicate direction, turns, and arrival.
+
+- **Follow-up activation patterns**
+  - **Step-In Trigger** commonly follows PoI guidance by indicating and activating the AR experience once visitors reach the point of interest.
+  - **Exhibit Knowledge Trigger** commonly follows PoI guidance when activation should be tied to a short exhibit-related or concept-linked interaction.
+
+- **Follow-up presentation patterns**
+  - **Sequential Explanation** may follow guidance and activation when visitors need structured exhibit-related content.
+  - **AR Labelling** may follow guidance and activation when visitors need spatially anchored labels or component-level explanations.
+  - **AR Exhibit Reassembler** may follow guidance and activation when visitors should reconstruct missing or fragmented exhibit components.
+  - **AR Exhibit Feature Drawing** may follow guidance and activation when visitors should draw, trace, or mark interpretive exhibit features.
+  - **AR Object Catching** may follow guidance and activation when visitors should respond to virtual threats or objects around an exhibit.
+
+---
+
+## Composition Notes
+
+PoI Guide normally occupies the first phase of a museum HMD-AR interaction sequence. It supports movement toward the point of interest and prepares the transition into indication, activation, and presentation.
+
+A typical composition is:
+
+**PoI Guide → Experience Indicator → Experience Presenter**
+
+For example:
+
+**Avatar Guide → Step-In Trigger → Sequential Explanation → AR Labelling**
+
+or:
+
+**Forward Cue-Routing → Exhibit Knowledge Trigger → AR Object Catching**
+
+The handoff from guidance to activation should be explicit. When visitors arrive at the point of interest, the guidance cue should reduce intensity, stop, or transform into an arrival confirmation. The activation pattern should then become visually primary. This prevents visitors from confusing route following with exhibit interaction.
+
+In multi-exhibit routes, the PoI Guide category can be repeated between points of interest, but each segment should have a clear start, route state, arrival state, and recovery behaviour.
+
+---
+
+## Implementation Alignment
+
+As a category-level pattern, PoI Guide should be implemented as a shared route-orchestration layer rather than as a single visual prefab. This layer can coordinate destination selection, waypoint data, route preview, guidance-state transitions, cue visibility, visitor-distance monitoring, turn anticipation, arrival detection, recovery behaviour, and handoff events.
+
+Application-level prefabs such as **Avatar Guide** and **Forward Cue-Routing** can then subscribe to the same route state and event structure while rendering different guidance representations.
+
+Relevant implementation data include:
+
+- point-of-interest metadata;
+- route geometry;
+- waypoint lists;
+- safe viewing positions;
+- arrival radii;
+- localization-confidence values;
+- cue-state definitions;
+- route-state definitions;
+- feedback-channel settings;
+- telemetry hooks.
+
+Implementation-level events may include:
+
+- destination selected;
+- route preview shown;
+- route committed;
+- guidance started;
+- cue displayed;
+- turn anticipated;
+- waypoint reached;
+- visitor deviated;
+- guidance paused;
+- recovery started;
+- tracking confidence low;
+- arrival confirmed;
+- handoff triggered;
+- route completed;
+- guidance ended.
+
+These events can support debugging, system logs, observation sheets, and later evaluation of route completion, deviation frequency, missed cues, recovery success, arrival recognition, and transition success.
+
+---
+
+## Example Use
+
+In a natural-history museum, a visitor begins an HMD-AR experience and selects a whale skeleton as the next point of interest. The PoI Guide layer defines the route, previews the destination, and starts the guidance phase. Depending on the exhibition concept, this guidance may be instantiated as an **Avatar Guide** that visitors follow through the hall, or as **Forward Cue-Routing** that uses subtle floor-based ripples and directional sound cues.
+
+As the visitor approaches the target area, the guidance state changes from navigation to arrival. The guide stops or the final route cue converges into an arrival marker. The guidance layer then hands over to an **Experience Indicator**, such as **Step-In Trigger** or **Exhibit Knowledge Trigger**, which activates the exhibit-related AR experience. After activation, the system continues into an **Experience Presenter** pattern, such as **Sequential Explanation** or **AR Labelling**.

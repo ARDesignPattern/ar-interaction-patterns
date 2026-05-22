@@ -3,104 +3,217 @@ layout: pattern
 title: "Object Catching"
 category: "sub-level"
 pattern_category: presenter
+pattern_group: experience-presenter
 order: 3.5
 
 tags:
-  - Environmental Awareness
+  - Experience Presenter
   - Embodied Interaction
-  - Gamified Learning
+  - Environmental Awareness
+  - Protective Interaction
 thumbnail: /images/Gif/CoralReef.gif
-summary: "Defending Ecosystems through AR-Based Environmental Challenges"
-description: "Transform invisible environmental threats into an interactive AR defense game, enabling visitors to protect vulnerable habitats through gestures while learning about real-world ecological impacts and solutions."
+summary: "Protecting vulnerable exhibits or environments through embodied AR interaction"
+description: "Dynamic AR threats move toward vulnerable exhibit zones, and visitors catch, block, deflect, or neutralize them through simple embodied actions."
 ---
 
-  <div class="column">
-    <img src="{{ '/images/Gif/CoralReef.gif' | relative_url }}" alt="AR Interaction" class="profile">
-  </div> 
-  
-# AR Object Catching
-A game-like mechanic where visitors protect an exhibit from environmental threats.
+<div class="column">
+  <img src="{{ '/images/Gif/CoralReef.gif' | relative_url }}" alt="AR Object Catching" class="profile">
+</div> 
 
----
-## Overview
-- **Name**  
-  AR Object Catching
-- **Intent**  
-  Convey invisible or abstract environmental threats through interactive AR gameplay, fostering urgency and empathy while teaching mitigation strategies.
+# Object Catching
+
+A protective AR interaction where visitors catch, block, deflect, or neutralize incoming virtual threats.
 
 ---
 
-## Target
-- **Problem**  
-  Invisible or abstract threats—such as pollution or climate impacts—are difficult to convey in static exhibits, reducing visitor empathy and sense of agency.
-- **Context**  
-  - Natural-history or environmental exhibits illustrating hazards (ghost nets, acidic runoff)  
-  - AR can render and animate non-physical threats in situ  
-  - Installation supports real-time gestural tracking  
-- **Use When**  
-  - The exhibit aims to illustrate environmental hazards and empower visitors to act  
-  - Visitors can interact gesturally (hand or body tracking)  
-  - Threats are dynamic and benefit from active interception  
-- **Forces**  
-  - **Visibility vs. Realism**: Threats must look tangible without breaking immersion  
-  - **Engagement vs. Complexity**: Gestures should be intuitive yet varied enough to teach concepts  
-  - **Feedback Latency**: Real-time responses crucial to maintain sense of cause and effect  
-  - **Emotional Impact**: Balancing urgency without overwhelming visitors  
-- **Consequences**  
-  - **Positive**: Deepens empathy, makes abstract hazards concrete, reinforces learning through action  
-  - **Negative**: Poor tracking or slow feedback can frustrate; overly aggressive challenges may deter participation  
+## Name
+
+AR Object Catching
 
 ---
-  
-## Application
 
-### Game Mechanics
-- **Type**: Catching objects  
-- **Object Interaction**: Engage with objects or phenomena through gestures.
-- **Blocking or Deflecting**: Actively block, redirect, or neutralize incoming objects.
-- **Targeted Protection**: Identify and protect vulnerable exhibit areas.
-- **Time-Based Challenges**: Introduce urgency with timelimited tasks.
+## Level and Category
 
-### Solution
-1. **Gesture-Based Object Interception**  
-   - Spawn virtual threats (drifting nets, plastic debris) moving toward vulnerable exhibit zones (e.g., coral reef).  
-   - Track visitor hand/body gestures to block, deflect, or capture threats in mid-air.
+Application-level pattern under the category-level class **Experience Presenter**.
 
-2. **Targeted Protection & Progressive Challenges**  
-   - Highlight critical zones when they’re at risk (glow or pulse).  
-   - Increase difficulty over time: faster threats, multiple simultaneous objects, or visual obfuscation (murkiness).
+---
 
-3. **Start-Point Guidance with Animated Prompts**  
-   - Begin with a short cinematic explaining real-world origin and impact of each threat.  
-   - Display ghost-hand overlays or arrows showing the protective gesture required (e.g., sweeping motion).
+## Intent
 
-4. **Narration & Real-Time Feedback**  
-   - Play spatialized audio narrating impact stats when a threat is intercepted or missed.  
-   - Show visual effects: healthy coral brightening and fish population bloom for successful defenses.
+Turn invisible, abstract, or slow-moving threats to an exhibit or represented environment into dynamic AR objects that visitors can catch, block, deflect, or neutralize through embodied interaction, thereby making risk, protection, and mitigation more tangible.
 
-5. **Educational Wrap-Up (Optional)**  
-   - After the session, display personalized metrics (objects intercepted, reef health score).  
-   - Present actionable conservation tips visitors can adopt outside the museum.
+---
 
-### Rationale
-Turning abstract environmental hazards into tangible, interactive threats leverages embodied action to build empathy and reinforce learning; immediate feedback ties visitor effort directly to positive virtual outcomes.
+## Rationale
 
-### Design Parameters
-- **Threat Speed**: Start at 0.5 m/s, increase by 0.1 m/s every 20 seconds  
-<!-- - **Gesture Window**: Recognition window of 0.3–0.5 s for swipe or block motions   -->
-- **Highlight Radius (Optional)**: 0.5 m glow around at-risk zones  
-- **Feedback Delay**: ≤ 0.1 s between gesture and visual/audio response  
-- **Session Duration**: 60–120 s for optimal engagement  
+Some museum topics are difficult to communicate because the relevant threats are not directly visible in the exhibit. Environmental hazards such as pollution, ghost nets, ocean acidification, invasive species, or climate-related stressors may be scientifically important but perceptually absent, temporally delayed, or spatially remote.
 
-### Related Pattern
-<!-- - AR Exhibit Reassembler (interactive assembly)  
-- Exhibit Knowledge Trigger (micro-task activation) -->
+AR Object Catching translates these hazards into visible and interactive objects that move toward a vulnerable exhibit zone. By asking visitors to intercept or neutralize them, the pattern connects learning to bodily action and gives visitors a direct sense of agency. The interaction should not only create challenge, but also help visitors understand what is being threatened, why it matters, and how protective action changes the outcome.
 
-### Impact on Immersion
-- **Enhances**: Makes invisible hazards visible and urgent; fosters active learning  
-- **Risks**: Tracking failures or UX latency break presence; overly difficult stages can frustrate
+---
 
-### Example
+## Problem
+
+Visitors may find invisible, abstract, or slow-moving threats difficult to understand when they are represented only through static panels, text, images, or passive visualizations. Environmental or cultural threats may feel distant from the physical exhibit, reducing urgency, empathy, and perceived agency.
+
+In HMD-based AR, these threats can be visualized in situ, but a passive overlay may still leave visitors as observers. A more active interaction structure is needed when the learning goal involves protection, mitigation, response, or the consequences of action and inaction.
+
+---
+
+## Context
+
+This pattern applies to HMD-AR museum experiences in which an exhibit represents a vulnerable organism, habitat, artifact, cultural site, or environment affected by visible or invisible threats. It is especially relevant for natural-history, ecology, climate, conservation, heritage-risk, or science-communication exhibits.
+
+The pattern assumes that the system can spawn virtual objects or effects, track simple visitor gestures or body positions, detect interception or collision events, and represent a vulnerable zone or protected target in relation to the physical exhibit.
+
+---
+
+## Use When
+
+Use this pattern when:
+
+- the exhibit topic involves threats, risk, vulnerability, protection, or mitigation;
+- the threat is difficult to perceive directly in the physical exhibit;
+- visitors should learn through active response rather than passive observation;
+- simple embodied actions, such as catching, blocking, swiping, or neutralizing, can represent the desired protective behaviour;
+- the experience can remain short, safe, and manageable in a public exhibition setting.
+
+Do not use this pattern when the topic is too sensitive for game-like treatment, when rapid gestures may be unsafe in the exhibition space, when tracking latency would make interception unreliable, or when the educational goal requires slow reflection rather than fast action. It may also be unsuitable in crowded galleries or around fragile exhibits if the interaction encourages broad arm movements or rapid body motion.
+
+---
+
+## Forces
+
+- **Urgency vs. comfort:** Threats should create a sense of immediacy, but not make visitors anxious, rushed, or physically unsafe.
+- **Engagement vs. conceptual clarity:** The game mechanic should reinforce the environmental or interpretive message rather than become a generic catching game.
+- **Challenge vs. accessibility:** The interaction should be active and rewarding, but remain manageable for first-time HMD users and visitors with different physical abilities.
+- **Realism vs. legibility:** Threat objects should be recognizable and meaningful, but may need stylization to remain visible and catchable in AR.
+- **Feedback immediacy vs. system robustness:** Catching and blocking require fast visual and audio feedback; latency can break cause-and-effect perception.
+- **Emotional impact vs. overload:** Missed threats can show negative consequences, but the system should avoid overwhelming visitors with failure states.
+- **Movement freedom vs. museum safety:** Gestures should be limited to a safe interaction volume and should not encourage visitors to step into obstacles, other visitors, or restricted areas.
+
+---
+
+## Solution
+
+Represent threats as virtual objects or effects that move toward a vulnerable exhibit zone. The visitor is asked to catch, block, deflect, or neutralize these threats through simple embodied actions, such as reaching out, swiping, holding up a hand, tapping a virtual object, or moving into a protective position. The vulnerable zone should be clearly indicated, for example through a glow, pulse, shield outline, reef-health indicator, or target highlight.
+
+The interaction should begin with a short explanation or animated prompt that shows what the threats are and how the visitor can respond. Early threats should move slowly and follow predictable paths so that visitors can learn the gesture. As the session progresses, the system may increase difficulty through faster movement, multiple simultaneous threats, different threat types, or partial visual obstruction.
+
+Each intercepted threat should produce immediate feedback, such as disappearance, deflection, particle burst, sound cue, score update, or visible improvement of the protected exhibit zone. Missed threats should also have visible consequences, such as reduced health, dimmed colours, damaged coral, or a warning cue.
+
+The experience should end with a short wrap-up. This may include the number of intercepted threats, a reef health or protection score, a visual before-and-after comparison, and a concise conservation or mitigation message. The wrap-up should connect the embodied game action back to the real-world issue represented by the exhibit.
+
+---
+
+## Design Parameters and Recommended Settings
+
+- **Threat type:** Use virtual objects or effects that clearly represent the issue, such as plastic debris, ghost nets, acidic runoff, invasive species, heat waves, pollutants, or symbolic hazard particles.
+- **Threat speed:** Start with slow movement, for example approximately **0.5 m/s**, and increase gradually if the visitor succeeds. A small increase, such as **0.1 m/s every 20 seconds**, can create progression without sudden difficulty spikes.
+- **Spawn rate:** Begin with single threats and increase spawn frequency only after visitors have understood the interaction. Avoid spawning so many objects that the scene becomes chaotic.
+- **Threat path:** Direct threats toward meaningful vulnerable zones, such as coral, a habitat area, an organism, or a protected artifact. Paths should be predictable enough for first-time users to intercept.
+- **Interaction volume:** Keep catching and blocking actions within a safe reach zone in front of the visitor. Avoid gestures that require turning quickly, stepping backward, or swinging arms widely.
+- **Gesture type:** Use simple gestures such as reaching, touching, swiping, blocking, or holding. Avoid complex gesture combinations unless a short practice phase is provided.
+- **Highlight radius:** Use a glow or pulse around vulnerable zones, for example approximately **0.5 metres**, to show where threats are heading and what needs protection.
+- **Feedback delay:** Keep the delay between gesture and visual or audio response very low, ideally below **0.1 seconds**, so that visitors perceive a direct causal relation.
+- **Session duration:** Keep the main interaction short, typically around **60–120 seconds**, to sustain urgency while fitting normal museum attention spans.
+- **Difficulty progression:** Adjust speed, number of threats, threat types, or visual complexity gradually. Difficulty should support engagement, not exclude slower or less confident visitors.
+- **Health or progress indicator:** Provide a simple indicator such as reef health, protection level, number of caught objects, or remaining time. The indicator should be readable without dominating the scene.
+- **Missed-threat feedback:** Show consequences when threats are missed, but avoid overly punitive or discouraging feedback. The aim is to communicate vulnerability and mitigation, not failure.
+- **Wrap-up content:** Present a short result summary and one or two actionable conservation or learning points after the session.
+- **Fallback behaviour:** If gesture tracking becomes unreliable, reduce threat speed, enlarge interception zones, simplify gestures, or allow gaze- or button-based neutralization.
+
+---
+
+## Consequences
+
+When applied successfully, AR Object Catching can make invisible or abstract threats visible, urgent, and personally actionable. It supports embodied learning by linking visitor action to changes in the exhibit state and can strengthen empathy toward vulnerable environments, organisms, or cultural resources. The pattern can also increase engagement by combining movement, challenge, feedback, and interpretive consequence within a short museum interaction.
+
+However, the pattern also introduces risks. Poor hand tracking, slow feedback, or ambiguous collision detection can quickly reduce trust and cause frustration. If the game becomes too fast, too visually busy, or too competitive, visitors may focus on score and reaction speed rather than the exhibit meaning. If the threat metaphor is poorly chosen, the interaction may trivialize the issue or misrepresent the real-world process. The pattern therefore requires careful tuning of threat representation, gesture simplicity, feedback latency, challenge progression, safety boundaries, and educational wrap-up.
+
+---
+
+## Related Patterns
+
+- **Preceding activation patterns**
+  - **Step-In Trigger** can precede AR Object Catching by activating the protective interaction at a safe standing position.
+  - **Exhibit Knowledge Trigger** can precede AR Object Catching when a short concept-specific action should introduce the threat or vulnerable zone before the main challenge begins.
+
+- **Preceding guidance patterns**
+  - **Avatar Guide** can indirectly precede AR Object Catching by guiding visitors to the location where the protective interaction should take place.
+  - **Forward Cue-Routing** can indirectly precede AR Object Catching by guiding visitors through lightweight route cues before activation and presentation.
+
+- **Complementary presentation patterns**
+  - **Sequential Explanation** can be used before the task to explain the threat, during the task to stage difficulty, or after completion to summarize the ecological or cultural meaning.
+  - **AR Labelling** can identify vulnerable exhibit parts, threat sources, or protected zones before the catching interaction begins.
+
+- **Related playful presentation patterns**
+  - **AR Exhibit Reassembler** is a related playful presentation pattern, but it focuses on reconstruction rather than active protection against incoming threats.
+  - **AR Exhibit Feature Drawing** is a related playful presentation pattern, but it focuses on creative marking or speculative feature interpretation rather than catching or deflecting threats.
+
+---
+
+## Composition Notes
+
+AR Object Catching is usually used as the main exhibit-centred interaction after the visitor has reached and activated a point of interest. A typical composition is:
+
+**PoI Guide → Experience Indicator → AR Object Catching**
+
+For example:
+
+**Avatar Guide / Forward Cue-Routing → Step-In Trigger / Exhibit Knowledge Trigger → Sequential Explanation → AR Object Catching → Wrap-up**
+
+The interaction should be framed carefully. It should not only ask visitors to catch objects, but should clarify what the objects represent, why the protected zone matters, and what the outcome means. If the session includes scoring, the score should be tied to interpretive feedback, such as habitat health or prevented damage, rather than presented as an isolated game result.
+
+After the session, the system should return attention to the physical exhibit through a summary, comparison, label layer, or short conservation message.
+
+---
+
+## Implementation Alignment
+
+The pattern can be implemented as a reusable object-catching or threat-defence module or Unity prefab that combines:
+
+- threat spawning;
+- movement paths;
+- collision or interception detection;
+- gesture tracking;
+- vulnerable-zone logic;
+- difficulty progression;
+- feedback effects;
+- health or score tracking;
+- session timing;
+- wrap-up display;
+- event-based transitions.
+
+Relevant exposed parameters include threat prefab list, spawn positions, threat speed, spawn rate, path target, vulnerable-zone radius, interception threshold, gesture type, feedback effect, audio cue, session duration, difficulty curve, health indicator, score logic, missed-threat consequence, wrap-up text, and fallback mode.
+
+Implementation-level events may include:
+
+- object-catching started;
+- threat spawned;
+- threat approached zone;
+- gesture detected;
+- threat intercepted;
+- threat missed;
+- zone damaged;
+- zone restored;
+- score updated;
+- difficulty increased;
+- session timer ended;
+- wrap-up opened;
+- tracking unstable;
+- object-catching exited.
+
+These events can support debugging, system logs, observation sheets, and later evaluation of interception rate, missed threats, gesture recognition errors, response latency, session completion, difficulty balance, and transition success.
+
+---
+
+## Example Use
+
+In a natural-history museum, visitors encounter a coral reef exhibit that is extended through an AR protection game. After activation, virtual plastic debris and ghost nets begin drifting toward the coral reef model. Vulnerable reef zones pulse softly to show where protection is needed.
+
+The visitor catches or swipes away the incoming threats with simple hand gestures. Each successful interception produces an immediate particle burst, a short sound cue, and a visible improvement in reef health. Missed threats cause subtle dimming or damage feedback. After the short session, a wrap-up screen shows how many threats were intercepted, the final reef-health score, and a concise conservation message connecting the interaction to real-world environmental protection.
+
 <div class="intro-video-wrapper">
   <iframe
     src="https://www.youtube-nocookie.com/embed/3VmuF4z6loY"
@@ -110,53 +223,3 @@ Turning abstract environmental hazards into tangible, interactive threats levera
     allowfullscreen
   ></iframe>
 </div>
-<!-- In a coral reef exhibit, plastic bottles drift toward a virtual reef. Visitors sweep their arms to deflect debris; each successful block triggers a coral-brightening animation and upbeat chime, while misses cause subtle reef graying and a soft alert tone. At the end, a summary screen shows intercepted debris count and suggests real-world recycling actions. -->
-
-<!-- ---
-## Narrative Creation in Cultural Heritage
-
-### Visitor Behavioral Goals
-- **Build empathy**: Encourage visitors to feel responsible by intercepting virtual threats before they reach vulnerable exhibit zones.  
-- **Learn mitigation**: Guide visitors to perform protective gestures that model real-world conservation actions.  
-
-### AR Experience Indicators
-- **Threat visuals**: Animated debris or nets with semitransparent textures that drift toward highlighted exhibit areas.  
-- **Risk highlights**: Pulsing glow around endangered zones (e.g., coral reef) to signal where intervention is needed.  
-
-### Interactive Narrative
-- **Narration Design**: Whenever a falling target is successfully intercepted, provide corresponding narrative explanations, such as the positive significance of the successful interception. 
-- **Audio cue**: A sharp “block” sound on successful interception and a low warning tone when a threat breaches the zone.  
-- **Visual cue**: Immediate particle burst and brightening of the protected area on success; brief darkening or desaturation on miss.  
- 
-
-### Experience Principles
-- **Intuitive gestures**: Use natural swipe or block motions—mirroring real cleanup actions—to minimize learning curve.  
-- **Instant reinforcement**: Provide feedback within 0.1 s to tie visitor effort directly to virtual outcomes and sustain engagement.  
-- **Balanced urgency**: Calibrate threat pacing so visitors feel motivated but not overwhelmed.  
-
-### Curation Considerations
-- **Gesture calibration**: Adjust recognition sensitivity per space and lighting to reduce false positives/negatives.  
-- **Emotional tone**: Tune audio and visual feedback to maintain a hopeful, actionable mood rather than despair.  
-- **Accessibility**: Offer alternate input options (e.g., button taps), captioned narration, and adjustable audio volumes.   -->
-
-
-
----
-
-## Supplementary Information
-
-### Biography
--
-
----
-
-## Discussion
-Key challenges include ensuring robust gesture recognition in varied lighting and space conditions, and balancing threat pacing to foster both engagement and educational impact. Future work could integrate cooperative multiplayer defense or dynamically tailor threat types based on visitor profiles.
-
-
-
-
-
-## Notes
-
-By turning hazard mitigation into an embodied game, this pattern converts abstract ecological data into visceral experience, driving home the importance—and attainability—of environmental stewardship.

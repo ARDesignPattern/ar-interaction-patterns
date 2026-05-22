@@ -3,140 +3,224 @@ layout: pattern
 title: "Experience Indicator"
 category: "high-level"
 pattern_category: indicator
+pattern_group: experience-indicator
 overlay: /images/PatternIcon/Initial Node.png
 order: 2
+
 tags:
-  - Indication
-  - AR Experience
-  - AR Effects
+  - Experience Indicator
+  - AR Activation
+  - Exhibit Discovery
 thumbnail: /images/high_indicator.png
-summary: "Recognizing and Activating AR Exhibit"
-description: "Recognizing and Activating AR Experiences: To help visitors easily identify and access AR content, combine clear visual cues with intuitive activation methods and feedback."
+summary: "Making AR-enabled exhibits discoverable and activatable"
+description: "The Experience Indicator category organizes HMD-AR activation patterns that help visitors recognize AR-enabled exhibits, understand available actions, confirm activation, and transition into exhibit-related AR experiences."
 ---
-  <div class="column">
-    <img src="{{ '/images/HomePage/Fig_ExperienceIndicator.png' | relative_url }}" alt="AR Interaction" class="profile">
-  </div> 
+
+<div class="column">
+  <img src="{{ '/images/HomePage/Fig_ExperienceIndicator.png' | relative_url }}" alt="Experience Indicator" class="profile">
+</div> 
   
 # Experience Indicator
-A visual or symbolic hint that shows how to activate AR content at an exhibit.
 
----
-## Overview
-- **Name**  
- AR Experience Indicator
-- **Intent**  
-  Help visitors discover and launch embedded AR experiences by providing clear, consistent cues and intuitive activation methods.
+A category-level pattern class for making AR-enabled exhibits discoverable and supporting the transition from arrival to activation.
 
 ---
 
-## Target
-- **Problem**  
-  Visitors often don’t know which exhibits contain AR content or how to start it, causing missed opportunities and wasted time.
-- **Context**  
-  - Only some exhibits feature AR experiences  
-  - Visitors use head-mounted displays or AR-capable devices  
-  - There are no obvious physical markers denoting interactivity  
-- **Use When**  
-  - Visitors explore freely in a point of interest and need discoverable markers for AR-enabled exhibits  
-  - Upon reaching an exhibit, users want to access rich multimedia or contextual overlays  
-- **Forces**  
-  - **Discoverability vs. Distraction**: Indicators must stand out without cluttering the scene  
-  - **Consistency vs. Flexibility**: Use a uniform visual language while supporting varied activation methods  
-  - **Immediate Feedback vs. Subtlety**: Confirm activations clearly but avoid jarring transitions  
-  - **Accessibility**: Cues and activation must work across device types and user abilities  
-- **Consequences**  
-  - **Positive**: Increases AR uptake; reduces user frustration; highlights interactive content  
-  - **Negative**: Overuse of indicators can overwhelm; inconsistent placement breaks visiting/learning expectations  
+## Name
+
+Experience Indicator
 
 ---
 
-## Application
+## Level and Category
 
-### Solution (High-Level, Principle-Only)
-1. **Purpose & Scope**  
-   Define a **platform convention** that governs the visitor journey from discovery → approach → activation. Specify **principles and agreements (i.e., system-level guarantees)**, rather than visuals, parameters, or gestures.  
-2. **Invariants (must always hold)**  
-   guides the visitor journey **from discovery → approach → activation. Specify 
-- Discoverable without clutter.
-- Clear state progression.
-- Redundant, multimodal feedback (at least two channels).
-- Accessible alternatives for varied abilities and contexts.
-- Consistent semantics across exhibits.
-3. **Design Choices(Variation Points)**  
-- Placement strategy: ambient discovery vs. local anchor.
-- Activation modes (e.g., proximity-based, intent-based): proximity, explicit intent, voice/assisted, etc.
-- Feedback mix and intensity: visual / audio / haptic.
-- Persistence level: always-on vs. on-demand; level of detail.
-- Adaptation: personalization by crowding, lighting, or device capability.
-4. **Decision Guidelines (Heuristics)**  
-Select variation points based on spatial constraints, crowd density, safety, learning intent (concept-first vs. flow-preserving), and device/ambient limitations.
-5. **Integration Protocol (system-level agreement)**  
-- Define lifecycle events and analytics hooks: **Discover → Candidate (potential AR target detected) → Confirm → Activate → Exit/Recover**.
-- Do **NOT** fix shapes, distances, timings, or gesture sets—those belong to sub-level patterns.
+Category-level pattern class in the consolidated pattern system.
 
-### Rationale
-- **Preserves creative flexibility** by separating **what** the indicator system guarantees from **how** it is realized.
-- **Enables extensibility**: new sub-level patterns can be authored without modifying the high-level contract.
-- **Maintains consistency and accessibility** across exhibits while adapting to diverse spaces, devices, and audiences.
-- **Supports governance and iteration** via shared lifecycle events and metrics rather than fixed UI details.
-
-
-
-<!-- ### Game Mechanics
-- **First-Use Badge**: Unlock “AR Explorer” on first activation  
-- **Activation Streak**: Reward successive AR launches without pauses  
-- **Discovery Tracker**: Show percentage of AR-enabled exhibits visited   -->
-
-### Related Pattern
-Sub-level patterns (e.g., Floor Circle, Exhibit Knowledge Trigger) **instantiate** choices along the variation points. They are examples, not the exhaustive set.
-
-
-
-<!-- ### Example -->
-<!-- In an art gallery, each painting with AR layers has a floating “AR” cube icon at upper right. Visitors fix their gaze on the cube for 1.5 seconds and hear a soft chime as the AR overlay loads, revealing animated brush-stroke breakdowns. -->
-
----
-<!-- ## Narrative Creation in Cultural Heritage
-
-### Visitor Behavioral Goals
-- **Draw visitors in**: Highlight floating AR icons with a gentle glow to signal interactivity and pique curiosity.  
-- **Auto-start interaction**: Automatically reveal the nearest AR indicator and enable gaze/gesture activation when a visitor approaches within 1.5-2 m.  
-
-### AR Experience Indicators
-- **Floor marking**: A subtle, semi-transparent circle at the exhibit base that appears on proximity to denote interactive zones.  
-- **Guiding element**: A pulsing “AR” cube or 3D model of the exhibit hovering beside the exhibit, oriented toward the visitor’s view.  
-
-### Interactive Narrative
-- **Narration design**: Provide exhibition titles and 3D objects to present the first impression of the exhibition.
-- **Audio cue**: A soft chime and brief spoken prompt (“step into to continue”) when the indicator appears.  
-- **Visual cue**: The icon disappear once on activation; or smoothly transitions into the AR content overlay.  
-
-
-### Experience Principles
-- **Intuitive guidance**: Use consistent iconography and placement so visitors immediately recognize AR-enabled exhibits.  
-- **Seamless transition**: Fade indicators in on approach and fade out once content loads, avoiding abrupt visual shifts.  
-- **Comfortable pacing (Optional)**: Allow a 1–2 second dwell time for gaze selection, avoiding rushed activations.  
-
-### Curation Considerations
-- **Traffic flow**: Limit visible indicators to the closest two exhibits to prevent crowding and visual clutter.  
-- **Aesthetic harmony**: Match icon colors, shapes, and glow intensity to the exhibit’s lighting and design language.  
-- **Accessibility**: Offer high-contrast indicator variants, adjustable dwell durations, and alternative tap or voice command activation.  
-
---- -->
-
-## Supplementary Information
-
-### Biography
-<!-- Developed by AR UX designer Thomas Lee for the “Digital Layers” initiative at the Modern Art Museum, 2024. -->
+It groups application-level patterns that make AR-enabled exhibits discoverable and support the transition from noticing an opportunity to activating an HMD-AR experience.
 
 ---
 
-## Discussion
-Key challenges include harmonizing indicator placement with exhibit aesthetics and ensuring voice/gesture activation works reliably across varied lighting and noise conditions. Future enhancements might personalize indicators based on visitor profiles or dynamically adjust glow intensity in crowded spaces.
+## Intent
 
+Help visitors discover, recognize, and activate AR experiences at points of interest through clear, consistent, and context-sensitive indicators.
 
-## Media 
+The category supports the visitor journey from exhibit arrival to AR experience activation and can be instantiated through application-level patterns such as **Step-In Trigger** and **Exhibit Knowledge Trigger**.
 
+---
 
-## Notes 
-This pattern helps prevent missed opportunities for engagement by making AR content clearly discoverable and easily triggerable. It supports both first-time and returning visitors by offering consistent, recognizable AR interaction cues.
+## Rationale
+
+In HMD-based AR museums, visitors do not automatically know which exhibits contain AR content, where an AR experience begins, or what action is required to start it. This problem is especially important when only selected exhibits are augmented and when visitors are first-time HMD users.
+
+The Experience Indicator class separates the general activation-support function from its concrete representation. This allows the system to maintain consistent discoverability, activation feedback, and lifecycle semantics across exhibits while allowing different activation forms, such as spatial entry zones, proximity triggers, concept-specific micro-tasks, voice prompts, or assisted activation.
+
+As a category-level class, Experience Indicator defines the shared interaction role, variation dimensions, state logic, and composition position of activation patterns without prescribing one fixed shape, distance, timing, or gesture.
+
+---
+
+## Problem
+
+Visitors may overlook AR-enabled exhibits, hesitate after arriving at a point of interest, or fail to understand how an AR experience should be started. Physical exhibits do not always provide visible signs of interactivity, and HMD-based AR content may remain hidden until triggered.
+
+If the activation opportunity is not clearly indicated, visitors may miss important content, waste time searching for controls, or require external assistance. If indicators are inconsistent or visually intrusive, they may disrupt the exhibition experience and reduce trust in the system.
+
+A reusable indicator structure is therefore needed so that different activation mechanisms can support discoverability, confirmation, feedback, recovery, and handoff in a consistent way.
+
+---
+
+## Context
+
+This category applies to HMD-based AR museum and exhibition experiences in which visitors arrive at a point of interest and need to discover or activate exhibit-related AR content. It is especially relevant when:
+
+- AR content is embedded in only some exhibits;
+- the physical environment does not include explicit markers for AR interactivity;
+- visitors explore freely or arrive through a guided route;
+- different exhibits require different activation mechanisms;
+- the system needs a consistent activation vocabulary across multiple exhibits;
+- activation should hand over clearly to exhibit-related presentation or interaction patterns.
+
+The category assumes that the system can identify relevant points of interest, display local indicators, and detect visitor activation through proximity, dwell, gesture, voice, selection, or a short task.
+
+---
+
+## Use When
+
+Use this category-level pattern whenever an HMD-AR exhibit experience needs a clear transition from physical exhibit viewing to digital augmentation. It is appropriate when visitors must know that an AR experience is available, where they should stand or look, and what action will start the experience.
+
+It is also useful when multiple exhibits in the same space require a consistent activation vocabulary while still allowing different activation mechanisms for different exhibit types.
+
+Do not rely on this category as a separate design layer when the AR content is always visible, when activation is automatic and requires no visitor interpretation, or when the exhibit context makes additional indicators unnecessary. In such cases, the activation function may be integrated directly into a presentation pattern.
+
+---
+
+## Forces
+
+- **Discoverability vs. distraction:** Indicators must stand out enough to be noticed, but should not clutter the scene or dominate the exhibit.
+- **Consistency vs. local adaptation:** The system should use a recognizable visual and interaction language, while still adapting to different exhibits, layouts, and activation needs.
+- **Immediate feedback vs. subtlety:** Activation should be confirmed clearly, but feedback should remain appropriate for the museum atmosphere.
+- **Automatic activation vs. visitor agency:** Proximity-based activation is low-friction, but explicit confirmation may be needed when accidental activation is likely.
+- **Accessibility vs. interaction richness:** Activation cues should work for diverse visitors and device conditions, while still supporting richer concept-specific interactions when appropriate.
+- **Indicator persistence vs. visual cleanliness:** Always-visible indicators increase discoverability, but on-demand or proximity-based indicators reduce visual clutter.
+- **Technical reliability vs. interpretive expressiveness:** Simple triggers are robust, while richer knowledge-based triggers may communicate meaning more effectively but require more reliable interaction detection.
+
+---
+
+## Solution
+
+Define a shared indicator logic that governs how visitors discover, approach, confirm, activate, and exit AR experiences at exhibits. The category should not prescribe one fixed shape, distance, timing, or gesture. Instead, it establishes system-level guarantees: AR opportunities should be discoverable without excessive clutter, activation states should be understandable, feedback should be immediate and multimodal where possible, and similar activation semantics should be reused across exhibits.
+
+A typical lifecycle includes:
+
+**Discover → Candidate → Confirm → Activate → Exit / Recover**
+
+In the **Discover** state, the system signals that an exhibit has AR content. In the **Candidate** state, the visitor is close enough or oriented enough for the system to make the activation option more explicit. In the **Confirm** state, the visitor performs or completes the required activation condition. In the **Activate** state, the AR experience starts and the indicator hands over to the presentation layer. In the **Exit / Recover** state, the system allows visitors to leave, retry, or recover from failed activation.
+
+Concrete application-level patterns instantiate this lifecycle differently. **Step-In Trigger** uses a spatial entry zone and dwell-based activation. **Exhibit Knowledge Trigger** uses a short concept-specific interaction to unlock deeper content. Other future indicators may use voice, gaze, object recognition, physical markers, or curator-assisted activation, as long as they preserve the shared discoverability, feedback, and handoff logic.
+
+---
+
+## Design Parameters and Recommended Settings
+
+- **Placement strategy:** Decide whether the indicator is ambient and visible from a distance, locally anchored near the exhibit, revealed only on approach, or tied to a specific interaction zone.
+- **Activation mode:** Use proximity, dwell, hand selection, gaze dwell, voice command, object manipulation, or concept-specific task completion depending on the intended level of agency and robustness.
+- **State visibility:** Define how the indicator changes between **discoverable**, **candidate**, **confirmable**, **activated**, **inactive**, and **recovery** states.
+- **Persistence level:** Decide whether indicators are always visible, shown on approach, revealed after guidance arrival, or hidden until the visitor looks toward the exhibit.
+- **Feedback mix:** Combine visual feedback with optional spatial audio, text prompts, animation, or haptic feedback where available. Use at least two feedback channels when accessibility or environmental uncertainty is important.
+- **Feedback intensity:** Tune glow, pulse, sound, motion, and label visibility so that activation is clear without producing jarring transitions.
+- **False-activation prevention:** Use dwell time, confirmation steps, proximity thresholds, or task completion when accidental activation is likely.
+- **Accessibility settings:** Support readable labels, sufficient contrast, non-colour-dependent cues, adjustable audio, and alternative activation modes where possible.
+- **Recovery behaviour:** Define what happens when the visitor fails to activate, leaves the zone, loses tracking, or activates the wrong exhibit.
+- **Analytics hooks:** Record discovery, approach, confirmation, activation, cancellation, recovery, and exit events to support usability analysis and system debugging.
+
+---
+
+## Consequences
+
+When applied successfully, the Experience Indicator category increases the discoverability of AR content, reduces hesitation at exhibits, and supports a smoother transition from physical viewing to digital interaction. It also provides a reusable activation vocabulary across an exhibition, making the AR system easier to learn for first-time visitors.
+
+However, the category also introduces risks. Overuse of indicators can visually overload the exhibition space. Inconsistent activation semantics can confuse visitors and break expectations. Too much automation can reduce visitor agency, while overly explicit confirmation can slow down the visit. The category therefore requires careful balancing of discoverability, subtlety, activation reliability, feedback clarity, and local exhibit meaning.
+
+---
+
+## Related Patterns
+
+- **Application-level patterns in this category**
+  - **Step-In Trigger** instantiates this category through a floor-based entry zone that visitors enter to activate the AR experience.
+  - **Exhibit Knowledge Trigger** instantiates this category through a short concept-specific interaction that unlocks deeper AR content.
+
+- **Preceding guidance patterns**
+  - **Avatar Guide** commonly precedes Experience Indicator by guiding visitors to the point of interest where an indicator becomes relevant.
+  - **Forward Cue-Routing** commonly precedes Experience Indicator by guiding visitors through lightweight route cues before the indicator becomes active.
+
+- **Follow-up presentation patterns**
+  - **Sequential Explanation** commonly follows Experience Indicator after activation when visitors need structured exhibit-related content.
+  - **AR Labelling** commonly follows Experience Indicator after activation when visitors need spatially anchored labels or component-level explanations.
+  - **AR Exhibit Reassembler** commonly follows Experience Indicator when visitors should reconstruct missing or fragmented exhibit components.
+  - **AR Exhibit Feature Drawing** commonly follows Experience Indicator when visitors should draw, trace, or mark interpretive exhibit features.
+  - **AR Object Catching** commonly follows Experience Indicator when visitors should respond to virtual threats or objects around an exhibit.
+
+---
+
+## Composition Notes
+
+Experience Indicator normally occupies the transition between guidance and presentation. A typical composition is:
+
+**PoI Guide → Experience Indicator → Experience Presenter**
+
+For example:
+
+**Avatar Guide → Step-In Trigger → Sequential Explanation → AR Labelling**
+
+or:
+
+**Forward Cue-Routing → Exhibit Knowledge Trigger → AR Object Catching**
+
+The handoff from guidance should be clear. When visitors arrive at the point of interest, guidance cues should reduce intensity or end, and the indicator should become visually primary.
+
+The handoff to presentation should also be explicit. Once activation succeeds, the indicator should fade, transform, or become secondary so that visitors understand that the main AR experience has begun. If several AR-enabled exhibits are nearby, only the relevant or nearest indicator should become active, while others remain hidden or visually subdued.
+
+---
+
+## Implementation Alignment
+
+As a category-level pattern, Experience Indicator can be implemented as a shared activation-orchestration layer that coordinates exhibit availability, indicator visibility, activation state, confirmation logic, feedback, recovery, and handoff events.
+
+Application-level prefabs such as **Step-In Trigger** and **Exhibit Knowledge Trigger** can subscribe to this shared state logic while using different visual representations and activation methods.
+
+Relevant implementation data include:
+
+- point-of-interest metadata;
+- exhibit availability state;
+- indicator anchors;
+- activation zones;
+- dwell thresholds;
+- interaction-task definitions;
+- feedback assets;
+- fallback options;
+- telemetry hooks.
+
+Implementation-level events may include:
+
+- indicator discovered;
+- candidate detected;
+- visitor approached;
+- confirmation started;
+- confirmation cancelled;
+- activation confirmed;
+- experience activated;
+- activation failed;
+- recovery shown;
+- indicator hidden;
+- experience exited.
+
+These events can support debugging, usability observation, analytics, and comparison between different activation strategies.
+
+---
+
+## Example Use
+
+In a natural-history museum, visitors arrive near an AR-enabled whale exhibit after following a guidance pattern. The Experience Indicator class determines how the system reveals the activation opportunity.
+
+In one version, the category is instantiated as a **Step-In Trigger**: a glowing floor circle appears at a safe viewing position, and the visitor activates the experience by stepping into it. In another version, it is instantiated as an **Exhibit Knowledge Trigger**: the visitor completes a short exhibit-related interaction before deeper content is unlocked.
+
+In both versions, the indicator confirms activation and hands over to an **Experience Presenter** pattern such as **Sequential Explanation** or **AR Labelling**.

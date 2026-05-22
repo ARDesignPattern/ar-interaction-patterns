@@ -1,36 +1,76 @@
 <nav class="pattern-subnav">
   <ul class="pattern-list">
 
-    <!-- High-Level Patterns -->
     <li class="pattern-group">
-      <h3>High-Level Patterns</h3>
-      <ul>
-        {% assign high_level_patterns = site.patterns | where: "category", "high-level" %}
-        {% for pattern in high_level_patterns %}
-          <li>
-            <a href="{{ pattern.url | relative_url }}"
-               class="{% if page.url == pattern.url %}active{% endif %}">
-              {{ pattern.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </li>
+      <h3>Pattern Categories</h3>
 
-    <!-- Sub-Level Patterns -->
-    <li class="pattern-group">
-      <h3>Sub-Level Patterns</h3>
+      {% assign poi_category = site.patterns | where: "category", "high-level" | where: "pattern_group", "poi-guide" | first %}
+      {% assign poi_patterns = site.patterns | where: "category", "sub-level" | where: "pattern_group", "poi-guide" | sort: "order" %}
+
       <ul>
-        {% assign sub_level_patterns = site.patterns | where: "category", "sub-level" %}
-        {% for pattern in sub_level_patterns %}
-          <li>
-            <a href="{{ pattern.url | relative_url }}"
-               class="{% if page.url == pattern.url %}active{% endif %}">
-              {{ pattern.title }}
-            </a>
-          </li>
-        {% endfor %}
+        <li class="pattern-category-group">
+          <a href="{{ poi_category.url | relative_url }}"
+             class="category-link {% if page.url == poi_category.url %}active{% endif %}">
+            {{ poi_category.title }}
+          </a>
+
+          <ul class="application-pattern-list">
+            {% for pattern in poi_patterns %}
+              <li>
+                <a href="{{ pattern.url | relative_url }}"
+                   class="{% if page.url == pattern.url %}active{% endif %}">
+                  {{ pattern.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+
+        {% assign indicator_category = site.patterns | where: "category", "high-level" | where: "pattern_group", "experience-indicator" | first %}
+        {% assign indicator_patterns = site.patterns | where: "category", "sub-level" | where: "pattern_group", "experience-indicator" | sort: "order" %}
+
+        <li class="pattern-category-group">
+          <a href="{{ indicator_category.url | relative_url }}"
+             class="category-link {% if page.url == indicator_category.url %}active{% endif %}">
+            {{ indicator_category.title }}
+          </a>
+
+          <ul class="application-pattern-list">
+            {% for pattern in indicator_patterns %}
+              <li>
+                <a href="{{ pattern.url | relative_url }}"
+                   class="{% if page.url == pattern.url %}active{% endif %}">
+                  {{ pattern.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+
+        {% assign presenter_category = site.patterns | where: "category", "high-level" | where: "pattern_group", "experience-presenter" | first %}
+        {% assign presenter_patterns = site.patterns | where: "category", "sub-level" | where: "pattern_group", "experience-presenter" | sort: "order" %}
+
+        <li class="pattern-category-group">
+          <a href="{{ presenter_category.url | relative_url }}"
+             class="category-link {% if page.url == presenter_category.url %}active{% endif %}">
+            {{ presenter_category.title }}
+          </a>
+
+          <ul class="application-pattern-list">
+            {% for pattern in presenter_patterns %}
+              <li>
+                <a href="{{ pattern.url | relative_url }}"
+                   class="{% if page.url == pattern.url %}active{% endif %}">
+                  {{ pattern.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
       </ul>
+
     </li>
 
   </ul>
