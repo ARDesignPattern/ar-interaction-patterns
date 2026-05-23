@@ -54,7 +54,7 @@ AR Exhibit Feature Drawing turns uncertainty into an active interpretive task. V
 
 ## Mechanic-based interaction logic
 
-This pattern is based on a freehand drawing and feature-customization mechanic. Visitors mark, trace, or create possible exhibit features in AR and compare their interpretation with expert or curatorial references. The mechanic links creative input, bounded sketching, feedback, and comparison to the interpretive goal of understanding uncertain, missing, or debated exhibit features.
+This pattern is based on a freehand drawing and feature-marking mechanic. Visitors mark, trace, or create possible exhibit features in AR and compare their interpretation with expert or curatorial references. The mechanic links creative input, a clearly defined sketching area, feedback, and comparison to the interpretive goal of understanding uncertain, missing, or debated exhibit features.
 
 ---
 

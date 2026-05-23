@@ -54,7 +54,7 @@ AR Object Catching translates these hazards into visible and interactive objects
 
 ## Mechanic-based interaction logic
 
-This pattern is based on an object-catching and protective-interception mechanic. Visitors block, catch, deflect, or neutralize virtual threats that move toward vulnerable exhibit zones. The mechanic links embodied reaction, targeted protection, time pressure, and immediate feedback to the interpretive goal of making abstract threats visible, urgent, and actionable.
+This pattern is based on an object-catching and protection mechanic. Visitors block, catch, redirect, or neutralize virtual threats that move toward vulnerable exhibit zones. The mechanic links embodied response, focused protection, time pressure, and immediate feedback to the interpretive goal of making abstract threats visible, urgent, and connected to possible action.
 
 ---
 
