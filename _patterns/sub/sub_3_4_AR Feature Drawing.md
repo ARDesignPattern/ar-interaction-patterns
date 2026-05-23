@@ -46,15 +46,21 @@ Invite visitors to actively interpret, mark, trace, or sketch uncertain, missing
 
 ## Rationale
 
-Some museum exhibits include features that are uncertain, debated, reconstructed, or difficult to perceive directly. Examples include feather morphology, extinct coloration, surface texture, missing boundaries, restoration decisions, or hypothetical anatomical details. Static panels or fixed reconstructions can explain these uncertainties, but they often leave visitors in a passive role.
+Some museum exhibits include features that are uncertain, debated, reconstructed, or difficult to perceive directly. Examples include feather form and structure, extinct coloration, surface texture, missing boundaries, restoration decisions, or hypothetical structural details. Static panels or fixed reconstructions can explain these uncertainties, but they often leave visitors in a passive role.
 
 AR Exhibit Feature Drawing turns uncertainty into an active interpretive task. Visitors can sketch, trace, or mark possible features on a spatial canvas, a virtual model, or an exhibit-related drawing surface. This supports creative exploration while also making the distinction between evidence, hypothesis, and reconstruction more tangible.
 
 ---
 
+## Mechanic-based interaction logic
+
+This pattern is based on a freehand drawing and feature-customization mechanic. Visitors mark, trace, or create possible exhibit features in AR and compare their interpretation with expert or curatorial references. The mechanic links creative input, bounded sketching, feedback, and comparison to the interpretive goal of understanding uncertain, missing, or debated exhibit features.
+
+---
+
 ## Problem
 
-Visitors may find speculative or partially unknown exhibit features difficult to understand when they are presented only through static panels, fixed reconstructions, or expert descriptions. They may not recognize which aspects of the exhibit are certain, which are inferred, and which are still debated.
+Visitors may find speculative or partially unknown exhibit features difficult to understand when they are presented only through static panels, fixed reconstructions, or expert descriptions. They may not recognize which aspects of the exhibit are certain, which are based on interpretation, and which are still debated.
 
 In HMD-based AR, a complete overlay can show one possible reconstruction, but it may not communicate the reasoning process behind that reconstruction. If visitors cannot experiment with features themselves, they may miss the interpretive uncertainty and creative reasoning involved in scientific or curatorial reconstruction.
 
@@ -78,7 +84,7 @@ Use this pattern when:
 - the experience aims to support discussion, comparison, or reflective learning;
 - the exhibit can be framed as a participatory reconstruction task, such as sketching feathers, markings, surface textures, restoration boundaries, or speculative missing parts.
 
-Avoid using this pattern when drawing would trivialize sensitive cultural, historical, or ethical material, when the exhibit requires precise scientific representation that visitors cannot reasonably approximate, or when hand tracking and stroke rendering are too unstable for a satisfying drawing experience. It may also be unsuitable when the exhibition space is crowded, when visitors cannot stand long enough to draw comfortably, or when the drawing interface would obscure the physical artifact.
+Avoid using this pattern when drawing would reduce the perceived seriousness of sensitive cultural, historical, or ethical material, when the exhibit requires precise scientific representation that visitors cannot reasonably produce accurately enough, or when hand tracking and stroke rendering are too unstable for a satisfying drawing experience. It may also be unsuitable when the exhibition space is crowded, when visitors cannot stand long enough to draw comfortably, or when the drawing interface would cover the physical artifact.
 
 ---
 
@@ -86,10 +92,10 @@ Avoid using this pattern when drawing would trivialize sensitive cultural, histo
 
 - **Creative freedom vs. scientific accuracy:** Visitors should be able to explore and create, but the activity should not imply that all reconstructions are equally supported by evidence.
 - **Accessibility vs. expressive control:** Drawing should be easy for first-time HMD users, while still providing enough control over brush size, colour, opacity, and erasing.
-- **Real-time feedback vs. technical stability:** Strokes should appear immediately and remain spatially stable; latency, jitter, or drifting strokes can quickly frustrate visitors.
+- **Real-time feedback vs. technical stability:** Strokes should appear immediately and remain spatially stable; delays, jitter, or drifting strokes can quickly frustrate visitors.
 - **Visibility vs. exhibit preservation:** Drawing overlays should be visible enough to support interpretation, but not so dense that they hide the physical exhibit or model.
 - **Guided prompts vs. open-ended interpretation:** Prompt zones can help visitors start drawing, but too much guidance may reduce creative exploration.
-- **Session-only creation vs. persistence:** Drawings can remain temporary, be saved for comparison, or contribute to a shared gallery; each option changes privacy, moderation, and curatorial requirements.
+- **Session-only creation vs. duration:** Drawings can remain temporary, be saved for comparison, or contribute to a shared gallery; each option changes privacy, moderation, and curatorial requirements.
 - **Individual expression vs. shared understanding:** Visitor drawings can foster ownership and discussion, but conflicting or poorly explained drawings may confuse later visitors.
 
 ---
@@ -111,7 +117,7 @@ After the drawing is complete, the system should support interpretation. This ma
 - **Opacity:** Provide opacity levels from approximately **20–100%**, preferably in simple increments. Lower opacity supports comparison with the exhibit surface; higher opacity supports clear markings.
 - **Colour options:** Provide a small palette that matches the exhibit theme, reconstruction hypotheses, or feature categories. Avoid overly large colour palettes that increase UI complexity.
 - **Input method:** Use pinch drawing, hand-ray drawing, gaze-assisted drawing, or simplified stroke placement depending on device capability and visitor familiarity.
-- **Stroke feedback:** Render strokes immediately during drawing. Keep visual latency low enough that visitors can understand the relation between hand movement and stroke placement.
+- **Stroke feedback:** Render strokes immediately during drawing. Keep visual delays low enough that visitors can understand the relation between hand movement and stroke placement.
 - **Prompt zones:** Highlight recommended drawing regions, such as wings, crests, skin areas, missing fragments, or surface patterns. Prompt zones should be subtle and fade when drawing begins.
 - **Undo and erase:** Provide simple undo and erase functions. These controls are important because visitors may otherwise hesitate to experiment.
 - **Layering:** Optionally separate visitor strokes, guide overlays, and expert reference overlays into different layers so that they can be toggled or faded independently.
@@ -126,7 +132,7 @@ After the drawing is complete, the system should support interpretation. This ma
 
 When applied successfully, AR Exhibit Feature Drawing can deepen engagement by turning uncertain or subtle exhibit features into an active interpretive task. It supports creative exploration, visitor ownership, and discussion, while helping visitors understand the difference between evidence, hypothesis, and reconstruction. It can also make scientific or curatorial uncertainty more tangible by allowing visitors to compare their own drawing with expert models.
 
-However, the pattern also introduces risks. Poor drawing controls, hand-tracking errors, latency, or unstable stroke anchoring can quickly frustrate visitors. Too many tools can make the interface feel like a complex graphics application rather than a museum interaction. Visitor drawings may obscure the exhibit, and shared or persistent sketches may confuse later visitors if they are not clearly separated from expert reconstructions. The pattern therefore requires careful tuning of input simplicity, stroke stability, tool complexity, prompt design, comparison framing, and persistence policy.
+However, the pattern also introduces risks. Poor drawing controls, hand-tracking errors, delays, or unstable stroke anchoring can quickly frustrate visitors. Too many tools can make the interface feel like a complex graphics application rather than a museum interaction. Visitor drawings may obscure the exhibit, and shared or persistent sketches may confuse later visitors if they are not clearly separated from expert reconstructions. The pattern therefore requires careful tuning of input simplicity, stroke stability, tool complexity, prompt design, comparison framing, and persistence policy.
 
 ---
 
@@ -160,7 +166,7 @@ For example:
 
 **Avatar Guide → Step-In Trigger → Sequential Explanation / AR Labelling → AR Exhibit Feature Drawing**
 
-The task should begin with a clear prompt and a bounded drawing area. Visitors should know what they are drawing, where they can draw, and how to finish. **Sequential Explanation** or **AR Labelling** can introduce the relevant feature before visitors begin drawing.
+The task should begin with a clear prompt and a clearly defined drawing area. Visitors should know what they are drawing, where they can draw, and how to finish. **Sequential Explanation** or **AR Labelling** can introduce the relevant feature before visitors begin drawing.
 
 After completion, the system should not leave the sketch uninterpreted. A reference overlay, expert reconstruction, or short explanation should connect the visitor’s drawing back to the exhibit evidence. If a gallery is used, the gallery should be clearly framed as visitor interpretation rather than authoritative reconstruction.
 
@@ -182,7 +188,7 @@ The pattern can be implemented as a reusable drawing module or Unity prefab that
 - optional gallery storage;
 - event-based transitions.
 
-Relevant exposed parameters include drawing-surface anchor, canvas bounds, brush size range, default brush size, opacity range, colour palette, stroke smoothing, input method, prompt-zone positions, guide overlay opacity, expert overlay asset, undo depth, erase mode, completion action, save policy, gallery visibility, and fallback mode.
+Relevant exposed parameters include drawing-surface anchor, canvas bounds, brush size range, default brush size, opacity range, colour palette, stroke smoothing, input method, prompt-zone positions, guide overlay transparency, expert overlay asset, undo depth, erase mode, completion action, save policy, gallery visibility, and fallback mode.
 
 Implementation-level events may include:
 
@@ -193,7 +199,7 @@ Implementation-level events may include:
 - stroke ended;
 - brush changed;
 - colour changed;
-- opacity changed;
+- transparency changed;
 - undo used;
 - erase used;
 - drawing cleared;
@@ -210,7 +216,7 @@ These events can support debugging, system logs, observation sheets, and later e
 
 ## Example Use
 
-In a natural-history museum, visitors explore a Deinonychus exhibit where feather morphology and surface appearance are presented as scientifically informed but partly speculative reconstruction topics. After a short prompt, a bounded drawing area appears around the virtual model. Visitors use pinch drawing or hand-ray drawing to sketch feather outlines, colour patterns, or surface markings on the model.
+In a natural-history museum, visitors explore a Deinonychus exhibit where feather form and structure and surface appearance are presented as scientifically informed but partly speculative reconstruction topics. After a short prompt, a bounded drawing area appears around the virtual model. Visitors use pinch drawing or hand-ray drawing to sketch feather outlines, colour patterns, or surface markings on the model.
 
 They can adjust brush size, opacity, and colour, erase mistakes, and use undo if needed. After finishing, an expert or reference reconstruction fades in as a comparison overlay. The system then explains which parts of the visitor’s drawing are consistent with current evidence and which parts remain speculative or interpretive. Optionally, the visitor can save the sketch to a moderated gallery of visitor interpretations.
 

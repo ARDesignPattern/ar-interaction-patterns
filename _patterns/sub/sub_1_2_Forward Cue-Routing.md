@@ -60,7 +60,7 @@ In HMD-based AR, this problem is intensified by limited field of view, divided a
 
 ## Context
 
-This pattern applies to standing and walking HMD-AR museum experiences in which visitors follow an authored route through corridors, open galleries, or multi-point exhibition layouts. It is especially relevant when the route contains turns, junctions, or intermediate waypoints, and when the experience requires an unobtrusive guidance layer that does not occlude exhibits.
+This pattern applies to standing and walking HMD-AR museum experiences in which visitors follow an authored route through corridors, open galleries, or multi-point exhibition layouts. It is especially relevant when the route contains turns, junctions, or intermediate waypoints, and when the experience requires a subtle guidance layer that does not occlude exhibits.
 
 The pattern assumes that route segments and waypoints can be authored in advance and that the system can place cues with sufficient spatial stability in relation to the floor plane, visitor position, and points of interest.
 
@@ -71,9 +71,9 @@ The pattern assumes that route segments and waypoints can be authored in advance
 Use this pattern when:
 
 - visitors need directional support, but a moving avatar or large above-ground interface would be too visually dominant;
-- the route should be indicated through subtle spatial cues, such as ripples, footprints, glowing arrows, lines, particles, or other thematic floor-based motifs;
+- the route should be indicated through subtle spatial cues, such as ripples, footprints, glowing arrows, lines, particles, or other thematic floor-based visual elements;
 - visitors should receive anticipatory guidance before turns, junctions, or transitions between rooms;
-- the museum wants to preserve attention on physical exhibits while still making the route legible;
+- the museum wants to preserve attention on physical exhibits while still making the route easy to follow;
 - the experience requires a lightweight guidance layer rather than a social, narrative, or character-based guide.
 
 Avoid using this pattern as the only guidance mechanism when the floor is visually cluttered, highly reflective, crowded, or difficult to augment reliably. It may also be insufficient when visitors need social, narrative, or spoken guidance, or when the route requires complex decision-making that cannot be communicated through simple forward cues alone.
@@ -82,7 +82,7 @@ Avoid using this pattern as the only guidance mechanism when the floor is visual
 
 ## Forces
 
-- **Visibility vs. unobtrusiveness:** The cues must be noticeable enough to guide the visitor, but subtle enough to avoid dominating the exhibition environment.
+- **Visibility vs. low interruption:** The cues must be noticeable enough to guide the visitor, but subtle enough to avoid dominating the exhibition environment.
 - **Anticipation vs. overload:** Cues should appear early enough before turns or decision points, but not so early or frequently that they become confusing or visually noisy.
 - **Route clarity vs. exhibit attention:** The route should remain understandable while allowing visitors to keep their attention on the surrounding exhibits.
 - **Pacing vs. autonomy:** Cue movement and rhythm can encourage walking pace, but should not pressure visitors to move faster than they wish.
@@ -95,24 +95,24 @@ Avoid using this pattern as the only guidance mechanism when the floor is visual
 
 Implement route guidance through a sequence of lightweight AR cues placed on or near the floor plane. The cues should appear along an authored route and provide anticipatory direction before turns, junctions, or intermediate waypoints.
 
-The route can be authored as a waypoint sequence, multi-segment path, floor-based cue chain, or hybrid representation. At each relevant waypoint or decision point, the system spawns a short cue pattern, such as ripples, footprints, glowing arrows, particles, lines, or other thematic floor-based motifs. These cues should propagate or orient toward the next waypoint so that visitors can infer the direction of travel before they reach the turn.
+The route can be authored as a waypoint sequence, multi-segment path, floor-based cue chain, or hybrid representation. At each relevant waypoint or decision point, the system spawns a short cue pattern, such as ripples, footprints, glowing arrows, particles, lines, or other thematic floor-based visual elements. These cues should progress or orient toward the next waypoint so that visitors can infer the direction of travel before they reach the turn.
 
-Optional spatial audio can be used to reinforce the visual cue, especially at turns or visually complex decision points. Audio should remain short and directional rather than becoming constant narration.
+Optional spatial audio can be used to support the visual cue, especially at turns or visually complex decision points. Audio should remain short and directional rather than becoming constant narration.
 
-At the destination, the final cue should converge into a stable arrival marker, such as a glowing disc, converging ripple, or short pulse. This marker confirms that the visitor has reached the point of interest and prepares the transition to the next interaction pattern.
+At the destination, the final cue should converge into a stable arrival marker, such as a glowing marker, converging ripple, or short pulse. This marker confirms that the visitor has reached the point of interest and prepares the transition to the next interaction pattern.
 
 ---
 
 ## Design Parameters and Recommended Settings
 
-- **Cue type:** Use visual forms such as ripples, footprints, glowing arrows, particles, lines, or other thematic ground-based motifs.
+- **Cue type:** Use visual forms such as ripples, footprints, glowing arrows, particles, lines, or other thematic ground-based visual elements.
 - **Cue placement:** Place cues on or near the floor plane and align them with the authored route, visitor movement direction, and safe walking path.
 - **Cue scale and spacing:** Keep cues large enough to be visible in the HMD field of view, but avoid covering too much of the floor or competing with physical exhibits.
-- **Propagation rate:** Calibrate cue movement so that it supports normal walking speed. As a practical reference, the cue may reach the midpoint between waypoints within approximately **2–3 seconds** at average walking speed.
+- **Cue movement speed:** Calibrate cue movement so that it supports normal walking speed. As a practical reference, the cue may reach the midpoint between waypoints within approximately **2–3 seconds** at average walking speed.
 - **Trigger radius:** Use a trigger radius of approximately **1–2 metres** before each waypoint or turn so that visitors receive the cue before reaching the decision point.
 - **Turn anticipation distance:** Increase the lead distance before sharp turns, corners, or visually complex junctions; reduce it in short or narrow passages where early cues may overlap.
-- **Cue persistence:** Keep cues temporary and allow them to fade after use. A short fade-out of approximately **1–2 seconds** can reduce visual clutter while preserving route legibility.
-- **Opacity and brightness:** Use enough contrast for the cue to be visible under exhibition lighting, but avoid excessive brightness that distracts from physical exhibits or creates visual fatigue.
+- **Cue display duration:** Keep cues temporary and allow them to fade after use. A short fade-out of approximately **1–2 seconds** can reduce visual clutter while preserving route legibility.
+- **Transparency and brightness:** Use enough contrast for the cue to be visible under exhibition lighting, but avoid excessive brightness that distracts from physical exhibits or creates visual fatigue.
 - **Audio lead time:** When audio is used, trigger it approximately **0.5–1 second** before or together with the visual cue to pre-alert the visitor without creating constant narration.
 - **Route progress:** Optionally show the path already passed through lower-intensity cues or fading traces, but avoid leaving persistent visual trails that clutter the floor.
 - **Arrival indication:** Use a stable final marker, such as a glowing disc, converging ripple, or short pulse, to indicate that the destination point of interest has been reached.
@@ -180,7 +180,7 @@ Implementation-level events may include:
 - cue spawned;
 - turn cue triggered;
 - waypoint reached;
-- visitor deviated;
+- visitor left path;
 - route resumed;
 - arrival cue triggered;
 - tracking unstable;

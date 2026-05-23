@@ -44,9 +44,9 @@ Present exhibit information through a structured, step-by-step AR interface that
 
 ## Rationale
 
-Museum exhibits often contain multiple layers of information, such as historical background, anatomical structure, ecological function, behavioural explanation, or curatorial interpretation. In HMD-based AR, presenting all of these layers at once can overload visitors, especially under limited field of view and short interaction time.
+Museum exhibits often contain multiple layers of information, such as historical background, physical structure, ecological function, behavioural explanation, or curatorial interpretation. In HMD-based AR, presenting all of these layers at once can overload visitors, especially under limited field of view and short interaction time.
 
-Sequential Explanation reduces this complexity by dividing content into ordered, bite-sized steps and by providing explicit navigation controls. This supports a predictable mental model of the information structure while preserving visitor control over pacing, repetition, and skipping.
+Sequential Explanation reduces this complexity by dividing content into ordered, small and manageable steps and by providing clear navigation controls. This supports a predictable mental model of the information structure while preserving visitor control over pacing, repetition, and skipping.
 
 ---
 
@@ -66,7 +66,7 @@ This pattern applies to HMD-based AR museum experiences after visitors have reac
 - the AR experience needs to present text, images, 3D models, animation, audio, or spatial highlights in a controlled order;
 - visitors should be able to move through the explanation at their own pace;
 - the content requires a beginning, middle, and end rather than free exploration alone;
-- the system needs to support revisitation, skipping, or repetition of individual content units.
+- the system needs to support returning to earlier steps, skipping, or repetition of individual content units.
 
 The pattern assumes that the exhibit-related AR experience has already been activated, for example through **Step-In Trigger** or **Exhibit Knowledge Trigger**.
 
@@ -128,8 +128,8 @@ When the sequence is complete, provide a clear end state. The system may summari
 - **Audio duration:** Keep narration segments short and allow visitors to pause or repeat them.
 - **Media control:** For looping animation or video, provide **Pause** and **Resume** controls and define whether media should auto-pause when visitors move to another step.
 - **Accessibility settings:** Provide captions or transcripts for audio, adjustable text size and contrast, non-colour-dependent cues, and alternative paths for visitors who cannot use a specific input mode.
-- **Exception states:** Define how the system handles skipped steps, paused interaction, off-focus behaviour, low tracking confidence, interrupted media, and exit requests.
-- **Telemetry hooks:** Record step entry, step exit, dwell time, navigation direction, skipped content, repeated content, media pause/resume, and completion rate.
+- **Exception states:** Define how the system handles skipped steps, paused interaction, loss of focus behaviour, low tracking confidence, interrupted media, and exit requests.
+- **Logging hooks:** Record step entry, step exit, dwell time, navigation direction, skipped content, repeated content, media pause/resume, and completion rate.
 
 ---
 
@@ -137,7 +137,7 @@ When the sequence is complete, provide a clear end state. The system may summari
 
 When applied successfully, Sequential Explanation helps visitors understand complex exhibit information without being overwhelmed. It supports a clear mental model of the content structure, gives visitors control over pacing, and makes it easier to revisit or skip information. It also provides creators with a reusable structure for organizing exhibit content into modular, updateable, and observable content units.
 
-However, the pattern also introduces risks. An overly linear sequence may feel rigid or menu-like, especially for visitors who prefer open exploration. Too many categories or steps can create cognitive load or choice fatigue. Poorly placed panels or controls may distract from the physical exhibit. Time-based media may also trap visitors in a fixed pace if pause, repeat, or skip controls are not provided. The pattern therefore requires careful tuning of content granularity, navigation freedom, progress feedback, media density, and spatial anchoring.
+However, the pattern also introduces risks. An overly linear sequence may feel rigid or menu-like, especially for visitors who prefer open exploration. Too many categories or steps can create cognitive load or choice fatigue. Poorly placed panels or controls may distract from the physical exhibit. Time-based media may also trap visitors in a fixed pace if pause, repeat, or skip controls are not provided. The pattern therefore requires careful tuning of content detail level, navigation freedom, progress feedback, media density, and spatial anchoring.
 
 ---
 

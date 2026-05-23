@@ -20,7 +20,7 @@ description: "A brief exhibit-related micro-task helps visitors recognize a key 
 
 # Exhibit Knowledge Trigger
 
-A brief concept-linked interaction that primes visitors and unlocks deeper AR content through a meaningful exhibit-related action.
+A brief concept-linked interaction that prepares visitors and unlocks deeper AR content through a meaningful exhibit-related action.
 
 ---
 
@@ -38,7 +38,7 @@ Application-level pattern under the category-level class **Experience Indicator*
 
 ## Intent
 
-Surface a single high-value exhibit concept through a brief, goal-oriented AR interaction that helps visitors recognize the relevance of the exhibit and unlocks deeper AR content after the concept has been enacted or discovered.
+Introduce one important exhibit concept through a brief, goal-oriented AR interaction that helps visitors recognize the relevance of the exhibit and unlocks deeper AR content after the concept has been enacted or discovered.
 
 ---
 
@@ -46,7 +46,7 @@ Surface a single high-value exhibit concept through a brief, goal-oriented AR in
 
 In HMD-based AR museum experiences, visitors may notice visual prompts or virtual objects without understanding their interpretive purpose. An exhibit-related micro-task can make a key concept more tangible by requiring visitors to perform a short action that demonstrates cause and effect, such as moving an object, revealing a hidden mechanism, or completing a simple spatial relation.
 
-This pattern treats activation not only as a technical trigger, but also as a meaningful interpretive bridge between the physical exhibit and the subsequent AR presentation. It is especially useful when the exhibit contains a scientific, cultural, behavioural, or functional idea that can be introduced through a single embodied action before richer content is displayed.
+This pattern treats activation not only as a technical trigger, but also as a meaningful meaningful transition between the physical exhibit and the subsequent AR presentation. It is especially useful when the exhibit contains a scientific, cultural, behavioural, or functional idea that can be introduced through a single embodied action before richer content is displayed.
 
 ---
 
@@ -60,9 +60,9 @@ This problem becomes more likely when the intended knowledge is abstract, hidden
 
 ## Context
 
-This pattern applies to HMD-AR museum experiences in which a physical exhibit contains a specific concept that benefits from a short, hands-on or embodied demonstration. It is especially relevant for exhibits that involve behaviour, function, mechanism, ecology, anatomy, historical use, or transformation.
+This pattern applies to HMD-AR museum experiences in which a physical exhibit contains a specific concept that benefits from a short, hands-on or embodied demonstration. It is especially relevant for exhibits that involve behaviour, function, mechanism, ecology, structure, historical use, or transformation.
 
-The pattern assumes that auxiliary virtual objects, target zones, or interaction markers can be placed near the primary exhibit with sufficient spatial stability, and that visitors can complete a simple one-step or short-loop interaction without extensive instruction.
+The pattern assumes that supporting virtual objects, target zones, or interaction markers can be placed near the primary exhibit with sufficient spatial stability, and that visitors can complete a simple one-step or short-loop interaction without extensive instruction.
 
 ---
 
@@ -82,18 +82,18 @@ Avoid using this pattern when the concept cannot be represented through a clear 
 
 ## Forces
 
-- **Engagement vs. friction:** The task should invite participation and curiosity, but remain short and easy enough for first-time HMD users.
+- **Engagement vs. Effort:** The task should invite participation and curiosity, but remain short and easy enough for first-time HMD users.
 - **Conceptual meaning vs. decorative action:** The interaction must demonstrate or reveal a meaningful exhibit concept, rather than functioning as an arbitrary game-like action.
 - **Focus vs. distraction:** The micro-task should foreground the exhibit concept without pulling attention too far away from the physical exhibit.
 - **Spatial accuracy vs. tolerance:** Object placement, grab detection, and target-zone detection require sufficient precision, but should remain tolerant enough to avoid repeated failure.
-- **Feedback clarity vs. visual clutter:** Visitors need clear confirmation of progress and success, but excessive effects can make the task feel gimmicky.
+- **Feedback clarity vs. visual clutter:** Visitors need clear confirmation of progress and success, but excessive effects can make the task feel superficial.
 - **Short activation vs. deeper content:** The task should be brief, while the content unlocked after completion should provide the fuller interpretive explanation.
 
 ---
 
 ## Solution
 
-Place a short exhibit-related AR micro-task between arrival at the point of interest and the main AR presentation. The task should involve one key action that makes an important concept perceptible, such as grabbing an auxiliary object, moving it toward a target, matching it with an exhibit part, revealing a hidden mechanism, or completing a simple cause-and-effect relation.
+Place a short exhibit-related AR micro-task between arrival at the point of interest and the main AR presentation. The task should involve one key action that makes an important concept perceptible, such as grabbing a supporting object, moving it toward a target, matching it with an exhibit part, revealing a hidden mechanism, or completing a simple cause-and-effect relation.
 
 The interaction should begin with a clear prompt and a visible affordance. For example, a virtual fish may appear near an orca exhibit to introduce the concept of echolocation and predation. When the visitor grabs or selects the fish, the orca can orient toward it, a pulsed sonar visualization can appear, and spatial audio can communicate the concept through sound.
 
@@ -105,17 +105,17 @@ The trigger should not remain visually dominant after the main content begins. I
 
 ## Design Parameters and Recommended Settings
 
-- **Auxiliary object position:** Place the auxiliary virtual object approximately **2–3 metres** from the primary exhibit, adjusted according to safe movement space and exhibit visibility.
+- **Auxiliary object position:** Place the supporting virtual objects approximately **2–3 metres** from the primary exhibit, adjusted according to safe movement space and exhibit visibility.
 - **Target-zone position:** Align the target zone with a meaningful exhibit-related location, such as the orca’s mouth, a body part, mechanism, tool, or object relation.
 - **Drop-zone radius:** Use a target radius of approximately **0.5–0.8 metres**, adjusted according to tracking stability, object size, and desired difficulty.
-- **Grab or selection affordance:** Use a subtle highlight, outline, icon, or short prompt to indicate that the auxiliary object can be interacted with.
+- **Grab or selection affordance:** Use a subtle highlight, outline, icon, or short prompt to indicate that the supporting object can be interacted with.
 - **Task prompt:** Use a short instruction through text, voice, or both, such as asking the visitor to move the object toward the exhibit.
 - **Progress feedback:** Provide feedback while the object approaches the target, for example through increasing glow, pulsed animation, directional sound, or concept-related visualization.
 - **Success feedback:** Use a short confirmation cue, such as a chime, capture tone, pulse, object animation, or exhibit response.
 - **Chime duration:** Keep confirmation audio short, for example approximately **0.3 seconds**.
 - **Panel fade-in:** Use a short transition of approximately **0.5 seconds** when the follow-up content appears.
 - **Success threshold:** Define whether completion requires entering the target zone, releasing the object, holding it briefly, or reaching a stable proximity condition.
-- **Reset behaviour:** If the object is dropped incorrectly, exits the interaction area, or tracking becomes unstable, reset it gracefully or provide a simple recovery cue.
+- **Reset behaviour:** If the object is dropped incorrectly, exits the interaction area, or tracking becomes unstable, reset it without disrupting the experience or provide a simple recovery cue.
 - **Fallback option:** Provide a skip, retry, or assisted activation option if the visitor cannot complete the micro-task.
 
 ---
@@ -168,7 +168,7 @@ The trigger should not remain visually dominant after the content layer begins. 
 
 The pattern can be implemented as a reusable knowledge-trigger module or Unity prefab that combines:
 
-- an auxiliary virtual object;
+- a supporting virtual object;
 - an exhibit-related target zone;
 - interaction-state logic;
 - grab or selection detection;
@@ -176,7 +176,7 @@ The pattern can be implemented as a reusable knowledge-trigger module or Unity p
 - success feedback;
 - event-based handoff to subsequent presentation modules.
 
-Relevant exposed parameters include concept label, auxiliary object prefab, object start position, target-zone position, drop-zone radius, grab affordance style, task prompt, progress-feedback intensity, audio cue, success animation, success threshold, reset behaviour, panel fade-in time, and fallback option.
+Relevant exposed parameters include concept label, supporting object prefab, object start position, target-zone position, drop-zone radius, grab affordance style, task prompt, progress-feedback intensity, audio cue, success animation, success threshold, reset behaviour, panel fade-in time, and fallback option.
 
 Implementation-level events may include:
 

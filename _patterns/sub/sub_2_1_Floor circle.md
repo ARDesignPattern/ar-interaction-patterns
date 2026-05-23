@@ -46,7 +46,7 @@ Provide a floor-based spatial entry zone that indicates where an HMD-AR exhibit 
 
 In HMD-based AR museum visits, visitors do not automatically know which exhibits contain AR content or how an AR experience should be started. A visible entry zone on the floor provides a simple spatial convention: visitors can understand that stepping into the zone means entering or launching the AR experience.
 
-The pattern uses proximity and short dwell-based activation to reduce the need for explicit menu interaction. It supports low-threshold activation for first-time users and creates a clear transition from noticing an AR opportunity to starting the exhibit-related experience.
+The pattern uses proximity and short dwell-based activation to reduce the need for explicit menu interaction. It supports low-effort activation for first-time users and creates a clear transition from noticing an AR opportunity to starting the exhibit-related experience.
 
 ---
 
@@ -76,7 +76,7 @@ The pattern assumes that the system can detect the visitor’s position reliably
 
 Use this pattern when:
 
-- visitors need a clear and low-friction way to activate an AR exhibit experience;
+- visitors need a clear and easy-to-use way to activate an AR exhibit experience;
 - the intended action can be communicated through a spatial entry zone;
 - stepping into a floor-based circle or marker fits the exhibition layout;
 - the activation should feel embodied and hands-free;
@@ -90,10 +90,10 @@ Avoid using this pattern when the floor is visually cluttered, crowded, unsafe, 
 
 - **Discoverability vs. visual subtlety:** The trigger zone must be noticeable enough to invite action, but not so bright or large that it clutters the floor or distracts from the exhibit.
 - **Activation reliability vs. visitor freedom:** The system must detect entry reliably, while avoiding accidental activation when visitors only pass nearby.
-- **Low-friction interaction vs. meaningful engagement:** A simple step-in action is easy to understand, but may provide less interpretive meaning than a concept-linked activation task.
+- **Easy-to-use interaction vs. meaningful engagement:** A simple step-in action is easy to understand, but may provide less interpretive meaning than a concept-linked activation task.
 - **Feedback clarity vs. interruption:** Activation feedback should clearly confirm that the experience has started, but should not interrupt the museum flow with excessive effects.
 - **Spatial placement vs. safety:** The trigger zone should be close enough to the exhibit to feel meaningful, but far enough to preserve safe viewing distance and visitor circulation.
-- **Automation vs. agency:** Automatic activation can feel seamless, but visitors should still understand what has happened and how to exit or continue.
+- **Automation vs. visitor control:** Automatic activation can feel seamless, but visitors should still understand what has happened and how to exit or continue.
 
 ---
 
@@ -113,8 +113,8 @@ After activation, the trigger elements should fade, transform, or become seconda
 
 - **Circle radius:** Use a radius of approximately **0.6–1.2 metres**, with **0.9 metres** as a practical default.
 - **Dwell time:** Use a short stable dwell threshold of approximately **0.40 seconds** after the visitor enters the zone.
-- **Placement from exhibit:** Place the circle centre approximately **0.8–1.2 metres** from the exhibit’s leading edge, adjusted according to exhibit size, safe viewing distance, and visitor flow.
-- **Detection threshold:** Define the entry condition based on visitor position, feet or head projection, or another stable body-position proxy.
+- **Placement from exhibit:** Place the circle centre approximately **0.8–1.2 metres** from the exhibit’s front edge, adjusted according to exhibit size, safe viewing distance, and visitor flow.
+- **Detection threshold:** Define the entry condition based on visitor position, feet or head projection, or another stable body-position reference.
 - **Label height:** Place title labels or short prompts at approximately **0.5 metres** above the floor or in another peripheral but readable position.
 - **Preview element:** Optionally include a small 3D model, icon, or animation that previews the available AR content.
 - **Visual style:** Use a clear but low-clutter visual form, such as a glowing ring, pulsing outline, soft disc, or thematic floor marker.
@@ -122,7 +122,7 @@ After activation, the trigger elements should fade, transform, or become seconda
 - **Audio cue:** Use a short spatial audio cue, such as a chime, splash, or thematic sound, to confirm activation.
 - **Fade duration:** Use an optional fade-out of approximately **0.5 seconds** for the circle, label, and preview element after activation.
 - **Activation state:** Distinguish between at least **available**, **entered**, **dwell started**, **activated**, and **completed** states.
-- **Fallback behaviour:** If tracking becomes unstable or the visitor exits the zone before dwell completion, cancel activation gracefully and keep the marker available.
+- **Fallback behaviour:** If tracking becomes unstable or the visitor exits the zone before dwell completion, cancel activation without disrupting the experience and keep the marker available.
 
 ---
 
@@ -166,7 +166,7 @@ The handoff from guidance should be explicit. When visitors arrive at the point 
 
 The handoff to presentation should also be clear. Once activation succeeds, the circle, label, and preview elements should fade out or become secondary so that visitors understand that the main AR experience has begun.
 
-If several AR-enabled exhibits are nearby, only the relevant or nearest Step-In Trigger should be active, while other trigger zones remain hidden or visually subdued.
+If several AR-enabled exhibits are nearby, only the relevant or nearest Step-In Trigger should be active, while other trigger zones remain hidden or made less visible.
 
 ---
 
@@ -183,7 +183,7 @@ The pattern can be implemented as a reusable spatial-trigger module or Unity pre
 - activation-state control;
 - event-based handoff to subsequent modules.
 
-Relevant exposed parameters include circle radius, circle position, placement offset from the exhibit, dwell time, detection threshold, visual style, opacity, pulse speed, label text, label height, preview element, audio cue, fade duration, activation state, and fallback behaviour.
+Relevant exposed parameters include circle radius, circle position, placement offset from the exhibit, dwell time, detection threshold, visual style, transparency, pulse speed, label text, label height, preview element, audio cue, fade duration, activation state, and fallback behaviour.
 
 Implementation-level events may include:
 

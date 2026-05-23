@@ -50,11 +50,11 @@ The category supports the visitor journey from activated AR experience to exhibi
 
 ## Rationale
 
-Museum exhibits often contain multiple thematic layers, such as scientific explanation, historical context, anatomical structure, ecological relationships, cultural meaning, or conservation relevance. In HMD-based AR, presenting all available information at once can overload visitors, especially under limited field of view, divided attention, short visit duration, and unfamiliar interaction conditions.
+Museum exhibits often contain multiple thematic layers, such as scientific explanation, historical context, physical structure, ecological relationships, cultural meaning, or conservation relevance. In HMD-based AR, presenting all available information at once can overload visitors, especially under limited field of view, divided attention, short visit duration, and unfamiliar interaction conditions.
 
 The Experience Presenter class separates the general content-presentation function from its concrete interaction form. This allows creators to preserve a consistent presentation logic across exhibits while choosing different presentation strategies, such as step-by-step explanation, spatial labelling, reconstruction tasks, creative drawing, or embodied object-catching interactions.
 
-As a category-level class, Experience Presenter defines the shared presentation role, variation dimensions, state logic, and composition position of exhibit-centred AR patterns without prescribing one fixed interface layout, media type, task structure, or navigation model.
+As a category-level class, Experience Presenter defines the shared presentation role, variation dimensions, state logic, and composition position of exhibit-centred AR patterns without requiring one fixed interface layout, media type, task structure, or navigation model.
 
 ---
 
@@ -62,9 +62,9 @@ As a category-level class, Experience Presenter defines the shared presentation 
 
 Visitors may face information overload when an exhibit contains several content layers without a clear structure or controllable pacing. They may not know which information to attend to first, how different media elements relate to the physical exhibit, or whether they have completed the intended experience.
 
-This problem becomes more pronounced in HMD-based AR because text, 3D overlays, audio, animation, spatial highlights, and interaction prompts all compete for attention within a limited field of view. If the presentation is poorly structured, visitors may skip important content, become cognitively overloaded, or treat AR elements as disconnected visual effects rather than meaningful exhibit interpretation.
+This problem becomes more noticeable in HMD-based AR because text, 3D overlays, audio, animation, spatial highlights, and interaction prompts all compete for attention within a limited field of view. If the presentation is poorly structured, visitors may skip important content, become cognitively overloaded, or treat AR elements as disconnected visual effects rather than meaningful exhibit interpretation.
 
-A reusable presentation structure is therefore needed so that different exhibit-centred AR experiences can support modularity, pacing control, progressive disclosure, completion awareness, accessibility, and handoff in a consistent way.
+A reusable presentation structure is therefore needed so that different exhibit-centred AR experiences can support modularity, pacing control, step-by-step revealing, completion awareness, accessibility, and handoff in a consistent way.
 
 ---
 
@@ -130,8 +130,8 @@ Concrete application-level patterns instantiate this lifecycle differently. **Se
 - **Progressive disclosure:** Reveal deeper information only when visitors select, approach, complete a task, or request more detail. Avoid displaying all layers at once.
 - **Accessibility settings:** Provide captions or transcripts for audio, adjustable text size and contrast, non-colour-dependent cues, and alternative paths for visitors who cannot use a specific input mode.
 - **Media persistence:** Define whether progress, completed modules, visitor-created content, or selected states persist within the session, across exhibits, or not at all.
-- **Exception states:** Define how the system handles paused interaction, off-focus behaviour, low tracking confidence, overload, skipped modules, or interrupted media.
-- **Telemetry hooks:** Record module entry, module exit, dwell time, step transitions, skipped content, repeated content, completed tasks, pause/resume behaviour, and completion rate.
+- **Exception states:** Define how the system handles paused interaction, loss of focus, low tracking confidence, overload, skipped modules, or interrupted media.
+- **Logging points:** Record module entry, module exit, dwell time, step transitions, skipped content, repeated content, completed tasks, pause/resume behaviour, and completion rate.
 
 ---
 
@@ -139,7 +139,7 @@ Concrete application-level patterns instantiate this lifecycle differently. **Se
 
 When applied successfully, the Experience Presenter category helps visitors explore complex exhibit content without being overwhelmed. It supports self-paced learning, personalized exploration, and clearer connections between AR media and the physical exhibit. It also gives creators a reusable structure for organizing different presentation styles under a shared logic of modularity, pacing, state management, and completion.
 
-However, the category also introduces risks. Too many modules may cause choice paralysis. Too much interface structure may make the experience feel like a digital menu rather than situated museum interpretation. Visitors may skip essential information if branching is too open, while overly linear structure may reduce exploration. The category therefore requires careful tuning of content granularity, module count, navigation freedom, media density, progress feedback, and spatial anchoring.
+However, the category also introduces risks. Too many modules may cause too many choices. Too much interface structure may make the experience feel like a digital menu rather than situated museum interpretation. Visitors may skip essential information if branching is too open, while overly linear structure may reduce exploration. The category therefore requires careful tuning of content detail level, module count, navigation freedom, media density, progress feedback, and spatial anchoring.
 
 ---
 
@@ -201,7 +201,7 @@ Relevant implementation data include:
 - interaction tasks;
 - completion rules;
 - accessibility settings;
-- telemetry hooks.
+- logging points.
 
 Implementation-level events may include:
 

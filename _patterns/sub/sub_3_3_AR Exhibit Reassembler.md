@@ -45,9 +45,15 @@ Enable visitors to virtually reconstruct missing or fragmented exhibit component
 
 ## Rationale
 
-Some museum exhibits are incomplete, fragmented, damaged, or difficult to understand as a whole from the physical remains alone. Fossils, machinery, relics, archaeological fragments, and reconstructed scientific objects often require visitors to imagine missing components and spatial relationships.
+Some museum exhibits are incomplete, fragmented, damaged, or difficult to understand as a whole from the physical remains alone. Fossils, machinery, historical objects, archaeological fragments, and reconstructed scientific objects often require visitors to imagine missing components and spatial relationships.
 
-AR Exhibit Reassembler turns this interpretive gap into an active reconstruction task. Instead of only showing the completed form, the pattern lets visitors participate in assembling it. This can support spatial reasoning, part-whole understanding, and memorable engagement while keeping the reconstructed elements anchored to the physical exhibit.
+AR Exhibit Reassembler turns this gap in understanding into an active reconstruction task. Instead of only showing the completed form, the pattern lets visitors participate in assembling it. This can support spatial reasoning, part-whole understanding, and memorable engagement while keeping the reconstructed elements anchored to the physical exhibit.
+
+---
+
+## Mechanic-based interaction logic
+
+This pattern is based on a reconstruction and puzzle-assembly mechanic. Visitors manipulate, align, and place virtual fragments in relation to an incomplete exhibit. The mechanic links piece matching, spatial arrangement, testing and adjustment, and progression feedback to the interpretive goal of understanding the exhibit as a reconstructed whole.
 
 ---
 
@@ -55,13 +61,13 @@ AR Exhibit Reassembler turns this interpretive gap into an active reconstruction
 
 When only partial physical artifacts are on display, visitors may struggle to grasp the complete structure, the relationships between parts, or the significance of missing components. Static reconstructions or explanatory panels can show the final result, but they may not help visitors understand how the parts fit together.
 
-In HMD-based AR, simply overlaying a completed reconstruction can also become passive. A more interactive structure is needed when visitors should actively explore how virtual pieces relate to the physical artifact and to one another.
+In HMD-based AR, simply overlaying a completed reconstruction can also become non-interactive. A more interactive structure is needed when visitors should actively explore how virtual pieces relate to the physical artifact and to one another.
 
 ---
 
 ## Context
 
-This pattern applies to HMD-AR museum experiences in which an exhibit contains missing, fragmented, disassembled, or reconstructable components. It is especially relevant for fossils, skeletal structures, machines, tools, relics, archaeological objects, damaged artifacts, or scientific models where digital reconstruction data is available.
+This pattern applies to HMD-AR museum experiences in which an exhibit contains missing, fragmented, disassembled, or reconstructable components. It is especially relevant for fossils, skeletal structures, machines, tools, historical objects, archaeological objects, damaged artifacts, or scientific models where digital reconstruction data is available.
 
 The pattern assumes that virtual pieces can be spatially registered to the physical exhibit or to a stable reconstruction area, and that visitors can manipulate pieces through hand interaction, gaze-assisted selection, simplified dragging, or another suitable HMD input method.
 
@@ -78,7 +84,7 @@ Use this pattern when:
 - virtual fragments can be aligned with stable docking regions or target positions;
 - the task can be completed within a short museum interaction time.
 
-Avoid using this pattern when spatial registration is too unstable for meaningful assembly, when the number of fragments would make the task too long, or when manipulation would distract from rather than clarify the exhibit. It may also be unsuitable when the exhibit’s interpretive value depends more on open reflection than on structural reconstruction.
+Avoid using this pattern when spatial registration is too unstable for meaningful assembly, when the number of fragments would make the task too long, or when manipulation would distract from rather than clarify the exhibit. It may also be unsuitable when the exhibit’s interpretive value depends more on open-ended interpretation than on structural reconstruction.
 
 ---
 
@@ -108,13 +114,13 @@ The task should remain closely tied to exhibit interpretation. When a piece is c
 
 ## Design Parameters and Recommended Settings
 
-- **Piece count:** Use approximately **4–8 fragments** to balance challenge, completion time, and museum attention span. Use fewer pieces for first-time users or crowded exhibition conditions.
+- **Piece count:** Use approximately **4–8 fragments** to balance challenge, completion time, and time visitors can reasonably spend in a museum visit. Use fewer pieces for first-time users or crowded exhibition conditions.
 - **Piece scale:** Size virtual pieces so that they are easy to see and manipulate while remaining proportional to the exhibit. Avoid pieces that are too small for reliable HMD hand interaction.
 - **Snap tolerance:** Use a positional threshold of approximately **0.2–0.5 metres** and a rotational tolerance of approximately **10–30°**, adjusted according to exhibit scale and required accuracy.
-- **Docking-region visibility:** Highlight initial docking regions with a pulsing outline, silhouette, ghost model, or low-opacity preview. Reduce assistance for later pieces if progressive challenge is desired.
+- **Docking-region visibility:** Highlight initial docking regions with a pulsing outline, silhouette, transparent preview model, or low-opacity preview. Reduce assistance for later pieces if progressive challenge is desired.
 - **Feedback delay:** Confirm correct placement within approximately **≤ 1 second**. Delayed feedback can make visitors uncertain about whether the system recognized the action.
-- **Progress indicator:** Show immediate progress after each correct placement, for example **“3 of 8 pieces assembled”**, a completion bar, or a gradually completed ghost model.
-- **Error handling:** Provide forgiving correction logic. If a piece is placed incorrectly, return it gently, show a short hint, or keep it near the attempted position rather than abruptly resetting the interaction.
+- **Progress indicator:** Show immediate progress after each correct placement, for example **“3 of 8 pieces assembled”**, a completion bar, or a gradually completed transparent preview model.
+- **Error handling:** Provide flexible correction logic. If a piece is placed incorrectly, return it gently, show a short hint, or keep it near the attempted position rather than abruptly resetting the interaction.
 - **Interaction method:** Use direct hand manipulation, grab-and-place, gaze-assisted selection, or simplified drag interaction depending on device capability and expected user familiarity.
 - **Instruction length:** Keep initial instructions short. Demonstrate the first action through one highlighted piece or docking area rather than relying only on text.
 - **Adaptive difficulty:** Start with boundary, large, or visually distinctive pieces. Introduce subtler, mirrored, or more ambiguous pieces only when visitors have successfully completed earlier placements.
@@ -128,7 +134,7 @@ The task should remain closely tied to exhibit interpretation. When a piece is c
 
 When applied successfully, AR Exhibit Reassembler can support active learning, spatial reasoning, and memorable exhibit engagement. Visitors do not only see a completed reconstruction; they participate in creating it. This can make part-whole relationships easier to understand and can strengthen attention to the physical exhibit because the reconstruction is anchored to it.
 
-However, the pattern also introduces risks. If tracking, snapping, or alignment is unreliable, visitors may blame themselves or lose trust in the system. If the puzzle is too easy, it may feel trivial; if it is too difficult, it may cause frustration or extend beyond the available museum attention span. If feedback or guidance is too strong, the task loses its exploratory value; if it is too weak, visitors may not know what to do. The pattern therefore requires careful tuning of piece count, manipulation method, snap tolerance, difficulty progression, feedback timing, and interpretive framing.
+However, the pattern also introduces risks. If tracking, snapping, or alignment is unreliable, visitors may blame themselves or lose trust in the system. If the puzzle is too easy, it may feel unchallenging; if it is too difficult, it may cause frustration or extend beyond the available museum attention span. If feedback or guidance is too strong, the task loses its exploratory value; if it is too weak, visitors may not know what to do. The pattern therefore requires careful tuning of piece count, manipulation method, snap tolerance, difficulty progression, feedback timing, and interpretive framing.
 
 ---
 

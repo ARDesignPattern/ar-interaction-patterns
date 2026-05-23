@@ -46,9 +46,15 @@ Turn invisible, abstract, or slow-moving threats to an exhibit or represented en
 
 ## Rationale
 
-Some museum topics are difficult to communicate because the relevant threats are not directly visible in the exhibit. Environmental hazards such as pollution, ghost nets, ocean acidification, invasive species, or climate-related stressors may be scientifically important but perceptually absent, temporally delayed, or spatially remote.
+Some museum topics are difficult to communicate because the relevant threats are not directly visible in the exhibit. Environmental hazards such as pollution, ghost nets, environmental stress, invasive species, or climate-related stressors may be scientifically important but perceptually absent, temporally delayed, or spatially remote.
 
 AR Object Catching translates these hazards into visible and interactive objects that move toward a vulnerable exhibit zone. By asking visitors to intercept or neutralize them, the pattern connects learning to bodily action and gives visitors a direct sense of agency. The interaction should not only create challenge, but also help visitors understand what is being threatened, why it matters, and how protective action changes the outcome.
+
+---
+
+## Mechanic-based interaction logic
+
+This pattern is based on an object-catching and protective-interception mechanic. Visitors block, catch, deflect, or neutralize virtual threats that move toward vulnerable exhibit zones. The mechanic links embodied reaction, targeted protection, time pressure, and immediate feedback to the interpretive goal of making abstract threats visible, urgent, and actionable.
 
 ---
 
@@ -87,7 +93,7 @@ Do not use this pattern when the topic is too sensitive for game-like treatment,
 - **Urgency vs. comfort:** Threats should create a sense of immediacy, but not make visitors anxious, rushed, or physically unsafe.
 - **Engagement vs. conceptual clarity:** The game mechanic should reinforce the environmental or interpretive message rather than become a generic catching game.
 - **Challenge vs. accessibility:** The interaction should be active and rewarding, but remain manageable for first-time HMD users and visitors with different physical abilities.
-- **Realism vs. legibility:** Threat objects should be recognizable and meaningful, but may need stylization to remain visible and catchable in AR.
+- **Realism vs. recognizability:** Threat objects should be recognizable and meaningful, but may need stylization to remain visible and catchable in AR.
 - **Feedback immediacy vs. system robustness:** Catching and blocking require fast visual and audio feedback; latency can break cause-and-effect perception.
 - **Emotional impact vs. overload:** Missed threats can show negative consequences, but the system should avoid overwhelming visitors with failure states.
 - **Movement freedom vs. museum safety:** Gestures should be limited to a safe interaction volume and should not encourage visitors to step into obstacles, other visitors, or restricted areas.
@@ -96,20 +102,20 @@ Do not use this pattern when the topic is too sensitive for game-like treatment,
 
 ## Solution
 
-Represent threats as virtual objects or effects that move toward a vulnerable exhibit zone. The visitor is asked to catch, block, deflect, or neutralize these threats through simple embodied actions, such as reaching out, swiping, holding up a hand, tapping a virtual object, or moving into a protective position. The vulnerable zone should be clearly indicated, for example through a glow, pulse, shield outline, reef-health indicator, or target highlight.
+Represent threats as virtual objects or effects that move toward a vulnerable exhibit zone. The visitor is asked to catch, block, deflect, or neutralize these threats through simple embodied actions, such as reaching out, swiping, holding up a hand, tapping a virtual object, or moving into a protective position. The vulnerable zone should be clearly indicated, for example through a glow, pulse, shield outline, exhibit-status indicator, or target highlight.
 
 The interaction should begin with a short explanation or animated prompt that shows what the threats are and how the visitor can respond. Early threats should move slowly and follow predictable paths so that visitors can learn the gesture. As the session progresses, the system may increase difficulty through faster movement, multiple simultaneous threats, different threat types, or partial visual obstruction.
 
 Each intercepted threat should produce immediate feedback, such as disappearance, deflection, particle burst, sound cue, score update, or visible improvement of the protected exhibit zone. Missed threats should also have visible consequences, such as reduced health, dimmed colours, damaged coral, or a warning cue.
 
-The experience should end with a short wrap-up. This may include the number of intercepted threats, a reef health or protection score, a visual before-and-after comparison, and a concise conservation or mitigation message. The wrap-up should connect the embodied game action back to the real-world issue represented by the exhibit.
+The experience should end with a short follow-up explanation. This may include the number of intercepted threats, a reef health or protection score, a visual before-and-after comparison, and a concise conservation or mitigation message. The final summary should connect the embodied game action back to the real-world issue represented by the exhibit.
 
 ---
 
 ## Design Parameters and Recommended Settings
 
-- **Threat type:** Use virtual objects or effects that clearly represent the issue, such as plastic debris, ghost nets, acidic runoff, invasive species, heat waves, pollutants, or symbolic hazard particles.
-- **Threat speed:** Start with slow movement, for example approximately **0.5 m/s**, and increase gradually if the visitor succeeds. A small increase, such as **0.1 m/s every 20 seconds**, can create progression without sudden difficulty spikes.
+- **Threat type:** Use virtual objects or effects that clearly represent the issue, such as plastic waste materials, ghost nets, pollution effects, invasive species, heat waves, pollutants, or symbolic hazard particles.
+- **Threat speed:** Start with slow movement, for example approximately **0.5 m/s**, and increase gradually if the visitor succeeds. A small increase, such as **0.1 m/s every 20 seconds**, can create progression without sudden sudden increases in difficulty.
 - **Spawn rate:** Begin with single threats and increase spawn frequency only after visitors have understood the interaction. Avoid spawning so many objects that the scene becomes chaotic.
 - **Threat path:** Direct threats toward meaningful vulnerable zones, such as coral, a habitat area, an organism, or a protected artifact. Paths should be predictable enough for first-time users to intercept.
 - **Interaction volume:** Keep catching and blocking actions within a safe reach zone in front of the visitor. Avoid gestures that require turning quickly, stepping backward, or swinging arms widely.
@@ -119,7 +125,7 @@ The experience should end with a short wrap-up. This may include the number of i
 - **Session duration:** Keep the main interaction short, typically around **60–120 seconds**, to sustain urgency while fitting normal museum attention spans.
 - **Difficulty progression:** Adjust speed, number of threats, threat types, or visual complexity gradually. Difficulty should support engagement, not exclude slower or less confident visitors.
 - **Health or progress indicator:** Provide a simple indicator such as reef health, protection level, number of caught objects, or remaining time. The indicator should be readable without dominating the scene.
-- **Missed-threat feedback:** Show consequences when threats are missed, but avoid overly punitive or discouraging feedback. The aim is to communicate vulnerability and mitigation, not failure.
+- **Missed-threat feedback:** Show consequences when threats are missed, but avoid overly harsh or discouraging feedback. The aim is to communicate vulnerability and mitigation, not failure.
 - **Wrap-up content:** Present a short result summary and one or two actionable conservation or learning points after the session.
 - **Fallback behaviour:** If gesture tracking becomes unreliable, reduce threat speed, enlarge interception zones, simplify gestures, or allow gaze- or button-based neutralization.
 
@@ -129,7 +135,7 @@ The experience should end with a short wrap-up. This may include the number of i
 
 When applied successfully, AR Object Catching can make invisible or abstract threats visible, urgent, and personally actionable. It supports embodied learning by linking visitor action to changes in the exhibit state and can strengthen empathy toward vulnerable environments, organisms, or cultural resources. The pattern can also increase engagement by combining movement, challenge, feedback, and interpretive consequence within a short museum interaction.
 
-However, the pattern also introduces risks. Poor hand tracking, slow feedback, or ambiguous collision detection can quickly reduce trust and cause frustration. If the game becomes too fast, too visually busy, or too competitive, visitors may focus on score and reaction speed rather than the exhibit meaning. If the threat metaphor is poorly chosen, the interaction may trivialize the issue or misrepresent the real-world process. The pattern therefore requires careful tuning of threat representation, gesture simplicity, feedback latency, challenge progression, safety boundaries, and educational wrap-up.
+However, the pattern also introduces risks. Poor hand tracking, slow feedback, or ambiguous collision detection can quickly reduce trust and cause frustration. If the game becomes too fast, too visually busy, or too competitive, visitors may focus on score and reaction speed rather than the exhibit meaning. If the threat metaphor is poorly chosen, the interaction may reduce the perceived seriousness of the issue or misrepresent the real-world process. The pattern therefore requires careful tuning of threat representation, gesture simplicity, response delay, challenge progression, safety boundaries, and educational wrap-up.
 
 ---
 
@@ -210,7 +216,7 @@ These events can support debugging, system logs, observation sheets, and later e
 
 ## Example Use
 
-In a natural-history museum, visitors encounter a coral reef exhibit that is extended through an AR protection game. After activation, virtual plastic debris and ghost nets begin drifting toward the coral reef model. Vulnerable reef zones pulse softly to show where protection is needed.
+In a natural-history museum, visitors encounter a coral reef exhibit that is extended through an AR protection game. After activation, virtual plastic debris and abandoned objects begin drifting toward the coral reef model. Vulnerable reef zones pulse softly to show where protection is needed.
 
 The visitor catches or swipes away the incoming threats with simple hand gestures. Each successful interception produces an immediate particle burst, a short sound cue, and a visible improvement in reef health. Missed threats cause subtle dimming or damage feedback. After the short session, a wrap-up screen shows how many threats were intercepted, the final reef-health score, and a concise conservation message connecting the interaction to real-world environmental protection.
 

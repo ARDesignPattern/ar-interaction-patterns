@@ -54,13 +54,13 @@ Guidance in HMD-based AR museums is not only a matter of showing a destination. 
 
 The PoI Guide class separates the general guidance function from its concrete representation. This allows creators to preserve a consistent guidance logic across an exhibition while choosing different guidance strategies according to route complexity, spatial layout, crowding, visitor intent, device capability, and desired narrative framing.
 
-As a category-level class, PoI Guide defines the shared interaction role, variation dimensions, state logic, and composition position of guidance patterns without prescribing a single visual form, distance threshold, or interaction technique.
+As a category-level class, PoI Guide defines the shared interaction role, variation dimensions, state logic, and composition position of guidance patterns without requiring a single visual form, distance threshold, or interaction technique.
 
 ---
 
 ## Problem
 
-Visitors in AR-enhanced museum or exhibition environments may miss important points of interest because exhibits are spatially dispersed, only partly visible, insufficiently supported by physical signage, or difficult to locate through conventional maps.
+Visitors in AR-enhanced museum or exhibition environments may miss important points of interest because exhibits are distributed across the space, only partly visible, insufficiently supported by physical guidance, or difficult to locate through conventional maps.
 
 In HMD-based AR, this problem is intensified by limited field of view, divided attention, unfamiliar spatial cues, and the need to remain aware of other visitors and the physical environment while moving.
 
@@ -104,8 +104,8 @@ Avoid relying on this category as a separate interaction phase when the exhibit 
 - **Guidance strength vs. exhibit attention:** Strong guidance can improve orientation, but may draw attention away from physical exhibits and the surrounding museum environment.
 - **Pacing vs. comfort:** The route should support comfortable movement and avoid encouraging visitors to walk too quickly, turn sharply, or ignore obstacles.
 - **Consistency vs. local adaptation:** Guidance semantics should remain recognizable across an exhibition, while cue form, modality, and intensity may adapt to local spatial conditions.
-- **Multimodal redundancy vs. overload:** Visual, auditory, and other feedback channels can reinforce orientation, but excessive simultaneous cues may become distracting.
-- **Spatial precision vs. recoverability:** Guidance should be spatially meaningful, but must degrade gracefully when tracking confidence, route alignment, or visitor position becomes uncertain.
+- **Multimodal redundancy vs. overload:** Visual, auditory, and other feedback channels can support orientation, but excessive simultaneous cues may become distracting.
+- **Spatial precision vs. recoverability:** Guidance should be spatially meaningful, but must recover smoothly when tracking confidence, route alignment, or visitor position becomes uncertain.
 
 ---
 
@@ -113,7 +113,7 @@ Avoid relying on this category as a separate interaction phase when the exhibit 
 
 Define a system-level guidance structure that supports the visitor journey from point-of-interest selection to route preview, route commitment, navigation, turn anticipation, arrival, dwell, and continuation or exit.
 
-The guidance layer should provide continuous orientation without over-specifying one particular representation. It may be implemented through a virtual guide, floor-based route cues, forward-facing indicators, audio prompts, haptic cues, or hybrid forms.
+The guidance layer should provide continuous orientation without over-specifying one particular representation. It may be implemented through a virtual guide, floor-based route cues, forward-facing indicators, audio prompts, body-based cues, or hybrid forms.
 
 The category should preserve several invariants:
 
@@ -137,7 +137,7 @@ Concrete application-level patterns should instantiate this logic through their 
 
 ## Design Parameters and Recommended Settings
 
-- **Guidance modality family:** Select between avatar-based guidance, ground-based cues, forward-facing overlays, audio prompts, haptic cues, or hybrid combinations. Use **Avatar Guide** when a social, narrative, or pace-regulated guide is desirable; use **Forward Cue-Routing** when lightweight and unobtrusive route indication is preferred.
+- **Guidance modality family:** Select between avatar-based guidance, ground-based cues, forward-facing overlays, audio prompts, haptic cues, or hybrid combinations. Use **Avatar Guide** when a social, narrative, or pace-regulated guide is desirable; use **Forward Cue-Routing** when lightweight and subtle route indication is preferred.
 - **Routing policy:** Define whether the route prioritizes shortest distance, smoothest movement, thematic order, accessibility, crowd avoidance, or curatorial narrative sequence.
 - **Pacing policy:** Decide whether guidance behaves as a leader, follower, fixed-rhythm cue, adaptive route assistant, or user-paced route display.
 - **Anticipation horizon:** Specify how early turns, junctions, or decision points should be announced. Increase anticipation in complex layouts and reduce it in short or narrow route segments.
@@ -147,7 +147,7 @@ Concrete application-level patterns should instantiate this logic through their 
 - **Recovery behaviour:** Define what happens when the visitor deviates, pauses, walks in the wrong direction, or tracking confidence becomes low. Recovery should be calm, reversible, and easy to understand.
 - **Arrival definition:** Define what counts as arrival, such as entering a radius around the point of interest, reaching a safe viewing position, or stopping within a predefined activation zone.
 - **Accessibility settings:** Support adjustable cue size, brightness, contrast, text size, audio volume, pacing tempo, and non-colour-dependent cue semantics where possible.
-- **Telemetry hooks:** Record route start, cue display, deviation, pause, recovery, arrival, and route completion events to support evaluation and debugging.
+- **Logging points:** Record route start, cue display, deviation, pause, recovery, arrival, and route completion events to support evaluation and debugging.
 
 ---
 
@@ -214,12 +214,12 @@ Relevant implementation data include:
 - route geometry;
 - waypoint lists;
 - safe viewing positions;
-- arrival radii;
+- arrival zones;
 - localization-confidence values;
 - cue-state definitions;
 - route-state definitions;
 - feedback-channel settings;
-- telemetry hooks.
+- logging hooks.
 
 Implementation-level events may include:
 
@@ -230,7 +230,7 @@ Implementation-level events may include:
 - cue displayed;
 - turn anticipated;
 - waypoint reached;
-- visitor deviated;
+- visitor left route;
 - guidance paused;
 - recovery started;
 - tracking confidence low;

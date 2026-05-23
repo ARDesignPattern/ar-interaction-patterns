@@ -76,7 +76,7 @@ Use this pattern when:
 - visitors benefit from seeing a direct spatial connection between a label and the corresponding exhibit part;
 - the exhibit is large, visually complex, or difficult to interpret without spatial annotations.
 
-Avoid using this pattern as the primary presentation mode when the exhibit has only one simple point of interest, when the number of labels would become excessive, or when spatial registration is too unstable to maintain reliable label-to-part alignment. It may also be unsuitable when labels would cover important visual details or interfere with a more immersive, narrative, or playful interaction.
+Avoid using this pattern as the primary presentation approach when the exhibit has only one simple point of interest, when the number of labels would become excessive, or when spatial registration is too unstable to maintain reliable label-to-part alignment. It may also be unsuitable when labels would cover important visual details or interfere with a more immersive, narrative, or playful interaction.
 
 ---
 
@@ -98,7 +98,7 @@ Place spatially anchored labels near relevant exhibit components and connect eac
 
 A typical implementation contains four elements. First, a pointing line or spatial connector links the exhibit component to the virtual label. Second, a short title label is placed near the endpoint of the line, using legible typography and sufficient contrast. Third, a proximity trigger, gaze trigger, or selection trigger detects visitor interest in the label. Fourth, a detailed explanation panel fades in when triggered and fades out when the visitor moves away or deselects the label. The explanation panel may include text, images, short audio, a 3D highlight, or a small animation, but should remain focused on the selected component.
 
-The pattern should not display all detailed explanations simultaneously. The default state should remain lightweight, with only titles, lines, and possibly subtle highlights visible. When one label is active, other labels may remain visible in reduced form or be temporarily dimmed. This helps visitors focus on the selected component while preserving an overview of the exhibit structure.
+The pattern should not display all detailed explanations simultaneously. The default state should remain lightweight, with only titles, lines, and possibly subtle highlights visible. When one label is active, other labels may remain visible in reduced form or be temporarily shown less prominently. This helps visitors focus on the selected component while preserving an overview of the exhibit structure.
 
 ---
 
@@ -108,13 +108,13 @@ The pattern should not display all detailed explanations simultaneously. The def
 - **Line thickness:** Use thin but visible pointing lines, approximately **1–2 cm** in perceived width, adjusted according to viewing distance, lighting, and exhibit scale.
 - **Title distance:** Place the title label approximately **0.2–0.8 metres** from the target component in 3D space, depending on component size, occlusion risk, and viewing angle.
 - **Trigger radius:** Use a proximity trigger radius of approximately **1.2–3 metres** around the label anchor or interaction zone. Reduce the radius in dense label arrangements and increase it for large exhibits.
-- **Activation method:** Use proximity, gaze dwell, hand selection, or voice command depending on the required explicitness. Proximity is lightweight, while hand or gaze selection provides clearer agency.
+- **Activation method:** Use proximity, gaze dwell, hand selection, or voice command depending on the required level of visitor control. Proximity is easy to use, while hand or gaze selection provides clearer visitor control.
 - **Fade duration:** Use a fade duration of approximately **0.5 seconds** for explanation panels so that information appears responsively without feeling abrupt.
 - **Panel placement:** Place detailed panels near the selected label but outside the main visual area of the exhibit component. Avoid placing panels directly over the physical feature being explained.
 - **Typography:** Use concise titles, high contrast, and readable font size. Detailed text should be short and broken into compact units.
-- **Highlight style:** Optionally highlight the selected exhibit part through outline, glow, colour tint, or subtle animation. Use this carefully to avoid obscuring material details.
+- **Highlight style:** Optionally highlight the selected exhibit part through outline, glow, colour tint, or subtle animation. Use this carefully to avoid covering material details.
 - **Inactive label state:** Keep inactive labels visible but visually secondary, or hide them progressively when the active panel is open.
-- **Flicker prevention:** Add hysteresis or a small delay when entering and exiting trigger zones so that panels do not repeatedly appear and disappear due to minor visitor movement.
+- **Flicker prevention:** Add small buffer or a small delay when entering and exiting trigger zones so that panels do not repeatedly appear and disappear due to minor visitor movement.
 - **Fallback behaviour:** If spatial alignment becomes unreliable, reduce labels to a more general overview mode, increase trigger tolerance, or provide a manual list of labels as backup.
 
 ---
@@ -174,7 +174,7 @@ The pattern can be implemented as a reusable labelling module or Unity prefab th
 - optional highlights;
 - event-based handoff to other modules.
 
-Relevant exposed parameters include label title, label anchor, target component anchor, line thickness, line length, label offset, trigger radius, activation method, dwell time, panel content, panel position, fade duration, highlight style, inactive-label opacity, and fallback mode.
+Relevant exposed parameters include label title, label anchor, target component anchor, line thickness, line length, label offset, trigger radius, activation method, dwell time, panel content, panel position, fade duration, highlight style, inactive-label transparency, and fallback mode.
 
 Implementation-level events may include:
 

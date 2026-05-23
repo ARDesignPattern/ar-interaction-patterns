@@ -54,7 +54,7 @@ In HMD-based AR museums, visitors do not automatically know which exhibits conta
 
 The Experience Indicator class separates the general activation-support function from its concrete representation. This allows the system to maintain consistent discoverability, activation feedback, and lifecycle semantics across exhibits while allowing different activation forms, such as spatial entry zones, proximity triggers, concept-specific micro-tasks, voice prompts, or assisted activation.
 
-As a category-level class, Experience Indicator defines the shared interaction role, variation dimensions, state logic, and composition position of activation patterns without prescribing one fixed shape, distance, timing, or gesture.
+As a category-level class, Experience Indicator defines the shared interaction role, variation dimensions, state logic, and composition position of activation patterns without requiring one fixed shape, distance, timing, or gesture.
 
 ---
 
@@ -98,7 +98,7 @@ Do not rely on this category as a separate design layer when the AR content is a
 - **Discoverability vs. distraction:** Indicators must stand out enough to be noticed, but should not clutter the scene or dominate the exhibit.
 - **Consistency vs. local adaptation:** The system should use a recognizable visual and interaction language, while still adapting to different exhibits, layouts, and activation needs.
 - **Immediate feedback vs. subtlety:** Activation should be confirmed clearly, but feedback should remain appropriate for the museum atmosphere.
-- **Automatic activation vs. visitor agency:** Proximity-based activation is low-friction, but explicit confirmation may be needed when accidental activation is likely.
+- **Automatic activation vs. visitor control:** Proximity-based activation is easy to use, but explicit confirmation may be needed when accidental activation is likely.
 - **Accessibility vs. interaction richness:** Activation cues should work for diverse visitors and device conditions, while still supporting richer concept-specific interactions when appropriate.
 - **Indicator persistence vs. visual cleanliness:** Always-visible indicators increase discoverability, but on-demand or proximity-based indicators reduce visual clutter.
 - **Technical reliability vs. interpretive expressiveness:** Simple triggers are robust, while richer knowledge-based triggers may communicate meaning more effectively but require more reliable interaction detection.
@@ -125,12 +125,12 @@ Concrete application-level patterns instantiate this lifecycle differently. **St
 - **Activation mode:** Use proximity, dwell, hand selection, gaze dwell, voice command, object manipulation, or concept-specific task completion depending on the intended level of agency and robustness.
 - **State visibility:** Define how the indicator changes between **discoverable**, **candidate**, **confirmable**, **activated**, **inactive**, and **recovery** states.
 - **Persistence level:** Decide whether indicators are always visible, shown on approach, revealed after guidance arrival, or hidden until the visitor looks toward the exhibit.
-- **Feedback mix:** Combine visual feedback with optional spatial audio, text prompts, animation, or haptic feedback where available. Use at least two feedback channels when accessibility or environmental uncertainty is important.
-- **Feedback intensity:** Tune glow, pulse, sound, motion, and label visibility so that activation is clear without producing jarring transitions.
+- **Feedback mix:** Combine visual feedback with optional spatial audio, text prompts, animation, or body-based feedback where available. Use at least two feedback channels when accessibility or environmental uncertainty is important.
+- **Feedback intensity:** Tune glow, pulse, sound, motion, and label visibility so that activation is clear without producing abrupt transitions.
 - **False-activation prevention:** Use dwell time, confirmation steps, proximity thresholds, or task completion when accidental activation is likely.
-- **Accessibility settings:** Support readable labels, sufficient contrast, non-colour-dependent cues, adjustable audio, and alternative activation modes where possible.
+- **Accessibility settings:** Support readable labels, sufficient contrast, non-colour-dependent cues, adjustable audio, and alternative activation methods where possible.
 - **Recovery behaviour:** Define what happens when the visitor fails to activate, leaves the zone, loses tracking, or activates the wrong exhibit.
-- **Analytics hooks:** Record discovery, approach, confirmation, activation, cancellation, recovery, and exit events to support usability analysis and system debugging.
+- **Logging points:** Record discovery, approach, confirmation, activation, cancellation, recovery, and exit events to support usability analysis and system debugging.
 
 ---
 
@@ -138,7 +138,7 @@ Concrete application-level patterns instantiate this lifecycle differently. **St
 
 When applied successfully, the Experience Indicator category increases the discoverability of AR content, reduces hesitation at exhibits, and supports a smoother transition from physical viewing to digital interaction. It also provides a reusable activation vocabulary across an exhibition, making the AR system easier to learn for first-time visitors.
 
-However, the category also introduces risks. Overuse of indicators can visually overload the exhibition space. Inconsistent activation semantics can confuse visitors and break expectations. Too much automation can reduce visitor agency, while overly explicit confirmation can slow down the visit. The category therefore requires careful balancing of discoverability, subtlety, activation reliability, feedback clarity, and local exhibit meaning.
+However, the category also introduces risks. Overuse of indicators can visually overload the exhibition space. Inconsistent activation semantics can confuse visitors and break expectations. Too much automation can reduce visitor control, while overly explicit confirmation can slow down the visit. The category therefore requires careful balancing of discoverability, subtlety, activation reliability, feedback clarity, and local exhibit meaning.
 
 ---
 
@@ -177,7 +177,7 @@ or:
 
 The handoff from guidance should be clear. When visitors arrive at the point of interest, guidance cues should reduce intensity or end, and the indicator should become visually primary.
 
-The handoff to presentation should also be explicit. Once activation succeeds, the indicator should fade, transform, or become secondary so that visitors understand that the main AR experience has begun. If several AR-enabled exhibits are nearby, only the relevant or nearest indicator should become active, while others remain hidden or visually subdued.
+The handoff to presentation should also be explicit. Once activation succeeds, the indicator should fade, transform, or become secondary so that visitors understand that the main AR experience has begun. If several AR-enabled exhibits are nearby, only the relevant or nearest indicator should become active, while others remain hidden or shown less prominently.
 
 ---
 
@@ -197,7 +197,7 @@ Relevant implementation data include:
 - interaction-task definitions;
 - feedback assets;
 - fallback options;
-- telemetry hooks.
+- logging points.
 
 Implementation-level events may include:
 

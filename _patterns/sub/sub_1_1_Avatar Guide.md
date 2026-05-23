@@ -46,7 +46,7 @@ Provide an embodied virtual guide that visitors can follow through the physical 
 
 In HMD-based AR museum visits, visitors often need to move through a physical exhibition space while maintaining awareness of exhibits, other visitors, and digital guidance cues. Map-based or symbolic guidance can require interpretation, while static indicators may not support walking pace or route-following behaviour.
 
-An avatar guide externalizes guidance as a visible moving entity. Visitors can follow the guide rather than continuously decode arrows, maps, or interface panels. This makes guidance easier to perceive as a spatial relation between visitor, guide, route, and destination. The pattern is especially useful when the guide can also support a thematic or narrative framing of the museum experience.
+An avatar guide externalizes guidance as a visible moving entity. Visitors can follow the guide rather than continuously interpret arrows, maps, or interface panels. This makes guidance easier to perceive as a spatial relation between visitor, guide, route, and destination. The pattern is especially useful when the guide can also support a thematic or narrative framing of the museum experience.
 
 ---
 
@@ -82,7 +82,7 @@ Use this pattern when:
 - the museum experience benefits from a companion-like or narrative guide;
 - the arrival point should trigger a clear transition into another interaction pattern, such as activation or exhibit-related presentation.
 
-Avoid using this pattern when the route is extremely short, when an avatar would visually distract from the exhibit, or when the exhibition space is too crowded or narrow for character-based guidance to remain comfortable and legible.
+Avoid using this pattern when the route is extremely short, when an avatar would visually distract from the exhibit, or when the exhibition space is too crowded or narrow for character-based guidance to remain comfortable and easy to follow.
 
 ---
 
@@ -101,7 +101,7 @@ Avoid using this pattern when the route is extremely short, when an avatar would
 
 Implement a virtual guide that appears near the visitor or at the beginning of the route and moves along an authored path toward a target point of interest. The avatar should remain ahead of the visitor at a comfortable distance and adjust its behaviour according to the visitor’s position and movement.
 
-The avatar should use clear movement states. In an **en-route** state, it moves along the path at a moderate speed and remains visible ahead of the visitor. In a **waiting** state, it pauses when the visitor slows down, looks away, or falls too far behind. In a **recovery** state, it provides a simple cue when the visitor deviates from the route or when tracking confidence becomes low. At the point of interest, it enters an **arrival** state, stops at a safe position, and provides clear visual or auditory feedback that the destination has been reached.
+The avatar should use clear movement states. During **active guidance** state, it moves along the path at a moderate speed and remains visible ahead of the visitor. In a **waiting** state, it pauses when the visitor slows down, looks away, or falls too far behind. In a **recovery** state, it provides a simple cue when the visitor deviates from the route or when tracking confidence becomes low. At the point of interest, it enters an **arrival** state, stops at a safe position, and provides clear visual or auditory feedback that the destination has been reached.
 
 The avatar should not be overloaded with all presentation functions. Its primary role is to guide, pace, and announce arrival. After arrival, the experience may hand over to an activation pattern, such as **Step-In Trigger** or **Exhibit Knowledge Trigger**, and then to one or more presentation patterns, such as **Sequential Explanation** or **AR Labelling**. If the avatar remains visible during exhibit exploration, it should move into a quiet idle state or a clearly secondary support role.
 
@@ -114,10 +114,10 @@ The avatar should not be overloaded with all presentation functions. Its primary
 - **Waypoint structure:** Define route waypoints in relation to stable spatial anchors, exhibit positions, and safe walking paths.
 - **Arrival radius:** Use an arrival radius of approximately **1.5–2.0 metres**, adjusted according to exhibit size, safe viewing distance, and the expected activation position for the next pattern.
 - **Avatar visibility:** Keep the avatar large and visually distinct enough to be recognized in the HMD field of view, but avoid excessive size, brightness, or animation intensity.
-- **Prompt cadence:** Use gentle prompts only when needed, for example when the visitor hesitates, deviates, or reaches a decision point.
+- **Prompt timing:** Use gentle prompts only when needed, for example when the visitor hesitates, moves away from the intended route, or reaches a decision point.
 - **Feedback modalities:** Combine visual feedback with optional spatial audio or short verbal prompts.
 - **Control access:** Provide minimal visitor controls, such as **Start**, **Pause**, **Resume**, and **End**.
-- **State indication:** Use subtle animation, posture, position, or optional visual markers to distinguish between **en-route**, **waiting**, **paused**, **arrival**, and **recovery** states.
+- **State indication:** Use subtle animation, posture, position, or optional visual markers to distinguish between **active guidance**, **waiting**, **paused**, **arrival**, and **recovery** states.
 - **Fallback behaviour:** If localization, path following, or gesture input becomes unreliable, the avatar should stop in a safe state, provide a simple recovery cue, and allow the visitor to continue, restart, or end the guidance sequence.
 
 ---
@@ -126,7 +126,7 @@ The avatar should not be overloaded with all presentation functions. Its primary
 
 When applied successfully, the Avatar Guide can make spatial guidance more understandable, reduce the cognitive effort of interpreting route cues, and support a smoother transition from movement to exhibit engagement. It can also strengthen social presence and narrative coherence when the avatar’s visual identity is aligned with the museum theme or exhibition story.
 
-However, the pattern also introduces risks. A highly visible avatar may distract from physical exhibits or reduce visitor autonomy if it appears too directive. Poor animation, unstable spatial registration, or delayed path updates may reduce trust in the system. In crowded or narrow spaces, the avatar may become visually intrusive or difficult to follow. The pattern therefore requires careful tuning of visibility, distance, speed, feedback, and fallback behaviour.
+However, the pattern also introduces risks. A highly visible avatar may distract from physical exhibits or reduce visitor autonomy if it appears too directive. Poor animation, unstable spatial registration, or delayed path updates may reduce trust in the system. In crowded or narrow spaces, the avatar may become visually distracting or difficult to follow. The pattern therefore requires careful tuning of visibility, distance, speed, feedback, and fallback behaviour.
 
 ---
 
