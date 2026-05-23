@@ -1,6 +1,6 @@
 ---
 layout: pattern
-title: Pattern Library
+title: Pattern System
 custom_js: custom-script
 permalink: /patterns.html
 ---
@@ -21,7 +21,7 @@ permalink: /patterns.html
 
 <!-- High-Level Patterns Section -->
 <section id="patterns" class="gallery-section">
-  <h2 class="section-title">High-Level Patterns</h2>
+  <h2 class="section-title">Category-Level Pattern Classes</h2>
   <div class="gallery">
     {% assign high_level_patterns = site.patterns | where: "category", "high-level" | sort: "order" %}
 {% for pattern in high_level_patterns %}
@@ -32,7 +32,7 @@ permalink: /patterns.html
 
 <!-- Sub-Patterns Section -->
 <section class="gallery-section">
-  <h2 class="section-title">Sub-Level Patterns</h2>
+  <h2 class="section-title">Application-Level Patterns</h2>
   <div class="gallery">
     {% assign sub_level_patterns = site.patterns | where: "category", "sub-level" | sort: "order" %}
 {% for pattern in sub_level_patterns %}
