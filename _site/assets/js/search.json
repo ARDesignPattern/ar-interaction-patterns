@@ -47,7 +47,7 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/index.html",
-    "excerpt": "<!-- HTML --><section id=\"about\" class=\"intro stacked\">  <div class=\"intro-video-wrapper\">    <iframe      src=\"https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg\"      title=\"YouTube video player\"..."
+    "excerpt": "<!-- Hero Section --><!-- Hero Section --><section id=\"about\" class=\"intro stacked portal-hero\">  <div class=\"intro-video-wrapper portal-video\">    <iframe      src=\"https://www.youtube-nocookie.co..."
   },
 
   {

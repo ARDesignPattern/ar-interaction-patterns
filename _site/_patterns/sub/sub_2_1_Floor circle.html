@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -211,7 +266,7 @@
 
 <p>In HMD-based AR museum visits, visitors do not automatically know which exhibits contain AR content or how an AR experience should be started. A visible entry zone on the floor provides a simple spatial convention: visitors can understand that stepping into the zone means entering or launching the AR experience.</p>
 
-<p>The pattern uses proximity and short dwell-based activation to reduce the need for explicit menu interaction. It supports low-threshold activation for first-time users and creates a clear transition from noticing an AR opportunity to starting the exhibit-related experience.</p>
+<p>The pattern uses proximity and short dwell-based activation to reduce the need for explicit menu interaction. It supports low-effort activation for first-time users and creates a clear transition from noticing an AR opportunity to starting the exhibit-related experience.</p>
 
 <hr />
 
@@ -244,7 +299,7 @@
 <p>Use this pattern when:</p>
 
 <ul>
-  <li>visitors need a clear and low-friction way to activate an AR exhibit experience;</li>
+  <li>visitors need a clear and easy-to-use way to activate an AR exhibit experience;</li>
   <li>the intended action can be communicated through a spatial entry zone;</li>
   <li>stepping into a floor-based circle or marker fits the exhibition layout;</li>
   <li>the activation should feel embodied and hands-free;</li>
@@ -260,10 +315,10 @@
 <ul>
   <li><strong>Discoverability vs. visual subtlety:</strong> The trigger zone must be noticeable enough to invite action, but not so bright or large that it clutters the floor or distracts from the exhibit.</li>
   <li><strong>Activation reliability vs. visitor freedom:</strong> The system must detect entry reliably, while avoiding accidental activation when visitors only pass nearby.</li>
-  <li><strong>Low-friction interaction vs. meaningful engagement:</strong> A simple step-in action is easy to understand, but may provide less interpretive meaning than a concept-linked activation task.</li>
+  <li><strong>Easy-to-use interaction vs. meaningful engagement:</strong> A simple step-in action is easy to understand, but may provide less interpretive meaning than a concept-linked activation task.</li>
   <li><strong>Feedback clarity vs. interruption:</strong> Activation feedback should clearly confirm that the experience has started, but should not interrupt the museum flow with excessive effects.</li>
   <li><strong>Spatial placement vs. safety:</strong> The trigger zone should be close enough to the exhibit to feel meaningful, but far enough to preserve safe viewing distance and visitor circulation.</li>
-  <li><strong>Automation vs. agency:</strong> Automatic activation can feel seamless, but visitors should still understand what has happened and how to exit or continue.</li>
+  <li><strong>Automation vs. visitor control:</strong> Automatic activation can feel seamless, but visitors should still understand what has happened and how to exit or continue.</li>
 </ul>
 
 <hr />
@@ -285,8 +340,8 @@
 <ul>
   <li><strong>Circle radius:</strong> Use a radius of approximately <strong>0.6–1.2 metres</strong>, with <strong>0.9 metres</strong> as a practical default.</li>
   <li><strong>Dwell time:</strong> Use a short stable dwell threshold of approximately <strong>0.40 seconds</strong> after the visitor enters the zone.</li>
-  <li><strong>Placement from exhibit:</strong> Place the circle centre approximately <strong>0.8–1.2 metres</strong> from the exhibit’s leading edge, adjusted according to exhibit size, safe viewing distance, and visitor flow.</li>
-  <li><strong>Detection threshold:</strong> Define the entry condition based on visitor position, feet or head projection, or another stable body-position proxy.</li>
+  <li><strong>Placement from exhibit:</strong> Place the circle centre approximately <strong>0.8–1.2 metres</strong> from the exhibit’s front edge, adjusted according to exhibit size, safe viewing distance, and visitor flow.</li>
+  <li><strong>Detection threshold:</strong> Define the entry condition based on visitor position, feet or head projection, or another stable body-position reference.</li>
   <li><strong>Label height:</strong> Place title labels or short prompts at approximately <strong>0.5 metres</strong> above the floor or in another peripheral but readable position.</li>
   <li><strong>Preview element:</strong> Optionally include a small 3D model, icon, or animation that previews the available AR content.</li>
   <li><strong>Visual style:</strong> Use a clear but low-clutter visual form, such as a glowing ring, pulsing outline, soft disc, or thematic floor marker.</li>
@@ -294,7 +349,7 @@
   <li><strong>Audio cue:</strong> Use a short spatial audio cue, such as a chime, splash, or thematic sound, to confirm activation.</li>
   <li><strong>Fade duration:</strong> Use an optional fade-out of approximately <strong>0.5 seconds</strong> for the circle, label, and preview element after activation.</li>
   <li><strong>Activation state:</strong> Distinguish between at least <strong>available</strong>, <strong>entered</strong>, <strong>dwell started</strong>, <strong>activated</strong>, and <strong>completed</strong> states.</li>
-  <li><strong>Fallback behaviour:</strong> If tracking becomes unstable or the visitor exits the zone before dwell completion, cancel activation gracefully and keep the marker available.</li>
+  <li><strong>Fallback behaviour:</strong> If tracking becomes unstable or the visitor exits the zone before dwell completion, cancel activation without disrupting the experience and keep the marker available.</li>
 </ul>
 
 <hr />
@@ -348,7 +403,7 @@
 
 <p>The handoff to presentation should also be clear. Once activation succeeds, the circle, label, and preview elements should fade out or become secondary so that visitors understand that the main AR experience has begun.</p>
 
-<p>If several AR-enabled exhibits are nearby, only the relevant or nearest Step-In Trigger should be active, while other trigger zones remain hidden or visually subdued.</p>
+<p>If several AR-enabled exhibits are nearby, only the relevant or nearest Step-In Trigger should be active, while other trigger zones remain hidden or made less visible.</p>
 
 <hr />
 
@@ -367,7 +422,7 @@
   <li>event-based handoff to subsequent modules.</li>
 </ul>
 
-<p>Relevant exposed parameters include circle radius, circle position, placement offset from the exhibit, dwell time, detection threshold, visual style, opacity, pulse speed, label text, label height, preview element, audio cue, fade duration, activation state, and fallback behaviour.</p>
+<p>Relevant exposed parameters include circle radius, circle position, placement offset from the exhibit, dwell time, detection threshold, visual style, transparency, pulse speed, label text, label height, preview element, audio cue, fade duration, activation state, and fallback behaviour.</p>
 
 <p>Implementation-level events may include:</p>
 

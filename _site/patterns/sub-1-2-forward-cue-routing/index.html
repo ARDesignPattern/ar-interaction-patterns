@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -225,7 +280,7 @@
 
 <h2 id="context">Context</h2>
 
-<p>This pattern applies to standing and walking HMD-AR museum experiences in which visitors follow an authored route through corridors, open galleries, or multi-point exhibition layouts. It is especially relevant when the route contains turns, junctions, or intermediate waypoints, and when the experience requires an unobtrusive guidance layer that does not occlude exhibits.</p>
+<p>This pattern applies to standing and walking HMD-AR museum experiences in which visitors follow an authored route through corridors, open galleries, or multi-point exhibition layouts. It is especially relevant when the route contains turns, junctions, or intermediate waypoints, and when the experience requires a subtle guidance layer that does not occlude exhibits.</p>
 
 <p>The pattern assumes that route segments and waypoints can be authored in advance and that the system can place cues with sufficient spatial stability in relation to the floor plane, visitor position, and points of interest.</p>
 
@@ -237,9 +292,9 @@
 
 <ul>
   <li>visitors need directional support, but a moving avatar or large above-ground interface would be too visually dominant;</li>
-  <li>the route should be indicated through subtle spatial cues, such as ripples, footprints, glowing arrows, lines, particles, or other thematic floor-based motifs;</li>
+  <li>the route should be indicated through subtle spatial cues, such as ripples, footprints, glowing arrows, lines, particles, or other thematic floor-based visual elements;</li>
   <li>visitors should receive anticipatory guidance before turns, junctions, or transitions between rooms;</li>
-  <li>the museum wants to preserve attention on physical exhibits while still making the route legible;</li>
+  <li>the museum wants to preserve attention on physical exhibits while still making the route easy to follow;</li>
   <li>the experience requires a lightweight guidance layer rather than a social, narrative, or character-based guide.</li>
 </ul>
 
@@ -250,7 +305,7 @@
 <h2 id="forces">Forces</h2>
 
 <ul>
-  <li><strong>Visibility vs. unobtrusiveness:</strong> The cues must be noticeable enough to guide the visitor, but subtle enough to avoid dominating the exhibition environment.</li>
+  <li><strong>Visibility vs. low interruption:</strong> The cues must be noticeable enough to guide the visitor, but subtle enough to avoid dominating the exhibition environment.</li>
   <li><strong>Anticipation vs. overload:</strong> Cues should appear early enough before turns or decision points, but not so early or frequently that they become confusing or visually noisy.</li>
   <li><strong>Route clarity vs. exhibit attention:</strong> The route should remain understandable while allowing visitors to keep their attention on the surrounding exhibits.</li>
   <li><strong>Pacing vs. autonomy:</strong> Cue movement and rhythm can encourage walking pace, but should not pressure visitors to move faster than they wish.</li>
@@ -264,25 +319,25 @@
 
 <p>Implement route guidance through a sequence of lightweight AR cues placed on or near the floor plane. The cues should appear along an authored route and provide anticipatory direction before turns, junctions, or intermediate waypoints.</p>
 
-<p>The route can be authored as a waypoint sequence, multi-segment path, floor-based cue chain, or hybrid representation. At each relevant waypoint or decision point, the system spawns a short cue pattern, such as ripples, footprints, glowing arrows, particles, lines, or other thematic floor-based motifs. These cues should propagate or orient toward the next waypoint so that visitors can infer the direction of travel before they reach the turn.</p>
+<p>The route can be authored as a waypoint sequence, multi-segment path, floor-based cue chain, or hybrid representation. At each relevant waypoint or decision point, the system spawns a short cue pattern, such as ripples, footprints, glowing arrows, particles, lines, or other thematic floor-based visual elements. These cues should progress or orient toward the next waypoint so that visitors can infer the direction of travel before they reach the turn.</p>
 
-<p>Optional spatial audio can be used to reinforce the visual cue, especially at turns or visually complex decision points. Audio should remain short and directional rather than becoming constant narration.</p>
+<p>Optional spatial audio can be used to support the visual cue, especially at turns or visually complex decision points. Audio should remain short and directional rather than becoming constant narration.</p>
 
-<p>At the destination, the final cue should converge into a stable arrival marker, such as a glowing disc, converging ripple, or short pulse. This marker confirms that the visitor has reached the point of interest and prepares the transition to the next interaction pattern.</p>
+<p>At the destination, the final cue should converge into a stable arrival marker, such as a glowing marker, converging ripple, or short pulse. This marker confirms that the visitor has reached the point of interest and prepares the transition to the next interaction pattern.</p>
 
 <hr />
 
 <h2 id="design-parameters-and-recommended-settings">Design Parameters and Recommended Settings</h2>
 
 <ul>
-  <li><strong>Cue type:</strong> Use visual forms such as ripples, footprints, glowing arrows, particles, lines, or other thematic ground-based motifs.</li>
+  <li><strong>Cue type:</strong> Use visual forms such as ripples, footprints, glowing arrows, particles, lines, or other thematic ground-based visual elements.</li>
   <li><strong>Cue placement:</strong> Place cues on or near the floor plane and align them with the authored route, visitor movement direction, and safe walking path.</li>
   <li><strong>Cue scale and spacing:</strong> Keep cues large enough to be visible in the HMD field of view, but avoid covering too much of the floor or competing with physical exhibits.</li>
-  <li><strong>Propagation rate:</strong> Calibrate cue movement so that it supports normal walking speed. As a practical reference, the cue may reach the midpoint between waypoints within approximately <strong>2–3 seconds</strong> at average walking speed.</li>
+  <li><strong>Cue movement speed:</strong> Calibrate cue movement so that it supports normal walking speed. As a practical reference, the cue may reach the midpoint between waypoints within approximately <strong>2–3 seconds</strong> at average walking speed.</li>
   <li><strong>Trigger radius:</strong> Use a trigger radius of approximately <strong>1–2 metres</strong> before each waypoint or turn so that visitors receive the cue before reaching the decision point.</li>
   <li><strong>Turn anticipation distance:</strong> Increase the lead distance before sharp turns, corners, or visually complex junctions; reduce it in short or narrow passages where early cues may overlap.</li>
-  <li><strong>Cue persistence:</strong> Keep cues temporary and allow them to fade after use. A short fade-out of approximately <strong>1–2 seconds</strong> can reduce visual clutter while preserving route legibility.</li>
-  <li><strong>Opacity and brightness:</strong> Use enough contrast for the cue to be visible under exhibition lighting, but avoid excessive brightness that distracts from physical exhibits or creates visual fatigue.</li>
+  <li><strong>Cue display duration:</strong> Keep cues temporary and allow them to fade after use. A short fade-out of approximately <strong>1–2 seconds</strong> can reduce visual clutter while preserving route legibility.</li>
+  <li><strong>Transparency and brightness:</strong> Use enough contrast for the cue to be visible under exhibition lighting, but avoid excessive brightness that distracts from physical exhibits or creates visual fatigue.</li>
   <li><strong>Audio lead time:</strong> When audio is used, trigger it approximately <strong>0.5–1 second</strong> before or together with the visual cue to pre-alert the visitor without creating constant narration.</li>
   <li><strong>Route progress:</strong> Optionally show the path already passed through lower-intensity cues or fading traces, but avoid leaving persistent visual trails that clutter the floor.</li>
   <li><strong>Arrival indication:</strong> Use a stable final marker, such as a glowing disc, converging ripple, or short pulse, to indicate that the destination point of interest has been reached.</li>
@@ -363,7 +418,7 @@
   <li>cue spawned;</li>
   <li>turn cue triggered;</li>
   <li>waypoint reached;</li>
-  <li>visitor deviated;</li>
+  <li>visitor left path;</li>
   <li>route resumed;</li>
   <li>arrival cue triggered;</li>
   <li>tracking unstable;</li>

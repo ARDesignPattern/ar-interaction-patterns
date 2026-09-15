@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -209,9 +264,15 @@
 
 <h2 id="rationale">Rationale</h2>
 
-<p>Some museum exhibits are incomplete, fragmented, damaged, or difficult to understand as a whole from the physical remains alone. Fossils, machinery, relics, archaeological fragments, and reconstructed scientific objects often require visitors to imagine missing components and spatial relationships.</p>
+<p>Some museum exhibits are incomplete, fragmented, damaged, or difficult to understand as a whole from the physical remains alone. Fossils, machinery, historical objects, archaeological fragments, and reconstructed scientific objects often require visitors to imagine missing components and spatial relationships.</p>
 
-<p>AR Exhibit Reassembler turns this interpretive gap into an active reconstruction task. Instead of only showing the completed form, the pattern lets visitors participate in assembling it. This can support spatial reasoning, part-whole understanding, and memorable engagement while keeping the reconstructed elements anchored to the physical exhibit.</p>
+<p>AR Exhibit Reassembler turns this gap in understanding into an active reconstruction task. Instead of only showing the completed form, the pattern lets visitors participate in assembling it. This can support spatial reasoning, part-whole understanding, and memorable engagement while keeping the reconstructed elements anchored to the physical exhibit.</p>
+
+<hr />
+
+<h2 id="mechanic-based-interaction-logic">Mechanic-based interaction logic</h2>
+
+<p>This pattern is based on a reconstruction and puzzle-assembly mechanic. Visitors manipulate, align, and place virtual fragments in relation to an incomplete exhibit. The mechanic links piece matching, spatial arrangement, testing and adjustment, and progression feedback to the interpretive goal of understanding the exhibit as a reconstructed whole.</p>
 
 <hr />
 
@@ -219,13 +280,13 @@
 
 <p>When only partial physical artifacts are on display, visitors may struggle to grasp the complete structure, the relationships between parts, or the significance of missing components. Static reconstructions or explanatory panels can show the final result, but they may not help visitors understand how the parts fit together.</p>
 
-<p>In HMD-based AR, simply overlaying a completed reconstruction can also become passive. A more interactive structure is needed when visitors should actively explore how virtual pieces relate to the physical artifact and to one another.</p>
+<p>In HMD-based AR, simply overlaying a completed reconstruction can also become non-interactive. A more interactive structure is needed when visitors should actively explore how virtual pieces relate to the physical artifact and to one another.</p>
 
 <hr />
 
 <h2 id="context">Context</h2>
 
-<p>This pattern applies to HMD-AR museum experiences in which an exhibit contains missing, fragmented, disassembled, or reconstructable components. It is especially relevant for fossils, skeletal structures, machines, tools, relics, archaeological objects, damaged artifacts, or scientific models where digital reconstruction data is available.</p>
+<p>This pattern applies to HMD-AR museum experiences in which an exhibit contains missing, fragmented, disassembled, or reconstructable components. It is especially relevant for fossils, skeletal structures, machines, tools, historical objects, archaeological objects, damaged artifacts, or scientific models where digital reconstruction data is available.</p>
 
 <p>The pattern assumes that virtual pieces can be spatially registered to the physical exhibit or to a stable reconstruction area, and that visitors can manipulate pieces through hand interaction, gaze-assisted selection, simplified dragging, or another suitable HMD input method.</p>
 
@@ -244,7 +305,7 @@
   <li>the task can be completed within a short museum interaction time.</li>
 </ul>
 
-<p>Avoid using this pattern when spatial registration is too unstable for meaningful assembly, when the number of fragments would make the task too long, or when manipulation would distract from rather than clarify the exhibit. It may also be unsuitable when the exhibit’s interpretive value depends more on open reflection than on structural reconstruction.</p>
+<p>Avoid using this pattern when spatial registration is too unstable for meaningful assembly, when the number of fragments would make the task too long, or when manipulation would distract from rather than clarify the exhibit. It may also be unsuitable when the exhibit’s interpretive value depends more on open-ended interpretation than on structural reconstruction.</p>
 
 <hr />
 
@@ -277,13 +338,13 @@
 <h2 id="design-parameters-and-recommended-settings">Design Parameters and Recommended Settings</h2>
 
 <ul>
-  <li><strong>Piece count:</strong> Use approximately <strong>4–8 fragments</strong> to balance challenge, completion time, and museum attention span. Use fewer pieces for first-time users or crowded exhibition conditions.</li>
+  <li><strong>Piece count:</strong> Use approximately <strong>4–8 fragments</strong> to balance challenge, completion time, and time visitors can reasonably spend in a museum visit. Use fewer pieces for first-time users or crowded exhibition conditions.</li>
   <li><strong>Piece scale:</strong> Size virtual pieces so that they are easy to see and manipulate while remaining proportional to the exhibit. Avoid pieces that are too small for reliable HMD hand interaction.</li>
   <li><strong>Snap tolerance:</strong> Use a positional threshold of approximately <strong>0.2–0.5 metres</strong> and a rotational tolerance of approximately <strong>10–30°</strong>, adjusted according to exhibit scale and required accuracy.</li>
-  <li><strong>Docking-region visibility:</strong> Highlight initial docking regions with a pulsing outline, silhouette, ghost model, or low-opacity preview. Reduce assistance for later pieces if progressive challenge is desired.</li>
+  <li><strong>Docking-region visibility:</strong> Highlight initial docking regions with a pulsing outline, silhouette, transparent preview model, or low-opacity preview. Reduce assistance for later pieces if progressive challenge is desired.</li>
   <li><strong>Feedback delay:</strong> Confirm correct placement within approximately <strong>≤ 1 second</strong>. Delayed feedback can make visitors uncertain about whether the system recognized the action.</li>
-  <li><strong>Progress indicator:</strong> Show immediate progress after each correct placement, for example <strong>“3 of 8 pieces assembled”</strong>, a completion bar, or a gradually completed ghost model.</li>
-  <li><strong>Error handling:</strong> Provide forgiving correction logic. If a piece is placed incorrectly, return it gently, show a short hint, or keep it near the attempted position rather than abruptly resetting the interaction.</li>
+  <li><strong>Progress indicator:</strong> Show immediate progress after each correct placement, for example <strong>“3 of 8 pieces assembled”</strong>, a completion bar, or a gradually completed transparent preview model.</li>
+  <li><strong>Error handling:</strong> Provide flexible correction logic. If a piece is placed incorrectly, return it gently, show a short hint, or keep it near the attempted position rather than abruptly resetting the interaction.</li>
   <li><strong>Interaction method:</strong> Use direct hand manipulation, grab-and-place, gaze-assisted selection, or simplified drag interaction depending on device capability and expected user familiarity.</li>
   <li><strong>Instruction length:</strong> Keep initial instructions short. Demonstrate the first action through one highlighted piece or docking area rather than relying only on text.</li>
   <li><strong>Adaptive difficulty:</strong> Start with boundary, large, or visually distinctive pieces. Introduce subtler, mirrored, or more ambiguous pieces only when visitors have successfully completed earlier placements.</li>
@@ -298,7 +359,7 @@
 
 <p>When applied successfully, AR Exhibit Reassembler can support active learning, spatial reasoning, and memorable exhibit engagement. Visitors do not only see a completed reconstruction; they participate in creating it. This can make part-whole relationships easier to understand and can strengthen attention to the physical exhibit because the reconstruction is anchored to it.</p>
 
-<p>However, the pattern also introduces risks. If tracking, snapping, or alignment is unreliable, visitors may blame themselves or lose trust in the system. If the puzzle is too easy, it may feel trivial; if it is too difficult, it may cause frustration or extend beyond the available museum attention span. If feedback or guidance is too strong, the task loses its exploratory value; if it is too weak, visitors may not know what to do. The pattern therefore requires careful tuning of piece count, manipulation method, snap tolerance, difficulty progression, feedback timing, and interpretive framing.</p>
+<p>However, the pattern also introduces risks. If tracking, snapping, or alignment is unreliable, visitors may blame themselves or lose trust in the system. If the puzzle is too easy, it may feel unchallenging; if it is too difficult, it may cause frustration or extend beyond the available museum attention span. If feedback or guidance is too strong, the task loses its exploratory value; if it is too weak, visitors may not know what to do. The pattern therefore requires careful tuning of piece count, manipulation method, snap tolerance, difficulty progression, feedback timing, and interpretive framing.</p>
 
 <hr />
 

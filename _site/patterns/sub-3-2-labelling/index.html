@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -243,7 +298,7 @@
   <li>the exhibit is large, visually complex, or difficult to interpret without spatial annotations.</li>
 </ul>
 
-<p>Avoid using this pattern as the primary presentation mode when the exhibit has only one simple point of interest, when the number of labels would become excessive, or when spatial registration is too unstable to maintain reliable label-to-part alignment. It may also be unsuitable when labels would cover important visual details or interfere with a more immersive, narrative, or playful interaction.</p>
+<p>Avoid using this pattern as the primary presentation approach when the exhibit has only one simple point of interest, when the number of labels would become excessive, or when spatial registration is too unstable to maintain reliable label-to-part alignment. It may also be unsuitable when labels would cover important visual details or interfere with a more immersive, narrative, or playful interaction.</p>
 
 <hr />
 
@@ -267,7 +322,7 @@
 
 <p>A typical implementation contains four elements. First, a pointing line or spatial connector links the exhibit component to the virtual label. Second, a short title label is placed near the endpoint of the line, using legible typography and sufficient contrast. Third, a proximity trigger, gaze trigger, or selection trigger detects visitor interest in the label. Fourth, a detailed explanation panel fades in when triggered and fades out when the visitor moves away or deselects the label. The explanation panel may include text, images, short audio, a 3D highlight, or a small animation, but should remain focused on the selected component.</p>
 
-<p>The pattern should not display all detailed explanations simultaneously. The default state should remain lightweight, with only titles, lines, and possibly subtle highlights visible. When one label is active, other labels may remain visible in reduced form or be temporarily dimmed. This helps visitors focus on the selected component while preserving an overview of the exhibit structure.</p>
+<p>The pattern should not display all detailed explanations simultaneously. The default state should remain lightweight, with only titles, lines, and possibly subtle highlights visible. When one label is active, other labels may remain visible in reduced form or be temporarily shown less prominently. This helps visitors focus on the selected component while preserving an overview of the exhibit structure.</p>
 
 <hr />
 
@@ -278,13 +333,13 @@
   <li><strong>Line thickness:</strong> Use thin but visible pointing lines, approximately <strong>1–2 cm</strong> in perceived width, adjusted according to viewing distance, lighting, and exhibit scale.</li>
   <li><strong>Title distance:</strong> Place the title label approximately <strong>0.2–0.8 metres</strong> from the target component in 3D space, depending on component size, occlusion risk, and viewing angle.</li>
   <li><strong>Trigger radius:</strong> Use a proximity trigger radius of approximately <strong>1.2–3 metres</strong> around the label anchor or interaction zone. Reduce the radius in dense label arrangements and increase it for large exhibits.</li>
-  <li><strong>Activation method:</strong> Use proximity, gaze dwell, hand selection, or voice command depending on the required explicitness. Proximity is lightweight, while hand or gaze selection provides clearer agency.</li>
+  <li><strong>Activation method:</strong> Use proximity, gaze dwell, hand selection, or voice command depending on the required level of visitor control. Proximity is easy to use, while hand or gaze selection provides clearer visitor control.</li>
   <li><strong>Fade duration:</strong> Use a fade duration of approximately <strong>0.5 seconds</strong> for explanation panels so that information appears responsively without feeling abrupt.</li>
   <li><strong>Panel placement:</strong> Place detailed panels near the selected label but outside the main visual area of the exhibit component. Avoid placing panels directly over the physical feature being explained.</li>
   <li><strong>Typography:</strong> Use concise titles, high contrast, and readable font size. Detailed text should be short and broken into compact units.</li>
-  <li><strong>Highlight style:</strong> Optionally highlight the selected exhibit part through outline, glow, colour tint, or subtle animation. Use this carefully to avoid obscuring material details.</li>
+  <li><strong>Highlight style:</strong> Optionally highlight the selected exhibit part through outline, glow, colour tint, or subtle animation. Use this carefully to avoid covering material details.</li>
   <li><strong>Inactive label state:</strong> Keep inactive labels visible but visually secondary, or hide them progressively when the active panel is open.</li>
-  <li><strong>Flicker prevention:</strong> Add hysteresis or a small delay when entering and exiting trigger zones so that panels do not repeatedly appear and disappear due to minor visitor movement.</li>
+  <li><strong>Flicker prevention:</strong> Add small buffer or a small delay when entering and exiting trigger zones so that panels do not repeatedly appear and disappear due to minor visitor movement.</li>
   <li><strong>Fallback behaviour:</strong> If spatial alignment becomes unreliable, reduce labels to a more general overview mode, increase trigger tolerance, or provide a manual list of labels as backup.</li>
 </ul>
 
@@ -356,7 +411,7 @@
   <li>event-based handoff to other modules.</li>
 </ul>
 
-<p>Relevant exposed parameters include label title, label anchor, target component anchor, line thickness, line length, label offset, trigger radius, activation method, dwell time, panel content, panel position, fade duration, highlight style, inactive-label opacity, and fallback mode.</p>
+<p>Relevant exposed parameters include label title, label anchor, target component anchor, line thickness, line length, label offset, trigger radius, activation method, dwell time, panel content, panel position, fade duration, highlight style, inactive-label transparency, and fallback mode.</p>
 
 <p>Implementation-level events may include:</p>
 

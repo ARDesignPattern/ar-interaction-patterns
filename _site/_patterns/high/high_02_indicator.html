@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -217,7 +272,7 @@
 
 <p>The Experience Indicator class separates the general activation-support function from its concrete representation. This allows the system to maintain consistent discoverability, activation feedback, and lifecycle semantics across exhibits while allowing different activation forms, such as spatial entry zones, proximity triggers, concept-specific micro-tasks, voice prompts, or assisted activation.</p>
 
-<p>As a category-level class, Experience Indicator defines the shared interaction role, variation dimensions, state logic, and composition position of activation patterns without prescribing one fixed shape, distance, timing, or gesture.</p>
+<p>As a category-level class, Experience Indicator defines the shared interaction role, variation dimensions, state logic, and composition position of activation patterns without requiring one fixed shape, distance, timing, or gesture.</p>
 
 <hr />
 
@@ -264,7 +319,7 @@
   <li><strong>Discoverability vs. distraction:</strong> Indicators must stand out enough to be noticed, but should not clutter the scene or dominate the exhibit.</li>
   <li><strong>Consistency vs. local adaptation:</strong> The system should use a recognizable visual and interaction language, while still adapting to different exhibits, layouts, and activation needs.</li>
   <li><strong>Immediate feedback vs. subtlety:</strong> Activation should be confirmed clearly, but feedback should remain appropriate for the museum atmosphere.</li>
-  <li><strong>Automatic activation vs. visitor agency:</strong> Proximity-based activation is low-friction, but explicit confirmation may be needed when accidental activation is likely.</li>
+  <li><strong>Automatic activation vs. visitor control:</strong> Proximity-based activation is easy to use, but explicit confirmation may be needed when accidental activation is likely.</li>
   <li><strong>Accessibility vs. interaction richness:</strong> Activation cues should work for diverse visitors and device conditions, while still supporting richer concept-specific interactions when appropriate.</li>
   <li><strong>Indicator persistence vs. visual cleanliness:</strong> Always-visible indicators increase discoverability, but on-demand or proximity-based indicators reduce visual clutter.</li>
   <li><strong>Technical reliability vs. interpretive expressiveness:</strong> Simple triggers are robust, while richer knowledge-based triggers may communicate meaning more effectively but require more reliable interaction detection.</li>
@@ -293,12 +348,12 @@
   <li><strong>Activation mode:</strong> Use proximity, dwell, hand selection, gaze dwell, voice command, object manipulation, or concept-specific task completion depending on the intended level of agency and robustness.</li>
   <li><strong>State visibility:</strong> Define how the indicator changes between <strong>discoverable</strong>, <strong>candidate</strong>, <strong>confirmable</strong>, <strong>activated</strong>, <strong>inactive</strong>, and <strong>recovery</strong> states.</li>
   <li><strong>Persistence level:</strong> Decide whether indicators are always visible, shown on approach, revealed after guidance arrival, or hidden until the visitor looks toward the exhibit.</li>
-  <li><strong>Feedback mix:</strong> Combine visual feedback with optional spatial audio, text prompts, animation, or haptic feedback where available. Use at least two feedback channels when accessibility or environmental uncertainty is important.</li>
-  <li><strong>Feedback intensity:</strong> Tune glow, pulse, sound, motion, and label visibility so that activation is clear without producing jarring transitions.</li>
+  <li><strong>Feedback mix:</strong> Combine visual feedback with optional spatial audio, text prompts, animation, or body-based feedback where available. Use at least two feedback channels when accessibility or environmental uncertainty is important.</li>
+  <li><strong>Feedback intensity:</strong> Tune glow, pulse, sound, motion, and label visibility so that activation is clear without producing abrupt transitions.</li>
   <li><strong>False-activation prevention:</strong> Use dwell time, confirmation steps, proximity thresholds, or task completion when accidental activation is likely.</li>
-  <li><strong>Accessibility settings:</strong> Support readable labels, sufficient contrast, non-colour-dependent cues, adjustable audio, and alternative activation modes where possible.</li>
+  <li><strong>Accessibility settings:</strong> Support readable labels, sufficient contrast, non-colour-dependent cues, adjustable audio, and alternative activation methods where possible.</li>
   <li><strong>Recovery behaviour:</strong> Define what happens when the visitor fails to activate, leaves the zone, loses tracking, or activates the wrong exhibit.</li>
-  <li><strong>Analytics hooks:</strong> Record discovery, approach, confirmation, activation, cancellation, recovery, and exit events to support usability analysis and system debugging.</li>
+  <li><strong>Logging points:</strong> Record discovery, approach, confirmation, activation, cancellation, recovery, and exit events to support usability analysis and system debugging.</li>
 </ul>
 
 <hr />
@@ -307,7 +362,7 @@
 
 <p>When applied successfully, the Experience Indicator category increases the discoverability of AR content, reduces hesitation at exhibits, and supports a smoother transition from physical viewing to digital interaction. It also provides a reusable activation vocabulary across an exhibition, making the AR system easier to learn for first-time visitors.</p>
 
-<p>However, the category also introduces risks. Overuse of indicators can visually overload the exhibition space. Inconsistent activation semantics can confuse visitors and break expectations. Too much automation can reduce visitor agency, while overly explicit confirmation can slow down the visit. The category therefore requires careful balancing of discoverability, subtlety, activation reliability, feedback clarity, and local exhibit meaning.</p>
+<p>However, the category also introduces risks. Overuse of indicators can visually overload the exhibition space. Inconsistent activation semantics can confuse visitors and break expectations. Too much automation can reduce visitor control, while overly explicit confirmation can slow down the visit. The category therefore requires careful balancing of discoverability, subtlety, activation reliability, feedback clarity, and local exhibit meaning.</p>
 
 <hr />
 
@@ -355,7 +410,7 @@
 
 <p>The handoff from guidance should be clear. When visitors arrive at the point of interest, guidance cues should reduce intensity or end, and the indicator should become visually primary.</p>
 
-<p>The handoff to presentation should also be explicit. Once activation succeeds, the indicator should fade, transform, or become secondary so that visitors understand that the main AR experience has begun. If several AR-enabled exhibits are nearby, only the relevant or nearest indicator should become active, while others remain hidden or visually subdued.</p>
+<p>The handoff to presentation should also be explicit. Once activation succeeds, the indicator should fade, transform, or become secondary so that visitors understand that the main AR experience has begun. If several AR-enabled exhibits are nearby, only the relevant or nearest indicator should become active, while others remain hidden or shown less prominently.</p>
 
 <hr />
 
@@ -376,7 +431,7 @@
   <li>interaction-task definitions;</li>
   <li>feedback assets;</li>
   <li>fallback options;</li>
-  <li>telemetry hooks.</li>
+  <li>logging points.</li>
 </ul>
 
 <p>Implementation-level events may include:</p>

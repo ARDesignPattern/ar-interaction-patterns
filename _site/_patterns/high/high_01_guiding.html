@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -217,13 +272,13 @@
 
 <p>The PoI Guide class separates the general guidance function from its concrete representation. This allows creators to preserve a consistent guidance logic across an exhibition while choosing different guidance strategies according to route complexity, spatial layout, crowding, visitor intent, device capability, and desired narrative framing.</p>
 
-<p>As a category-level class, PoI Guide defines the shared interaction role, variation dimensions, state logic, and composition position of guidance patterns without prescribing a single visual form, distance threshold, or interaction technique.</p>
+<p>As a category-level class, PoI Guide defines the shared interaction role, variation dimensions, state logic, and composition position of guidance patterns without requiring a single visual form, distance threshold, or interaction technique.</p>
 
 <hr />
 
 <h2 id="problem">Problem</h2>
 
-<p>Visitors in AR-enhanced museum or exhibition environments may miss important points of interest because exhibits are spatially dispersed, only partly visible, insufficiently supported by physical signage, or difficult to locate through conventional maps.</p>
+<p>Visitors in AR-enhanced museum or exhibition environments may miss important points of interest because exhibits are distributed across the space, only partly visible, insufficiently supported by physical guidance, or difficult to locate through conventional maps.</p>
 
 <p>In HMD-based AR, this problem is intensified by limited field of view, divided attention, unfamiliar spatial cues, and the need to remain aware of other visitors and the physical environment while moving.</p>
 
@@ -272,8 +327,8 @@
   <li><strong>Guidance strength vs. exhibit attention:</strong> Strong guidance can improve orientation, but may draw attention away from physical exhibits and the surrounding museum environment.</li>
   <li><strong>Pacing vs. comfort:</strong> The route should support comfortable movement and avoid encouraging visitors to walk too quickly, turn sharply, or ignore obstacles.</li>
   <li><strong>Consistency vs. local adaptation:</strong> Guidance semantics should remain recognizable across an exhibition, while cue form, modality, and intensity may adapt to local spatial conditions.</li>
-  <li><strong>Multimodal redundancy vs. overload:</strong> Visual, auditory, and other feedback channels can reinforce orientation, but excessive simultaneous cues may become distracting.</li>
-  <li><strong>Spatial precision vs. recoverability:</strong> Guidance should be spatially meaningful, but must degrade gracefully when tracking confidence, route alignment, or visitor position becomes uncertain.</li>
+  <li><strong>Multimodal redundancy vs. overload:</strong> Visual, auditory, and other feedback channels can support orientation, but excessive simultaneous cues may become distracting.</li>
+  <li><strong>Spatial precision vs. recoverability:</strong> Guidance should be spatially meaningful, but must recover smoothly when tracking confidence, route alignment, or visitor position becomes uncertain.</li>
 </ul>
 
 <hr />
@@ -282,7 +337,7 @@
 
 <p>Define a system-level guidance structure that supports the visitor journey from point-of-interest selection to route preview, route commitment, navigation, turn anticipation, arrival, dwell, and continuation or exit.</p>
 
-<p>The guidance layer should provide continuous orientation without over-specifying one particular representation. It may be implemented through a virtual guide, floor-based route cues, forward-facing indicators, audio prompts, haptic cues, or hybrid forms.</p>
+<p>The guidance layer should provide continuous orientation without over-specifying one particular representation. It may be implemented through a virtual guide, floor-based route cues, forward-facing indicators, audio prompts, body-based cues, or hybrid forms.</p>
 
 <p>The category should preserve several invariants:</p>
 
@@ -309,7 +364,7 @@
 <h2 id="design-parameters-and-recommended-settings">Design Parameters and Recommended Settings</h2>
 
 <ul>
-  <li><strong>Guidance modality family:</strong> Select between avatar-based guidance, ground-based cues, forward-facing overlays, audio prompts, haptic cues, or hybrid combinations. Use <strong>Avatar Guide</strong> when a social, narrative, or pace-regulated guide is desirable; use <strong>Forward Cue-Routing</strong> when lightweight and unobtrusive route indication is preferred.</li>
+  <li><strong>Guidance modality family:</strong> Select between avatar-based guidance, ground-based cues, forward-facing overlays, audio prompts, haptic cues, or hybrid combinations. Use <strong>Avatar Guide</strong> when a social, narrative, or pace-regulated guide is desirable; use <strong>Forward Cue-Routing</strong> when lightweight and subtle route indication is preferred.</li>
   <li><strong>Routing policy:</strong> Define whether the route prioritizes shortest distance, smoothest movement, thematic order, accessibility, crowd avoidance, or curatorial narrative sequence.</li>
   <li><strong>Pacing policy:</strong> Decide whether guidance behaves as a leader, follower, fixed-rhythm cue, adaptive route assistant, or user-paced route display.</li>
   <li><strong>Anticipation horizon:</strong> Specify how early turns, junctions, or decision points should be announced. Increase anticipation in complex layouts and reduce it in short or narrow route segments.</li>
@@ -319,7 +374,7 @@
   <li><strong>Recovery behaviour:</strong> Define what happens when the visitor deviates, pauses, walks in the wrong direction, or tracking confidence becomes low. Recovery should be calm, reversible, and easy to understand.</li>
   <li><strong>Arrival definition:</strong> Define what counts as arrival, such as entering a radius around the point of interest, reaching a safe viewing position, or stopping within a predefined activation zone.</li>
   <li><strong>Accessibility settings:</strong> Support adjustable cue size, brightness, contrast, text size, audio volume, pacing tempo, and non-colour-dependent cue semantics where possible.</li>
-  <li><strong>Telemetry hooks:</strong> Record route start, cue display, deviation, pause, recovery, arrival, and route completion events to support evaluation and debugging.</li>
+  <li><strong>Logging points:</strong> Record route start, cue display, deviation, pause, recovery, arrival, and route completion events to support evaluation and debugging.</li>
 </ul>
 
 <hr />
@@ -397,12 +452,12 @@
   <li>route geometry;</li>
   <li>waypoint lists;</li>
   <li>safe viewing positions;</li>
-  <li>arrival radii;</li>
+  <li>arrival zones;</li>
   <li>localization-confidence values;</li>
   <li>cue-state definitions;</li>
   <li>route-state definitions;</li>
   <li>feedback-channel settings;</li>
-  <li>telemetry hooks.</li>
+  <li>logging hooks.</li>
 </ul>
 
 <p>Implementation-level events may include:</p>
@@ -415,7 +470,7 @@
   <li>cue displayed;</li>
   <li>turn anticipated;</li>
   <li>waypoint reached;</li>
-  <li>visitor deviated;</li>
+  <li>visitor left route;</li>
   <li>guidance paused;</li>
   <li>recovery started;</li>
   <li>tracking confidence low;</li>

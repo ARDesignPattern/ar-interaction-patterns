@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -211,7 +266,7 @@
 
 <p>In HMD-based AR museum visits, visitors often need to move through a physical exhibition space while maintaining awareness of exhibits, other visitors, and digital guidance cues. Map-based or symbolic guidance can require interpretation, while static indicators may not support walking pace or route-following behaviour.</p>
 
-<p>An avatar guide externalizes guidance as a visible moving entity. Visitors can follow the guide rather than continuously decode arrows, maps, or interface panels. This makes guidance easier to perceive as a spatial relation between visitor, guide, route, and destination. The pattern is especially useful when the guide can also support a thematic or narrative framing of the museum experience.</p>
+<p>An avatar guide externalizes guidance as a visible moving entity. Visitors can follow the guide rather than continuously interpret arrows, maps, or interface panels. This makes guidance easier to perceive as a spatial relation between visitor, guide, route, and destination. The pattern is especially useful when the guide can also support a thematic or narrative framing of the museum experience.</p>
 
 <hr />
 
@@ -251,7 +306,7 @@
   <li>the arrival point should trigger a clear transition into another interaction pattern, such as activation or exhibit-related presentation.</li>
 </ul>
 
-<p>Avoid using this pattern when the route is extremely short, when an avatar would visually distract from the exhibit, or when the exhibition space is too crowded or narrow for character-based guidance to remain comfortable and legible.</p>
+<p>Avoid using this pattern when the route is extremely short, when an avatar would visually distract from the exhibit, or when the exhibition space is too crowded or narrow for character-based guidance to remain comfortable and easy to follow.</p>
 
 <hr />
 
@@ -272,7 +327,7 @@
 
 <p>Implement a virtual guide that appears near the visitor or at the beginning of the route and moves along an authored path toward a target point of interest. The avatar should remain ahead of the visitor at a comfortable distance and adjust its behaviour according to the visitor’s position and movement.</p>
 
-<p>The avatar should use clear movement states. In an <strong>en-route</strong> state, it moves along the path at a moderate speed and remains visible ahead of the visitor. In a <strong>waiting</strong> state, it pauses when the visitor slows down, looks away, or falls too far behind. In a <strong>recovery</strong> state, it provides a simple cue when the visitor deviates from the route or when tracking confidence becomes low. At the point of interest, it enters an <strong>arrival</strong> state, stops at a safe position, and provides clear visual or auditory feedback that the destination has been reached.</p>
+<p>The avatar should use clear movement states. During <strong>active guidance</strong> state, it moves along the path at a moderate speed and remains visible ahead of the visitor. In a <strong>waiting</strong> state, it pauses when the visitor slows down, looks away, or falls too far behind. In a <strong>recovery</strong> state, it provides a simple cue when the visitor deviates from the route or when tracking confidence becomes low. At the point of interest, it enters an <strong>arrival</strong> state, stops at a safe position, and provides clear visual or auditory feedback that the destination has been reached.</p>
 
 <p>The avatar should not be overloaded with all presentation functions. Its primary role is to guide, pace, and announce arrival. After arrival, the experience may hand over to an activation pattern, such as <strong>Step-In Trigger</strong> or <strong>Exhibit Knowledge Trigger</strong>, and then to one or more presentation patterns, such as <strong>Sequential Explanation</strong> or <strong>AR Labelling</strong>. If the avatar remains visible during exhibit exploration, it should move into a quiet idle state or a clearly secondary support role.</p>
 
@@ -286,10 +341,10 @@
   <li><strong>Waypoint structure:</strong> Define route waypoints in relation to stable spatial anchors, exhibit positions, and safe walking paths.</li>
   <li><strong>Arrival radius:</strong> Use an arrival radius of approximately <strong>1.5–2.0 metres</strong>, adjusted according to exhibit size, safe viewing distance, and the expected activation position for the next pattern.</li>
   <li><strong>Avatar visibility:</strong> Keep the avatar large and visually distinct enough to be recognized in the HMD field of view, but avoid excessive size, brightness, or animation intensity.</li>
-  <li><strong>Prompt cadence:</strong> Use gentle prompts only when needed, for example when the visitor hesitates, deviates, or reaches a decision point.</li>
+  <li><strong>Prompt timing:</strong> Use gentle prompts only when needed, for example when the visitor hesitates, moves away from the intended route, or reaches a decision point.</li>
   <li><strong>Feedback modalities:</strong> Combine visual feedback with optional spatial audio or short verbal prompts.</li>
   <li><strong>Control access:</strong> Provide minimal visitor controls, such as <strong>Start</strong>, <strong>Pause</strong>, <strong>Resume</strong>, and <strong>End</strong>.</li>
-  <li><strong>State indication:</strong> Use subtle animation, posture, position, or optional visual markers to distinguish between <strong>en-route</strong>, <strong>waiting</strong>, <strong>paused</strong>, <strong>arrival</strong>, and <strong>recovery</strong> states.</li>
+  <li><strong>State indication:</strong> Use subtle animation, posture, position, or optional visual markers to distinguish between <strong>active guidance</strong>, <strong>waiting</strong>, <strong>paused</strong>, <strong>arrival</strong>, and <strong>recovery</strong> states.</li>
   <li><strong>Fallback behaviour:</strong> If localization, path following, or gesture input becomes unreliable, the avatar should stop in a safe state, provide a simple recovery cue, and allow the visitor to continue, restart, or end the guidance sequence.</li>
 </ul>
 
@@ -299,7 +354,7 @@
 
 <p>When applied successfully, the Avatar Guide can make spatial guidance more understandable, reduce the cognitive effort of interpreting route cues, and support a smoother transition from movement to exhibit engagement. It can also strengthen social presence and narrative coherence when the avatar’s visual identity is aligned with the museum theme or exhibition story.</p>
 
-<p>However, the pattern also introduces risks. A highly visible avatar may distract from physical exhibits or reduce visitor autonomy if it appears too directive. Poor animation, unstable spatial registration, or delayed path updates may reduce trust in the system. In crowded or narrow spaces, the avatar may become visually intrusive or difficult to follow. The pattern therefore requires careful tuning of visibility, distance, speed, feedback, and fallback behaviour.</p>
+<p>However, the pattern also introduces risks. A highly visible avatar may distract from physical exhibits or reduce visitor autonomy if it appears too directive. Poor animation, unstable spatial registration, or delayed path updates may reduce trust in the system. In crowded or narrow spaces, the avatar may become visually distracting or difficult to follow. The pattern therefore requires careful tuning of visibility, distance, speed, feedback, and fallback behaviour.</p>
 
 <hr />
 

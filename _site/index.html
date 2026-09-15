@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AR Pattern Library</title>
+  <title>HMD-AR Pattern System - Pattern Library</title>
   <link rel="canonical" href="http://localhost:4000/ar-interaction-patterns/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -20,14 +20,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -40,8 +46,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -49,17 +80,43 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="active">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class="active"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class=""
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
     <main>
-      <!-- HTML -->
-<section id="about" class="intro stacked">
-  <div class="intro-video-wrapper">
+      <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="about" class="intro stacked portal-hero">
+
+  <div class="intro-video-wrapper portal-video">
     <iframe
       src="https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg"
       title="YouTube video player"
@@ -68,55 +125,370 @@
       allowfullscreen
     ></iframe>
   </div>
-  <div class="intro-text-wrapper">
-    <h2 class="section-subtitle">Welcome to AR Interaction Patterns — A Research Showcase on HMD-Based Interaction Design in Augmented Reality</h2>
-    <p class="intro-text">
-      This website showcases the PhD research of <strong>Yu Liu</strong> at <strong>Hochschule RheinMain</strong>, focusing on the design and validation of interaction patterns for <span class="highlight">Head-Mounted Display (HMD)</span>-based <span class="highlight">Augmented Reality (AR)</span> experiences. It aims to support the development of intuitive, effective AR interactions—especially within <strong>cultural heritage</strong> contexts.
+
+  <div class="intro-text-wrapper portal-hero-text">
+    <p class="eyebrow">PhD Research Portal · HMD-Based Augmented Reality · Cultural Heritage</p>
+
+    <h1 class="portal-title">
+      A Research Portal for HMD-Based AR Interaction Design Patterns
+    </h1>
+
+    <p class="portal-lead">
+      This website presents the PhD research of <strong>Yu Liu</strong> at
+      <strong>Hochschule RheinMain</strong>, focusing on reusable, parameterized,
+      and empirically validated interaction design patterns for
+      <span class="highlight">Head-Mounted Display (HMD)</span>-based
+      <span class="highlight">Augmented Reality (AR)</span> in museum and
+      cultural heritage contexts.
     </p>
 
-    <div class="two-column-section">
-      <div class="two-column-block">
-        <div class="column-left">
-          <h3 class="intro-section-title">Library Structure</h3>
-        </div>
-        <div class="column-right">
-          <p class="intro-text tight">
-            This Library is structured around two main components:
-          </p>
-          <ul class="intro-text tight">
-            <li><strong>Design Patterns:</strong> A collection of rigorously developed HMD-based AR interaction patterns, presented through scenario descriptions, interaction flows, and an Event–Condition–Action (ECA) model.</li>
-            <li><strong>Technology Module (under development):</strong> A library of reusable Unity-based prefabs that implement these patterns, to be published on GitHub for direct integration.</li>
-          </ul>
-        </div>
+    <div class="hero-actions">
+      <a href="#pattern-system" class="button-primary">Explore the Pattern System</a>
+      <a href="#research-overview" class="button-secondary">View Research Overview</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- Library Structure and Research Context -->
+<section class="portal-section">
+  <div class="two-column-section">
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Design Pattern System</h3>
       </div>
 
-      <div class="two-column-block">
-        <div class="column-left">
-          <h3 class="intro-section-title">Research Context</h3>
-        </div>
-        <div class="column-right">
-          <p class="intro-text tight">
-            This work is embedded in two European projects: <a href="https://presentxr.de/" target="_blank">presentXR</a> and <a href="https://logaculture.eu/" target="_blank">LoGa Culture</a>, both exploring innovative AR interaction paradigms for museums and cultural institutions.
-          </p>
-          <p class="intro-text tight">
-            By bridging <em>design theory</em> and <em>technical implementation</em>, this project advances pattern-based methodologies in immersive media and invites collaboration and feedback from the global AR community.
-          </p>
-        </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          This pattern system is structured around two main components:
+        </p>
+
+        <ul class="intro-text tight">
+          <li>
+            <strong>Design Patterns:</strong> A two-level pattern system consisting of
+            category-level classes and application-level patterns for HMD-based AR
+            interaction design, presented through scenario descriptions, interaction
+            flows, design parameters, and implementation-oriented descriptions.
+          </li>
+
+          <li>
+            <strong>Technology Module (under development):</strong> A library of reusable
+            Unity-based prefabs that implement selected application-level patterns,
+            to be published on GitHub for direct integration and further adaptation.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Research Context</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text tight">
+          This work is embedded in two European projects:
+          <a href="https://presentxr.de/" target="_blank">presentXR</a> and
+          <a href="https://logaculture.eu/" target="_blank">LoGa Culture</a>,
+          both exploring innovative AR interaction paradigms for museums and
+          cultural institutions.
+        </p>
+
+        <p class="intro-text tight">
+          By bridging <em>design theory</em> and <em>technical implementation</em>,
+          this project advances pattern-based methodologies in immersive media
+          and invites collaboration and feedback from the global AR community.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Research Problem -->
+<section id="research-overview" class="portal-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Research Motivation</p>
+    <h2 class="section-title">Why HMD-Based AR Needs Reusable Interaction Patterns</h2>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Design Challenge</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          Museums and cultural heritage institutions increasingly experiment with
+          HMD-based AR to enrich visitor experiences. However, many AR applications
+          remain isolated prototypes that are difficult to adapt, reuse, or transfer
+          to new exhibits and museum settings.
+        </p>
+        <p class="intro-text tight">
+          At the same time, first-time visitors often have limited tolerance for
+          training, unfamiliar interaction techniques, and attention-demanding
+          interfaces. This creates a need for interaction solutions that are not only
+          engaging, but also understandable, reusable, and adaptable to situated
+          exhibition contexts.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Research Response</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          This research develops a two-level interaction pattern system for
+          HMD-based AR in museums. The system organizes recurring interaction
+          problems and solutions into category-level classes and application-level
+          patterns, supported by design parameters, composition logic, and
+          implementation-oriented descriptions.
+        </p>
+        <p class="intro-text tight">
+          The patterns are grounded in iterative prototype development, museum-based
+          studies, expert feedback, and cross-site reconfiguration across cultural
+          heritage scenarios.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 
+<!-- Contributions -->
+<section class="portal-section muted-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Research Contribution</p>
+    <h2 class="section-title">What This Portal Provides</h2>
+  </div>
+
+  <div class="portal-grid three-columns">
+    <div class="portal-card">
+      <h3>Two-Level Pattern System</h3>
+      <p>
+        A structured collection of category-level classes and application-level
+        patterns for organizing HMD-based AR interaction design in museum visits.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Parameterized Design Knowledge</h3>
+      <p>
+        Each pattern is described through recurring design problems, contexts,
+        forces, solutions, parameters, consequences, and relationships to other
+        patterns.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Implementation-Oriented Resources</h3>
+      <p>
+        The pattern descriptions are aligned with reusable Unity-based prefabs and
+        technical resources that support practical implementation and adaptation.
+      </p>
+    </div>
+  </div>
+</section>
 
 
-<!-- High-Level Patterns Section -->
+<!-- Pattern System Overview -->
+<section id="pattern-system" class="portal-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Pattern System</p>
+    <h2 class="section-title">From Visitor Journey to Reusable Interaction Patterns</h2>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Category-Level Classes</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          Category-level classes describe broader functional roles within the
+          museum visit, such as guiding visitors to points of interest, indicating
+          available AR experiences, and presenting exhibit-related information.
+        </p>
+        <p class="intro-text tight">
+          They help organize the pattern language around recurring phases of
+          HMD-based museum interaction.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Application-Level Patterns</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          Application-level patterns describe concrete and reusable interaction
+          solutions, such as avatar-based guidance, spatial triggers, sequential
+          explanation, AR labelling, reassembly tasks, feature drawing, and embodied
+          object-catching interactions.
+        </p>
+        <p class="intro-text tight">
+          These patterns can be combined into interaction flows and adapted through
+          configurable parameters according to exhibit content, spatial layout,
+          visitor needs, and technical constraints.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Research Process -->
+<section class="portal-section muted-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Research Process</p>
+    <h2 class="section-title">How the Pattern System Was Developed</h2>
+  </div>
+
+  <div class="portal-timeline">
+    <div class="timeline-item">
+      <span class="timeline-marker">1</span>
+      <div>
+        <h3>Early Interaction Analysis</h3>
+        <p>
+          The research began with the analysis of interaction challenges when
+          transferring AR interaction concepts from handheld devices to
+          head-mounted displays in exhibition contexts.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-marker">2</span>
+      <div>
+        <h3>Prototype-Led Exploration</h3>
+        <p>
+          Multiple HMD-based AR prototypes were developed and tested in relation to
+          guidance, onboarding, exhibit interpretation, playful interaction, and
+          visitor engagement.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-marker">3</span>
+      <div>
+        <h3>Pattern Derivation</h3>
+        <p>
+          Recurring interaction problems and reusable solutions were abstracted
+          from prototype iterations into a structured pattern schema with design
+          parameters and composition relationships.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-marker">4</span>
+      <div>
+        <h3>Evaluation and Reconfiguration</h3>
+        <p>
+          The resulting pattern system was examined through visitor-side
+          deployments, creator-side expert evaluation, and cross-site adaptation
+          across museum contexts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Validation -->
+<section class="portal-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Validation</p>
+    <h2 class="section-title">Evidence Behind the Pattern System</h2>
+  </div>
+
+  <div class="portal-grid three-columns">
+    <div class="portal-card">
+      <h3>Visitor-Side Evaluation</h3>
+      <p>
+        Museum visitors tested HMD-based AR prototypes under situated exhibition
+        conditions, supporting the analysis of usability, workload, presence,
+        attention, and interaction flow.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Creator-Side Evaluation</h3>
+      <p>
+        AR developers and cultural heritage practitioners assessed whether the
+        patterns support planning, communication, implementation thinking, and
+        exhibit-oriented adaptation.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Cross-Site Reconfiguration</h3>
+      <p>
+        Pattern compositions were adapted across comparable museum scenarios to
+        examine which interaction roles, relationships, and parameters remain
+        stable and which require local adjustment.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Technology Module -->
+<section class="portal-section muted-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Technology Module</p>
+    <h2 class="section-title">Toward Reusable Unity-Based AR Components</h2>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Reusable Prefabs</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          The technology module is under development as a library of Unity-based
+          prefabs corresponding to selected application-level patterns. These
+          prefabs are intended to support faster prototyping, adaptation, and
+          implementation of HMD-based AR interactions.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">GitHub Publication</h3>
+      </div>
+      <div class="column-right">
+        <p class="intro-text tight">
+          The reusable resources will be published through GitHub to support
+          research transparency, technical reuse, and further development by AR
+          designers, developers, and cultural heritage researchers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Category-Level Patterns Section -->
 <section id="patterns" class="gallery-section">
-  <h2 class="section-title">High-Level Patterns</h2>
+  <h2 class="section-title">Category-Level Patterns</h2>
+  <p class="section-description">
+    Category-level classes organize recurring functional roles in HMD-based museum
+    visits and provide the structural foundation for composing application-level
+    interaction patterns.
+  </p>
+
   <div class="gallery">
     
-
-  <div class="thumbnail guiding">
+    
+      <div class="thumbnail guiding">
     <a href="/ar-interaction-patterns/patterns/high-01-guiding/">
       <div class="image-container">
         
@@ -152,8 +524,8 @@
     <div class="color-bar guiding"></div>
   </div>
   
-
-  <div class="thumbnail indicator">
+    
+      <div class="thumbnail indicator">
     <a href="/ar-interaction-patterns/patterns/high-02-indicator/">
       <div class="image-container">
         
@@ -189,8 +561,8 @@
     <div class="color-bar indicator"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/high-03-presenter/">
       <div class="image-container">
         
@@ -226,17 +598,24 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
+    
   </div>
 </section>
 
-<!-- Sub-Patterns Section -->
+
+<!-- Application-Level Patterns Section -->
 <section class="gallery-section">
-  <h2 class="section-title">Sub-Level Patterns</h2>
+  <h2 class="section-title">Application-Level Patterns</h2>
+  <p class="section-description">
+    Application-level patterns describe concrete, reusable interaction solutions
+    that can be implemented, combined, and adapted for different exhibits,
+    visitor journeys, and HMD-based AR scenarios.
+  </p>
+
   <div class="gallery">
     
-
-  <div class="thumbnail guiding">
+    
+      <div class="thumbnail guiding">
     <a href="/ar-interaction-patterns/patterns/sub-1-1-avatar-guide/">
       <div class="image-container">
         
@@ -263,8 +642,8 @@
     <div class="color-bar guiding"></div>
   </div>
   
-
-  <div class="thumbnail guiding">
+    
+      <div class="thumbnail guiding">
     <a href="/ar-interaction-patterns/patterns/sub-1-2-forward-cue-routing/">
       <div class="image-container">
         
@@ -291,8 +670,8 @@
     <div class="color-bar guiding"></div>
   </div>
   
-
-  <div class="thumbnail indicator">
+    
+      <div class="thumbnail indicator">
     <a href="/ar-interaction-patterns/patterns/sub-2-1-floor-circle/">
       <div class="image-container">
         
@@ -319,8 +698,8 @@
     <div class="color-bar indicator"></div>
   </div>
   
-
-  <div class="thumbnail indicator">
+    
+      <div class="thumbnail indicator">
     <a href="/ar-interaction-patterns/patterns/sub-2-2-knowledge-trigger/">
       <div class="image-container">
         
@@ -347,8 +726,8 @@
     <div class="color-bar indicator"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/sub-3-1-sequential-explanation/">
       <div class="image-container">
         
@@ -375,8 +754,8 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/sub-3-2-labelling/">
       <div class="image-container">
         
@@ -403,8 +782,8 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/sub-3-3-ar-exhibit-reassembler/">
       <div class="image-container">
         
@@ -433,8 +812,8 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/sub-3-4-ar-feature-drawing/">
       <div class="image-container">
         
@@ -465,8 +844,8 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
-  <div class="thumbnail presenter">
+    
+      <div class="thumbnail presenter">
     <a href="/ar-interaction-patterns/patterns/sub-3-5-ar-threat-defender/">
       <div class="image-container">
         
@@ -497,11 +876,9 @@
     <div class="color-bar presenter"></div>
   </div>
   
-
+    
   </div>
 </section>
-
-<!-- JS for "More" toggle -->
     </main> 
   </div>
 

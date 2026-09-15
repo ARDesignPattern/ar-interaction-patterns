@@ -19,14 +19,20 @@
   <!-- 左侧 Logo 和 Tagline -->
   <div class="logo-section">
     <h4 class="logo">
-      <a href="/ar-interaction-patterns/index.html">AR Pattern Library</a>
+      <a href="/ar-interaction-patterns/index.html">HMD-AR Pattern System</a>
     </h4>
-    <p class="tagline">An HMD-based AR interaction design pattern collection</p>
+    <p class="tagline">
+      Reusable interaction design patterns for HMD-based AR in cultural heritage
+    </p>
   </div>
 
   <!-- 右侧搜索栏 + About & Contact 链接 + 移动端汉堡按钮 -->
   <div class="header-right">
-    <form class="search-form" action="/ar-interaction-patterns/search/" method="get">
+    <form
+      class="search-form"
+      action="/ar-interaction-patterns/search/"
+      method="get"
+    >
       <div class="search-input-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" name="q" placeholder="Search..." />
@@ -39,8 +45,33 @@
 
     <!-- Header 顶部右侧导航项 -->
     <ul class="header-nav">
-      <li><a href="/ar-interaction-patterns/about.html" class="">About</a></li>
-      <li><a href="/ar-interaction-patterns/contact.html" class="">Contact</a></li>
+      <li>
+        <a
+          href="/ar-interaction-patterns/about.html"
+          class=""
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/ar-interaction-patterns/contact.html"
+          class=""
+        >
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://yuliu.design/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Yu Liu ↗
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -48,10 +79,34 @@
 <!-- 一级主导航栏（页面主菜单） -->
 <nav class="navbar" id="mainNav">
   <ul class="nav-links">
-    <li><a href="/ar-interaction-patterns/index.html" class="">Home</a></li>
-    <li><a href="/ar-interaction-patterns/patterns.html" class="active">Patterns</a></li>
-    <li><a href="/ar-interaction-patterns/tech.html" class="">Technology</a></li>
-    <li><a href="/ar-interaction-patterns/literature.html" class="">Literature</a></li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/index.html"
+        class=""
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/patterns.html"
+        class="active"
+        >Patterns</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/tech.html"
+        class=""
+        >Technology</a
+      >
+    </li>
+    <li>
+      <a
+        href="/ar-interaction-patterns/literature.html"
+        class=""
+        >Literature</a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -185,7 +240,7 @@
 
 <h1 id="exhibit-knowledge-trigger">Exhibit Knowledge Trigger</h1>
 
-<p>A brief concept-linked interaction that primes visitors and unlocks deeper AR content through a meaningful exhibit-related action.</p>
+<p>A brief concept-linked interaction that prepares visitors and unlocks deeper AR content through a meaningful exhibit-related action.</p>
 
 <hr />
 
@@ -203,7 +258,7 @@
 
 <h2 id="intent">Intent</h2>
 
-<p>Surface a single high-value exhibit concept through a brief, goal-oriented AR interaction that helps visitors recognize the relevance of the exhibit and unlocks deeper AR content after the concept has been enacted or discovered.</p>
+<p>Introduce one important exhibit concept through a brief, goal-oriented AR interaction that helps visitors recognize the relevance of the exhibit and unlocks deeper AR content after the concept has been enacted or discovered.</p>
 
 <hr />
 
@@ -211,7 +266,7 @@
 
 <p>In HMD-based AR museum experiences, visitors may notice visual prompts or virtual objects without understanding their interpretive purpose. An exhibit-related micro-task can make a key concept more tangible by requiring visitors to perform a short action that demonstrates cause and effect, such as moving an object, revealing a hidden mechanism, or completing a simple spatial relation.</p>
 
-<p>This pattern treats activation not only as a technical trigger, but also as a meaningful interpretive bridge between the physical exhibit and the subsequent AR presentation. It is especially useful when the exhibit contains a scientific, cultural, behavioural, or functional idea that can be introduced through a single embodied action before richer content is displayed.</p>
+<p>This pattern treats activation not only as a technical trigger, but also as a meaningful meaningful transition between the physical exhibit and the subsequent AR presentation. It is especially useful when the exhibit contains a scientific, cultural, behavioural, or functional idea that can be introduced through a single embodied action before richer content is displayed.</p>
 
 <hr />
 
@@ -225,9 +280,9 @@
 
 <h2 id="context">Context</h2>
 
-<p>This pattern applies to HMD-AR museum experiences in which a physical exhibit contains a specific concept that benefits from a short, hands-on or embodied demonstration. It is especially relevant for exhibits that involve behaviour, function, mechanism, ecology, anatomy, historical use, or transformation.</p>
+<p>This pattern applies to HMD-AR museum experiences in which a physical exhibit contains a specific concept that benefits from a short, hands-on or embodied demonstration. It is especially relevant for exhibits that involve behaviour, function, mechanism, ecology, structure, historical use, or transformation.</p>
 
-<p>The pattern assumes that auxiliary virtual objects, target zones, or interaction markers can be placed near the primary exhibit with sufficient spatial stability, and that visitors can complete a simple one-step or short-loop interaction without extensive instruction.</p>
+<p>The pattern assumes that supporting virtual objects, target zones, or interaction markers can be placed near the primary exhibit with sufficient spatial stability, and that visitors can complete a simple one-step or short-loop interaction without extensive instruction.</p>
 
 <hr />
 
@@ -250,11 +305,11 @@
 <h2 id="forces">Forces</h2>
 
 <ul>
-  <li><strong>Engagement vs. friction:</strong> The task should invite participation and curiosity, but remain short and easy enough for first-time HMD users.</li>
+  <li><strong>Engagement vs. Effort:</strong> The task should invite participation and curiosity, but remain short and easy enough for first-time HMD users.</li>
   <li><strong>Conceptual meaning vs. decorative action:</strong> The interaction must demonstrate or reveal a meaningful exhibit concept, rather than functioning as an arbitrary game-like action.</li>
   <li><strong>Focus vs. distraction:</strong> The micro-task should foreground the exhibit concept without pulling attention too far away from the physical exhibit.</li>
   <li><strong>Spatial accuracy vs. tolerance:</strong> Object placement, grab detection, and target-zone detection require sufficient precision, but should remain tolerant enough to avoid repeated failure.</li>
-  <li><strong>Feedback clarity vs. visual clutter:</strong> Visitors need clear confirmation of progress and success, but excessive effects can make the task feel gimmicky.</li>
+  <li><strong>Feedback clarity vs. visual clutter:</strong> Visitors need clear confirmation of progress and success, but excessive effects can make the task feel superficial.</li>
   <li><strong>Short activation vs. deeper content:</strong> The task should be brief, while the content unlocked after completion should provide the fuller interpretive explanation.</li>
 </ul>
 
@@ -262,7 +317,7 @@
 
 <h2 id="solution">Solution</h2>
 
-<p>Place a short exhibit-related AR micro-task between arrival at the point of interest and the main AR presentation. The task should involve one key action that makes an important concept perceptible, such as grabbing an auxiliary object, moving it toward a target, matching it with an exhibit part, revealing a hidden mechanism, or completing a simple cause-and-effect relation.</p>
+<p>Place a short exhibit-related AR micro-task between arrival at the point of interest and the main AR presentation. The task should involve one key action that makes an important concept perceptible, such as grabbing a supporting object, moving it toward a target, matching it with an exhibit part, revealing a hidden mechanism, or completing a simple cause-and-effect relation.</p>
 
 <p>The interaction should begin with a clear prompt and a visible affordance. For example, a virtual fish may appear near an orca exhibit to introduce the concept of echolocation and predation. When the visitor grabs or selects the fish, the orca can orient toward it, a pulsed sonar visualization can appear, and spatial audio can communicate the concept through sound.</p>
 
@@ -275,17 +330,17 @@
 <h2 id="design-parameters-and-recommended-settings">Design Parameters and Recommended Settings</h2>
 
 <ul>
-  <li><strong>Auxiliary object position:</strong> Place the auxiliary virtual object approximately <strong>2–3 metres</strong> from the primary exhibit, adjusted according to safe movement space and exhibit visibility.</li>
+  <li><strong>Auxiliary object position:</strong> Place the supporting virtual objects approximately <strong>2–3 metres</strong> from the primary exhibit, adjusted according to safe movement space and exhibit visibility.</li>
   <li><strong>Target-zone position:</strong> Align the target zone with a meaningful exhibit-related location, such as the orca’s mouth, a body part, mechanism, tool, or object relation.</li>
   <li><strong>Drop-zone radius:</strong> Use a target radius of approximately <strong>0.5–0.8 metres</strong>, adjusted according to tracking stability, object size, and desired difficulty.</li>
-  <li><strong>Grab or selection affordance:</strong> Use a subtle highlight, outline, icon, or short prompt to indicate that the auxiliary object can be interacted with.</li>
+  <li><strong>Grab or selection affordance:</strong> Use a subtle highlight, outline, icon, or short prompt to indicate that the supporting object can be interacted with.</li>
   <li><strong>Task prompt:</strong> Use a short instruction through text, voice, or both, such as asking the visitor to move the object toward the exhibit.</li>
   <li><strong>Progress feedback:</strong> Provide feedback while the object approaches the target, for example through increasing glow, pulsed animation, directional sound, or concept-related visualization.</li>
   <li><strong>Success feedback:</strong> Use a short confirmation cue, such as a chime, capture tone, pulse, object animation, or exhibit response.</li>
   <li><strong>Chime duration:</strong> Keep confirmation audio short, for example approximately <strong>0.3 seconds</strong>.</li>
   <li><strong>Panel fade-in:</strong> Use a short transition of approximately <strong>0.5 seconds</strong> when the follow-up content appears.</li>
   <li><strong>Success threshold:</strong> Define whether completion requires entering the target zone, releasing the object, holding it briefly, or reaching a stable proximity condition.</li>
-  <li><strong>Reset behaviour:</strong> If the object is dropped incorrectly, exits the interaction area, or tracking becomes unstable, reset it gracefully or provide a simple recovery cue.</li>
+  <li><strong>Reset behaviour:</strong> If the object is dropped incorrectly, exits the interaction area, or tracking becomes unstable, reset it without disrupting the experience or provide a simple recovery cue.</li>
   <li><strong>Fallback option:</strong> Provide a skip, retry, or assisted activation option if the visitor cannot complete the micro-task.</li>
 </ul>
 
@@ -351,7 +406,7 @@
 <p>The pattern can be implemented as a reusable knowledge-trigger module or Unity prefab that combines:</p>
 
 <ul>
-  <li>an auxiliary virtual object;</li>
+  <li>a supporting virtual object;</li>
   <li>an exhibit-related target zone;</li>
   <li>interaction-state logic;</li>
   <li>grab or selection detection;</li>
@@ -360,7 +415,7 @@
   <li>event-based handoff to subsequent presentation modules.</li>
 </ul>
 
-<p>Relevant exposed parameters include concept label, auxiliary object prefab, object start position, target-zone position, drop-zone radius, grab affordance style, task prompt, progress-feedback intensity, audio cue, success animation, success threshold, reset behaviour, panel fade-in time, and fallback option.</p>
+<p>Relevant exposed parameters include concept label, supporting object prefab, object start position, target-zone position, drop-zone radius, grab affordance style, task prompt, progress-feedback intensity, audio cue, success animation, success threshold, reset behaviour, panel fade-in time, and fallback option.</p>
 
 <p>Implementation-level events may include:</p>
 
