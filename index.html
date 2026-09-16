@@ -7,19 +7,64 @@ permalink: /index.html
 <!-- Hero Section -->
 <!-- Hero Section -->
 <section id="about" class="intro stacked portal-hero">
+  <div class="intro-video-wrapper portal-video dual-video-player">
+    <div class="video-platform-switch">
+      <button type="button" class="video-switch active" data-platform="youtube">
+        YouTube
+      </button>
 
-  <div class="intro-video-wrapper portal-video">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+      <button type="button" class="video-switch" data-platform="bilibili">
+        Bilibili
+      </button>
+    </div>
+
+    <div class="video-frame-wrapper">
+      <iframe
+        id="hero-video-player"
+        src="https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg"
+        title="Project video"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+        "
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 
+  <script>
+    const player = document.getElementById("hero-video-player");
+    const buttons = document.querySelectorAll(".video-switch");
+
+    const sources = {
+      youtube: "https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg",
+
+      bilibili:
+        "https://player.bilibili.com/player.html?bvid=BV16NirY7Ezg&page=1",
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const platform = button.dataset.platform;
+
+        player.src = sources[platform];
+
+        buttons.forEach((btn) => {
+          btn.classList.toggle("active", btn === button);
+        });
+      });
+    });
+  </script>
+
   <div class="intro-text-wrapper portal-hero-text">
-    <p class="eyebrow">PhD Research Portal · HMD-Based Augmented Reality · Cultural Heritage</p>
+    <p class="eyebrow">
+      PhD Research Portal · HMD-Based Augmented Reality · Cultural Heritage
+    </p>
 
     <h1 class="portal-title">
       A Research Portal for HMD-Based AR Interaction Design Patterns
@@ -27,25 +72,27 @@ permalink: /index.html
 
     <p class="portal-lead">
       This website presents the PhD research of <strong>Yu Liu</strong> at
-      <strong>Hochschule RheinMain</strong>, focusing on reusable, parameterized,
-      and empirically validated interaction design patterns for
+      <strong>Hochschule RheinMain</strong>, focusing on reusable,
+      parameterized, and empirically validated interaction design patterns for
       <span class="highlight">Head-Mounted Display (HMD)</span>-based
       <span class="highlight">Augmented Reality (AR)</span> in museum and
       cultural heritage contexts.
     </p>
 
     <div class="hero-actions">
-      <a href="#pattern-system" class="button-primary">Explore the Pattern System</a>
-      <a href="#research-overview" class="button-secondary">View Research Overview</a>
+      <a href="#pattern-system" class="button-primary"
+        >Explore the Pattern System</a
+      >
+      <a href="#research-overview" class="button-secondary"
+        >View Research Overview</a
+      >
     </div>
   </div>
-
 </section>
 
 <!-- Library Structure and Research Context -->
 <section class="portal-section">
   <div class="two-column-section">
-
     <div class="two-column-block">
       <div class="column-left">
         <h3 class="intro-section-title">Design Pattern System</h3>
@@ -58,16 +105,18 @@ permalink: /index.html
 
         <ul class="intro-text tight">
           <li>
-            <strong>Design Patterns:</strong> A two-level pattern system consisting of
-            category-level classes and application-level patterns for HMD-based AR
-            interaction design, presented through scenario descriptions, interaction
-            flows, design parameters, and implementation-oriented descriptions.
+            <strong>Design Patterns:</strong> A two-level pattern system
+            consisting of category-level classes and application-level patterns
+            for HMD-based AR interaction design, presented through scenario
+            descriptions, interaction flows, design parameters, and
+            implementation-oriented descriptions.
           </li>
 
           <li>
-            <strong>Technology Module (under development):</strong> A library of reusable
-            Unity-based prefabs that implement selected application-level patterns,
-            to be published on GitHub for direct integration and further adaptation.
+            <strong>Technology Module (under development):</strong> A library of
+            reusable Unity-based prefabs that implement selected
+            application-level patterns, to be published on GitHub for direct
+            integration and further adaptation.
           </li>
         </ul>
       </div>
@@ -88,13 +137,13 @@ permalink: /index.html
         </p>
 
         <p class="intro-text tight">
-          By bridging <em>design theory</em> and <em>technical implementation</em>,
-          this project advances pattern-based methodologies in immersive media
-          and invites collaboration and feedback from the global AR community.
+          By bridging <em>design theory</em> and
+          <em>technical implementation</em>, this project advances pattern-based
+          methodologies in immersive media and invites collaboration and
+          feedback from the global AR community.
         </p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -102,7 +151,9 @@ permalink: /index.html
 <section id="research-overview" class="portal-section">
   <div class="section-heading-block">
     <p class="eyebrow">Research Motivation</p>
-    <h2 class="section-title">Why HMD-Based AR Needs Reusable Interaction Patterns</h2>
+    <h2 class="section-title">
+      Why HMD-Based AR Needs Reusable Interaction Patterns
+    </h2>
   </div>
 
   <div class="two-column-section">
@@ -112,17 +163,17 @@ permalink: /index.html
       </div>
       <div class="column-right">
         <p class="intro-text tight">
-          Museums and cultural heritage institutions increasingly experiment with
-          HMD-based AR to enrich visitor experiences. However, many AR applications
-          remain isolated prototypes that are difficult to adapt, reuse, or transfer
-          to new exhibits and museum settings.
+          Museums and cultural heritage institutions increasingly experiment
+          with HMD-based AR to enrich visitor experiences. However, many AR
+          applications remain isolated prototypes that are difficult to adapt,
+          reuse, or transfer to new exhibits and museum settings.
         </p>
         <p class="intro-text tight">
           At the same time, first-time visitors often have limited tolerance for
           training, unfamiliar interaction techniques, and attention-demanding
-          interfaces. This creates a need for interaction solutions that are not only
-          engaging, but also understandable, reusable, and adaptable to situated
-          exhibition contexts.
+          interfaces. This creates a need for interaction solutions that are not
+          only engaging, but also understandable, reusable, and adaptable to
+          situated exhibition contexts.
         </p>
       </div>
     </div>
@@ -135,20 +186,19 @@ permalink: /index.html
         <p class="intro-text tight">
           This research develops a two-level interaction pattern system for
           HMD-based AR in museums. The system organizes recurring interaction
-          problems and solutions into category-level classes and application-level
-          patterns, supported by design parameters, composition logic, and
-          implementation-oriented descriptions.
+          problems and solutions into category-level classes and
+          application-level patterns, supported by design parameters,
+          composition logic, and implementation-oriented descriptions.
         </p>
         <p class="intro-text tight">
-          The patterns are grounded in iterative prototype development, museum-based
-          studies, expert feedback, and cross-site reconfiguration across cultural
-          heritage scenarios.
+          The patterns are grounded in iterative prototype development,
+          museum-based studies, expert feedback, and cross-site reconfiguration
+          across cultural heritage scenarios.
         </p>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Contributions -->
 <section class="portal-section muted-section">
@@ -162,7 +212,8 @@ permalink: /index.html
       <h3>Two-Level Pattern System</h3>
       <p>
         A structured collection of category-level classes and application-level
-        patterns for organizing HMD-based AR interaction design in museum visits.
+        patterns for organizing HMD-based AR interaction design in museum
+        visits.
       </p>
     </div>
 
@@ -178,19 +229,21 @@ permalink: /index.html
     <div class="portal-card">
       <h3>Implementation-Oriented Resources</h3>
       <p>
-        The pattern descriptions are aligned with reusable Unity-based prefabs and
-        technical resources that support practical implementation and adaptation.
+        The pattern descriptions are aligned with reusable Unity-based prefabs
+        and technical resources that support practical implementation and
+        adaptation.
       </p>
     </div>
   </div>
 </section>
 
-
 <!-- Pattern System Overview -->
 <section id="pattern-system" class="portal-section">
   <div class="section-heading-block">
     <p class="eyebrow">Pattern System</p>
-    <h2 class="section-title">From Visitor Journey to Reusable Interaction Patterns</h2>
+    <h2 class="section-title">
+      From Visitor Journey to Reusable Interaction Patterns
+    </h2>
   </div>
 
   <div class="two-column-section">
@@ -201,8 +254,9 @@ permalink: /index.html
       <div class="column-right">
         <p class="intro-text tight">
           Category-level classes describe broader functional roles within the
-          museum visit, such as guiding visitors to points of interest, indicating
-          available AR experiences, and presenting exhibit-related information.
+          museum visit, such as guiding visitors to points of interest,
+          indicating available AR experiences, and presenting exhibit-related
+          information.
         </p>
         <p class="intro-text tight">
           They help organize the pattern language around recurring phases of
@@ -219,19 +273,18 @@ permalink: /index.html
         <p class="intro-text tight">
           Application-level patterns describe concrete and reusable interaction
           solutions, such as avatar-based guidance, spatial triggers, sequential
-          explanation, AR labelling, reassembly tasks, feature drawing, and embodied
-          object-catching interactions.
+          explanation, AR labelling, reassembly tasks, feature drawing, and
+          embodied object-catching interactions.
         </p>
         <p class="intro-text tight">
-          These patterns can be combined into interaction flows and adapted through
-          configurable parameters according to exhibit content, spatial layout,
-          visitor needs, and technical constraints.
+          These patterns can be combined into interaction flows and adapted
+          through configurable parameters according to exhibit content, spatial
+          layout, visitor needs, and technical constraints.
         </p>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Research Process -->
 <section class="portal-section muted-section">
@@ -258,9 +311,9 @@ permalink: /index.html
       <div>
         <h3>Prototype-Led Exploration</h3>
         <p>
-          Multiple HMD-based AR prototypes were developed and tested in relation to
-          guidance, onboarding, exhibit interpretation, playful interaction, and
-          visitor engagement.
+          Multiple HMD-based AR prototypes were developed and tested in relation
+          to guidance, onboarding, exhibit interpretation, playful interaction,
+          and visitor engagement.
         </p>
       </div>
     </div>
@@ -290,7 +343,6 @@ permalink: /index.html
     </div>
   </div>
 </section>
-
 
 <!-- Validation -->
 <section class="portal-section">
@@ -329,7 +381,6 @@ permalink: /index.html
   </div>
 </section>
 
-
 <!-- Technology Module -->
 <section class="portal-section muted-section">
   <div class="section-heading-block">
@@ -367,24 +418,21 @@ permalink: /index.html
   </div>
 </section>
 
-
 <!-- Category-Level Patterns Section -->
 <section id="patterns" class="gallery-section">
   <h2 class="section-title">Category-Level Patterns</h2>
   <p class="section-description">
-    Category-level classes organize recurring functional roles in HMD-based museum
-    visits and provide the structural foundation for composing application-level
-    interaction patterns.
+    Category-level classes organize recurring functional roles in HMD-based
+    museum visits and provide the structural foundation for composing
+    application-level interaction patterns.
   </p>
 
   <div class="gallery">
-    {% assign high_level_patterns = site.patterns | where: "category", "high-level" | sort: "order" %}
-    {% for pattern in high_level_patterns %}
-      {% include pattern-card.html pattern=pattern %}
-    {% endfor %}
+    {% assign high_level_patterns = site.patterns | where: "category",
+    "high-level" | sort: "order" %} {% for pattern in high_level_patterns %} {%
+    include pattern-card.html pattern=pattern %} {% endfor %}
   </div>
 </section>
-
 
 <!-- Application-Level Patterns Section -->
 <section class="gallery-section">
@@ -396,9 +444,8 @@ permalink: /index.html
   </p>
 
   <div class="gallery">
-    {% assign sub_level_patterns = site.patterns | where: "category", "sub-level" | sort: "order" %}
-    {% for pattern in sub_level_patterns %}
-      {% include pattern-card.html pattern=pattern %}
-    {% endfor %}
+    {% assign sub_level_patterns = site.patterns | where: "category",
+    "sub-level" | sort: "order" %} {% for pattern in sub_level_patterns %} {%
+    include pattern-card.html pattern=pattern %} {% endfor %}
   </div>
 </section>

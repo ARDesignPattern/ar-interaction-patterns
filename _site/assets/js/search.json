@@ -11,7 +11,7 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/contact.html",
-    "excerpt": "<section class=\"page-section\">  <h1 class=\"page-title\">Get in Touch</h1>  <p class=\"intro-text\">    If you are interested in AR interaction design, collaboration opportunities, or would like to con..."
+    "excerpt": "<section class=\"page-section\">  <h1 class=\"page-title\">Get in Touch</h1>  <p class=\"intro-text\">    If you are interested in AR interaction design, collaboration opportunities,    or would like to ..."
   },
 
   {
@@ -47,7 +47,7 @@
   {
     "title": "Untitled",
     "url": "/ar-interaction-patterns/index.html",
-    "excerpt": "<!-- Hero Section --><!-- Hero Section --><section id=\"about\" class=\"intro stacked portal-hero\">  <div class=\"intro-video-wrapper portal-video\">    <iframe      src=\"https://www.youtube-nocookie.co..."
+    "excerpt": "<!-- Hero Section --><!-- Hero Section --><section id=\"about\" class=\"intro stacked portal-hero\">  <div class=\"intro-video-wrapper portal-video dual-video-player\">    <div class=\"video-platform-swit..."
   },
 
   {
