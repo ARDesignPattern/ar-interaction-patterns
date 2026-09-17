@@ -19,45 +19,60 @@ permalink: /literature.html
       <h2 class="literature-year-title">{{ year.name }}</h2>
 
       {% for pub in year.items %}
-      <article class="literature-item">
-        <h3 class="literature-title">{{ pub.title }}</h3>
 
-        <p class="literature-authors">{{ pub.authors | join: ", " }}</p>
-
-        <p class="literature-venue">{{ pub.venue }}</p>
-
-        {% if pub.abstract and pub.abstract != "" %}
-        <p class="literature-abstract">{{ pub.abstract }}</p>
-        {% endif %} {% if pub.topics and pub.topics.size > 0 %}
-        <div class="literature-topics">
-          {% for topic in pub.topics %}
-          <span class="literature-topic">{{ topic }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        <div class="literature-links">
-          {% if pub.doi and pub.doi != "" %}
-          <a
-            class="literature-link"
-            href="https://doi.org/{{ pub.doi }}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DOI ↗
-          </a>
-          {% endif %} {% if pub.url and pub.url != "" %}
-          <a
-            class="literature-link"
-            href="{{ pub.url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View publication ↗
-          </a>
+      <article class="literature-item" id="{{ pub.slug }}">
+        <div class="literature-image-column">
+          {% if pub.image and pub.image != "" %}
+          <img
+            class="literature-image"
+            src="{{ pub.image }}"
+            alt="Figure from {{ pub.title }}"
+            loading="lazy"
+          />
           {% endif %}
         </div>
+
+        <div class="literature-content-column">
+          <p class="literature-meta">{{ pub.venue }}</p>
+
+          <h3 class="literature-title">{{ pub.title }}</h3>
+
+          <p class="literature-authors">{{ pub.authors | join: ", " }}</p>
+
+          {% if pub.abstract and pub.abstract != "" %}
+          <p class="literature-abstract">{{ pub.abstract }}</p>
+          {% endif %} {% if pub.topics and pub.topics.size > 0 %}
+          <div class="literature-topics">
+            {% for topic in pub.topics %}
+            <span class="literature-topic"> {{ topic }} </span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="literature-links">
+            {% if pub.doi and pub.doi != "" %}
+            <a
+              class="literature-link"
+              href="https://doi.org/{{ pub.doi }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DOI ↗
+            </a>
+            {% endif %} {% if pub.url and pub.url != "" %}
+            <a
+              class="literature-link"
+              href="{{ pub.url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Publication ↗
+            </a>
+            {% endif %}
+          </div>
+        </div>
       </article>
+
       {% endfor %}
     </section>
     {% endfor %}

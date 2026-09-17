@@ -5,83 +5,183 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
+  background: #fff;
   margin: 0;
 }
 
 html,
 body {
   overflow-x: hidden;
-  overflow-y: scroll; /* 防止滚动条影响布局跳动 */
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-}
-
+/* Page wrapper */
 .page-section {
-  padding: 2rem 2rem;
+  padding: 2.5rem 2rem 4rem;
 }
 
 .page-title {
+  margin: 0 0 1rem;
   font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #222;
 }
 
 .intro-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 0 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #555;
 }
 
-.literature-item {
-  padding: 1.5rem 0 2rem;
-  border-bottom: 1px solid #e6e6e6;
+/* Year group */
+.literature-year {
+  margin-top: 2.5rem;
 }
 
-.literature-title {
-  margin-bottom: 0.6rem;
+.literature-year:first-child {
+  margin-top: 0;
 }
 
-.literature-authors,
-.literature-venue {
-  margin: 0.25rem 0;
+.literature-year-title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
 }
 
-.literature-abstract {
-  max-width: 760px;
-  margin-top: 1rem;
-  line-height: 1.6;
+/* Two-column publication layout */
+.page-section .literature-item {
+  display: grid;
+  grid-template-columns: minmax(260px, 38%) minmax(0, 62%);
+  gap: 2.5rem;
+  align-items: start;
+
+  padding: 3rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Left image column */
+.page-section .literature-image-column {
+  min-width: 0;
+}
+
+.page-section .literature-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 320px;
+  height: auto;
+
+  object-fit: contain;
+  object-position: top left;
+
+  background: #f7f7f7;
+}
+
+/* Right content column */
+.page-section .literature-content-column {
+  min-width: 0;
+}
+
+.page-section .literature-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+}
+
+.page-section .literature-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #222;
+}
+
+.page-section .literature-authors {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.page-section .literature-abstract {
+  margin: 1.25rem 0 0;
+  max-width: 720px;
+
+  font-size: 1rem;
+  line-height: 1.65;
   color: #444;
 }
 
-.literature-topics {
+/* Topic tags */
+.page-section .literature-topics {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1rem;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
 }
 
-.literature-topic {
-  padding: 0.3rem 0.55rem;
+.page-section .literature-topic {
+  padding: 0.3rem 0.6rem;
   border: 1px solid #d8d8d8;
   border-radius: 999px;
-  font-size: 0.8rem;
+
+  font-size: 0.78rem;
+  line-height: 1;
   color: #555;
 }
 
-.literature-links {
+/* Links */
+.page-section .literature-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
-.literature-link {
+.page-section .literature-link {
+  font-size: 0.9rem;
+  color: #0066cc;
   text-decoration: none;
+}
+
+.page-section .literature-link:hover {
+  text-decoration: underline;
+}
+
+/* Direct-link highlight */
+.page-section .literature-item:target {
+  background: #fafafa;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .page-section .literature-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .page-section .literature-image {
+    max-width: 520px;
+    max-height: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-section {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .page-section .literature-title {
+    font-size: 1.35rem;
+  }
+
+  .page-section .literature-abstract {
+    font-size: 0.95rem;
+  }
 }
