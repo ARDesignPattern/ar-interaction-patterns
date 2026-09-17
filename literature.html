@@ -6,5 +6,60 @@ permalink: /literature.html
 
 <section class="page-section">
   <h1 class="page-title">Literature</h1>
-  <p class="intro-text">Content coming soon. This section will provide references, theoretical foundations, and related academic work behind AR interaction patterns.</p>
+
+  <p class="intro-text">
+    Publications and related research behind the HMD-AR pattern system.
+  </p>
+
+  {% assign pubs_by_year = site.data.publications | group_by: "year" %}
+
+  <div class="literature-list">
+    {% for year in pubs_by_year %}
+    <section class="literature-year">
+      <h2 class="literature-year-title">{{ year.name }}</h2>
+
+      {% for pub in year.items %}
+      <article class="literature-item">
+        <h3 class="literature-title">{{ pub.title }}</h3>
+
+        <p class="literature-authors">{{ pub.authors | join: ", " }}</p>
+
+        <p class="literature-venue">{{ pub.venue }}</p>
+
+        {% if pub.abstract and pub.abstract != "" %}
+        <p class="literature-abstract">{{ pub.abstract }}</p>
+        {% endif %} {% if pub.topics and pub.topics.size > 0 %}
+        <div class="literature-topics">
+          {% for topic in pub.topics %}
+          <span class="literature-topic">{{ topic }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="literature-links">
+          {% if pub.doi and pub.doi != "" %}
+          <a
+            class="literature-link"
+            href="https://doi.org/{{ pub.doi }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI ↗
+          </a>
+          {% endif %} {% if pub.url and pub.url != "" %}
+          <a
+            class="literature-link"
+            href="{{ pub.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View publication ↗
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
 </section>
