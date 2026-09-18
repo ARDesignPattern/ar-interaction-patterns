@@ -4,39 +4,50 @@ title: Pattern System
 custom_js: custom-script
 permalink: /patterns.html
 ---
-<section id="about" class="intro">
-  <div class="column">
-    <img src="{{ '/images/HomePage/ARInteraction_1.png' | relative_url }}" alt="AR Interaction" class="profile">
-  </div>    
-  <div class="column">
-    <h3 class="section-subtitle">Introduction</h3>
-    <p class="intro-text">
-      AR Interaction Design Patterns provide structured solutions to recurring challenges in augmented reality interaction design. By capturing best practices across domains such as user navigation, object manipulation, and spatial feedback, these patterns help designers and developers create intuitive, efficient, and context-aware AR experiences.
-    </p>
-    <p class="intro-text">
-      Grounded in empirical research and iterative prototyping, AR interaction patterns serve as reusable design knowledge that supports the development of user-centered AR applications, particularly in complex environments like cultural heritage, education, and gaming.
-    </p>
-  </div>
-</section>
 
-<!-- High-Level Patterns Section -->
-<section id="patterns" class="gallery-section">
-  <h2 class="section-title">Category-Level Pattern Classes</h2>
-  <div class="gallery">
-    {% assign high_level_patterns = site.patterns | where: "category", "high-level" | sort: "order" %}
-{% for pattern in high_level_patterns %}
-  {% include pattern-card.html pattern=pattern %}
-{% endfor %}
-  </div>
-</section>
+<div class="patterns-hero">
+  <p class="patterns-eyebrow">Patterns</p>
 
-<!-- Sub-Patterns Section -->
-<section class="gallery-section">
-  <h2 class="section-title">Application-Level Patterns</h2>
-  <div class="gallery">
-    {% assign sub_level_patterns = site.patterns | where: "category", "sub-level" | sort: "order" %}
-{% for pattern in sub_level_patterns %}
-  {% include pattern-card.html pattern=pattern %}
-{% endfor %}
+  <h1>A reusable interaction design pattern system for HMD-based AR.</h1>
+
+  <p class="patterns-intro">
+    AR interaction design patterns provide structured solutions to recurring
+    challenges in augmented reality interaction design. Grounded in empirical
+    research and iterative prototyping, the pattern system captures reusable
+    design knowledge for navigation, spatial interaction, content presentation,
+    and visitor experience in museum and cultural heritage contexts.
+  </p>
+</div>
+
+<div class="pattern-page-container pattern-index-layout">
+  <aside class="pattern-sidebar">{% include pattern-subnav.html %}</aside>
+
+  <div class="pattern-main-content">
+    <div class="patterns-overview-image">
+      <img
+        src="{{ '/images/HomePage/ARInteraction_1.png' | relative_url }}"
+        alt="Overview of HMD-AR interaction design patterns"
+      />
+    </div>
+
+    <section id="patterns" class="gallery-section">
+      <h2 class="section-title">Category-Level Pattern Classes</h2>
+
+      <div class="gallery">
+        {% assign high_level_patterns = site.patterns | where: "category",
+        "high-level" | sort: "order" %} {% for pattern in high_level_patterns %}
+        {% include pattern-card.html pattern=pattern %} {% endfor %}
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2 class="section-title">Application-Level Patterns</h2>
+
+      <div class="gallery">
+        {% assign sub_level_patterns = site.patterns | where: "category",
+        "sub-level" | sort: "order" %} {% for pattern in sub_level_patterns %}
+        {% include pattern-card.html pattern=pattern %} {% endfor %}
+      </div>
+    </section>
   </div>
-</section>
+</div>

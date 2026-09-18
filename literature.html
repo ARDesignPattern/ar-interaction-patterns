@@ -1,15 +1,21 @@
 ---
 layout: default
-title: Literature
+title: Publications
 permalink: /literature.html
 ---
 
-<section class="page-section">
-  <h1 class="page-title">Literature</h1>
+<section class="literature-page">
+  <div class="literature-hero">
+    <p class="literature-eyebrow">Publications</p>
 
-  <p class="intro-text">
-    Publications and related research behind the HMD-AR pattern system.
-  </p>
+    <h1>Publications behind the HMD-AR pattern system.</h1>
+
+    <p class="literature-intro">
+      Peer-reviewed publications documenting the empirical studies, interaction
+      design explorations, evaluation methods, and reusable design knowledge
+      developed through this research.
+    </p>
+  </div>
 
   {% assign pubs_by_year = site.data.publications | group_by: "year" %}
 
@@ -19,7 +25,6 @@ permalink: /literature.html
       <h2 class="literature-year-title">{{ year.name }}</h2>
 
       {% for pub in year.items %}
-
       <article class="literature-item" id="{{ pub.slug }}">
         <div class="literature-image-column">
           {% if pub.image and pub.image != "" %}
@@ -72,7 +77,6 @@ permalink: /literature.html
           </div>
         </div>
       </article>
-
       {% endfor %}
     </section>
     {% endfor %}

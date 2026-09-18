@@ -1,7 +1,11 @@
 /* layout_literature.css
-   Styles specific to the Literature page
+   Styles specific to the Literature / Publications page
    Author: Yu Liu
 */
+
+/* =========================
+   PAGE BASE
+   ========================= */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -14,27 +18,59 @@ body {
   overflow-x: hidden;
 }
 
-/* Page wrapper */
-.page-section {
-  padding: 2.5rem 2rem 4rem;
+/* =========================
+   PAGE WRAPPER
+   ========================= */
+
+.literature-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  background: #fff;
 }
 
-.page-title {
-  margin: 0 0 1rem;
-  font-size: 2rem;
-  font-weight: 700;
+/* =========================
+   HERO
+   ========================= */
+
+.literature-hero {
+  max-width: 900px;
+  margin-bottom: 4.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.literature-eyebrow {
+  margin: 0 0 1.25rem;
+  color: #777;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.literature-hero h1 {
+  max-width: 820px;
+  margin: 0;
   color: #222;
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 700;
 }
 
-.intro-text {
-  max-width: 760px;
-  margin: 0 0 2.5rem;
+.literature-intro {
+  max-width: 720px;
+  margin: 2rem 0 0;
+  color: #555;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #555;
 }
 
-/* Year group */
+/* =========================
+   YEAR GROUP
+   ========================= */
+
 .literature-year {
   margin-top: 2.5rem;
 }
@@ -50,8 +86,11 @@ body {
   color: #222;
 }
 
-/* Two-column publication layout */
-.page-section .literature-item {
+/* =========================
+   PUBLICATION ITEM
+   ========================= */
+
+.literature-page .literature-item {
   display: grid;
   grid-template-columns: minmax(260px, 38%) minmax(0, 62%);
   gap: 2.5rem;
@@ -61,12 +100,15 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Left image column */
-.page-section .literature-image-column {
+/* =========================
+   LEFT IMAGE COLUMN
+   ========================= */
+
+.literature-page .literature-image-column {
   min-width: 0;
 }
 
-.page-section .literature-image {
+.literature-page .literature-image {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -79,109 +121,183 @@ body {
   background: #f7f7f7;
 }
 
-/* Right content column */
-.page-section .literature-content-column {
+/* =========================
+   RIGHT CONTENT COLUMN
+   ========================= */
+
+.literature-page .literature-content-column {
   min-width: 0;
 }
 
-.page-section .literature-meta {
+.literature-page .literature-meta {
   margin: 0 0 0.75rem;
+
+  color: #555;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.4;
+
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #555;
 }
 
-.page-section .literature-title {
+.literature-page .literature-title {
   margin: 0 0 0.75rem;
+
+  color: #222;
   font-size: clamp(1.35rem, 2vw, 2rem);
   font-weight: 700;
   line-height: 1.15;
-  color: #222;
 }
 
-.page-section .literature-authors {
+.literature-page .literature-authors {
   margin: 0 0 1rem;
+
+  color: #333;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #333;
 }
 
-.page-section .literature-abstract {
-  margin: 1.25rem 0 0;
+.literature-page .literature-abstract {
   max-width: 720px;
+  margin: 1.25rem 0 0;
 
+  color: #444;
   font-size: 1rem;
   line-height: 1.65;
-  color: #444;
 }
 
-/* Topic tags */
-.page-section .literature-topics {
+/* =========================
+   TOPIC TAGS
+   ========================= */
+
+.literature-page .literature-topics {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+
   margin-top: 1.25rem;
 }
 
-.page-section .literature-topic {
+.literature-page .literature-topic {
   padding: 0.3rem 0.6rem;
+
   border: 1px solid #d8d8d8;
   border-radius: 999px;
 
+  color: #555;
   font-size: 0.78rem;
   line-height: 1;
-  color: #555;
 }
 
-/* Links */
-.page-section .literature-links {
+/* =========================
+   LINKS
+   ========================= */
+
+.literature-page .literature-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+
   margin-top: 1.25rem;
 }
 
-.page-section .literature-link {
-  font-size: 0.9rem;
+.literature-page .literature-link {
   color: #0066cc;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
-.page-section .literature-link:hover {
+.literature-page .literature-link:hover {
   text-decoration: underline;
 }
 
-/* Direct-link highlight */
-.page-section .literature-item:target {
+/* =========================
+   DIRECT LINK HIGHLIGHT
+   ========================= */
+
+.literature-page .literature-item:target {
   background: #fafafa;
 }
 
-/* Responsive */
+/* =========================
+   TABLET
+   ========================= */
+
 @media (max-width: 800px) {
-  .page-section .literature-item {
+  .literature-page {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .literature-hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .literature-hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .literature-intro {
+    font-size: 1rem;
+  }
+
+  .literature-page .literature-item {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .page-section .literature-image {
+  .literature-page .literature-image {
     max-width: 520px;
     max-height: none;
   }
 }
 
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 600px) {
-  .page-section {
-    padding: 2rem 1rem 3rem;
+  .literature-page {
+    padding: 2.5rem 1rem 3.5rem;
   }
 
-  .page-section .literature-title {
+  .literature-hero {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .literature-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .literature-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1;
+  }
+
+  .literature-intro {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .literature-year-title {
     font-size: 1.35rem;
   }
 
-  .page-section .literature-abstract {
+  .literature-page .literature-item {
+    padding: 2rem 0;
+  }
+
+  .literature-page .literature-title {
+    font-size: 1.35rem;
+  }
+
+  .literature-page .literature-authors {
+    font-size: 0.9rem;
+  }
+
+  .literature-page .literature-abstract {
     font-size: 0.95rem;
   }
 }

@@ -5,13 +5,19 @@ collections:
   patterns:
     output: true
     permalink: /patterns/:name/
-  technology:       # ← 修正缩进：必须与 patterns 对齐
+
+  technology:
     output: true
     permalink: /technology/:name/
 
+  studies:
+    output: true
+    permalink: /studies/:name/
+
 include:
   - _patterns
-  - _technology     # ← 你也需要将 _technology 文件夹包含进构建中
+  - _technology
+  - _studies
 
 defaults:
   - scope:
@@ -19,8 +25,15 @@ defaults:
       type: patterns
     values:
       layout: pattern
+
   - scope:
       path: ""
       type: technology
     values:
-      layout: tech  # 或你将来可以为每个技术项创建专属 layout，如 layout: tech
+      layout: tech
+
+  - scope:
+      path: ""
+      type: studies
+    values:
+      layout: study

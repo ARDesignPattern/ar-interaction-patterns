@@ -66,30 +66,46 @@
     <li>
       <a
         href="{{ '/index.html' | relative_url }}"
-        class="{% if page.url == '/index.html' %}active{% endif %}"
-        >Home</a
+        class="{% if page.url == '/index.html' or page.url == '/' %}active{% endif %}"
       >
+        Home
+      </a>
     </li>
+
+    <li>
+      <a
+        href="{{ '/studies.html' | relative_url }}"
+        class="{% if page.url == '/studies.html' or page.url contains '/studies/' %}active{% endif %}"
+      >
+        Studies
+      </a>
+    </li>
+
     <li>
       <a
         href="{{ '/patterns.html' | relative_url }}"
-        class="{% if page.url contains 'patterns' and page.url != '/patterns/guiding/' %}active{% endif %}"
-        >Patterns</a
+        class="{% if page.url == '/patterns.html' or page.url contains '/patterns/' %}active{% endif %}"
       >
+        Patterns
+      </a>
     </li>
+
     <li>
       <a
-        href="{{ '/tech.html' | relative_url }}"
-        class="{% if page.url == '/tech.html' %}active{% endif %}"
-        >Technology</a
+        href="{{ '/resources.html' | relative_url }}"
+        class="{% if page.url == '/resources.html' or page.url contains '/resources/' %}active{% endif %}"
       >
+        Resources
+      </a>
     </li>
+
     <li>
       <a
         href="{{ '/literature.html' | relative_url }}"
         class="{% if page.url == '/literature.html' %}active{% endif %}"
-        >Literature</a
       >
+        Publications
+      </a>
     </li>
   </ul>
 </nav>

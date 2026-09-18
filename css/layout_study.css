@@ -1,0 +1,116 @@
+/* layout_study.css
+   Styles for individual study pages
+*/
+
+.study-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.study-hero {
+  max-width: 900px;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.study-eyebrow {
+  margin: 0 0 1.25rem;
+  color: #777;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.study-hero h1 {
+  max-width: 860px;
+  margin: 0;
+  color: #222;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.study-subtitle {
+  max-width: 720px;
+  margin: 2rem 0 0;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.study-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.study-tags span {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  color: #555;
+  font-size: 0.78rem;
+}
+
+.study-body {
+  max-width: 900px;
+}
+
+.study-body h2 {
+  margin: 4rem 0 1rem;
+  color: #222;
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.study-body h3 {
+  margin: 2.5rem 0 0.8rem;
+  color: #222;
+  font-size: 1.3rem;
+}
+
+.study-body p {
+  max-width: 760px;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.study-body img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.study-body ul,
+.study-body ol {
+  max-width: 760px;
+  color: #444;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .study-page {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .study-hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .study-hero h1 {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+
+  .study-subtitle {
+    font-size: 1rem;
+  }
+}

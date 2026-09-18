@@ -1,32 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="canonical" href="{{ page.canonical | default: page.url | absolute_url | replace: 'index.html', '' }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="{{ '/css/layout_default.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/layout_pattern.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/cards.css' | relative_url }}" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
 
-<body>
+    <title>{{ page.title }}</title>
 
-  <div class="container">
-    {% include header.html %}
-    <div class="pattern-page-container">
-      <aside class="pattern-sidebar">
-        {% include pattern-subnav.html %}
-      </aside>
+    <link
+      rel="canonical"
+      href="{{ page.canonical | default: page.url | absolute_url | replace: 'index.html', '' }}"
+    />
 
-      <main class="pattern-main-content">
-        {{ content }}
-      </main>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="{{ '/css/layout_default.css' | relative_url }}"
+      rel="stylesheet"
+    />
+
+    <link
+      href="{{ '/css/layout_pattern.css' | relative_url }}"
+      rel="stylesheet"
+    />
+
+    <link href="{{ '/css/cards.css' | relative_url }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      {% include header.html %} {% if page.url == '/patterns.html' %}
+
+      <main class="pattern-overview-page">{{ content }}</main>
+
+      {% else %}
+
+      <div class="pattern-page-container">
+        <aside class="pattern-sidebar">{% include pattern-subnav.html %}</aside>
+
+        <main class="pattern-main-content">{{ content }}</main>
+      </div>
+
+      {% endif %}
     </div>
-  </div>
 
-  {% include footer.html %}
-  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
-</body>
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  </body>
 </html>

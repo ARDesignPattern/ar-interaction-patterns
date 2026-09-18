@@ -24,49 +24,39 @@
 
     <link href="{{ '/css/cards.css' | relative_url }}" rel="stylesheet" />
 
-    {% if page.layout == 'pattern' %}
-    <link
-      href="{{ '/css/layout_pattern.css' | relative_url }}"
-      rel="stylesheet"
-    />
-
-    {% elsif page.url == '/tech.html' %}
-    <link
-      href="{{ '/css/layout_technology.css' | relative_url }}"
-      rel="stylesheet"
-    />
-
-    {% elsif page.url == '/literature.html' %}
-    <link
-      href="{{ '/css/layout_literature.css' | relative_url }}"
-      rel="stylesheet"
-    />
-
-    {% elsif page.url == '/studies.html' %}
-    <link
-      href="{{ '/css/layout_studies.css' | relative_url }}"
-      rel="stylesheet"
-    />
-
-    {% elsif page.url == '/resources.html' %}
-    <link
-      href="{{ '/css/layout_resources.css' | relative_url }}"
-      rel="stylesheet"
-    />
-
-    {% elsif page.layout == 'study' %}
     <link
       href="{{ '/css/layout_study.css' | relative_url }}"
       rel="stylesheet"
     />
-    {% endif %}
   </head>
 
   <body>
     <div class="container">
       {% include header.html %}
 
-      <main>{{ content }}</main>
+      <main>
+        <article class="study-page">
+          <div class="study-hero">
+            <p class="study-eyebrow">
+              Study{% if page.study_number %} {{ page.study_number }}{% endif %}
+            </p>
+
+            <h1>{{ page.title }}</h1>
+
+            {% if page.subtitle %}
+            <p class="study-subtitle">{{ page.subtitle }}</p>
+            {% endif %} {% if page.tags %}
+            <div class="study-tags">
+              {% for tag in page.tags %}
+              <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="study-body">{{ content }}</div>
+        </article>
+      </main>
     </div>
 
     {% include footer.html %}
