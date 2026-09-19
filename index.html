@@ -1,11 +1,14 @@
 ---
 layout: default
-title: HMD-AR Pattern System - Pattern Library
+title: HMD-AR Pattern System - Research Portal
 permalink: /index.html
 ---
 
-<!-- Hero Section -->
-<!-- Hero Section -->
+<!-- =========================================================
+     HERO
+     Keep existing dual-platform video player
+     ========================================================= -->
+
 <section id="about" class="intro stacked portal-hero">
   <div class="intro-video-wrapper portal-video dual-video-player">
     <div class="video-platform-switch">
@@ -22,7 +25,7 @@ permalink: /index.html
       <iframe
         id="hero-video-player"
         src="https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg"
-        title="Project video"
+        title="HMD-AR interaction design research overview"
         frameborder="0"
         allow="
           accelerometer;
@@ -43,7 +46,6 @@ permalink: /index.html
 
     const sources = {
       youtube: "https://www.youtube-nocookie.com/embed/Q7GGMHvsuNg",
-
       bilibili:
         "https://player.bilibili.com/player.html?bvid=BV1gtec6kEGy&page=1",
     };
@@ -63,389 +65,487 @@ permalink: /index.html
 
   <div class="intro-text-wrapper portal-hero-text">
     <p class="eyebrow">
-      PhD Research Portal · HMD-Based Augmented Reality · Cultural Heritage
+      PhD Research · HMD-Based Augmented Reality · Cultural Heritage
     </p>
 
-    <h1 class="portal-title">
-      A Research Portal for HMD-Based AR Interaction Design Patterns
-    </h1>
+    <h1 class="portal-title">Designing Reusable Interaction for Museum XR</h1>
 
     <p class="portal-lead">
-      This website presents the PhD research of <strong>Yu Liu</strong> at
-      <strong>Hochschule RheinMain</strong>, focusing on reusable,
-      parameterized, and empirically validated interaction design patterns for
-      <span class="highlight">Head-Mounted Display (HMD)</span>-based
-      <span class="highlight">Augmented Reality (AR)</span> in museum and
-      cultural heritage contexts.
+      A doctoral research project on interaction design for
+      <strong>head-mounted augmented reality in museums</strong> — from
+      first-time-user challenges and field prototypes to a parameterized and
+      empirically evaluated interaction pattern language.
     </p>
 
     <div class="hero-actions">
-      <a href="#pattern-system" class="button-primary"
-        >Explore the Pattern System</a
-      >
-      <a href="#research-overview" class="button-secondary"
-        >View Research Overview</a
-      >
+      <a href="#research-journey" class="button-primary">
+        Explore the Research
+      </a>
+
+      <a href="#pattern-system" class="button-secondary">
+        Explore the Pattern System
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Library Structure and Research Context -->
-<section class="portal-section">
-  <div class="two-column-section">
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Design Pattern System</h3>
-      </div>
+<!-- =========================================================
+     RESEARCH JOURNEY
+     ========================================================= -->
 
-      <div class="column-right">
-        <p class="intro-text tight">
-          This pattern system is structured around two main components:
-        </p>
-
-        <ul class="intro-text tight">
-          <li>
-            <strong>Design Patterns:</strong> A two-level pattern system
-            consisting of category-level classes and application-level patterns
-            for HMD-based AR interaction design, presented through scenario
-            descriptions, interaction flows, design parameters, and
-            implementation-oriented descriptions.
-          </li>
-
-          <li>
-            <strong>Technology Module (under development):</strong> A library of
-            reusable Unity-based prefabs that implement selected
-            application-level patterns, to be published on GitHub for direct
-            integration and further adaptation.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Research Context</h3>
-      </div>
-
-      <div class="column-right">
-        <p class="intro-text tight">
-          This work is embedded in two European projects:
-          <a href="https://presentxr.de/" target="_blank">presentXR</a> and
-          <a href="https://logaculture.eu/" target="_blank">LoGa Culture</a>,
-          both exploring innovative AR interaction paradigms for museums and
-          cultural institutions.
-        </p>
-
-        <p class="intro-text tight">
-          By bridging <em>design theory</em> and
-          <em>technical implementation</em>, this project advances pattern-based
-          methodologies in immersive media and invites collaboration and
-          feedback from the global AR community.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Research Problem -->
-<section id="research-overview" class="portal-section">
+<section id="research-journey" class="portal-section">
   <div class="section-heading-block">
-    <p class="eyebrow">Research Motivation</p>
+    <p class="eyebrow">Research Journey</p>
+
     <h2 class="section-title">
-      Why HMD-Based AR Needs Reusable Interaction Patterns
+      From Interaction Problems to Reusable Design Knowledge
     </h2>
+
+    <p class="section-description">
+      The research developed through a sequence of empirical studies, prototype
+      iterations, museum deployments, pattern abstraction, and validation.
+    </p>
   </div>
 
-  <div class="two-column-section">
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Design Challenge</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          Museums and cultural heritage institutions increasingly experiment
-          with HMD-based AR to enrich visitor experiences. However, many AR
-          applications remain isolated prototypes that are difficult to adapt,
-          reuse, or transfer to new exhibits and museum settings.
-        </p>
-        <p class="intro-text tight">
-          At the same time, first-time visitors often have limited tolerance for
-          training, unfamiliar interaction techniques, and attention-demanding
-          interfaces. This creates a need for interaction solutions that are not
-          only engaging, but also understandable, reusable, and adaptable to
-          situated exhibition contexts.
-        </p>
-      </div>
-    </div>
+  <div class="portal-timeline research-journey">
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/walk-up-xr/' | relative_url }}"
+    >
+      <span class="timeline-marker">01</span>
 
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Research Response</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          This research develops a two-level interaction pattern system for
-          HMD-based AR in museums. The system organizes recurring interaction
-          problems and solutions into category-level classes and
-          application-level patterns, supported by design parameters,
-          composition logic, and implementation-oriented descriptions.
-        </p>
-        <p class="intro-text tight">
-          The patterns are grounded in iterative prototype development,
-          museum-based studies, expert feedback, and cross-site reconfiguration
-          across cultural heritage scenarios.
+      <div>
+        <h3>Walk-up XR for Real-World Environments</h3>
+
+        <p>
+          Investigating first-time-user challenges and developing interaction
+          approaches for accessible HMD-based museum experiences.
         </p>
       </div>
-    </div>
+    </a>
+
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/game-mechanic-interaction/' | relative_url }}"
+    >
+      <span class="timeline-marker">02</span>
+
+      <div>
+        <h3>Game-Mechanic-Based Interaction Design</h3>
+
+        <p>
+          Exploring playful spatial interaction and introducing game mechanics
+          into museum XR experiences.
+        </p>
+      </div>
+    </a>
+
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/xr-evaluation-museums/' | relative_url }}"
+    >
+      <span class="timeline-marker">03</span>
+
+      <div>
+        <h3>Evaluating HMD Interaction in Museums</h3>
+
+        <p>
+          Developing practical field-observation methods and structured
+          evaluation approaches for real museum environments.
+        </p>
+      </div>
+    </a>
+
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/parameterized-design-patterns/' | relative_url }}"
+    >
+      <span class="timeline-marker">04</span>
+
+      <div>
+        <h3>Parameterized Design Patterns for Museum XR</h3>
+
+        <p>
+          Abstracting recurring prototype interactions into reusable, adaptable,
+          and composable design knowledge.
+        </p>
+      </div>
+    </a>
+
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/spatial-ui-anchoring/' | relative_url }}"
+    >
+      <span class="timeline-marker">05</span>
+
+      <div>
+        <h3>Empirical Validation of HMD-AR Interaction Design</h3>
+
+        <p>
+          Testing specific design parameters and examining pattern reuse across
+          different museum contexts.
+        </p>
+      </div>
+    </a>
+
+    <a
+      class="timeline-item research-journey-item"
+      href="{{ '/studies/immersion-museum-xr/' | relative_url }}"
+    >
+      <span class="timeline-marker">06</span>
+
+      <div>
+        <h3>Immersion in Museum XR</h3>
+
+        <p>
+          Examining flow, narrative immersion, and spatial immersion in relation
+          to museum learning and visitor experience.
+        </p>
+      </div>
+    </a>
+  </div>
+
+  <div class="section-action">
+    <a class="button-secondary" href="{{ '/studies.html' | relative_url }}">
+      View All Research Studies
+    </a>
   </div>
 </section>
 
-<!-- Contributions -->
-<section class="portal-section muted-section">
-  <div class="section-heading-block">
-    <p class="eyebrow">Research Contribution</p>
-    <h2 class="section-title">What This Portal Provides</h2>
-  </div>
+<!-- =========================================================
+     PATTERN SYSTEM
+     ========================================================= -->
 
-  <div class="portal-grid three-columns">
-    <div class="portal-card">
-      <h3>Two-Level Pattern System</h3>
-      <p>
-        A structured collection of category-level classes and application-level
-        patterns for organizing HMD-based AR interaction design in museum
-        visits.
-      </p>
-    </div>
-
-    <div class="portal-card">
-      <h3>Parameterized Design Knowledge</h3>
-      <p>
-        Each pattern is described through recurring design problems, contexts,
-        forces, solutions, parameters, consequences, and relationships to other
-        patterns.
-      </p>
-    </div>
-
-    <div class="portal-card">
-      <h3>Implementation-Oriented Resources</h3>
-      <p>
-        The pattern descriptions are aligned with reusable Unity-based prefabs
-        and technical resources that support practical implementation and
-        adaptation.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Pattern System Overview -->
-<section id="pattern-system" class="portal-section">
+<section id="pattern-system" class="portal-section muted-section">
   <div class="section-heading-block">
     <p class="eyebrow">Pattern System</p>
+
+    <h2 class="section-title">A Two-Level Interaction Pattern Language</h2>
+
+    <p class="section-description">
+      The research resulted in a reusable interaction design system that
+      connects broader interaction purposes with concrete, parameterized
+      solutions for HMD-based museum experiences.
+    </p>
+  </div>
+
+  <div class="portal-grid pattern-system-summary">
+    <div class="portal-card pattern-summary-card">
+      <p class="pattern-summary-number">THREE</p>
+
+      <h3>Category-Level Patterns</h3>
+
+      <p>
+        Higher-level interaction structures describing recurring roles within
+        the visitor journey.
+      </p>
+    </div>
+
+    <div class="portal-card pattern-summary-card">
+      <p class="pattern-summary-number">NINE</p>
+
+      <h3>Application-Level Patterns</h3>
+
+      <p>
+        Concrete interaction solutions that can be instantiated, adapted, and
+        combined across museum scenarios.
+      </p>
+    </div>
+
+    <div class="portal-card pattern-summary-card">
+      <p class="pattern-summary-word">Parameterized</p>
+
+      <h3>Adaptable Design Knowledge</h3>
+
+      <p>
+        Explicit parameters describe which aspects of a pattern can change
+        across exhibits, environments, and visitor situations.
+      </p>
+    </div>
+
+    <div class="portal-card pattern-summary-card">
+      <p class="pattern-summary-word">Composable</p>
+
+      <h3>Reusable Interaction Flows</h3>
+
+      <p>
+        Multiple patterns can be combined to construct larger visitor journeys
+        rather than functioning as isolated UI elements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CATEGORY-LEVEL PATTERNS
+     Existing collection preserved
+     ========================================================= -->
+
+<section class="gallery-section portal-pattern-preview">
+  <div class="section-heading-block">
+    <p class="eyebrow">Pattern Categories</p>
+
     <h2 class="section-title">
-      From Visitor Journey to Reusable Interaction Patterns
+      Three Recurring Roles in the Museum Experience
     </h2>
+
+    <p class="section-description">
+      Category-level patterns organize the interaction system around recurring
+      visitor needs: reaching relevant content, discovering available AR
+      experiences, and engaging with exhibit-related information.
+    </p>
   </div>
-
-  <div class="two-column-section">
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Category-Level Classes</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          Category-level classes describe broader functional roles within the
-          museum visit, such as guiding visitors to points of interest,
-          indicating available AR experiences, and presenting exhibit-related
-          information.
-        </p>
-        <p class="intro-text tight">
-          They help organize the pattern language around recurring phases of
-          HMD-based museum interaction.
-        </p>
-      </div>
-    </div>
-
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Application-Level Patterns</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          Application-level patterns describe concrete and reusable interaction
-          solutions, such as avatar-based guidance, spatial triggers, sequential
-          explanation, AR labelling, reassembly tasks, feature drawing, and
-          embodied object-catching interactions.
-        </p>
-        <p class="intro-text tight">
-          These patterns can be combined into interaction flows and adapted
-          through configurable parameters according to exhibit content, spatial
-          layout, visitor needs, and technical constraints.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Research Process -->
-<section class="portal-section muted-section">
-  <div class="section-heading-block">
-    <p class="eyebrow">Research Process</p>
-    <h2 class="section-title">How the Pattern System Was Developed</h2>
-  </div>
-
-  <div class="portal-timeline">
-    <div class="timeline-item">
-      <span class="timeline-marker">1</span>
-      <div>
-        <h3>Early Interaction Analysis</h3>
-        <p>
-          The research began with the analysis of interaction challenges when
-          transferring AR interaction concepts from handheld devices to
-          head-mounted displays in exhibition contexts.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="timeline-marker">2</span>
-      <div>
-        <h3>Prototype-Led Exploration</h3>
-        <p>
-          Multiple HMD-based AR prototypes were developed and tested in relation
-          to guidance, onboarding, exhibit interpretation, playful interaction,
-          and visitor engagement.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="timeline-marker">3</span>
-      <div>
-        <h3>Pattern Derivation</h3>
-        <p>
-          Recurring interaction problems and reusable solutions were abstracted
-          from prototype iterations into a structured pattern schema with design
-          parameters and composition relationships.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="timeline-marker">4</span>
-      <div>
-        <h3>Evaluation and Reconfiguration</h3>
-        <p>
-          The resulting pattern system was examined through visitor-side
-          deployments, creator-side expert evaluation, and cross-site adaptation
-          across museum contexts.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Validation -->
-<section class="portal-section">
-  <div class="section-heading-block">
-    <p class="eyebrow">Validation</p>
-    <h2 class="section-title">Evidence Behind the Pattern System</h2>
-  </div>
-
-  <div class="portal-grid three-columns">
-    <div class="portal-card">
-      <h3>Visitor-Side Evaluation</h3>
-      <p>
-        Museum visitors tested HMD-based AR prototypes under situated exhibition
-        conditions, supporting the analysis of usability, workload, presence,
-        attention, and interaction flow.
-      </p>
-    </div>
-
-    <div class="portal-card">
-      <h3>Creator-Side Evaluation</h3>
-      <p>
-        AR developers and cultural heritage practitioners assessed whether the
-        patterns support planning, communication, implementation thinking, and
-        exhibit-oriented adaptation.
-      </p>
-    </div>
-
-    <div class="portal-card">
-      <h3>Cross-Site Reconfiguration</h3>
-      <p>
-        Pattern compositions were adapted across comparable museum scenarios to
-        examine which interaction roles, relationships, and parameters remain
-        stable and which require local adjustment.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Technology Module -->
-<section class="portal-section muted-section">
-  <div class="section-heading-block">
-    <p class="eyebrow">Technology Module</p>
-    <h2 class="section-title">Toward Reusable Unity-Based AR Components</h2>
-  </div>
-
-  <div class="two-column-section">
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">Reusable Prefabs</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          The technology module is under development as a library of Unity-based
-          prefabs corresponding to selected application-level patterns. These
-          prefabs are intended to support faster prototyping, adaptation, and
-          implementation of HMD-based AR interactions.
-        </p>
-      </div>
-    </div>
-
-    <div class="two-column-block">
-      <div class="column-left">
-        <h3 class="intro-section-title">GitHub Publication</h3>
-      </div>
-      <div class="column-right">
-        <p class="intro-text tight">
-          The reusable resources will be published through GitHub to support
-          research transparency, technical reuse, and further development by AR
-          designers, developers, and cultural heritage researchers.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Category-Level Patterns Section -->
-<section id="patterns" class="gallery-section">
-  <h2 class="section-title">Category-Level Patterns</h2>
-  <p class="section-description">
-    Category-level classes organize recurring functional roles in HMD-based
-    museum visits and provide the structural foundation for composing
-    application-level interaction patterns.
-  </p>
 
   <div class="gallery">
     {% assign high_level_patterns = site.patterns | where: "category",
     "high-level" | sort: "order" %} {% for pattern in high_level_patterns %} {%
     include pattern-card.html pattern=pattern %} {% endfor %}
   </div>
+
+  <div class="section-action">
+    <a class="button-secondary" href="{{ '/patterns.html' | relative_url }}">
+      Explore the Complete Pattern Library
+    </a>
+  </div>
 </section>
 
-<!-- Application-Level Patterns Section -->
-<section class="gallery-section">
-  <h2 class="section-title">Application-Level Patterns</h2>
-  <p class="section-description">
-    Application-level patterns describe concrete, reusable interaction solutions
-    that can be implemented, combined, and adapted for different exhibits,
-    visitor journeys, and HMD-based AR scenarios.
-  </p>
+<!-- =========================================================
+     EMPIRICAL FOUNDATION
+     ========================================================= -->
 
-  <div class="gallery">
-    {% assign sub_level_patterns = site.patterns | where: "category",
-    "sub-level" | sort: "order" %} {% for pattern in sub_level_patterns %} {%
-    include pattern-card.html pattern=pattern %} {% endfor %}
+<section class="portal-section muted-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Empirical Foundation</p>
+
+    <h2 class="section-title">Evidence Behind the Pattern System</h2>
+
+    <p class="section-description">
+      The interaction patterns were developed and refined through complementary
+      forms of evidence rather than through a single study.
+    </p>
+  </div>
+
+  <div class="portal-grid evidence-grid">
+    <div class="portal-card">
+      <h3>Visitor Studies</h3>
+
+      <p>
+        HMD-based AR prototypes were evaluated with museum visitors and
+        first-time users under realistic exhibition conditions.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Creator Evaluation</h3>
+
+      <p>
+        AR developers and cultural heritage practitioners examined the clarity,
+        usability, and reuse potential of the pattern language.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Cross-Site Deployment</h3>
+
+      <p>
+        Related pattern compositions were adapted and deployed across different
+        natural history museum environments.
+      </p>
+    </div>
+
+    <div class="portal-card">
+      <h3>Design-Parameter Studies</h3>
+
+      <p>
+        Specific dimensions, including semantic anchoring and spatial UI
+        placement, were investigated through focused empirical studies.
+      </p>
+    </div>
+  </div>
+
+  <div class="section-action">
+    <a
+      class="button-secondary"
+      href="{{ '/studies/spatial-ui-anchoring/' | relative_url }}"
+    >
+      Explore Validation Research
+    </a>
+  </div>
+</section>
+
+<!-- =========================================================
+     SELECTED PUBLICATIONS
+     ========================================================= -->
+
+<section class="portal-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Selected Publications</p>
+
+    <h2 class="section-title">Research Behind the System</h2>
+
+    <p class="section-description">
+      Selected publications documenting the development of the interaction
+      pattern system, playful interaction strategies, and museum-based HMD-AR
+      design research.
+    </p>
+  </div>
+
+  <div class="selected-publications">
+    <a
+      class="selected-publication"
+      href="{{ '/literature.html#pattern-language-hmd-ar-museums' | relative_url }}"
+    >
+      <div class="selected-publication-meta">
+        <span>IMX 2026</span>
+        <span>Pattern Language</span>
+      </div>
+
+      <h3>
+        A Pattern Language for Head-Mounted AR in Museums: Parameterized,
+        Composable, and Reproducible
+      </h3>
+
+      <span class="selected-publication-arrow">↗</span>
+    </a>
+
+    <a
+      class="selected-publication"
+      href="{{ '/literature.html#playful-ar-design-patterns-cultural-heritage' | relative_url }}"
+    >
+      <div class="selected-publication-meta">
+        <span>DIS 2025</span>
+        <span>Game Mechanics</span>
+      </div>
+
+      <h3>
+        Design Patterns for Playful Augmented Reality: Enhancing Cultural
+        Heritage Engagement with Game Mechanics
+      </h3>
+
+      <span class="selected-publication-arrow">↗</span>
+    </a>
+
+    <a
+      class="selected-publication"
+      href="{{ '/literature.html#playful-locative-interaction-museums' | relative_url }}"
+    >
+      <div class="selected-publication-meta">
+        <span>JCSG 2025</span>
+        <span>Locative Interaction</span>
+      </div>
+
+      <h3>
+        Playful Locative Interaction in Museums and Exhibitions with Immersive
+        Augmented Reality
+      </h3>
+
+      <span class="selected-publication-arrow">↗</span>
+    </a>
+  </div>
+
+  <div class="section-action">
+    <a class="button-secondary" href="{{ '/literature.html' | relative_url }}">
+      View All Publications
+    </a>
+  </div>
+</section>
+
+<!-- =========================================================
+     RESOURCES
+     ========================================================= -->
+
+<section class="portal-section muted-section">
+  <div class="section-heading-block">
+    <p class="eyebrow">Resources</p>
+
+    <h2 class="section-title">From Design Knowledge to Reusable Resources</h2>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Pattern Documentation</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text tight">
+          The portal documents interaction patterns, parameters, relationships,
+          scenarios, and implementation-oriented guidance for reuse in future
+          HMD-based AR projects.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Technology Resources</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text tight">
+          Unity-based reference implementations and reusable components are
+          being prepared to support practical prototyping, replication, and
+          further development.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-action">
+    <a class="button-secondary" href="{{ '/resources.html' | relative_url }}">
+      Explore Resources
+    </a>
+  </div>
+</section>
+
+<!-- =========================================================
+     RESEARCH CONTEXT
+     ========================================================= -->
+
+<section class="portal-section portal-context">
+  <div class="section-heading-block">
+    <p class="eyebrow">Research Context</p>
+
+    <h2 class="section-title">
+      Developed Through Museum-Based Design Research
+    </h2>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Doctoral Research</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text tight">
+          This portal presents the doctoral research of
+          <strong>Yu Liu</strong> at <strong>Hochschule RheinMain</strong>,
+          focusing on interaction design for head-mounted augmented reality in
+          museums and cultural heritage environments.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Research Projects</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text tight">
+          The work was developed in the context of
+          <a href="https://presentxr.de/" target="_blank" rel="noopener">
+            presentXR
+          </a>
+          and the European
+          <a href="https://logaculture.eu/" target="_blank" rel="noopener">
+            LoGaCulture
+          </a>
+          project, with iterative prototyping and deployment in natural history
+          museum environments.
+        </p>
+      </div>
+    </div>
   </div>
 </section>

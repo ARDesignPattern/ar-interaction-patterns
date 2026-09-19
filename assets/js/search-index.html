@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /assets/js/search.json
+---
+
+[ {% assign docs = site.pages | concat: site.documents %} {% assign first_result
+= true %} {% for doc in docs %} {% if doc.exclude_from_search != true and
+doc.title and doc.url and doc.url != "/search/" %} {% unless first_result %},{%
+endunless %} { "title": {{ doc.title | jsonify }}, "url": {{ doc.url |
+relative_url | jsonify }}, "excerpt": {{ doc.content | strip_html |
+strip_newlines | truncate: 300 | jsonify }} } {% assign first_result = false %}
+{% endif %} {% endfor %} ]

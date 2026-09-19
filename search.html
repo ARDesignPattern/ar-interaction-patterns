@@ -2,44 +2,125 @@
 layout: default
 title: Search Results
 permalink: /search/
+exclude_from_search: true
 ---
 
-<h2>Search Results for "<span id="search-query"></span>"</h2>
-<div id="search-results">Loading...</div>
+<section class="search-page">
+  <p class="eyebrow">Search</p>
+
+  <h1 class="search-title">
+    Search Results for “<span id="search-query"></span>”
+  </h1>
+
+  <div id="search-results" class="search-results">
+    <p>Loading...</p>
+  </div>
+</section>
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
+
 <script>
-  const query = new URLSearchParams(window.location.search).get('q') || '';
-  document.getElementById('search-query').textContent = query;
+  const query =
+    new URLSearchParams(window.location.search).get("q")?.trim() || "";
+
+  const queryLabel = document.getElementById("search-query");
+
+  const container = document.getElementById("search-results");
+
+  queryLabel.textContent = query;
 
   fetch('{{ "/assets/js/search.json" | relative_url }}')
-    .then(res => res.json())
-    .then(pages => {
-      const idx = lunr(function () {
-        this.ref('url');
-        this.field('title');
-        this.field('excerpt');
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Unable to load search index.");
+      }
 
-        pages.forEach(doc => this.add(doc));
+      return response.json();
+    })
+
+    .then((pages) => {
+      const idx = lunr(function () {
+        this.ref("url");
+
+        this.field("title", {
+          boost: 10,
+        });
+
+        this.field("excerpt");
+
+        pages.forEach((doc) => {
+          this.add(doc);
+        });
       });
 
-      const results = query ? idx.search(query) : [];
-      const container = document.getElementById('search-results');
-
       if (!query) {
-        container.innerHTML = '<p>Please enter a search query.</p>';
-      } else if (results.length === 0) {
-        container.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
-      } else {
-        container.innerHTML = results.map(result => {
-          const page = pages.find(p => p.url === result.ref);
+        container.innerHTML = "<p>Please enter a search query.</p>";
+
+        return;
+      }
+
+      let results = [];
+
+      try {
+        results = idx.search(query);
+
+        /*
+          If an exact search returns nothing,
+          try a prefix search.
+        */
+
+        if (results.length === 0) {
+          results = idx.search(`${query}*`);
+        }
+      } catch (error) {
+        container.innerHTML = "<p>The search query could not be processed.</p>";
+
+        return;
+      }
+
+      if (results.length === 0) {
+        container.innerHTML = `<p>No results found for “<strong>${query}</strong>”.</p>`;
+
+        return;
+      }
+
+      container.innerHTML = results
+        .map((result) => {
+          const page = pages.find((item) => item.url === result.ref);
+
+          if (!page) {
+            return "";
+          }
+
           return `
-            <article style="margin-bottom: 2em;">
-              <h3><a href="${page.url}">${page.title || '(Untitled)'}</a></h3>
-              <p>${page.excerpt}</p>
+            <article class="search-result">
+
+              <h2>
+                <a href="${page.url}">
+                  ${page.title}
+                </a>
+              </h2>
+
+              <p>
+                ${page.excerpt}
+              </p>
+
+              <a
+                class="search-result-link"
+                href="${page.url}"
+              >
+                View page ↗
+              </a>
+
             </article>
           `;
-        }).join('');
-      }
+        })
+        .join("");
+    })
+
+    .catch((error) => {
+      console.error(error);
+
+      container.innerHTML = "<p>Search is temporarily unavailable.</p>";
     });
 </script>
