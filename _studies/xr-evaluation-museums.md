@@ -20,6 +20,10 @@ To capture these reactions in context, the studies combined think-aloud procedur
 
 A particular challenge was that HMD interaction is largely invisible to an external observer. To address this, the headset view was streamed in real time to a portable monitor, allowing researchers to observe the in-headset interface and the visitor's physical behavior simultaneously without changing the interaction setup itself. This made it possible to identify specific interface problems while preserving the visitor's natural interaction with the HMD.
 
+![Field-based evaluation of first-time HMD interaction in a museum setting]({{ '/images/studies/xr-evaluation-museums/Evaluating_Interaction.jpeg' | relative_url }})
+
+_Example of the qualitative field-evaluation setup used in the early studies. Researchers observed the visitor's behavior in the exhibition space while simultaneously monitoring the streamed headset view on a portable display, allowing in-situ documentation of first-time interaction challenges._
+
 Immediately after the experience, short interviews were conducted while the interaction was still fresh in the visitor's memory. These interviews were used to clarify observed behaviors, unexpected reactions, and the reasoning behind particular interaction difficulties.
 
 Together, think-aloud data, structured observation, streamed headset views, and post-experience interviews provided a practical qualitative evaluation setup for studying first-time HMD interaction under realistic museum conditions.

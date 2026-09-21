@@ -59,13 +59,13 @@ The three recurring interaction clusters also corresponded to three key stages i
 
 These category-level patterns describe higher-level design intentions and recurring roles within the museum XR experience.
 
-At the same time, nine more concrete design patterns were retained as application-level patterns. These provide more directly usable interaction solutions, including specific implementations, parameters, and reusable authoring logic. Because they can be instantiated more directly in concrete systems — for example as reusable prefabs or pattern-based building blocks — they function as application-level patterns.
+At the same time, nine more concrete design patterns were retained as application-level patterns. These provide more directly usable interaction solutions, including specific implementations, parameters, and reusable authoring logic. Because they can be instantiated more directly in concrete systems — for example as reusable prefabs or pattern-based building blocks — they function as application-level patterns. The corresponding reusable technical resources and Unity prefabs are described in the [Technology resources]({{ '/tech.html' | relative_url }}).
 
 However, concrete interaction solutions alone are not sufficient. The diversity of exhibits, themes, spaces, and curatorial goals means that creators still need to interpret, adapt, and extend these patterns when designing new museum XR experiences.
 
 For this reason, the three category-level patterns provide a higher level of design knowledge. They support creators not only in selecting existing application-level patterns, but also in designing and creating new solutions based on the same interaction logic.
 
-The resulting pattern language therefore contains twelve patterns in total: three category-level patterns and nine application-level patterns.
+The resulting pattern language therefore contains twelve patterns in total: three category-level patterns and nine application-level patterns. The complete pattern set can be explored in the [Pattern Library]({{ '/patterns.html' | relative_url }}).
 
 Their organization is not only hierarchical, but also relational. The pattern language captures four main relationship types between patterns:
 
