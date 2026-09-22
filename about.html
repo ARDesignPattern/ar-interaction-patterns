@@ -50,6 +50,42 @@ permalink: /about.html
       gap: 16px;
     }
   }
+
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 34px 42px;
+    margin-top: 24px;
+  }
+
+  .partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 64px;
+    flex: 0 0 150px;
+  }
+
+  .partner-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 760px) {
+    .partner-logos {
+      gap: 26px 30px;
+    }
+
+    .partner-logo {
+      width: 125px;
+      height: 54px;
+      flex-basis: 125px;
+    }
+  }
 </style>
 
 <section class="page-section">
@@ -78,7 +114,14 @@ permalink: /about.html
       <div class="column-right">
         <p class="intro-text">
           This project was developed as part of my doctoral research at
-          Hochschule RheinMain within the PZAI doctoral program.
+          Hochschule RheinMain within the
+          <a
+            href="https://www.hs-rm.de/design-informatik-medien/forschung/promotionszentrum-angewandte-informatik"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Promotionszentrum Angewandte Informatik (PZAI) </a
+          >.
         </p>
 
         <p class="intro-text">
@@ -99,6 +142,66 @@ permalink: /about.html
             <strong>Prof. Dr. Ralf Dörner</strong> </a
           >.
         </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Research Partners</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text">
+          The research was developed in the context of collaborative XR and
+          cultural heritage projects and through field deployments with museum
+          partners.
+        </p>
+
+        <div class="partner-logos">
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/Logo_HSRM_2025.svg' | relative_url }}"
+              alt="Hochschule RheinMain"
+            />
+          </div>
+
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/satis-fy-logo-black.svg' | relative_url }}"
+              alt="satis&fy"
+            />
+          </div>
+
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/presentXR-logo.svg' | relative_url }}"
+              alt="presentXR"
+            />
+          </div>
+
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/Logo_LoGaCulture.png' | relative_url }}"
+              alt="LoGaCulture"
+            />
+          </div>
+
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/senckenberg-logo-black.svg' | relative_url }}"
+              alt="Senckenberg Naturmuseum Frankfurt"
+            />
+          </div>
+
+          <div class="partner-logo">
+            <img
+              src="{{ '/images/logos/MMF-logo.svg' | relative_url }}"
+              alt="Natural History Museum of Funchal"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
