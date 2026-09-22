@@ -4,41 +4,147 @@ title: About
 permalink: /about.html
 ---
 
+<style>
+  .page-section {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .page-title {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin-bottom: 28px;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .two-column-section {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .two-column-block {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .intro-section-title {
+    margin: 0;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+  }
+
+  @media (max-width: 760px) {
+    .two-column-block {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>
+
 <section class="page-section">
   <h1 class="page-title">About This Project</h1>
+
   <p class="intro-text">
-    This AR Pattern Library is part of a PhD research project that explores interaction design patterns for head-mounted display-based augmented reality experiences. It aims to support designers and developers working in cultural heritage, education, and beyond.
+    This AR Pattern Library is part of a PhD research project that explores
+    interaction design patterns for head-mounted display-based augmented reality
+    experiences. It aims to support designers and developers working in cultural
+    heritage, education, and related XR contexts.
   </p>
+
   <p class="intro-text">
-    The library provides high-level and reusable AR interaction solutions grounded in empirical studies and iterative prototyping. It also serves as a communication bridge between design researchers, developers, and cultural institutions.
+    The library provides reusable and empirically grounded AR interaction design
+    knowledge developed through iterative prototyping, field studies, and
+    pattern-based abstraction. It also serves as a communication bridge between
+    design researchers, developers, and cultural institutions.
   </p>
+
+  <div class="two-column-section">
+    <div class="two-column-block">
+      <div class="column-left">
+        <h3 class="intro-section-title">Research Context</h3>
+      </div>
+
+      <div class="column-right">
+        <p class="intro-text">
+          This project was developed as part of my doctoral research at
+          Hochschule RheinMain within the PZAI doctoral program.
+        </p>
+
+        <p class="intro-text">
+          The doctoral research is supervised by
+          <a
+            href="https://www.hs-rm.de/en/person-detail/ulrike-spierling"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Prof. Dr. Ulrike Spierling</strong>
+          </a>
+          and
+          <a
+            href="https://www.hs-rm.de/design-informatik-medien/ueber-uns/personen-am-fachbereich/person/ralf-doerner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Prof. Dr. Ralf Dörner</strong> </a
+          >.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class="two-column-section">
     <div class="two-column-block">
       <div class="column-left">
         <h3 class="intro-section-title">Technology</h3>
       </div>
+
       <div class="column-right">
         <p class="intro-text">
-          The <strong>Technology</strong> module presents the practical implementations of the interaction design patterns developed as part of my PhD research on head-mounted display (HMD)-based augmented reality in cultural heritage contexts.
+          The <strong>Technology</strong> module presents practical
+          implementations of the interaction design patterns developed for
+          head-mounted display (HMD)-based augmented reality in cultural
+          heritage contexts.
         </p>
+
         <p class="intro-text">
-          All interaction patterns showcased here were originally conceived, designed, and evaluated by me, with the goal of supporting developers in creating effective AR interaction experiences grounded in both usability and contextual relevance.
+          The interaction patterns were developed through iterative design,
+          prototyping, and empirical evaluation in museum environments.
         </p>
+
         <p class="intro-text">
-          To facilitate reuse and practical application, each pattern has been implemented as a Unity prefab, encapsulating its core interaction mechanisms. These prefabs are available for download and linked to corresponding GitHub repositories.
+          To facilitate reuse and practical application, each pattern has been
+          implemented as a Unity prefab that encapsulates its core interaction
+          mechanisms. These prefabs are available for download and linked to
+          corresponding GitHub repositories.
         </p>
+
         <p class="intro-text">
-          The Unity scripting work was technically supported by <strong>Manuel Feller</strong>, a master’s student in computer science, who contributed to the implementation of selected interaction scripts under my supervision. All algorithms and interaction logic were defined and approved by me to ensure consistency with the theoretical framework of the research.
+          The Unity scripting work was technically supported by
+          <strong>Manuel Feller</strong>, a master’s student in computer
+          science, who contributed to the implementation of selected interaction
+          scripts under my supervision. The interaction logic and design
+          requirements were defined and reviewed as part of the research process
+          to ensure consistency with the pattern framework.
         </p>
+
         <p class="intro-text">
-          This module complements the theoretical contributions of the dissertation by translating pattern-based design into ready-to-use, field-tested components suitable for integration into real-world AR applications.
+          This module complements the theoretical contributions of the
+          dissertation by translating pattern-based design into reusable,
+          field-tested components suitable for integration into real-world AR
+          applications.
         </p>
       </div>
     </div>
-
-
-        
-
-
+  </div>
 </section>
