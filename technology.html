@@ -5,46 +5,87 @@ permalink: /tech.html
 ---
 
 <div class="pattern-main-content">
-
-  <!-- 介绍部分 -->
+  <!-- Technology Overview -->
   <section id="about" class="intro">
     <div class="column">
-      <img src="{{ '/images/TechImage/Labelsofbones.png' | relative_url }}" alt="AR Technology Implementation" class="profile">
-    </div>    
-    
+      <img
+        src="{{ '/images/TechImage/Labelsofbones.png' | relative_url }}"
+        alt="HMD-AR interaction pattern implementation"
+        class="profile"
+      />
+    </div>
+
     <div class="column">
       <h3 class="section-subtitle">Technology Overview</h3>
+
       <p class="intro-text">
-        This module presents the technical implementation of AR interaction design patterns using <strong>Unity</strong>, tailored for <strong>HoloLens 2</strong> and developed with <strong>AR Foundation</strong> and <strong>Mixed Reality Toolkit (MRTK) 2.8.3</strong>.
+        This module provides the technical implementation resources for the
+        <strong>HMD-AR Interaction Design Pattern Language</strong>, developed
+        through doctoral research on augmented reality experiences in museums
+        and cultural heritage.
       </p>
+
       <p class="intro-text">
-        All components were created and tested in <strong>Unity 2020.3.25f1</strong>. The base project includes a well-structured directory with Unity's <code>Assets/</code>, <code>Packages/</code>, and <code>ProjectSettings/</code> folders, optimized for cultural heritage applications.
+        The pattern language consists of
+        <strong>3 Category-Level Patterns</strong> and
+        <strong>9 Application-Level Patterns</strong>. The Category-Level
+        Patterns provide conceptual design guidance, while the Application-Level
+        Patterns are the focus of the
+        <strong>Unity-based implementation toolkit</strong>.
       </p>
+
       <p class="intro-text">
-        To get started, users can follow the setup guide in the GitHub repository to install the necessary MRTK packages—either via <strong>unitypackage</strong> files or using the <strong>Mixed Reality Feature Tool</strong>. Once the environment is prepared, you can download and import specific design pattern prefabs as <strong>.unitypackage</strong> files from the GitHub <strong>Releases</strong> section.
+        Each implementation is designed to provide reusable
+        <strong>Unity prefabs, scripts, and supporting assets</strong>,
+        distributed as individual <code>.unitypackage</code> files. The toolkit
+        aims to support modularity, parameterization, and the combination of
+        multiple interaction patterns within a single AR application.
       </p>
+
       <p class="intro-text">
-        Each Unity prefab corresponds to a specific AR interaction pattern and encapsulates its interaction logic for immediate reuse. These prefabs are modular and field-tested, enabling easy integration into your own HoloLens-based AR applications.
+        The original implementations primarily target
+        <strong>Microsoft HoloLens 2</strong> and were developed using
+        <strong>Unity 2020.3.25f1</strong>, <strong>MRTK 2.8.3</strong>, and
+        <strong>URP 10.7.0</strong>, together with compatible OpenXR components.
+        Compatibility with other Unity versions and XR platforms has not yet
+        been established.
       </p>
-      <a href="https://github.com/lovesini2152/AR-Design-Patterns_Git" target="_blank" class="git-button">
+
+      <p class="intro-text">
+        Existing implementations are being reviewed for independent
+        installation, dependency management, and cross-package compatibility.
+        Individual packages and documentation will be updated progressively as
+        validation proceeds.
+      </p>
+
+      <p class="intro-text">
+        To get started, visit the GitHub repository for
+        <strong
+          >environment requirements, installation instructions, and
+          implementation documentation</strong
+        >. Available Unity packages can be downloaded from
+        <strong>GitHub Releases</strong> and imported into compatible Unity
+        projects.
+      </p>
+
+      <a
+        href="https://github.com/ARDesignPattern/AR-Design-Patterns_Git"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="git-button"
+      >
         View on GitHub
       </a>
     </div>
-    
-    
-
-
   </section>
 
-  <!-- Prefab 卡片展示部分 -->
+  <!-- Unity Prefabs and Tools -->
   <section class="gallery-section">
     <h2 class="section-title">Unity Prefabs and Tools</h2>
+
     <div class="gallery">
-      {% assign tech_items = site.technology | sort: "order" %}
-      {% for tech in tech_items %}
-        {% include tech-card.html tech=tech %}
-      {% endfor %}
+      {% assign tech_items = site.technology | sort: "order" %} {% for tech in
+      tech_items %} {% include tech-card.html tech=tech %} {% endfor %}
     </div>
   </section>
-
 </div>
