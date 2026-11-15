@@ -1,26 +1,53 @@
 <nav class="pattern-subnav">
+  <div class="tech-overview-link" style="margin-bottom: 24px">
+    <a
+      href="{{ '/tech.html' | relative_url }}"
+      style="color: #087cf4; font-weight: 600; text-decoration: none"
+    >
+      <svg
+        width="17"
+        height="17"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        style="vertical-align: -3px; margin-right: 5px"
+        aria-hidden="true"
+      >
+        <path d="M19 12H5"></path>
+        <path d="m12 19-7-7 7-7"></path>
+      </svg>
+      Unity Toolkit Overview
+    </a>
+  </div>
+
   <ul class="pattern-list">
-
-    {% assign categories = "guidance,feedback,input,indicator,presenter" | split: "," %}
-
-    {% for category in categories %}
-      {% assign tech_items = site.technology | where: "tech_category", category | sort: "order" %}
-      {% if tech_items.size > 0 %}
-        <li class="pattern-group">
-          <h3>{{ category | capitalize }} Prefabs</h3>
-          <ul>
-            {% for tech in tech_items %}
-              <li>
-                <a href="{{ tech.url | relative_url }}"
-                   class="{% if page.url == tech.url %}active{% endif %}">
-                  {{ tech.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
+    {% assign categories =
+    "authoring,guidance,feedback,input,indicator,presenter" | split: "," %} {%
+    for category in categories %} {% assign tech_items = site.technology |
+    where: "tech_category", category | sort: "order" %} {% if tech_items.size >
+    0 %}
+    <li class="pattern-group">
+      {% if category == "authoring" %}
+      <h3>Authoring Tools</h3>
+      {% else %}
+      <h3>{{ category | capitalize }} Prefabs</h3>
       {% endif %}
-    {% endfor %}
-
+      <ul>
+        {% for tech in tech_items %}
+        <li>
+          <a
+            href="{{ tech.url | relative_url }}"
+            class="{% if page.url == tech.url %}active{% endif %}"
+          >
+            {{ tech.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %} {% endfor %}
   </ul>
 </nav>

@@ -1,16 +1,34 @@
 <!-- _includes/tech-card.html -->
-<div class="thumbnail technology {{ tech.tech_category }}">
-    <a href="{{ tech.url | relative_url }}">
-      <div class="image-container">
-        <img src="{{ tech.image | relative_url }}" alt="{{ tech.title }} image">
-      </div>
-      <h4>{{ tech.title }}</h4>
-    </a>
-  
-    <div class="summary-truncated">
-      {{ tech.description }}
-    </div>
-  
-    <div class="color-bar {{ tech.tech_category }}"></div>
+
+<a
+  class="toolkit-card"
+  href="{{ tech.url | relative_url }}"
+  aria-label="View {{ tech.title }} implementation"
+>
+  <div class="toolkit-card-image">
+    <img
+      src="{{ tech.image | relative_url }}"
+      alt="{{ tech.title }} Unity implementation"
+      loading="lazy"
+    />
   </div>
-  
+
+  <div class="toolkit-card-body">
+    <span class="toolkit-card-category">
+      {% if tech.tech_category == "authoring" %} Authoring Tool {% elsif
+      tech.tech_category == "guidance" %} Guidance {% elsif tech.tech_category
+      == "indicator" %} Interaction Indicator {% elsif tech.tech_category ==
+      "presenter" %} Experience Presenter {% else %} Unity Implementation {%
+      endif %}
+    </span>
+
+    <h3>{{ tech.title }}</h3>
+
+    <p>{{ tech.description }}</p>
+
+    <span class="toolkit-card-link">
+      View Implementation
+      <span aria-hidden="true">→</span>
+    </span>
+  </div>
+</a>
