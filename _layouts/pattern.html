@@ -52,3 +52,15 @@
     <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   </body>
 </html>
+
+{% if page.title == "Avatar Guide" or page.title == "Forward Cue-Routing" or
+page.title == "Step-In Trigger" or page.title == "Exhibit Knowledge Trigger" or
+page.title == "Sequential Explanation" or page.title == "AR Labelling" or
+page.title == "Exhibit Reassembler" or page.title == "Exhibit Feature Drawing"
+or page.title == "Object Catching" or page.title == "Point of Interest Guide" or
+page.title == "Experience Indicator" or page.title == "Experience Presenter" %}
+<link
+  href="{{ '/css/pattern-avatar-guide.css' | relative_url }}"
+  rel="stylesheet"
+/>
+{% endif %}
